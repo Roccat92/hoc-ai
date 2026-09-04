@@ -105,7 +105,7 @@
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var caption = document.getElementById('caption');
   var stage = document.getElementById('stage');
-  var timer = null, i = 0;
+  var timer = null, cycle = null, i = 0;
 
   function reset(){
     stage.innerHTML =
@@ -131,7 +131,7 @@
   ];
 
   function play(){
-    clearTimeout(timer); reset(); i = 0;
+    clearTimeout(timer); clearTimeout(cycle); reset(); i = 0;
     if (reduce){
       steps.forEach(function(s){ s.run(); });
       caption.innerHTML = [
@@ -144,7 +144,10 @@
       return;
     }
     (function next(){
-      if (i >= steps.length) return;
+      if (i >= steps.length){
+        cycle = setTimeout(play, 3000);
+        return;
+      }
       caption.textContent = steps[i].text;
       steps[i].run();
       i++;

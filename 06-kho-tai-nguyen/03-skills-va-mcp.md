@@ -8,6 +8,8 @@ Bài này dành cho người đã quen dùng Claude Code và muốn mở rộng 
 
 Tìm hiểu thêm và tài liệu chính thức tại docs.claude.com (tài liệu Claude Code/Claude API của Anthropic) — tìm mục liên quan tới "Skills" hoặc "Agent Skills".
 
+<iframe src="/minh-hoa/skill.html" title="Minh họa: Skill đưa quy trình cho AI" loading="lazy" style="width:100%; height:400px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+
 ## MCP server là gì? (nhắc lại)
 
 Đã giới thiệu ở [`04-build-ung-dung-ai/03-ai-agent.md`](../04-build-ung-dung-ai/03-ai-agent.md): MCP (Model Context Protocol) là chuẩn mở giúp AI kết nối với công cụ/dữ liệu bên ngoài theo cách chuẩn hóa. Một **MCP server** là một chương trình nhỏ tuân theo chuẩn này, cung cấp cho AI khả năng cụ thể — ví dụ: đọc/ghi file trên máy, truy vấn một database, thao tác với GitHub, tìm kiếm web, điều khiển trình duyệt.

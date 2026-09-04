@@ -80,6 +80,8 @@ Ví dụ minh họa cách tính (dùng số giả định để hiểu công th�
 - Nếu giá input là X đồng/1000 token và giá output là Y đồng/1000 token
 - Chi phí = (500/1000 × X) + (300/1000 × Y)
 
+<iframe src="/minh-hoa/token-chi-phi.html" title="Minh họa tương tác: Token và chi phí API" loading="lazy" style="width:100%; height:420px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+
 **Giá thật của từng model thay đổi thường xuyên** — luôn tra trực tiếp trang pricing chính thức của hãng (đã liệt kê ở [`00-ban-do-gioi-ai/03-cac-cong-ty-va-model.md`](../00-ban-do-gioi-ai/03-cac-cong-ty-va-model.md)) để tính chi phí thật cho dự án của bạn, đừng dựa vào con số cố định trong bài viết bất kỳ.
 
 **Mẹo kiểm soát chi phí:**

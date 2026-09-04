@@ -20,6 +20,10 @@ Nhắc lại từ [từ điển thuật ngữ](../00-ban-do-gioi-ai/06-tu-dien-t
 
 Ví dụ thực tế: có sẵn các MCP server cộng đồng cho việc đọc file hệ thống, truy vấn GitHub, thao tác Google Drive, truy vấn database... Thay vì tự viết tích hợp từ đầu, bạn có thể dùng lại các MCP server có sẵn này. Xem thêm ở [`06-kho-tai-nguyen/03-skills-va-mcp.md`](../06-kho-tai-nguyen/03-skills-va-mcp.md).
 
+<iframe src="/minh-hoa/mcp.html" title="Minh họa: MCP kết nối AI với công cụ" loading="lazy" style="width:100%; height:420px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+
+<iframe src="/minh-hoa/agent-loop.html" title="Minh họa: Vòng lặp của AI Agent" loading="lazy" style="width:100%; height:440px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+
 ## Build agent đầu tiên: agent tra cứu thời tiết
 
 Ví dụ nhỏ, dễ kiểm chứng: một agent có thể tự quyết định gọi API thời tiết khi cần, thay vì lúc nào cũng gọi.

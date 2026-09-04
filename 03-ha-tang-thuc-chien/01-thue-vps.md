@@ -10,6 +10,8 @@ VPS (Virtual Private Server — máy chủ ảo riêng) là một "máy tính" b
 
 VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy chủ vật lý lớn, được chia tách bằng công nghệ ảo hóa — nhưng với bạn, nó hoạt động độc lập như một máy riêng.
 
+<iframe src="/minh-hoa/client-server.html" title="Minh họa: Trình duyệt gửi yêu cầu tới máy chủ" loading="lazy" style="width:100%; height:380px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+
 ## Chọn nhà cung cấp: Việt Nam hay quốc tế?
 
 | Nhóm | Ví dụ | Ưu điểm | Cân nhắc |

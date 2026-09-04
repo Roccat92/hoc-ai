@@ -25,6 +25,8 @@ Câu hỏi người dùng → Tạo embedding câu hỏi → Tìm đoạn tài l
 3. **Lưu vào vector database:** lưu các vector này vào một cơ sở dữ liệu chuyên tìm kiếm theo độ "gần nghĩa" (ví dụ: Chroma, Pinecone, Weaviate, hoặc pgvector nếu bạn đã dùng PostgreSQL).
 4. **Khi có câu hỏi:** biến câu hỏi thành embedding tương tự, tìm trong vector database những đoạn tài liệu có vector "gần" nhất về ý nghĩa, rồi gửi (câu hỏi + các đoạn tìm được) vào một prompt cho LLM trả lời — LLM lúc này trả lời **dựa trên tài liệu thật** thay vì chỉ dựa vào trí nhớ huấn luyện.
 
+<iframe src="/minh-hoa/rag.html" title="Minh họa: RAG tìm mẩu tài liệu liên quan" loading="lazy" style="width:100%; height:460px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+
 ## Build chatbot RAG đơn giản với Claude Code
 
 Bạn không cần tự viết từng bước trên bằng tay — mô tả yêu cầu cho Claude Code theo từng bước nhỏ (đúng tinh thần đã học ở [bài dự án đầu tiên](../02-code-voi-ai/03-du-an-dau-tien.md)):
