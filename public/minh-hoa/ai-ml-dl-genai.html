@@ -5,15 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Minh họa: AI, ML, Deep Learning và GenAI</title>
 <style>
-  :root{--bg:#fff;--fg:#1a1a1a;--muted:#6b7280;--line:#d9dde3;--accent:#2f6f6a;--soft:#2f6f6a22;--r:8px}
-  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1b1f;--fg:#e6e6e6;--muted:#9aa0a6;--line:#33353a;--accent:#5bb3ab;--soft:#5bb3ab22}}
-  :root[data-theme="dark"]{--bg:#1b1b1f;--fg:#e6e6e6;--muted:#9aa0a6;--line:#33353a;--accent:#5bb3ab;--soft:#5bb3ab22}
-  *{box-sizing:border-box}html,body{margin:0}body{padding:16px;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-  .stage{min-height:315px;max-width:720px;margin:auto}.caption{min-height:2.6em;margin:12px 0 0;color:var(--muted);font-size:14px}.btn{margin-top:8px;padding:8px 14px;border:0;border-radius:8px;background:var(--accent);color:var(--bg);font:inherit;cursor:pointer}.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .diagram{height:315px;position:relative;overflow:hidden}.ring{position:absolute;left:50%;top:50%;border:1px solid var(--line);border-radius:50%;transform:translate(-50%,-50%) scale(.82);opacity:0;transition:opacity .5s ease,transform .55s ease,border-color .35s,background .35s}.ring.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.ring.active{border-color:var(--accent);background:var(--soft)}
-  .ai{width:300px;height:300px}.ml{width:226px;height:226px}.dl{width:150px;height:150px}.gen{width:82px;height:82px}.tag{position:absolute;color:var(--muted);font-size:13px;white-space:nowrap;opacity:0;transition:opacity .3s}.tag.show{opacity:1}.tag strong{color:var(--fg);font-weight:650}.tag-ai{top:20px;left:calc(50% - 104px)}.tag-ml{top:76px;left:calc(50% - 83px)}.tag-dl{top:125px;left:calc(50% - 65px)}.tag-gen{top:177px;left:50%;transform:translateX(-50%);text-align:center;color:var(--accent);line-height:1.25}.tag-gen strong{color:var(--accent)}
-  .note{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:max-content;max-width:100%;color:var(--muted);font-size:12px;text-align:center;opacity:0;transition:opacity .35s}.note.show{opacity:1}
-  @media(max-width:390px){body{padding:8px}.stage,.diagram{min-height:280px;height:280px}.ai{width:264px;height:264px}.ml{width:198px;height:198px}.dl{width:132px;height:132px}.gen{width:70px;height:70px}.tag{font-size:12px}.tag-ai{top:14px;left:calc(50% - 94px)}.tag-ml{top:64px;left:calc(50% - 74px)}.tag-dl{top:108px;left:calc(50% - 57px)}.tag-gen{top:154px}.caption{font-size:13px}}
+  :root{
+    --bg:#fbfcfa; --surface:#f2f5f1; --fg:#17201d; --muted:#65716d;
+    --line:#d7dedb; --line-strong:#aebbb6; --accent:#2f6f6a; --accent-soft:#2f6f6a20;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#171a19; --surface:#1d2220; --fg:#edf2ef; --muted:#98a49f;
+      --line:#303a36; --line-strong:#53625d; --accent:#5bb3ab; --accent-soft:#5bb3ab1f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#171a19; --surface:#1d2220; --fg:#edf2ef; --muted:#98a49f;
+    --line:#303a36; --line-strong:#53625d; --accent:#5bb3ab; --accent-soft:#5bb3ab1f;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{padding:14px;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+  .stage{
+    position:relative;min-height:320px;max-width:760px;margin:auto;overflow:hidden;
+    border:1px solid var(--line);background-color:var(--surface);
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:32px 32px;
+  }
+  .stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 31% 53%,var(--accent-soft),transparent 43%)}
+  .meta{position:absolute;z-index:3;top:12px;left:14px;color:var(--muted);font-size:11px;letter-spacing:.04em}
+  .index{position:absolute;z-index:3;right:14px;top:10px;color:var(--line-strong);font:12px ui-monospace,SFMono-Regular,Consolas,monospace}
+  .map{position:absolute;z-index:2;left:3%;top:26px;width:58%;height:282px}
+  .cross::before,.cross::after{content:"";position:absolute;background:var(--line-strong);opacity:.45}
+  .cross::before{width:1px;height:252px;left:48%;top:12px}.cross::after{height:1px;width:252px;left:calc(48% - 126px);top:138px}
+  .ring{
+    position:absolute;left:48%;top:50%;border:1px solid var(--line-strong);border-radius:50%;
+    transform:translate(-50%,-50%) scale(.72);opacity:0;
+    transition:opacity .42s ease,transform .7s cubic-bezier(.16,1.22,.3,1),border-color .32s,background-color .32s,filter .32s;
+  }
+  .ring::before{content:attr(data-n);position:absolute;top:9%;left:16%;color:var(--muted);font:11px ui-monospace,SFMono-Regular,Consolas,monospace}
+  .ring.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  .ring.active{border:2px solid var(--accent);background:var(--accent-soft);filter:drop-shadow(0 0 8px var(--accent-soft))}
+  .ring-ai{width:270px;height:270px}.ring-ml{width:204px;height:204px}.ring-dl{width:138px;height:138px}.ring-gen{width:72px;height:72px;background:var(--bg)}
+  .ring-gen::before{display:none}
+  .core{position:absolute;z-index:3;left:48%;top:50%;transform:translate(-50%,-50%) scale(.7);opacity:0;text-align:center;color:var(--accent);font-weight:700;font-size:12px;line-height:1.15;transition:opacity .4s,transform .65s cubic-bezier(.16,1.22,.3,1)}
+  .core.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  .legend{position:absolute;z-index:4;right:14px;top:42px;bottom:38px;width:39%;display:grid;align-content:center;gap:2px}
+  .item{appearance:none;width:100%;display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:center;padding:7px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--fg);text-align:left;font:inherit;cursor:pointer;opacity:.34;transform:translateX(12px);transition:opacity .35s,transform .45s ease,color .25s}
+  .item.visible{opacity:.68;transform:none}.item.active{opacity:1;color:var(--accent)}
+  .num{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted)}
+  .name{display:block;font-weight:700;font-size:13px}.desc{display:block;color:var(--muted);font-size:11px;margin-top:1px}
+  .item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .rule{position:absolute;z-index:4;right:14px;bottom:24px;width:39%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .55s ease}.rule.visible{transform:scaleX(1)}
+  .caption{min-height:2.7em;margin:10px 0 0;color:var(--muted);font-size:14px}
+  .btn{margin-top:7px;padding:8px 14px;border:0;border-radius:6px;background:var(--accent);color:var(--bg);font:inherit;cursor:pointer}.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  @media(max-width:470px){
+    body{padding:8px}.stage{min-height:290px;background-size:24px 24px}.meta{top:8px;left:9px}.index{right:9px;top:7px}
+    .map{left:-8%;top:30px;width:72%;height:248px}.cross::before{height:220px;top:8px}.cross::after{width:220px;left:calc(48% - 110px);top:121px}
+    .ring-ai{width:232px;height:232px}.ring-ml{width:176px;height:176px}.ring-dl{width:120px;height:120px}.ring-gen{width:64px;height:64px}
+    .legend{right:9px;top:40px;bottom:28px;width:42%;gap:0}.item{grid-template-columns:20px 1fr;gap:4px;padding:6px 0}.name{font-size:11px}.desc{font-size:10px;line-height:1.2}
+    .rule{right:9px;bottom:17px;width:42%}.caption{font-size:12px;line-height:1.35}
+  }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -23,22 +71,45 @@
   <button class="btn" id="replay" type="button">Chạy lại</button>
 <script>
 (function(){
-  var theme=new URLSearchParams(location.search).get('theme');
-  if(theme==='dark'||theme==='light')document.documentElement.dataset.theme=theme;
-  addEventListener('message',function(e){if(e.data&&(e.data.theme==='dark'||e.data.theme==='light'))document.documentElement.dataset.theme=e.data.theme});
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,stage=document.getElementById('stage'),caption=document.getElementById('caption'),timer,cycle,index;
-  function reset(){stage.innerHTML='<div class="diagram"><div class="ring ai" id="ai"></div><div class="ring ml" id="ml"></div><div class="ring dl" id="dl"></div><div class="ring gen" id="gen"></div><div class="tag tag-ai" id="ai-t"><strong>AI</strong> · Trí tuệ nhân tạo</div><div class="tag tag-ml" id="ml-t"><strong>Machine Learning</strong> · Máy học</div><div class="tag tag-dl" id="dl-t"><strong>Deep Learning</strong> · Học sâu</div><div class="tag tag-gen" id="gen-t"><strong>Generative AI</strong><br>AI tạo sinh</div><div class="note" id="note">Cái sau là một phần nhỏ hơn, chuyên biệt hơn của cái trước.</div></div>'}
-  function reveal(id){document.getElementById(id).classList.add('show');document.getElementById(id+'-t').classList.add('show')}
-  var steps=[
-    ['Bước 1: AI là vòng lớn nhất: máy làm những việc cần “trí thông minh”.',function(){reveal('ai');document.getElementById('ai').classList.add('active')}],
-    ['Bước 2: Machine Learning là một phần của AI: máy học quy luật từ dữ liệu.',function(){document.getElementById('ai').classList.remove('active');reveal('ml');document.getElementById('ml').classList.add('active')}],
-    ['Bước 3: Deep Learning là một phần của ML, dùng mạng neural nhiều lớp.',function(){document.getElementById('ml').classList.remove('active');reveal('dl');document.getElementById('dl').classList.add('active')}],
-    ['Bước 4: Generative AI là một phần của Deep Learning, chuyên tạo nội dung mới.',function(){document.getElementById('dl').classList.remove('active');reveal('gen');document.getElementById('gen').classList.add('active')}],
-    ['Bước 5: GenAI nằm trong Deep Learning, Deep Learning nằm trong ML, và ML nằm trong AI.',function(){document.getElementById('note').classList.add('show')}]
+  var selectedTheme=new URLSearchParams(location.search).get('theme');
+  if(selectedTheme==='dark'||selectedTheme==='light')document.documentElement.dataset.theme=selectedTheme;
+  addEventListener('message',function(event){if(event.data&&(event.data.theme==='dark'||event.data.theme==='light'))document.documentElement.dataset.theme=event.data.theme});
+
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var stage=document.getElementById('stage'),caption=document.getElementById('caption');
+  var timer=null,cycle=null,index=0;
+  var concepts=[
+    {id:'ai',name:'AI',desc:'Khái niệm rộng nhất',text:'AI bao gồm mọi hệ thống làm việc vốn cần trí thông minh — kể cả hệ thống chỉ chạy theo luật.'},
+    {id:'ml',name:'Machine Learning',desc:'Học quy luật từ dữ liệu',text:'Machine Learning nằm trong AI: thay vì viết mọi luật bằng tay, ta cho máy học từ dữ liệu.'},
+    {id:'dl',name:'Deep Learning',desc:'Mạng neural nhiều lớp',text:'Deep Learning nằm trong Machine Learning và dùng mạng neural nhiều lớp để học đặc trưng.'},
+    {id:'gen',name:'Generative AI',desc:'Tạo nội dung mới',text:'Generative AI nằm trong Deep Learning, chuyên tạo văn bản, hình ảnh, âm thanh, video hoặc code.'}
   ];
-  function play(){clearTimeout(timer);clearTimeout(cycle);reset();index=0;if(reduce){steps.forEach(function(s){s[1]()});caption.textContent='1. AI.  2. Machine Learning thuộc AI.  3. Deep Learning thuộc ML.  4. GenAI thuộc Deep Learning.  5. Đây không phải bốn khái niệm ngang hàng.';return}(function next(){if(index>=steps.length){cycle=setTimeout(play,3200);return}caption.textContent=steps[index][0];steps[index++][1]();timer=setTimeout(next,1800)})()}
-  document.getElementById('replay').onclick=play;play();
-  function report(){try{parent.postMessage({type:'minhhoa-height',height:document.body.scrollHeight},'*')}catch(e){}}addEventListener('load',report);if(window.ResizeObserver)new ResizeObserver(report).observe(document.body);
+
+  function reset(){
+    stage.innerHTML='<div class="meta">Bản đồ khái niệm</div><div class="index">01—04</div><div class="map cross"><div class="ring ring-ai" id="ring-ai" data-n="01"></div><div class="ring ring-ml" id="ring-ml" data-n="02"></div><div class="ring ring-dl" id="ring-dl" data-n="03"></div><div class="ring ring-gen" id="ring-gen"></div><div class="core" id="core">Gen<br>AI</div></div><div class="legend">'+concepts.map(function(c,n){return '<button class="item" id="item-'+c.id+'" data-i="'+n+'" type="button"><span class="num">0'+(n+1)+'</span><span><span class="name">'+c.name+'</span><span class="desc">'+c.desc+'</span></span></button>'}).join('')+'</div><div class="rule" id="rule"></div>';
+    Array.prototype.forEach.call(stage.querySelectorAll('.item'),function(button){button.addEventListener('click',function(){clearTimeout(timer);clearTimeout(cycle);showThrough(+button.dataset.i,true)})});
+  }
+  function showThrough(target,manual){
+    concepts.forEach(function(c,n){
+      var ring=document.getElementById('ring-'+c.id),item=document.getElementById('item-'+c.id);
+      ring.classList.toggle('visible',n<=target);item.classList.toggle('visible',n<=target);
+      ring.classList.toggle('active',n===target);item.classList.toggle('active',n===target);
+    });
+    document.getElementById('core').classList.toggle('visible',target>=3);
+    document.getElementById('rule').classList.toggle('visible',target>=3);
+    caption.textContent=(manual?'Xem lại: ':'Bước '+(target+1)+': ')+concepts[target].text;
+  }
+  function play(){
+    clearTimeout(timer);clearTimeout(cycle);reset();index=0;
+    if(reduce){showThrough(3,false);caption.textContent='AI là vòng lớn nhất; Machine Learning nằm trong AI; Deep Learning nằm trong ML; Generative AI nằm trong Deep Learning.';return}
+    (function next(){
+      if(index>=concepts.length){caption.textContent='Kết luận: cái sau là một nhánh chuyên biệt nằm bên trong cái trước. Bạn có thể bấm từng tên để xem lại.';cycle=setTimeout(play,4200);return}
+      showThrough(index,false);index++;timer=setTimeout(next,1900);
+    })();
+  }
+  document.getElementById('replay').addEventListener('click',play);play();
+  function reportHeight(){try{parent.postMessage({type:'minhhoa-height',height:document.body.scrollHeight},'*')}catch(error){}}
+  addEventListener('load',reportHeight);if(window.ResizeObserver)new ResizeObserver(reportHeight).observe(document.body);
 })();
 </script>
 </body>
