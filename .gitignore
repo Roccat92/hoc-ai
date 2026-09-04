@@ -1,0 +1,9 @@
+node_modules/
+.vitepress/dist/
+.vitepress/cache/
+
+# File nội bộ — không đưa lên bản public (chiến lược, prompt gốc, backlog, ghi chú build)
+CONTEXT.md
+BACKLOG.md
+MO-RONG-REPO.md
+PROMPT-CHO-CLAUDE-CODE.md

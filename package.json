@@ -1,0 +1,18 @@
+{
+  "name": "learn-ai-vietnamese",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thư viện mở học lập trình và build sản phẩm với AI cho người Việt",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
