@@ -17,7 +17,7 @@ const internalRootDocs = fs
 
 // Điền địa chỉ repo GitHub dạng "ten-tai-khoan/learn-ai-vietnamese" sau khi đã đẩy code lên GitHub.
 // Có giá trị này, web sẽ hiện nút "Đề xuất sửa bài này" và icon GitHub trên thanh menu.
-const githubRepo = ''
+const githubRepo = 'Roccat92/hoc-ai'
 
 const sections = [
   { dir: '00-ban-do-gioi-ai', text: 'Bản đồ giới AI' },
