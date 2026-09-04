@@ -10,7 +10,22 @@ VPS (Virtual Private Server - máy chủ ảo riêng) là một "máy tính" b�
 
 VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy chủ vật lý lớn, được chia tách bằng công nghệ ảo hóa - nhưng với bạn, nó hoạt động độc lập như một máy riêng.
 
-<iframe src="/minh-hoa/client-server.html" title="Minh họa: Trình duyệt gửi yêu cầu tới máy chủ" loading="lazy" style="width:100%; height:380px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+<figure style="max-width:560px;margin:24px auto">
+<svg viewBox="0 0 480 150" width="100%" role="img" aria-label="Trình duyệt gửi yêu cầu qua internet tới máy chủ, máy chủ trả trang web về" style="font-family:inherit;display:block">
+  <rect x="20" y="40" width="140" height="70" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
+  <text x="90" y="70" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">Trình duyệt</text>
+  <text x="90" y="88" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">của bạn</text>
+  <rect x="320" y="40" width="140" height="70" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2"/>
+  <text x="390" y="70" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">Máy chủ (VPS)</text>
+  <text x="390" y="88" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">chạy 24/7, ở xa</text>
+  <text x="240" y="52" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">yêu cầu: "mở trang chủ"</text>
+<path d="M168 62 H312 M305 57 L312 62 L305 67" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+<path d="M312 90 H168 M175 85 L168 90 L175 95" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <text x="240" y="106" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">trả về: trang web</text>
+  <text x="240" y="140" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">cả hai chiều đều đi qua internet</text>
+</svg>
+<figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Trình duyệt gửi yêu cầu tới một máy tính thuê ở xa luôn bật, máy đó trả trang web về.</figcaption>
+</figure>
 
 ## Chọn nhà cung cấp: Việt Nam hay quốc tế?
 
