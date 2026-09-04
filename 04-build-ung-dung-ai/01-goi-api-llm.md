@@ -89,15 +89,15 @@ Ví dụ minh họa cách tính (dùng số giả định để hiểu công th�
 - Chi phí = (500/1000 × X) + (300/1000 × Y)
 
 <figure style="max-width:560px;margin:24px auto">
-<svg viewBox="0 0 480 206" width="100%" role="img" aria-label="Ba văn bản dài dần tương ứng số token tăng dần, tiền tính theo số token" style="font-family:inherit;display:block">
+<svg id="mh-cost" viewBox="0 0 480 206" width="100%" role="img" aria-label="Ba văn bản dài dần tương ứng số token tăng dần, tiền tính theo số token" style="font-family:inherit;display:block">
   <text x="20" y="45" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px">Một câu hỏi ngắn</text>
-  <rect x="190" y="32" width="8" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35"/>
+  <rect class="mh-anim" x="190" y="32" width="8" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35;transform-box:fill-box;transform-origin:left center;animation:mh-cost-g 5.5s ease-in-out infinite;animation-delay:0s"/>
   <text x="460" y="45" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:end">≈ 20 token</text>
   <text x="20" y="85" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px">Một đoạn email</text>
-  <rect x="190" y="72" width="50" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35"/>
+  <rect class="mh-anim" x="190" y="72" width="50" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35;transform-box:fill-box;transform-origin:left center;animation:mh-cost-g 5.5s ease-in-out infinite;animation-delay:0.4s"/>
   <text x="460" y="85" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:end">≈ 200 token</text>
   <text x="20" y="125" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px">Một tài liệu 10 trang</text>
-  <rect x="190" y="112" width="180" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35"/>
+  <rect class="mh-anim" x="190" y="112" width="180" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35;transform-box:fill-box;transform-origin:left center;animation:mh-cost-g 5.5s ease-in-out infinite;animation-delay:0.8s"/>
   <text x="460" y="125" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:end">≈ 5.000 token</text>
   <text x="240" y="160" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">tiền phải trả = số token × đơn giá</text>
   <text x="240" y="182" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">Số token chỉ là ước lượng để hình dung.</text>

@@ -1,0 +1,30 @@
+/* Chuyển động cho các sơ đồ minh họa (SVG nhúng trong bài).
+   Keyframes phải ở đây vì VitePress/Vue loại bỏ thẻ <style> đặt thẳng trong markdown.
+   Mỗi phần tử động trong SVG mang thuộc tính animation inline trỏ tới các keyframe này,
+   và class mh-anim (thêm mh-dot / mh-wire khi cần) để tắt khi người đọc bật giảm chuyển động. */
+
+@keyframes mh-rings-p { 0%, 100% { opacity: 1 } 50% { opacity: .45 } }
+
+@keyframes mh-tok-in { 0% { opacity: 0 } 8% { opacity: 1 } 80% { opacity: 1 } 92% { opacity: 0 } 100% { opacity: 0 } }
+@keyframes mh-tok-g  { 0%, 100% { stroke-opacity: 1 } 20% { stroke-opacity: .4 } 40% { stroke-opacity: 1 } }
+
+@keyframes mh-cs-req { 0% { transform: translateX(0); opacity: 0 } 5% { opacity: 1 } 40% { transform: translateX(140px); opacity: 1 } 45% { opacity: 0 } 100% { opacity: 0 } }
+@keyframes mh-cs-res { 0%, 50% { transform: translateX(0); opacity: 0 } 55% { opacity: 1 } 90% { transform: translateX(-140px); opacity: 1 } 95% { opacity: 0 } 100% { opacity: 0 } }
+
+@keyframes mh-cost-g { 0% { transform: scaleX(0) } 25% { transform: scaleX(1) } 88% { transform: scaleX(1) } 100% { transform: scaleX(0) } }
+
+@keyframes mh-rag-p { 0%, 30% { fill-opacity: .3 } 45% { fill-opacity: .6 } 60%, 100% { fill-opacity: .3 } }
+@keyframes mh-rag-d { 0%, 45% { transform: translateY(0); opacity: 0 } 50% { opacity: 1 } 70% { transform: translateY(96px); opacity: 1 } 75% { opacity: 0 } 100% { opacity: 0 } }
+
+@keyframes mh-mcp-f { to { stroke-dashoffset: -20 } }
+
+@keyframes mh-loop-run { from { offset-distance: 0% } to { offset-distance: 100% } }
+
+@keyframes mh-skill-g  { 0%, 100% { stroke-opacity: 1 } 45% { stroke-opacity: .4 } 70% { stroke-opacity: 1 } }
+@keyframes mh-skill-in { 0%, 30% { opacity: 0 } 45% { opacity: 1 } 90% { opacity: 1 } 100% { opacity: 0 } }
+
+@media (prefers-reduced-motion: reduce) {
+  .mh-anim { animation: none !important; }
+  .mh-dot  { opacity: 0 !important; }
+  .mh-wire { stroke-dasharray: none !important; }
+}

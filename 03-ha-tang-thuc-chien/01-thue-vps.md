@@ -11,7 +11,7 @@ VPS (Virtual Private Server - máy chủ ảo riêng) là một "máy tính" b�
 VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy chủ vật lý lớn, được chia tách bằng công nghệ ảo hóa - nhưng với bạn, nó hoạt động độc lập như một máy riêng.
 
 <figure style="max-width:560px;margin:24px auto">
-<svg viewBox="0 0 480 150" width="100%" role="img" aria-label="Trình duyệt gửi yêu cầu qua internet tới máy chủ, máy chủ trả trang web về" style="font-family:inherit;display:block">
+<svg id="mh-cs" viewBox="0 0 480 150" width="100%" role="img" aria-label="Trình duyệt gửi yêu cầu qua internet tới máy chủ, máy chủ trả trang web về" style="font-family:inherit;display:block">
   <rect x="20" y="40" width="140" height="70" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
   <text x="90" y="70" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">Trình duyệt</text>
   <text x="90" y="88" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">của bạn</text>
@@ -21,6 +21,8 @@ VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy ch�
   <text x="240" y="52" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">yêu cầu: "mở trang chủ"</text>
 <path d="M168 62 H312 M305 57 L312 62 L305 67" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
 <path d="M312 90 H168 M175 85 L168 90 L175 95" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <circle class="mh-anim mh-dot" cx="172" cy="62" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-cs-req 4.5s ease-in-out infinite"/>
+  <circle class="mh-anim mh-dot" cx="308" cy="90" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-cs-res 4.5s ease-in-out infinite"/>
   <text x="240" y="106" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">trả về: trang web</text>
   <text x="240" y="140" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">cả hai chiều đều đi qua internet</text>
 </svg>

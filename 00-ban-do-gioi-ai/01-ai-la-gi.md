@@ -7,12 +7,12 @@ Bài này dành cho người **chưa từng học AI ngày nào**, nghe người
 Đừng nghĩ AI, ML, Deep Learning, GenAI là bốn thứ ngang hàng, tách biệt. Chúng là **các vòng tròn lồng vào nhau**, cái sau là một phần nhỏ hơn, chuyên biệt hơn của cái trước:
 
 <figure style="max-width:560px;margin:24px auto">
-<svg viewBox="0 0 480 300" width="100%" role="img" aria-label="Bốn vòng tròn lồng nhau: AI chứa Máy học, Máy học chứa Học sâu, Học sâu chứa AI tạo sinh" style="font-family:inherit;display:block">
+<svg id="mh-rings" viewBox="0 0 480 300" width="100%" role="img" aria-label="Bốn vòng tròn lồng nhau: AI chứa Máy học, Máy học chứa Học sâu, Học sâu chứa AI tạo sinh" style="font-family:inherit;display:block">
   <g style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5">
     <circle cx="140" cy="150" r="120"/>
     <circle cx="140" cy="180" r="90"/>
     <circle cx="140" cy="210" r="60"/>
-    <circle cx="140" cy="240" r="30" style="stroke-opacity:1;stroke-width:2"/>
+    <circle class="mh-anim" cx="140" cy="240" r="30" style="stroke-opacity:1;stroke-width:2;animation:mh-rings-p 4.5s ease-in-out infinite"/>
   </g>
   <g style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">
     <text x="140" y="55">AI</text>

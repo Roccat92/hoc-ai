@@ -26,20 +26,21 @@ Câu hỏi người dùng → Tạo embedding câu hỏi → Tìm đoạn tài l
 4. **Khi có câu hỏi:** biến câu hỏi thành embedding tương tự, tìm trong vector database những đoạn tài liệu có vector "gần" nhất về ý nghĩa, rồi gửi (câu hỏi + các đoạn tìm được) vào một prompt cho LLM trả lời - LLM lúc này trả lời **dựa trên tài liệu thật** thay vì chỉ dựa vào trí nhớ huấn luyện.
 
 <figure style="max-width:560px;margin:24px auto">
-<svg viewBox="0 0 480 260" width="100%" role="img" aria-label="Tài liệu cắt thành 6 mẩu, 2 mẩu khớp câu hỏi được đưa cùng câu hỏi vào model, model trả lời kèm nguồn" style="font-family:inherit;display:block">
+<svg id="mh-rag" viewBox="0 0 480 260" width="100%" role="img" aria-label="Tài liệu cắt thành 6 mẩu, 2 mẩu khớp câu hỏi được đưa cùng câu hỏi vào model, model trả lời kèm nguồn" style="font-family:inherit;display:block">
   <rect x="20" y="30" width="80" height="60" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
   <text x="60" y="64" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">Tài liệu</text>
   <text x="128" y="50" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">cắt nhỏ</text>
 <path d="M106 60 H152 M145 55 L152 60 L145 65" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
   <rect x="160" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="180" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">1</text>
   <rect x="208" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="228" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">2</text>
-  <rect x="256" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.3;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2"/><text x="276" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">3</text>
+  <rect class="mh-anim" x="256" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.3;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-rag-p 5.5s ease-in-out infinite"/><text x="276" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">3</text>
   <rect x="304" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="324" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">4</text>
-  <rect x="352" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.3;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2"/><text x="372" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">5</text>
+  <rect class="mh-anim" x="352" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.3;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-rag-p 5.5s ease-in-out infinite"/><text x="372" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">5</text>
   <rect x="400" y="40" width="40" height="40" rx="3" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="420" y="65" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">6</text>
   <line x1="156" y1="86" x2="444" y2="86" style="stroke:var(--vp-c-divider);stroke-width:2"/>
   <text x="214" y="104" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">6 mẩu xếp lên kệ</text>
   <path d="M372 88 V140 H276 M276 88 V196 M271 189 L276 196 L281 189" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <circle class="mh-anim mh-dot" cx="276" cy="100" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-rag-d 5.5s ease-in-out infinite"/>
   <text x="382" y="130" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">2 mẩu khớp</text>
   <text x="382" y="145" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">được lấy ra</text>
   <rect x="12" y="202" width="132" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
