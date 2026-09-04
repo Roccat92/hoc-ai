@@ -8,7 +8,26 @@ Bài này dành cho người đã quen dùng Claude Code và muốn mở rộng 
 
 Tìm hiểu thêm và tài liệu chính thức tại docs.claude.com (tài liệu Claude Code/Claude API của Anthropic) - tìm mục liên quan tới "Skills" hoặc "Agent Skills".
 
-<iframe src="/minh-hoa/skill.html" title="Minh họa: Skill đưa quy trình cho AI" loading="lazy" style="width:100%; height:400px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+<figure style="max-width:560px;margin:24px auto">
+<svg viewBox="0 0 480 176" width="100%" role="img" aria-label="Cùng một yêu cầu: AI không có skill trả lời chung chung, AI có skill trả lời đúng mẫu công ty" style="font-family:inherit;display:block">
+  <text x="20" y="46" style="fill:currentColor;font-size:14px;font-weight:600;font-size:12px">"Viết email xin nghỉ phép"</text>
+<path d="M178 42 H202 M195 37 L202 42 L195 47" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <rect x="210" y="22" width="80" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
+  <text x="250" y="47" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">AI</text>
+<path d="M298 42 H322 M315 37 L322 42 L315 47" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <text x="330" y="46" style="fill:var(--vp-c-text-2);font-size:12px">trả lời chung chung</text>
+  <text x="20" y="136" style="fill:currentColor;font-size:14px;font-weight:600;font-size:12px">"Viết email xin nghỉ phép"</text>
+<path d="M178 132 H202 M195 127 L202 132 L195 137" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <rect x="210" y="108" width="80" height="48" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2"/>
+  <text x="250" y="129" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">AI</text>
+  <text x="250" y="146" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">+ sổ tay skill</text>
+<path d="M298 132 H322 M315 127 L322 132 L315 137" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <text x="330" y="124" style="fill:currentColor;font-size:14px;font-weight:600;font-size:12px">đúng mẫu công ty:</text>
+  <text x="330" y="140" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">kính gửi, lý do,</text>
+  <text x="330" y="154" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">thời gian, người bàn giao</text>
+</svg>
+<figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Cùng một yêu cầu, có skill thì AI làm theo đúng quy trình đã đóng gói thay vì trả lời chung chung.</figcaption>
+</figure>
 
 ## MCP server là gì? (nhắc lại)
 
