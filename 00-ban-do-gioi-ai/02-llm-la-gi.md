@@ -22,12 +22,30 @@ Với **tiếng Việt**, mọi chuyện tốn kém hơn một chút: vì có d�
 1. **Giá tiền** khi gọi API LLM thường tính theo số token (cả token đầu vào lẫn đầu ra) - xem chi tiết giá ở [`04-build-ung-dung-ai/01-goi-api-llm.md`](../04-build-ung-dung-ai/01-goi-api-llm.md). (*API* là cách để code của bạn tự "gọi" tới AI qua internet mà xử lý, thay vì bạn ngồi chat tay - gặp lại nhiều lần trong repo này, có giải thích đầy đủ ở [từ điển thuật ngữ](06-tu-dien-thuat-ngu.md).)
 2. **Giới hạn context window** (mục dưới đây) cũng được đo bằng token, không phải bằng chữ.
 
-<iframe
-  src="/minh-hoa/llm-token.html"
-  title="Minh họa: LLM tách token và sinh câu trả lời"
-  loading="lazy"
-  style="width:100%; height:440px; border:1px solid var(--vp-c-divider); border-radius:8px;">
-</iframe>
+<figure style="max-width:560px;margin:24px auto">
+<svg viewBox="0 0 480 284" width="100%" role="img" aria-label="Câu hỏi tách thành 7 token đi vào model, model sinh ra câu trả lời từng token một" style="font-family:inherit;display:block">
+  <text x="20" y="20" style="fill:var(--vp-c-text-2);font-size:12px">Câu hỏi của bạn, tách thành 7 token:</text>
+  <g><rect x="20" y="32" width="44" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="42" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">Thủ</text></g>
+  <g><rect x="72" y="32" width="36" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="90" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">đô</text></g>
+  <g><rect x="116" y="32" width="44" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="138" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">Việt</text></g>
+  <g><rect x="168" y="32" width="46" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="191" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">Nam</text></g>
+  <g><rect x="222" y="32" width="30" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="237" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">là</text></g>
+  <g><rect x="260" y="32" width="32" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="276" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">gì</text></g>
+  <g><rect x="300" y="32" width="24" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="312" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">?</text></g>
+<path d="M240 70 V98 M235 91 L240 98 L245 91" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <rect x="170" y="100" width="140" height="46" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2"/>
+  <text x="240" y="119" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>
+  <text x="240" y="136" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">đoán token kế tiếp, lặp lại</text>
+<path d="M240 152 V180 M235 173 L240 180 L245 173" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <text x="20" y="196" style="fill:var(--vp-c-text-2);font-size:12px">Câu trả lời, sinh lần lượt từng token:</text>
+  <g style="opacity:0.35"><rect x="20" y="206" width="36" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="38" y="226" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">Hà</text></g>
+  <g style="opacity:0.65"><rect x="64" y="206" width="40" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="84" y="226" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">Nội</text></g>
+  <g style="opacity:1"><rect x="112" y="206" width="24" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="124" y="226" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">.</text></g>
+  <text x="20" y="260" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">Mỗi ô là một token, không luôn bằng một từ.</text>
+  <text x="20" y="275" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">Tiếng Việt thường tốn nhiều token hơn tiếng Anh.</text>
+</svg>
+<figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">LLM đọc câu hỏi theo từng mẩu (token) và trả lời bằng cách đoán từng mẩu kế tiếp.</figcaption>
+</figure>
 
 ## Context window - "trí nhớ" trong một cuộc trò chuyện
 
