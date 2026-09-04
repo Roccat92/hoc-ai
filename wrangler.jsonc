@@ -1,0 +1,13 @@
+{
+  // Cấu hình deploy web tĩnh (VitePress) lên Cloudflare qua luồng Workers.
+  // Build ("npm run docs:build") sinh ra thư mục .vitepress/dist, rồi
+  // "npx wrangler deploy" đọc file này và tải thư mục đó lên phục vụ.
+  "name": "hoc-ai",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": ".vitepress/dist",
+    // Đường dẫn lạ (không có file) sẽ trả trang 404 riêng của VitePress
+    // thay vì lỗi trống.
+    "not_found_handling": "404-page"
+  }
+}
