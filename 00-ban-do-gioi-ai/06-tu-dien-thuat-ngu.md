@@ -91,4 +91,4 @@ Khi bạn gặp một từ lạ ở bất kỳ đâu trong repo (hoặc ngoài �
 
 ## Bước tiếp theo
 
-Đã có vốn từ vựng cơ bản, giờ xem một bức tranh tổng thể: AI hiện làm được những gì, và vì sao cần cẩn thận với các lời hứa "kiếm tiền nhanh bằng AI": [AI làm được gì](07-ai-lam-duoc-gi.md)
+Đã có bức tranh toàn cảnh và vốn từ vựng cơ bản, giờ là lúc bắt tay vào học thật: [Bắt đầu từ số 0 →](../01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md)

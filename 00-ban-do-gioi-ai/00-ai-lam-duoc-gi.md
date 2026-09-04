@@ -1,16 +1,29 @@
 # AI làm được gì - và vì sao phải cẩn thận với "mỏ vàng"
 
-Bài này dành cho người đã đi qua sáu bài trước trong phần này và muốn có một bức tranh tổng thể: AI hiện làm được những gì, không chỉ riêng chuyện code. Học xong bạn sẽ biết AI đang mạnh ở những nhóm năng lực nào, hiểu vì sao thư viện này chỉ tập trung vào đúng một nhánh trong số đó, và - quan trọng không kém - biết nhận diện chiêu trò "kiếm tiền nhanh bằng AI" đang tràn lan trên mạng xã hội để không mất tiền oan.
+Đây là bài **đầu tiên**, dành cho người **chưa biết gì về AI** và muốn thấy ngay câu trả lời thực tế: rốt cuộc AI làm được gì cho mình? Học xong bạn sẽ có bức tranh tổng thể về các nhóm năng lực của AI hiện nay, biết thư viện này tập trung vào nhánh nào, và - quan trọng không kém - biết nhận diện chiêu trò "kiếm tiền nhanh bằng AI" tràn lan trên mạng để không mất tiền oan.
+
+## AI giúp được gì trong đời sống hàng ngày?
+
+Trước khi đi vào bản đồ đầy đủ, hình dung nhanh vài việc AI **đã có thể** giúp bạn ngay trong cuộc sống thường ngày, chỉ bằng cách gõ yêu cầu bằng tiếng Việt bình thường:
+
+- Soạn và trả lời email, viết đơn từ, tin nhắn khó nói cho khéo.
+- Dịch tài liệu/đoạn chat tiếng nước ngoài, giải thích nghĩa từ lạ.
+- Tóm tắt một văn bản dài (hợp đồng, bài báo, tài liệu học) thành vài ý chính.
+- Giải thích một khái niệm khó theo cách dễ hiểu, kèm ví dụ - như một gia sư riêng.
+- Lên kế hoạch chuyến đi, gợi ý thực đơn theo nguyên liệu đang có, sắp xếp công việc.
+- Viết bài đăng bán hàng, mô tả sản phẩm, kịch bản nội dung.
+
+Đó mới là bề nổi, và phần lớn làm được **miễn phí** với bản dùng thử của các chatbot. Dưới đây là bản đồ đầy đủ hơn về những gì AI làm được.
 
 ## Bản đồ năng lực AI hiện nay
 
-Sáu nhóm năng lực chính mà AI (chủ yếu là GenAI - xem lại [`01-ai-la-gi.md`](01-ai-la-gi.md)) đang làm tốt. Tên công cụ liệt kê bên dưới **đổi rất nhanh** - công cụ hot nhất hôm nay có thể bị thay thế trong vài tháng - nên chỉ coi là ví dụ tham khảo, đừng học thuộc.
+Sáu nhóm năng lực chính mà AI (chủ yếu là GenAI - xem [`01-ai-la-gi.md`](01-ai-la-gi.md)) đang làm tốt. Tên công cụ liệt kê bên dưới **đổi rất nhanh** - công cụ hot nhất hôm nay có thể bị thay thế trong vài tháng - nên chỉ coi là ví dụ tham khảo, đừng học thuộc.
 
 ### Văn bản
 
-AI viết, dịch, tóm tắt văn bản, và ngày càng được dùng nhiều trong chăm sóc khách hàng - trả lời câu hỏi thường gặp, soạn email, viết mô tả sản phẩm. Đây là năng lực "gốc" của LLM (nhắc lại [`02-llm-la-gi.md`](02-llm-la-gi.md)): AI về bản chất xử lý ngôn ngữ, nên mọi việc liên quan tới đọc/hiểu/viết đều làm được ngay từ đầu, không cần huấn luyện thêm gì. Ứng dụng phổ biến: dịch tài liệu, tóm tắt hợp đồng dài, chatbot hỗ trợ khách hàng 24/7.
+AI viết, dịch, tóm tắt văn bản, và ngày càng được dùng nhiều trong chăm sóc khách hàng - trả lời câu hỏi thường gặp, soạn email, viết mô tả sản phẩm. Đây là năng lực "gốc" của LLM (sẽ nói kỹ ở [`02-llm-la-gi.md`](02-llm-la-gi.md)): AI về bản chất xử lý ngôn ngữ, nên mọi việc liên quan tới đọc/hiểu/viết đều làm được ngay từ đầu, không cần huấn luyện thêm gì. Ứng dụng phổ biến: dịch tài liệu, tóm tắt hợp đồng dài, chatbot hỗ trợ khách hàng 24/7.
 
-Công cụ tiêu biểu (tên đổi nhanh, chỉ để tham khảo): Claude, ChatGPT, Gemini - dùng trực tiếp qua giao diện chat, không cần biết code.
+Công cụ tiêu biểu (tên đổi nhanh, chỉ để tham khảo): Claude, ChatGPT, Gemini, Grok - dùng trực tiếp qua giao diện chat, không cần biết code.
 
 ### Code
 
@@ -32,7 +45,7 @@ Công cụ tiêu biểu: các nền tảng tạo video AI (Runway, Sora...), cô
 
 ### Agent & tự động hóa
 
-AI không chỉ trả lời một câu hỏi mà tự lên kế hoạch, gọi công cụ, thực hiện chuỗi nhiều bước để hoàn thành một mục tiêu - đã học kỹ ở [`04-build-ung-dung-ai/03-ai-agent.md`](../04-build-ung-dung-ai/03-ai-agent.md). Ứng dụng: tự động hóa quy trình lặp lại (xử lý email, cập nhật bảng tính), trợ lý tự tìm kiếm và tổng hợp thông tin thay bạn.
+AI không chỉ trả lời một câu hỏi mà tự lên kế hoạch, gọi công cụ, thực hiện chuỗi nhiều bước để hoàn thành một mục tiêu - sẽ học kỹ ở [`04-build-ung-dung-ai/03-ai-agent.md`](../04-build-ung-dung-ai/03-ai-agent.md). Ứng dụng: tự động hóa quy trình lặp lại (xử lý email, cập nhật bảng tính), trợ lý tự tìm kiếm và tổng hợp thông tin thay bạn.
 
 Công cụ tiêu biểu: Claude Code (agent chuyên code), n8n kết hợp AI (xem [`04-build-ung-dung-ai/05-n8n-automation.md`](../04-build-ung-dung-ai/05-n8n-automation.md)).
 
@@ -58,6 +71,4 @@ Nhánh media/video/ảnh hiện **để mở cho cộng đồng đóng góp**. N
 
 ## Bước tiếp theo
 
-Muốn biết rõ hơn AI đang tạo ra những công việc/nghề nào cho con người, xem lại [Các nghề trong AI](05-cac-nghe-trong-ai.md).
-
-Đã có bức tranh đầy đủ về năng lực AI, giờ bắt tay vào học thật: [Bắt đầu từ số 0 →](../01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md)
+Đã thấy bức tranh AI làm được gì, giờ đi vào hiểu bản chất một chút để không bị "khớp" mỗi khi nghe thuật ngữ: [AI, ML, Deep Learning, GenAI khác nhau thế nào?](01-ai-la-gi.md)

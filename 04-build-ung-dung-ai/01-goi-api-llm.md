@@ -20,6 +20,14 @@ Mỗi hãng thường yêu cầu **nạp một khoản tín dụng tối thiểu
 
 **Tuyệt đối không chia sẻ API key công khai** - key này gắn với tài khoản thanh toán của bạn, ai có key đều gọi được API và tính phí vào tài khoản bạn.
 
+### Cách gọn hơn: một cổng gom nhiều model (OpenRouter)
+
+Nếu bạn muốn **thử/đổi qua lại nhiều model của nhiều hãng** (Claude, GPT, Gemini, cả các model mở) mà ngại phải tạo tài khoản + nạp tiền + quản lý key riêng cho từng hãng, có một loại dịch vụ "cổng trung gian" giải quyết đúng việc đó. Phổ biến nhất là **[OpenRouter](https://openrouter.ai)**: bạn tạo **một tài khoản, một API key duy nhất**, nạp tiền một chỗ, rồi gọi được **hàng trăm model của nhiều hãng** chỉ bằng cách đổi tên model trong code - rất tiện để so sánh model nào hợp việc của bạn mà không phải đăng ký lung tung. Đổi lại, OpenRouter cộng thêm một khoản phí nhỏ trên giá gốc của hãng, và dữ liệu đi qua thêm một bên trung gian (cân nhắc nếu dữ liệu nhạy cảm).
+
+Vài dịch vụ tương tự (mỗi cái mạnh một kiểu, kiểm tra trang chủ để biết chi tiết mới nhất): **Together AI**, **Fireworks AI**, **Replicate** (thiên về chạy model mở), **Groq** (nổi tiếng tốc độ phản hồi rất nhanh - lưu ý: Groq là *nền tảng chạy model*, khác với Grok là *model của xAI*, dễ nhầm vì tên gần giống). Hugging Face cũng có Inference API cho nhiều model mở.
+
+**Gợi ý cho người mới:** nếu chỉ dùng cố định một hãng (ví dụ chỉ Claude), lấy key thẳng từ hãng là đơn giản nhất. Nếu muốn nghịch/so sánh nhiều model, OpenRouter tiện hơn hẳn. Cách viết code gọi API bên dưới gần như giống nhau, chỉ khác địa chỉ endpoint và tên model.
+
 ## Bước 2: Lưu API key an toàn
 
 Không bao giờ gõ thẳng API key vào code. Tạo file `.env` ở thư mục gốc dự án:

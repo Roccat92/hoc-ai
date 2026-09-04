@@ -148,7 +148,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'Học AI Việt',
     nav: [
-      { text: 'Bắt đầu học', link: '/00-ban-do-gioi-ai/01-ai-la-gi' },
+      { text: 'Bắt đầu học', link: '/00-ban-do-gioi-ai/00-ai-lam-duoc-gi' },
       { text: 'Từ điển thuật ngữ', link: '/00-ban-do-gioi-ai/06-tu-dien-thuat-ngu' },
       { text: 'Đóng góp', link: '/CONTRIBUTING' },
     ],

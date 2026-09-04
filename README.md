@@ -5,7 +5,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-> Giúp một thế hệ không biết gì công nghệ có kiến thức và tự tin, dù có thể vẫn không kiếm được tiền, nhưng không để họ nuôi thầy vớ vẩn.
+> Giúp người chưa biết gì về công nghệ có kiến thức và tự tin. Có thể bạn vẫn chưa kiếm được tiền ngay, nhưng ít nhất sẽ không mất tiền cho những khóa học không đáng.
 
 ## Sứ mệnh
 
