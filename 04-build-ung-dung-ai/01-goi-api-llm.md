@@ -88,7 +88,23 @@ Ví dụ minh họa cách tính (dùng số giả định để hiểu công th�
 - Nếu giá input là X đồng/1000 token và giá output là Y đồng/1000 token
 - Chi phí = (500/1000 × X) + (300/1000 × Y)
 
-<iframe src="/minh-hoa/token-chi-phi.html" title="Minh họa tương tác: Token và chi phí API" loading="lazy" style="width:100%; height:420px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+<figure style="max-width:560px;margin:24px auto">
+<svg viewBox="0 0 480 206" width="100%" role="img" aria-label="Ba văn bản dài dần tương ứng số token tăng dần, tiền tính theo số token" style="font-family:inherit;display:block">
+  <text x="20" y="45" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px">Một câu hỏi ngắn</text>
+  <rect x="190" y="32" width="8" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35"/>
+  <text x="460" y="45" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:end">≈ 20 token</text>
+  <text x="20" y="85" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px">Một đoạn email</text>
+  <rect x="190" y="72" width="50" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35"/>
+  <text x="460" y="85" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:end">≈ 200 token</text>
+  <text x="20" y="125" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px">Một tài liệu 10 trang</text>
+  <rect x="190" y="112" width="180" height="16" rx="2" style="fill:var(--vp-c-brand-1);fill-opacity:.35"/>
+  <text x="460" y="125" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:end">≈ 5.000 token</text>
+  <text x="240" y="160" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">tiền phải trả = số token × đơn giá</text>
+  <text x="240" y="182" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">Số token chỉ là ước lượng để hình dung.</text>
+  <text x="240" y="197" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">Giá thật thay đổi theo hãng và model, tra trang chính thức.</text>
+</svg>
+<figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Văn bản càng dài, càng nhiều token, càng tốn tiền; giá thật xem trên trang hãng.</figcaption>
+</figure>
 
 **Giá thật của từng model thay đổi thường xuyên** - luôn tra trực tiếp trang pricing chính thức của hãng (đã liệt kê ở [`00-ban-do-gioi-ai/03-cac-cong-ty-va-model.md`](../00-ban-do-gioi-ai/03-cac-cong-ty-va-model.md)) để tính chi phí thật cho dự án của bạn, đừng dựa vào con số cố định trong bài viết bất kỳ.
 
