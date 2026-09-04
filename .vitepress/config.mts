@@ -31,6 +31,7 @@ const sections = [
   { dir: '08-chuan-hoa-du-an', text: 'Chuẩn hóa dự án (nâng cao)' },
   { dir: '09-du-an-thuc-hanh', text: 'Dự án thực hành' },
   { dir: '10-bao-mat', text: 'Bảo mật tối thiểu' },
+  { dir: '11-ra-thi-truong', text: 'Ra thị trường thật (Việt Nam)' },
 ]
 
 // Thứ tự đọc ưu tiên cho 4 file chuẩn trong mỗi thư mục dự án ở 09-du-an-thuc-hanh/.

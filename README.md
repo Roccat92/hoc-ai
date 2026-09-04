@@ -49,6 +49,7 @@ Bạn không cần biết trước bất kỳ thuật ngữ nào. Thấy chữ "
 | [`08-chuan-hoa-du-an/`](08-chuan-hoa-du-an/) | Nâng cao: làm việc với AI có kỷ luật - spec.md, backlog.md, CLAUDE.md, quy trình một phiên làm việc chuẩn |
 | [`09-du-an-thuc-hanh/`](09-du-an-thuc-hanh/) | Dự án thực hành có sẵn spec - copy ra, build, tùy biến thành sản phẩm của riêng bạn |
 | [`10-bao-mat/`](10-bao-mat/) | Checklist bảo mật tối thiểu trước khi cho người khác dùng: SSL, giấu API key, chống bot/spam, đăng nhập an toàn |
+| [`11-ra-thi-truong/`](11-ra-thi-truong/) | Thực tế ở Việt Nam khi ra thị trường: đăng nhập Google/Apple/OTP/Zalo, đưa app lên store (mã D-U-N-S miễn phí), pháp lý cơ bản |
 
 ## Lộ trình gợi ý (8 tuần)
 
@@ -62,7 +63,7 @@ Bạn không cần biết trước bất kỳ thuật ngữ nào. Thấy chữ "
 | 6-7 | Build ứng dụng AI: gọi API, làm chatbot RAG, thử AI agent | `04-build-ung-dung-ai/` |
 | 8 | Tự chọn một ý tưởng, tự build từ đầu đến khi deploy được - dự án riêng của bạn | Toàn bộ những gì đã học |
 
-Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng cao, có thể học sau tuần 8 khi đã có nhu cầu cụ thể - xem `05-train-va-finetune/`. Khi dự án của bạn lớn hơn, làm qua nhiều phiên, nhiều ngày - học cách làm việc với AI có kỷ luật ở `08-chuan-hoa-du-an/`, rồi luyện tập ngay quy trình đó với spec có sẵn ở `09-du-an-thuc-hanh/`. Trước khi cho người khác dùng thử sản phẩm, đi qua checklist bảo mật tối thiểu ở `10-bao-mat/`.
+Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng cao, có thể học sau tuần 8 khi đã có nhu cầu cụ thể - xem `05-train-va-finetune/`. Khi dự án của bạn lớn hơn, làm qua nhiều phiên, nhiều ngày - học cách làm việc với AI có kỷ luật ở `08-chuan-hoa-du-an/`, rồi luyện tập ngay quy trình đó với spec có sẵn ở `09-du-an-thuc-hanh/`. Trước khi cho người khác dùng thử sản phẩm, đi qua checklist bảo mật tối thiểu ở `10-bao-mat/`. Và khi đưa sản phẩm ra thị trường thật ở Việt Nam (đăng nhập, lên store, pháp lý), xem `11-ra-thi-truong/` - những thứ thực tế mà gần như không nơi nào dạy miễn phí.
 
 ## Chi phí thực tế tối thiểu
 

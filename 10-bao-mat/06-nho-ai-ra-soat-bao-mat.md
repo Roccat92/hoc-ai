@@ -46,3 +46,7 @@ Rà soát bằng AI + checklist trong phần này là mức **"đủ an toàn đ
 ## Tổng kết phần 10
 
 Sáu bài trong phần này ([1](01-checklist-truoc-khi-public.md) đến bài này) cho bạn một checklist thực dụng - không phải để biến bạn thành chuyên gia bảo mật, mà để tránh những lỗi phổ biến nhất khiến sản phẩm của người mới dễ bị tấn công nhất. Áp dụng đều đặn trước mỗi lần public sản phẩm mới, và đừng ngại nhờ AI kiểm tra lại - hỏi thêm một lần không bao giờ thừa.
+
+## Bước tiếp theo
+
+Sản phẩm đã build xong, đã bảo mật cơ bản - giờ là những chuyện thực tế khi đưa nó ra thị trường thật ở Việt Nam (đăng nhập, lên store, pháp lý): [Ra thị trường thật →](../11-ra-thi-truong/)
