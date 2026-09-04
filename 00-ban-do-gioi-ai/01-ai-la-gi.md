@@ -6,7 +6,40 @@ Bài này dành cho người **chưa từng học AI ngày nào**, nghe người
 
 Đừng nghĩ AI, ML, Deep Learning, GenAI là bốn thứ ngang hàng, tách biệt. Chúng là **các vòng tròn lồng vào nhau**, cái sau là một phần nhỏ hơn, chuyên biệt hơn của cái trước:
 
-<iframe src="/minh-hoa/ai-ml-dl-genai.html" title="Minh họa: AI, Machine Learning, Deep Learning và Generative AI" loading="lazy" style="width:100%; height:420px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
+<figure style="max-width:560px;margin:24px auto">
+<svg viewBox="0 0 480 300" width="100%" role="img" aria-label="Bốn vòng tròn lồng nhau: AI chứa Máy học, Máy học chứa Học sâu, Học sâu chứa AI tạo sinh" style="font-family:inherit;display:block">
+  <g style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5">
+    <circle cx="140" cy="150" r="120"/>
+    <circle cx="140" cy="180" r="90"/>
+    <circle cx="140" cy="210" r="60"/>
+    <circle cx="140" cy="240" r="30" style="stroke-opacity:1;stroke-width:2"/>
+  </g>
+  <g style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">
+    <text x="140" y="55">AI</text>
+    <text x="140" y="115">Máy học</text>
+    <text x="140" y="175">Học sâu</text>
+    <text x="140" y="238" style="font-size:11px">AI</text>
+    <text x="140" y="251" style="font-size:11px">tạo sinh</text>
+  </g>
+  <g style="fill:currentColor;font-size:14px;font-weight:600">
+    <text x="290" y="60">AI</text>
+    <text x="290" y="120">Máy học</text>
+    <text x="290" y="180">Học sâu</text>
+    <text x="290" y="240">AI tạo sinh</text>
+  </g>
+  <g style="fill:var(--vp-c-text-2);font-size:12px">
+    <text x="290" y="78">Máy làm việc "thông minh"</text>
+    <text x="290" y="93">GPS, bot chơi cờ</text>
+    <text x="290" y="138">AI tự học từ dữ liệu</text>
+    <text x="290" y="153">Bộ lọc thư rác</text>
+    <text x="290" y="198">Máy học dùng mạng neural</text>
+    <text x="290" y="213">Nhận diện khuôn mặt</text>
+    <text x="290" y="258">Học sâu tạo nội dung mới</text>
+    <text x="290" y="273">ChatGPT, Claude</text>
+  </g>
+</svg>
+<figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Cái sau nằm trọn trong cái trước: AI tạo sinh ⊂ Học sâu ⊂ Máy học ⊂ AI.</figcaption>
+</figure>
 
 Nói cách khác: **mọi GenAI đều là Deep Learning, mọi Deep Learning đều là Machine Learning, mọi Machine Learning đều là AI** - nhưng chiều ngược lại thì không đúng.
 
