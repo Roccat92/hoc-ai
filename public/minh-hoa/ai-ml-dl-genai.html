@@ -6,18 +6,18 @@
 <title>Minh họa: AI, ML, Deep Learning và GenAI</title>
 <style>
   :root{
-    --bg:#fbfcfa; --surface:#f2f5f1; --fg:#17201d; --muted:#65716d;
-    --line:#d7dedb; --line-strong:#aebbb6; --accent:#2f6f6a; --accent-soft:#2f6f6a20;
+    --bg:#fcfdfa; --surface:#f1f5f2; --fg:#101916; --muted:#52615c;
+    --line:#cdd8d3; --line-strong:#82968e; --accent:#176f67; --accent-soft:#176f6729;
   }
   @media (prefers-color-scheme:dark){
     :root:not([data-theme="light"]){
-      --bg:#171a19; --surface:#1d2220; --fg:#edf2ef; --muted:#98a49f;
-      --line:#303a36; --line-strong:#53625d; --accent:#5bb3ab; --accent-soft:#5bb3ab1f;
+      --bg:#0f1412; --surface:#151c19; --fg:#f3f8f5; --muted:#a9b9b3;
+      --line:#2e3d37; --line-strong:#71877f; --accent:#63ddd1; --accent-soft:#63ddd12e;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#171a19; --surface:#1d2220; --fg:#edf2ef; --muted:#98a49f;
-    --line:#303a36; --line-strong:#53625d; --accent:#5bb3ab; --accent-soft:#5bb3ab1f;
+    --bg:#0f1412; --surface:#151c19; --fg:#f3f8f5; --muted:#a9b9b3;
+    --line:#2e3d37; --line-strong:#71877f; --accent:#63ddd1; --accent-soft:#63ddd12e;
   }
   *{box-sizing:border-box}
   html,body{margin:0}
@@ -41,14 +41,14 @@
   }
   .ring::before{content:attr(data-n);position:absolute;top:9%;left:16%;color:var(--muted);font:11px ui-monospace,SFMono-Regular,Consolas,monospace}
   .ring.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
-  .ring.active{border:2px solid var(--accent);background:var(--accent-soft);filter:drop-shadow(0 0 8px var(--accent-soft))}
+  .ring.active{border:2px solid var(--accent);background:var(--accent-soft);filter:drop-shadow(0 0 14px var(--accent));animation:focus-ring .8s cubic-bezier(.16,1.22,.3,1) both}
   .ring-ai{width:270px;height:270px}.ring-ml{width:204px;height:204px}.ring-dl{width:138px;height:138px}.ring-gen{width:72px;height:72px;background:var(--bg)}
   .ring-gen::before{display:none}
   .core{position:absolute;z-index:3;left:48%;top:50%;transform:translate(-50%,-50%) scale(.7);opacity:0;text-align:center;color:var(--accent);font-weight:700;font-size:12px;line-height:1.15;transition:opacity .4s,transform .65s cubic-bezier(.16,1.22,.3,1)}
   .core.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
   .legend{position:absolute;z-index:4;right:14px;top:42px;bottom:38px;width:39%;display:grid;align-content:center;gap:2px}
   .item{appearance:none;width:100%;display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:center;padding:7px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--fg);text-align:left;font:inherit;cursor:pointer;opacity:.34;transform:translateX(12px);transition:opacity .35s,transform .45s ease,color .25s}
-  .item.visible{opacity:.68;transform:none}.item.active{opacity:1;color:var(--accent)}
+  .item.visible{opacity:.78;transform:none}.item.active{opacity:1;color:var(--accent)}
   .num{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted)}
   .name{display:block;font-weight:700;font-size:13px}.desc{display:block;color:var(--muted);font-size:11px;margin-top:1px}
   .item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -62,7 +62,8 @@
     .legend{right:9px;top:40px;bottom:28px;width:42%;gap:0}.item{grid-template-columns:20px 1fr;gap:4px;padding:6px 0}.name{font-size:11px}.desc{font-size:10px;line-height:1.2}
     .rule{right:9px;bottom:17px;width:42%}.caption{font-size:12px;line-height:1.35}
   }
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+  @keyframes focus-ring{0%{transform:translate(-50%,-50%) scale(.72);opacity:.2}72%{transform:translate(-50%,-50%) scale(1.035);opacity:1}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
+  @media(prefers-reduced-motion:reduce){:root:not([data-force-motion="true"]) *{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -99,15 +100,17 @@
     document.getElementById('rule').classList.toggle('visible',target>=3);
     caption.textContent=(manual?'Xem lại: ':'Bước '+(target+1)+': ')+concepts[target].text;
   }
-  function play(){
+  function play(forceMotion){
     clearTimeout(timer);clearTimeout(cycle);reset();index=0;
-    if(reduce){showThrough(3,false);caption.textContent='AI là vòng lớn nhất; Machine Learning nằm trong AI; Deep Learning nằm trong ML; Generative AI nằm trong Deep Learning.';return}
+    if(reduce&&!forceMotion){showThrough(3,false);caption.textContent='AI là vòng lớn nhất; Machine Learning nằm trong AI; Deep Learning nằm trong ML; Generative AI nằm trong Deep Learning.';document.getElementById('replay').textContent='Xem chuyển động';return}
+    if(forceMotion)document.documentElement.dataset.forceMotion='true';
+    document.getElementById('replay').textContent='Chạy lại';
     (function next(){
-      if(index>=concepts.length){caption.textContent='Kết luận: cái sau là một nhánh chuyên biệt nằm bên trong cái trước. Bạn có thể bấm từng tên để xem lại.';cycle=setTimeout(play,4200);return}
+      if(index>=concepts.length){caption.textContent='Kết luận: cái sau là một nhánh chuyên biệt nằm bên trong cái trước. Bạn có thể bấm từng tên để xem lại.';if(!reduce)cycle=setTimeout(function(){play(false)},4200);return}
       showThrough(index,false);index++;timer=setTimeout(next,1900);
     })();
   }
-  document.getElementById('replay').addEventListener('click',play);play();
+  document.getElementById('replay').addEventListener('click',function(){play(true)});play(false);
   function reportHeight(){try{parent.postMessage({type:'minhhoa-height',height:document.body.scrollHeight},'*')}catch(error){}}
   addEventListener('load',reportHeight);if(window.ResizeObserver)new ResizeObserver(reportHeight).observe(document.body);
 })();
