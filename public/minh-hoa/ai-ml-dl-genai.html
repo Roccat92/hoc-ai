@@ -6,117 +6,92 @@
 <title>Minh họa: AI, ML, Deep Learning và GenAI</title>
 <style>
   :root{
-    --bg:#fcfdfa; --surface:#f1f5f2; --fg:#101916; --muted:#52615c;
-    --line:#cdd8d3; --line-strong:#82968e; --accent:#176f67; --accent-soft:#176f6729;
+    --bg:#fbfcfa;--panel:#fff;--fg:#13201c;--muted:#53635d;--line:#a8b8b2;
+    --accent:#176f67;--accent-soft:#176f6728;--layer-1:#eef4f1;--layer-2:#e5eeea;--layer-3:#d9e8e2;
   }
-  @media (prefers-color-scheme:dark){
+  @media(prefers-color-scheme:dark){
     :root:not([data-theme="light"]){
-      --bg:#0f1412; --surface:#151c19; --fg:#f3f8f5; --muted:#a9b9b3;
-      --line:#2e3d37; --line-strong:#71877f; --accent:#63ddd1; --accent-soft:#63ddd12e;
+      --bg:#0f1412;--panel:#151c19;--fg:#f3f8f5;--muted:#acbbb5;--line:#70837c;
+      --accent:#63ddd1;--accent-soft:#63ddd130;--layer-1:#17221e;--layer-2:#1b2a25;--layer-3:#20352e;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#0f1412; --surface:#151c19; --fg:#f3f8f5; --muted:#a9b9b3;
-    --line:#2e3d37; --line-strong:#71877f; --accent:#63ddd1; --accent-soft:#63ddd12e;
+    --bg:#0f1412;--panel:#151c19;--fg:#f3f8f5;--muted:#acbbb5;--line:#70837c;
+    --accent:#63ddd1;--accent-soft:#63ddd130;--layer-1:#17221e;--layer-2:#1b2a25;--layer-3:#20352e;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;height:100%;overflow:hidden}
-  body{padding:10px;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;grid-template-rows:minmax(0,1fr) auto auto;gap:6px}
-  .stage{
-    position:relative;width:100%;height:100%;min-height:0;max-height:300px;max-width:760px;margin:0 auto;overflow:hidden;
-    border:1px solid var(--line-strong);background:var(--surface);
+  html,body{height:100%;margin:0;overflow:hidden}
+  body{padding:8px;background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+  .stage{width:100%;height:100%;max-width:760px;margin:auto;border:1px solid var(--line);background:var(--panel);display:grid;grid-template-rows:48px minmax(0,1fr) 64px;overflow:hidden}
+  .topbar{padding:0 12px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .title strong{display:block;font-size:14px}.title span{display:block;color:var(--muted);font-size:11px;margin-top:1px}
+  .controls{display:flex;gap:6px;flex:none}.icon-btn{width:32px;height:32px;padding:0;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--fg);display:grid;place-items:center;cursor:pointer}.icon-btn.primary{border-color:var(--accent);background:var(--accent);color:var(--bg)}.icon-btn svg{width:14px;height:14px}.icon-btn:focus-visible,.bubble-label:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .content{display:grid;grid-template-columns:54% 46%;min-height:0}
+  .map{position:relative;display:grid;place-items:center;overflow:hidden;background:var(--bg)}
+  .nest{position:relative;width:280px;height:260px}
+  .bubble{position:absolute;border:1px solid var(--line);border-radius:50%;opacity:.16;transform:scale(.76);transition:opacity .35s,transform .65s cubic-bezier(.16,1.18,.3,1),border-color .3s,background-color .3s,box-shadow .3s;pointer-events:none}
+  .bubble.revealed{opacity:1;transform:scale(1)}.bubble.active{border:2px solid var(--accent);box-shadow:0 0 0 5px var(--accent-soft);animation:arrive .72s cubic-bezier(.16,1.2,.3,1) both}
+  .bubble-ai{left:8px;top:4px;width:250px;height:250px;background:var(--layer-1);z-index:1}.bubble-ml{left:52px;top:49px;width:196px;height:196px;background:var(--layer-2);z-index:2}.bubble-dl{left:92px;top:89px;width:142px;height:142px;background:var(--layer-3);z-index:3}.bubble-gen{left:126px;top:123px;width:76px;height:76px;background:var(--panel);z-index:4}
+  .bubble-label{position:absolute;z-index:8;padding:0;border:0;background:transparent;color:var(--fg);font:inherit;font-weight:750;text-align:left;opacity:0;transition:opacity .3s,color .3s;pointer-events:auto;cursor:pointer}.bubble-label.visible{opacity:1}.bubble-label.active{color:var(--accent)}.label-ai{left:30px;top:22px}.label-ml{left:71px;top:65px}.label-dl{left:109px;top:105px}.label-gen{left:140px;top:148px;text-align:center;font-size:12px;line-height:1.1}
+  .explain{align-self:stretch;padding:22px 18px;border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;min-width:0}
+  .eyebrow{color:var(--accent);font-size:12px;font-weight:700;margin-bottom:8px}.plain{font-size:21px;line-height:1.18;letter-spacing:-.015em;max-width:280px}.example{margin-top:14px;color:var(--muted);font-size:13px}.example strong{color:var(--fg)}
+  .explain.change .eyebrow,.explain.change .plain,.explain.change .example{animation:text-in .45s ease both}.explain.change .plain{animation-delay:.05s}.explain.change .example{animation-delay:.1s}
+  .footer{border-top:1px solid var(--line);padding:8px 12px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center}.steps{display:flex;gap:5px}.step{width:18px;height:3px;background:var(--line);transition:background .25s,width .25s}.step.on{width:30px;background:var(--accent)}.caption{margin:0;color:var(--muted);font-size:12px;line-height:1.3}
+  @keyframes arrive{0%{transform:scale(.78);opacity:.2}72%{transform:scale(1.035);opacity:1}100%{transform:scale(1);opacity:1}}
+  @keyframes text-in{0%{opacity:0;transform:translateY(7px)}100%{opacity:1;transform:none}}
+  @media(max-width:520px){
+    .stage{grid-template-rows:46px minmax(0,1fr) 68px}.content{grid-template-columns:1fr;grid-template-rows:190px minmax(0,1fr)}.title strong{font-size:13px}.title span{font-size:10px}.map{overflow:hidden;border-bottom:1px solid var(--line)}.nest{transform:scale(.7)}
+    .explain{border-left:0;padding:7px 11px;justify-content:center}.eyebrow{font-size:10px;margin-bottom:3px}.plain{font-size:15px;max-width:none}.example{font-size:11px;margin-top:5px}.footer{padding:7px 9px;gap:8px}.step{width:12px}.step.on{width:20px}.caption{font-size:11px}
   }
-  .meta{position:absolute;z-index:3;top:12px;left:14px;color:var(--muted);font-size:11px;letter-spacing:.04em}
-  .index{position:absolute;z-index:3;right:14px;top:10px;color:var(--line-strong);font:12px ui-monospace,SFMono-Regular,Consolas,monospace}
-  .map{position:absolute;z-index:2;left:3%;top:24px;width:58%;height:calc(100% - 28px)}
-  .ring{
-    position:absolute;left:48%;top:50%;border:1px solid var(--line-strong);border-radius:50%;
-    transform:translate(-50%,-50%) scale(.72);opacity:0;
-    transition:opacity .42s ease,transform .7s cubic-bezier(.16,1.22,.3,1),border-color .32s,background-color .32s,filter .32s;
-  }
-  .ring::before{content:attr(data-n);position:absolute;top:9%;left:16%;color:var(--muted);font:11px ui-monospace,SFMono-Regular,Consolas,monospace}
-  .ring.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
-  .ring.active{border:2px solid var(--accent);background:var(--accent-soft);filter:drop-shadow(0 0 14px var(--accent));animation:focus-ring .8s cubic-bezier(.16,1.22,.3,1) both}
-  .ring-ai{width:240px;height:240px}.ring-ml{width:182px;height:182px}.ring-dl{width:124px;height:124px}.ring-gen{width:68px;height:68px;background:var(--bg)}
-  .ring-gen::before{display:none}
-  .core{position:absolute;z-index:3;left:48%;top:50%;transform:translate(-50%,-50%) scale(.7);opacity:0;text-align:center;color:var(--accent);font-weight:700;font-size:12px;line-height:1.15;transition:opacity .4s,transform .65s cubic-bezier(.16,1.22,.3,1)}
-  .core.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
-  .legend{position:absolute;z-index:4;right:14px;top:42px;bottom:38px;width:39%;display:grid;align-content:center;gap:2px}
-  .item{appearance:none;width:100%;display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:center;padding:7px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--fg);text-align:left;font:inherit;cursor:pointer;opacity:.34;transform:translateX(12px);transition:opacity .35s,transform .45s ease,color .25s}
-  .item.visible{opacity:.78;transform:none}.item.active{opacity:1;color:var(--accent)}
-  .num{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted)}
-  .name{display:block;font-weight:700;font-size:13px}.desc{display:block;color:var(--muted);font-size:11px;margin-top:1px}
-  .item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .rule{position:absolute;z-index:4;right:14px;bottom:24px;width:39%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .55s ease}.rule.visible{transform:scaleX(1)}
-  .caption{min-height:2.7em;max-width:760px;width:100%;margin:0 auto;color:var(--fg);font-size:13px}
-  .controls{max-width:760px;width:100%;height:34px;margin:0 auto;display:flex;gap:7px;align-items:center}
-  .icon-btn{width:34px;height:34px;padding:0;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface);color:var(--fg);display:grid;place-items:center;cursor:pointer}
-  .icon-btn.primary{border-color:var(--accent);background:var(--accent);color:var(--bg)}.icon-btn svg{width:15px;height:15px;display:block}.icon-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  @media(max-width:470px){
-    body{padding:7px}.stage{max-height:290px}.meta{top:8px;left:9px}.index{right:9px;top:7px}
-    .map{left:-8%;top:28px;width:72%;height:calc(100% - 30px)}
-    .ring-ai{width:220px;height:220px}.ring-ml{width:166px;height:166px}.ring-dl{width:112px;height:112px}.ring-gen{width:60px;height:60px}
-    .legend{right:9px;top:40px;bottom:28px;width:42%;gap:0}.item{grid-template-columns:20px 1fr;gap:4px;padding:6px 0}.name{font-size:11px}.desc{font-size:10px;line-height:1.2}
-    .rule{right:9px;bottom:17px;width:42%}.caption{font-size:12px;line-height:1.3}
-  }
-  @keyframes focus-ring{0%{transform:translate(-50%,-50%) scale(.72);opacity:.2}72%{transform:translate(-50%,-50%) scale(1.035);opacity:1}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
   @media(prefers-reduced-motion:reduce){:root:not([data-force-motion="true"]) *{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-  <div class="stage" id="stage"></div>
-  <p class="caption" id="caption" aria-live="polite"></p>
-  <div class="controls">
-    <button class="icon-btn primary" id="play" type="button" aria-label="Phát hoạt cảnh" title="Phát hoạt cảnh">
-      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.2 13.2 8 3 13.8Z" fill="currentColor"/></svg>
-    </button>
-    <button class="icon-btn" id="replay" type="button" aria-label="Chạy lại" title="Chạy lại">
-      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.1 5.2A6 6 0 1 1 2 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M3.1 1.8v3.4H6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
+<section class="stage" aria-label="Bốn lớp lồng nhau của AI">
+  <header class="topbar">
+    <div class="title"><strong>Bốn lớp lồng nhau</strong><span>Từ khái niệm rộng nhất đến nhánh chuyên biệt nhất</span></div>
+    <div class="controls">
+      <button class="icon-btn primary" id="play" type="button" aria-label="Phát hoạt cảnh" title="Phát hoạt cảnh"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.2 13.2 8 3 13.8Z" fill="currentColor"/></svg></button>
+      <button class="icon-btn" id="replay" type="button" aria-label="Chạy lại" title="Chạy lại"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.1 5.2A6 6 0 1 1 2 9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M3.1 1.8v3.4H6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </header>
+  <div class="content">
+    <div class="map">
+      <div class="nest" id="nest">
+        <div class="bubble bubble-ai" id="bubble-ai"></div><button class="bubble-label label-ai" id="label-ai" data-index="0" type="button">AI</button>
+        <div class="bubble bubble-ml" id="bubble-ml"></div><button class="bubble-label label-ml" id="label-ml" data-index="1" type="button">Máy học</button>
+        <div class="bubble bubble-dl" id="bubble-dl"></div><button class="bubble-label label-dl" id="label-dl" data-index="2" type="button">Học sâu</button>
+        <div class="bubble bubble-gen" id="bubble-gen"></div><button class="bubble-label label-gen" id="label-gen" data-index="3" type="button">AI<br>tạo sinh</button>
+      </div>
+    </div>
+    <aside class="explain" id="explain"><div class="eyebrow" id="eyebrow"></div><strong class="plain" id="plain"></strong><div class="example" id="example"></div></aside>
   </div>
+  <footer class="footer"><div class="steps"><span class="step" id="step-0"></span><span class="step" id="step-1"></span><span class="step" id="step-2"></span><span class="step" id="step-3"></span></div><p class="caption" id="caption" aria-live="polite"></p></footer>
+</section>
 <script>
 (function(){
-  var selectedTheme=new URLSearchParams(location.search).get('theme');
-  if(selectedTheme==='dark'||selectedTheme==='light')document.documentElement.dataset.theme=selectedTheme;
+  var theme=new URLSearchParams(location.search).get('theme');if(theme==='dark'||theme==='light')document.documentElement.dataset.theme=theme;
   addEventListener('message',function(event){if(event.data&&(event.data.theme==='dark'||event.data.theme==='light'))document.documentElement.dataset.theme=event.data.theme});
-
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var stage=document.getElementById('stage'),caption=document.getElementById('caption');
-  var timer=null,cycle=null,index=0;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,timer=null,cycle=null,current=0;
   var concepts=[
-    {id:'ai',name:'AI',desc:'Khái niệm rộng nhất',text:'AI bao gồm mọi hệ thống làm việc vốn cần trí thông minh — kể cả hệ thống chỉ chạy theo luật.'},
-    {id:'ml',name:'Machine Learning',desc:'Học quy luật từ dữ liệu',text:'Machine Learning nằm trong AI: thay vì viết mọi luật bằng tay, ta cho máy học từ dữ liệu.'},
-    {id:'dl',name:'Deep Learning',desc:'Mạng neural nhiều lớp',text:'Deep Learning nằm trong Machine Learning và dùng mạng neural nhiều lớp để học đặc trưng.'},
-    {id:'gen',name:'Generative AI',desc:'Tạo nội dung mới',text:'Generative AI nằm trong Deep Learning, chuyên tạo văn bản, hình ảnh, âm thanh, video hoặc code.'}
+    {id:'ai',kicker:'AI · Trí tuệ nhân tạo',plain:'Máy làm một việc trông có vẻ thông minh.',example:'Ví dụ: <strong>GPS tìm đường, bot chơi cờ.</strong>',caption:'AI là chiếc vòng lớn nhất. Một hệ thống AI có thể học từ dữ liệu, hoặc chỉ chạy theo luật viết sẵn.'},
+    {id:'ml',kicker:'Machine Learning · Máy học',plain:'Một phần của AI biết học quy luật từ dữ liệu.',example:'Ví dụ: <strong>bộ lọc thư rác tự học.</strong>',caption:'Máy học nằm trọn bên trong AI — mọi hệ thống máy học đều là AI.'},
+    {id:'dl',kicker:'Deep Learning · Học sâu',plain:'Một phần của máy học dùng mạng neural nhiều lớp.',example:'Ví dụ: <strong>nhận diện khuôn mặt.</strong>',caption:'Học sâu nằm trong máy học — đây là một cách chuyên biệt để máy học từ dữ liệu.'},
+    {id:'gen',kicker:'Generative AI · AI tạo sinh',plain:'Một phần của học sâu chuyên tạo nội dung mới.',example:'Ví dụ: <strong>ChatGPT, Claude, công cụ tạo ảnh.</strong>',caption:'AI tạo sinh nằm trong học sâu. Nó tạo chữ, ảnh, âm thanh, video hoặc code mới.'}
   ];
-
-  function reset(){
-    stage.innerHTML='<div class="meta">Bản đồ khái niệm</div><div class="index">01—04</div><div class="map"><div class="ring ring-ai" id="ring-ai" data-n="01"></div><div class="ring ring-ml" id="ring-ml" data-n="02"></div><div class="ring ring-dl" id="ring-dl" data-n="03"></div><div class="ring ring-gen" id="ring-gen"></div><div class="core" id="core">Gen<br>AI</div></div><div class="legend">'+concepts.map(function(c,n){return '<button class="item" id="item-'+c.id+'" data-i="'+n+'" type="button"><span class="num">0'+(n+1)+'</span><span><span class="name">'+c.name+'</span><span class="desc">'+c.desc+'</span></span></button>'}).join('')+'</div><div class="rule" id="rule"></div>';
-    Array.prototype.forEach.call(stage.querySelectorAll('.item'),function(button){button.addEventListener('click',function(){clearTimeout(timer);clearTimeout(cycle);showThrough(+button.dataset.i,true)})});
+  function clearState(){concepts.forEach(function(c,n){document.getElementById('bubble-'+c.id).className='bubble bubble-'+c.id;document.getElementById('label-'+c.id).className='bubble-label label-'+c.id;document.getElementById('step-'+n).className='step'})}
+  function show(index,manual){
+    current=index;concepts.forEach(function(c,n){var bubble=document.getElementById('bubble-'+c.id),label=document.getElementById('label-'+c.id);bubble.classList.toggle('revealed',n<=index);label.classList.toggle('visible',n<=index);bubble.classList.toggle('active',n===index);label.classList.toggle('active',n===index);document.getElementById('step-'+n).classList.toggle('on',n===index)});
+    var c=concepts[index],panel=document.getElementById('explain');panel.classList.remove('change');void panel.offsetWidth;panel.classList.add('change');document.getElementById('eyebrow').textContent=c.kicker;document.getElementById('plain').textContent=c.plain;document.getElementById('example').innerHTML=c.example;document.getElementById('caption').textContent=(manual?'Xem lại: ':'')+c.caption;
   }
-  function showThrough(target,manual){
-    concepts.forEach(function(c,n){
-      var ring=document.getElementById('ring-'+c.id),item=document.getElementById('item-'+c.id);
-      ring.classList.toggle('visible',n<=target);item.classList.toggle('visible',n<=target);
-      ring.classList.toggle('active',n===target);item.classList.toggle('active',n===target);
-    });
-    document.getElementById('core').classList.toggle('visible',target>=3);
-    document.getElementById('rule').classList.toggle('visible',target>=3);
-    caption.textContent=(manual?'Xem lại: ':'Bước '+(target+1)+': ')+concepts[target].text;
+  function play(force){
+    clearTimeout(timer);clearTimeout(cycle);clearState();current=0;if(force)document.documentElement.dataset.forceMotion='true';
+    if(reduce&&!force){show(3,false);document.getElementById('play').setAttribute('aria-label','Xem chuyển động');return}
+    (function next(){if(current>=concepts.length){document.getElementById('caption').textContent='Chốt lại: AI tạo sinh nằm trong Học sâu, Học sâu nằm trong Máy học, và Máy học nằm trong AI.';if(!reduce)cycle=setTimeout(function(){play(false)},4200);return}show(current,false);current++;timer=setTimeout(next,2100)})();
   }
-  function play(forceMotion){
-    clearTimeout(timer);clearTimeout(cycle);reset();index=0;
-    if(reduce&&!forceMotion){showThrough(3,false);caption.textContent='AI là vòng lớn nhất; Machine Learning nằm trong AI; Deep Learning nằm trong ML; Generative AI nằm trong Deep Learning.';document.getElementById('play').setAttribute('aria-label','Xem chuyển động');return}
-    if(forceMotion)document.documentElement.dataset.forceMotion='true';
-    (function next(){
-      if(index>=concepts.length){caption.textContent='Kết luận: cái sau là một nhánh chuyên biệt nằm bên trong cái trước. Bạn có thể bấm từng tên để xem lại.';if(!reduce)cycle=setTimeout(function(){play(false)},4200);return}
-      showThrough(index,false);index++;timer=setTimeout(next,1900);
-    })();
-  }
-  document.getElementById('play').addEventListener('click',function(){play(true)});
-  document.getElementById('replay').addEventListener('click',function(){play(true)});play(false);
-  function reportHeight(){try{parent.postMessage({type:'minhhoa-height',height:document.body.scrollHeight},'*')}catch(error){}}
-  addEventListener('load',reportHeight);if(window.ResizeObserver)new ResizeObserver(reportHeight).observe(document.body);
+  Array.prototype.forEach.call(document.querySelectorAll('.bubble-label'),function(button){button.addEventListener('click',function(){clearTimeout(timer);clearTimeout(cycle);show(+button.dataset.index,true)})});
+  document.getElementById('play').addEventListener('click',function(){play(true)});document.getElementById('replay').addEventListener('click',function(){play(true)});play(false);
+  function report(){try{parent.postMessage({type:'minhhoa-height',height:document.body.scrollHeight},'*')}catch(error){}}addEventListener('load',report);if(window.ResizeObserver)new ResizeObserver(report).observe(document.body);
 })();
 </script>
 </body>
