@@ -7,7 +7,7 @@ Bắt đầu làm ra sản phẩm thật. Cài Claude Code, biết các AI IDE k
 ## Các bài trong phần này
 
 1. [Claude Code: cài đặt, đăng nhập, lệnh cơ bản, CLAUDE.md, chi phí](01-claude-code.md)
-2. [Cursor, Windsurf, Copilot — so sánh các AI IDE, chọn cái nào?](02-cursor-windsurf-copilot.md)
+2. [Cursor, Windsurf, Copilot - so sánh các AI IDE, chọn cái nào?](02-cursor-windsurf-copilot.md)
 3. [Build dự án đầu tiên: một web app hoàn chỉnh chỉ bằng mô tả tiếng Việt](03-du-an-dau-tien.md)
 4. [Đọc hiểu code AI viết ra, hỏi lại AI khi không hiểu](04-doc-hieu-code-ai-viet.md)
 5. [Git, GitHub cơ bản: lưu code, đẩy lên GitHub, không sợ mất](05-git-github-co-ban.md)

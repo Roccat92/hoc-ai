@@ -2,7 +2,7 @@
 
 Nơi tiếp tục tự học sau khi đi hết lộ trình: repo GitHub đáng đọc, khóa học miễn phí chất lượng, kho Claude skills và MCP server, cộng đồng tiếng Việt, và các kênh để không bị lạc hậu trong ngành thay đổi theo tuần.
 
-Đây là phần **cộng đồng cần cập nhật thường xuyên nhất** — link chết, kênh mới, group mới — xem cách đóng góp ở [CONTRIBUTING.md](../CONTRIBUTING.md).
+Đây là phần **cộng đồng cần cập nhật thường xuyên nhất** - link chết, kênh mới, group mới - xem cách đóng góp ở [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Các bài trong phần này
 

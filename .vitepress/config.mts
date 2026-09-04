@@ -41,10 +41,10 @@ function headingOf(file: string): string {
   return match ? match[1].trim() : path.basename(file, '.md')
 }
 
-// Rút gọn tiêu đề cho sidebar: cắt ở dấu ":" hoặc "—" đầu tiên, không để ngoặc mở lửng.
+// Rút gọn tiêu đề cho sidebar: cắt ở dấu ":" hoặc " - " đầu tiên, không để ngoặc mở lửng.
 function shortTitle(title: string): string {
   let short = title
-  for (const sep of [': ', ' — ', ' – ']) {
+  for (const sep of [': ', ' - ']) {
     const i = short.indexOf(sep)
     if (i > 0) {
       short = short.slice(0, i)
@@ -173,8 +173,8 @@ export default defineConfig({
       linkText: 'Về trang chủ',
     },
     footer: {
-      message: 'Phát hành theo giấy phép MIT — dùng, sửa, chia sẻ lại thoải mái.',
-      copyright: '© 2026 Học AI Việt — cộng đồng đóng góp',
+      message: 'Phát hành theo giấy phép MIT - dùng, sửa, chia sẻ lại thoải mái.',
+      copyright: '© 2026 Học AI Việt - cộng đồng đóng góp',
     },
     search: {
       provider: 'local',

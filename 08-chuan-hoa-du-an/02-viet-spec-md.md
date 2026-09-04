@@ -1,10 +1,10 @@
 # Viết spec.md: template chuẩn, có ví dụ điền sẵn
 
-Bài này dành cho người đã hiểu [vì sao cần spec](01-tai-sao-can-spec.md) và muốn viết file spec.md đầu tiên của mình. Học xong bạn sẽ có một file spec.md hoàn chỉnh cho dự án đang định làm — kể cả khi bạn chưa từng viết tài liệu kỹ thuật nào trước đây.
+Bài này dành cho người đã hiểu [vì sao cần spec](01-tai-sao-can-spec.md) và muốn viết file spec.md đầu tiên của mình. Học xong bạn sẽ có một file spec.md hoàn chỉnh cho dự án đang định làm - kể cả khi bạn chưa từng viết tài liệu kỹ thuật nào trước đây.
 
 ## spec.md là gì, đặt ở đâu?
 
-`spec.md` là một file văn bản (markdown) đặt ở **thư mục gốc dự án**, mô tả toàn bộ ý tưởng sản phẩm ở một chỗ duy nhất — giống một bản tóm tắt bạn đưa cho một người mới vào dự án để họ hiểu ngay "đang làm cái gì, cho ai, làm tới đâu thì dừng". AI (và cả bạn, sau vài tuần quên mất chi tiết) sẽ đọc file này mỗi khi cần nhớ lại toàn cảnh.
+`spec.md` là một file văn bản (markdown) đặt ở **thư mục gốc dự án**, mô tả toàn bộ ý tưởng sản phẩm ở một chỗ duy nhất - giống một bản tóm tắt bạn đưa cho một người mới vào dự án để họ hiểu ngay "đang làm cái gì, cho ai, làm tới đâu thì dừng". AI (và cả bạn, sau vài tuần quên mất chi tiết) sẽ đọc file này mỗi khi cần nhớ lại toàn cảnh.
 
 ## Template chuẩn
 
@@ -14,10 +14,10 @@ Copy khối dưới đây, tạo file `spec.md` ở gốc dự án, điền vào
 # Spec: [Tên dự án]
 
 ## Mục tiêu
-[Dự án này giải quyết vấn đề gì, cho ai — 2-3 câu]
+[Dự án này giải quyết vấn đề gì, cho ai - 2-3 câu]
 
 ## Người dùng
-[Ai sẽ dùng sản phẩm này — 1 hoặc nhiều nhóm người dùng]
+[Ai sẽ dùng sản phẩm này - 1 hoặc nhiều nhóm người dùng]
 
 ## Tính năng PHẢI có
 - [Tính năng 1]
@@ -34,7 +34,7 @@ Copy khối dưới đây, tạo file `spec.md` ở gốc dự án, điền vào
 - Deploy: [ví dụ: Cloudflare Pages, xem phần 3]
 
 ## Màn hình chính
-1. [Tên màn hình] — [mô tả ngắn có gì trên màn hình này]
+1. [Tên màn hình] - [mô tả ngắn có gì trên màn hình này]
 2. ...
 
 ## Dữ liệu cần lưu
@@ -72,9 +72,9 @@ Chỉ một người dùng: chủ shop (không cần phân quyền nhiều tài 
 - Deploy: VPS (xem phần 3)
 
 ## Màn hình chính
-1. Danh sách đơn hàng — bảng có cột tên khách, sản phẩm, trạng thái, ngày đặt
-2. Thêm đơn hàng mới — form nhập liệu
-3. Chi tiết đơn hàng — xem/sửa/đổi trạng thái một đơn cụ thể
+1. Danh sách đơn hàng - bảng có cột tên khách, sản phẩm, trạng thái, ngày đặt
+2. Thêm đơn hàng mới - form nhập liệu
+3. Chi tiết đơn hàng - xem/sửa/đổi trạng thái một đơn cụ thể
 
 ## Dữ liệu cần lưu
 Đơn hàng: mã đơn, tên khách, số điện thoại, sản phẩm, size, màu, số lượng,
@@ -93,11 +93,11 @@ các màn hình chính, dữ liệu cần lưu. Sau khi hỏi đủ, tự viết
 spec.md hoàn chỉnh theo đúng template chuẩn.
 ```
 
-AI sẽ hỏi lại bạn từng phần một — bạn chỉ cần trả lời như đang trò chuyện, không cần biết trước cấu trúc file. Đây chính là cách thực tế nhất để bắt đầu nếu bạn thấy template ở trên vẫn "đáng sợ".
+AI sẽ hỏi lại bạn từng phần một - bạn chỉ cần trả lời như đang trò chuyện, không cần biết trước cấu trúc file. Đây chính là cách thực tế nhất để bắt đầu nếu bạn thấy template ở trên vẫn "đáng sợ".
 
 ## Mẹo giữ spec luôn đúng
 
-Spec không phải viết một lần rồi để đó — khi ý tưởng thay đổi giữa chừng (rất bình thường), **cập nhật lại spec.md** trước khi yêu cầu AI làm tiếp, để lần sau đọc lại vẫn đúng với thực tế hiện tại.
+Spec không phải viết một lần rồi để đó - khi ý tưởng thay đổi giữa chừng (rất bình thường), **cập nhật lại spec.md** trước khi yêu cầu AI làm tiếp, để lần sau đọc lại vẫn đúng với thực tế hiện tại.
 
 ## Bước tiếp theo
 

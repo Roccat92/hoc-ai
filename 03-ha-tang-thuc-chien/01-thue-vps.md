@@ -2,13 +2,13 @@
 
 Bài này dành cho người muốn đưa sản phẩm lên internet để **ai cũng truy cập được**, không chỉ chạy trên máy mình. Học xong bạn sẽ hiểu VPS là gì, biết chọn nhà cung cấp phù hợp túi tiền, và tự setup được một server Ubuntu sạch từ đầu.
 
-> **Cân nhắc trước khi thuê:** không phải dự án nào cũng cần VPS ngay từ đầu — nhiều dịch vụ deploy miễn phí (Vercel, Netlify, Railway...) đủ dùng cho phần lớn dự án cá nhân/nhỏ. Đọc [`03-deploy-mien-phi.md`](03-deploy-mien-phi.md) trước để biết khi nào thật sự cần VPS. Bài này dành cho khi bạn đã xác định cần một server riêng — ví dụ chạy backend phức tạp, cần toàn quyền kiểm soát, hoặc dự án vượt quá giới hạn miễn phí.
+> **Cân nhắc trước khi thuê:** không phải dự án nào cũng cần VPS ngay từ đầu - nhiều dịch vụ deploy miễn phí (Vercel, Netlify, Railway...) đủ dùng cho phần lớn dự án cá nhân/nhỏ. Đọc [`03-deploy-mien-phi.md`](03-deploy-mien-phi.md) trước để biết khi nào thật sự cần VPS. Bài này dành cho khi bạn đã xác định cần một server riêng - ví dụ chạy backend phức tạp, cần toàn quyền kiểm soát, hoặc dự án vượt quá giới hạn miễn phí.
 
 ## VPS là gì?
 
-VPS (Virtual Private Server — máy chủ ảo riêng) là một "máy tính" bạn thuê, chạy 24/7 trên internet, có toàn quyền cài đặt phần mềm, cấu hình như máy tính cá nhân — khác với hosting chia sẻ (shared hosting) nơi bạn chỉ được cấp một phần giới hạn trên một máy dùng chung với nhiều người khác.
+VPS (Virtual Private Server - máy chủ ảo riêng) là một "máy tính" bạn thuê, chạy 24/7 trên internet, có toàn quyền cài đặt phần mềm, cấu hình như máy tính cá nhân - khác với hosting chia sẻ (shared hosting) nơi bạn chỉ được cấp một phần giới hạn trên một máy dùng chung với nhiều người khác.
 
-VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy chủ vật lý lớn, được chia tách bằng công nghệ ảo hóa — nhưng với bạn, nó hoạt động độc lập như một máy riêng.
+VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy chủ vật lý lớn, được chia tách bằng công nghệ ảo hóa - nhưng với bạn, nó hoạt động độc lập như một máy riêng.
 
 <iframe src="/minh-hoa/client-server.html" title="Minh họa: Trình duyệt gửi yêu cầu tới máy chủ" loading="lazy" style="width:100%; height:380px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
 
@@ -23,16 +23,16 @@ VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy ch�
 
 ## Chi phí ước tính
 
-VPS cấu hình nhỏ nhất (đủ cho một website cá nhân/dự án nhỏ mới bắt đầu, thường 1 CPU, 1-2GB RAM) hiện dao động khoảng **50.000 – 150.000đ/tháng** tùy nhà cung cấp và khuyến mãi tại thời điểm. Cấu hình mạnh hơn (nhiều RAM/CPU hơn, cho dự án có lượng truy cập lớn hơn) giá tăng theo.
+VPS cấu hình nhỏ nhất (đủ cho một website cá nhân/dự án nhỏ mới bắt đầu, thường 1 CPU, 1-2GB RAM) hiện dao động khoảng **50.000 - 150.000đ/tháng** tùy nhà cung cấp và khuyến mãi tại thời điểm. Cấu hình mạnh hơn (nhiều RAM/CPU hơn, cho dự án có lượng truy cập lớn hơn) giá tăng theo.
 
-> Đây là khoảng ước lượng thô, **giá thực tế thay đổi liên tục** theo khuyến mãi và nhà cung cấp — luôn kiểm tra trang giá chính thức trước khi quyết định:
+> Đây là khoảng ước lượng thô, **giá thực tế thay đổi liên tục** theo khuyến mãi và nhà cung cấp - luôn kiểm tra trang giá chính thức trước khi quyết định:
 > - Vietnix: vietnix.vn
 > - TinoHost: tinohost.com
 > - DigitalOcean: digitalocean.com/pricing
 > - Vultr: vultr.com/pricing
 > - Contabo: contabo.com
 
-**Mẹo cho người mới:** bắt đầu với cấu hình **nhỏ nhất/rẻ nhất** — gần như mọi nhà cung cấp đều cho phép nâng cấp cấu hình sau này chỉ với vài cú click, không cần lo "chọn sai thì phải làm lại từ đầu".
+**Mẹo cho người mới:** bắt đầu với cấu hình **nhỏ nhất/rẻ nhất** - gần như mọi nhà cung cấp đều cho phép nâng cấp cấu hình sau này chỉ với vài cú click, không cần lo "chọn sai thì phải làm lại từ đầu".
 
 ## Setup Ubuntu từng lệnh
 
@@ -51,7 +51,7 @@ apt update && apt upgrade -y
 - `apt update`: kiểm tra danh sách phần mềm có bản cập nhật mới.
 - `apt upgrade -y`: cài đặt các bản cập nhật đó, `-y` để tự động đồng ý mà không cần bấm xác nhận từng bước.
 
-**Bước 3: Tạo một user riêng, không dùng root cho công việc hàng ngày** (an toàn hơn — root có toàn quyền, lỡ gõ nhầm lệnh nguy hiểm hậu quả lớn hơn):
+**Bước 3: Tạo một user riêng, không dùng root cho công việc hàng ngày** (an toàn hơn - root có toàn quyền, lỡ gõ nhầm lệnh nguy hiểm hậu quả lớn hơn):
 ```bash
 adduser ten-cua-ban
 usermod -aG sudo ten-cua-ban

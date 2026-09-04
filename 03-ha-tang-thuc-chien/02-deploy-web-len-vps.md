@@ -5,8 +5,8 @@ Bài này dành cho người đã có VPS Ubuntu sẵn sàng ([bài trước](01
 ## Ba mảnh ghép cần hiểu trước khi bắt đầu
 
 - **PM2**: giữ cho ứng dụng Node.js của bạn **luôn chạy**, kể cả khi bạn đóng SSH, và **tự khởi động lại** nếu app bị crash.
-- **Nginx**: đứng giữa internet và ứng dụng của bạn — nhận yêu cầu từ người dùng ở cổng 80 (HTTP)/443 (HTTPS) tiêu chuẩn, rồi chuyển tiếp vào cổng nội bộ mà app của bạn đang chạy (ví dụ cổng 3000). Cách làm này gọi là "reverse proxy".
-- **SSL/HTTPS**: mã hóa dữ liệu giữa người dùng và server — trình duyệt hiện ổ khóa thay vì cảnh báo "không an toàn". Miễn phí nhờ Let's Encrypt.
+- **Nginx**: đứng giữa internet và ứng dụng của bạn - nhận yêu cầu từ người dùng ở cổng 80 (HTTP)/443 (HTTPS) tiêu chuẩn, rồi chuyển tiếp vào cổng nội bộ mà app của bạn đang chạy (ví dụ cổng 3000). Cách làm này gọi là "reverse proxy".
+- **SSL/HTTPS**: mã hóa dữ liệu giữa người dùng và server - trình duyệt hiện ổ khóa thay vì cảnh báo "không an toàn". Miễn phí nhờ Let's Encrypt.
 
 ```
 Người dùng → internet → Nginx (cổng 80/443) → ứng dụng của bạn (PM2 giữ chạy, cổng 3000)
@@ -48,7 +48,7 @@ pm2 startup
 - Dòng 3: lưu lại danh sách app đang chạy.
 - Dòng 4: thiết lập để PM2 tự khởi động lại app mỗi khi server reboot (lệnh này sẽ in ra một dòng lệnh khác, copy và chạy dòng đó để hoàn tất).
 
-**Kiểm tra:** `pm2 list` — thấy app ở trạng thái "online" là ổn.
+**Kiểm tra:** `pm2 list` - thấy app ở trạng thái "online" là ổn.
 
 ## Bước 4: Cài và cấu hình Nginx
 
@@ -90,9 +90,9 @@ Nếu bạn đã mua domain (từ nhà đăng ký như Namecheap, Mắt Bão, PA
 
 | Loại | Tên | Giá trị |
 |---|---|---|
-| A | `@` (hoặc để trống — nghĩa là domain gốc) | Địa chỉ IP của VPS |
+| A | `@` (hoặc để trống - nghĩa là domain gốc) | Địa chỉ IP của VPS |
 
-Việc này có thể mất từ vài phút đến vài giờ để có hiệu lực trên toàn cầu (gọi là "DNS propagation") — nếu chưa vào được ngay, hãy kiên nhẫn chờ.
+Việc này có thể mất từ vài phút đến vài giờ để có hiệu lực trên toàn cầu (gọi là "DNS propagation") - nếu chưa vào được ngay, hãy kiên nhẫn chờ.
 
 ## Bước 6: Cài SSL miễn phí (HTTPS) với Certbot
 
@@ -100,15 +100,15 @@ Việc này có thể mất từ vài phút đến vài giờ để có hiệu l
 sudo apt install -y certbot python3-certbot-nginx
 sudo certbot --nginx -d domain-cua-ban.com
 ```
-- Dòng 1: cài Certbot — công cụ tự động lấy chứng chỉ SSL miễn phí từ Let's Encrypt.
+- Dòng 1: cài Certbot - công cụ tự động lấy chứng chỉ SSL miễn phí từ Let's Encrypt.
 - Dòng 2: yêu cầu Certbot lấy chứng chỉ và **tự động cấu hình Nginx** để dùng HTTPS. Sẽ hỏi email (để nhận thông báo khi chứng chỉ sắp hết hạn) và vài câu xác nhận.
 
 Certbot cũng tự thiết lập gia hạn chứng chỉ tự động (chứng chỉ Let's Encrypt có hạn 90 ngày, tự gia hạn nên bạn không cần nhớ làm lại).
 
 ## Kiểm tra cuối cùng
 
-Mở trình duyệt, vào `https://domain-cua-ban.com` — thấy ổ khóa và website của bạn chạy đúng là thành công. Nếu có lỗi, kiểm tra theo thứ tự: `pm2 list` (app có đang chạy không) → `sudo nginx -t` (cấu hình Nginx có lỗi cú pháp không) → `sudo systemctl status nginx` (Nginx có đang chạy không).
+Mở trình duyệt, vào `https://domain-cua-ban.com` - thấy ổ khóa và website của bạn chạy đúng là thành công. Nếu có lỗi, kiểm tra theo thứ tự: `pm2 list` (app có đang chạy không) → `sudo nginx -t` (cấu hình Nginx có lỗi cú pháp không) → `sudo systemctl status nginx` (Nginx có đang chạy không).
 
 ## Bước tiếp theo
 
-Deploy lên VPS khá nhiều bước — với dự án nhỏ, có cách nhanh hơn nhiều. Xem: [Deploy miễn phí — khi nào chưa cần VPS](03-deploy-mien-phi.md)
+Deploy lên VPS khá nhiều bước - với dự án nhỏ, có cách nhanh hơn nhiều. Xem: [Deploy miễn phí - khi nào chưa cần VPS](03-deploy-mien-phi.md)

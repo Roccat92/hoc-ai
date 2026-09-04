@@ -4,18 +4,18 @@ Bài này dành cho người đã build được vài dự án ([dự án đầu
 
 ## "UI phèn" là gì?
 
-"UI phèn" là cách gọi dân dã (không phải thuật ngữ chính thức) cho kiểu giao diện **rập khuôn, một màu, generic** mà rất nhiều sản phẩm build bằng AI hay mắc phải — nhìn phát là biết ngay "code AI ra cái này", dù bạn chưa hỏi. Vài dấu hiệu nhận biết phổ biến nhất:
+"UI phèn" là cách gọi dân dã (không phải thuật ngữ chính thức) cho kiểu giao diện **rập khuôn, một màu, generic** mà rất nhiều sản phẩm build bằng AI hay mắc phải - nhìn phát là biết ngay "code AI ra cái này", dù bạn chưa hỏi. Vài dấu hiệu nhận biết phổ biến nhất:
 
-- **Gradient tím** (thường tím-hồng hoặc tím-xanh) phủ lên nền hoặc nút bấm chính, xuất hiện khắp nơi mà không có lý do thẩm mỹ cụ thể nào — chỉ vì "nhìn có vẻ hiện đại".
-- **Mọi thứ đều là "card" bo góc giống hệt nhau** — thẻ sản phẩm, thẻ tính năng, khối thống kê... dù nội dung khác nhau hoàn toàn, hình dạng khung bao lại y hệt.
-- **Bóng đổ (box-shadow) xám nhạt dưới MỌI card** — như một quy tắc mặc định áp cho tất cả, không phân biệt cái gì cần nổi bật, cái gì không.
-- **Chữ viết hoa toàn bộ, cỡ nhỏ (ALL-CAPS)** dùng làm nhãn/tiêu đề phụ — kiểu "FEATURES", "OUR SERVICES", xuất hiện lặp đi lặp lại.
-- **Icon emoji** (🚀 ✨ 💡) thay cho icon thiết kế riêng — nhanh, tiện, nhưng không có bản sắc.
+- **Gradient tím** (thường tím-hồng hoặc tím-xanh) phủ lên nền hoặc nút bấm chính, xuất hiện khắp nơi mà không có lý do thẩm mỹ cụ thể nào - chỉ vì "nhìn có vẻ hiện đại".
+- **Mọi thứ đều là "card" bo góc giống hệt nhau** - thẻ sản phẩm, thẻ tính năng, khối thống kê... dù nội dung khác nhau hoàn toàn, hình dạng khung bao lại y hệt.
+- **Bóng đổ (box-shadow) xám nhạt dưới MỌI card** - như một quy tắc mặc định áp cho tất cả, không phân biệt cái gì cần nổi bật, cái gì không.
+- **Chữ viết hoa toàn bộ, cỡ nhỏ (ALL-CAPS)** dùng làm nhãn/tiêu đề phụ - kiểu "FEATURES", "OUR SERVICES", xuất hiện lặp đi lặp lại.
+- **Icon emoji** (🚀 ✨ 💡) thay cho icon thiết kế riêng - nhanh, tiện, nhưng không có bản sắc.
 - **Mũi tên "→"** gắn tự động ở cuối mọi nút bấm và đường link, như một tick không ai còn để ý.
 
 ## Vì sao AI hay ra kiểu này?
 
-Không phải vì AI "dốt thẩm mỹ". Nhắc lại cách LLM hoạt động ở [`00-ban-do-gioi-ai/02-llm-la-gi.md`](../00-ban-do-gioi-ai/02-llm-la-gi.md): AI dự đoán "cái gì có khả năng cao nhất" dựa trên những gì đã thấy trong dữ liệu huấn luyện. Khi bạn **không cho nó biết khẩu vị cụ thể** — không nói rõ thương hiệu, phong cách, cảm xúc bạn muốn truyền tải — nó buộc phải tự chọn, và lựa chọn "an toàn nhất" luôn là **phương án trung bình cộng**: những mẫu xuất hiện dày đặc nhất trong hàng loạt template SaaS, dashboard, landing page phổ biến trên internet những năm gần đây. Gradient tím, card bo tròn, bóng đổ nhạt... đều là những mẫu cực kỳ phổ biến trong dữ liệu đó — nên khi không bị ràng buộc gì khác, AI có xu hướng hội tụ về đúng những mẫu này.
+Không phải vì AI "dốt thẩm mỹ". Nhắc lại cách LLM hoạt động ở [`00-ban-do-gioi-ai/02-llm-la-gi.md`](../00-ban-do-gioi-ai/02-llm-la-gi.md): AI dự đoán "cái gì có khả năng cao nhất" dựa trên những gì đã thấy trong dữ liệu huấn luyện. Khi bạn **không cho nó biết khẩu vị cụ thể** - không nói rõ thương hiệu, phong cách, cảm xúc bạn muốn truyền tải - nó buộc phải tự chọn, và lựa chọn "an toàn nhất" luôn là **phương án trung bình cộng**: những mẫu xuất hiện dày đặc nhất trong hàng loạt template SaaS, dashboard, landing page phổ biến trên internet những năm gần đây. Gradient tím, card bo tròn, bóng đổ nhạt... đều là những mẫu cực kỳ phổ biến trong dữ liệu đó - nên khi không bị ràng buộc gì khác, AI có xu hướng hội tụ về đúng những mẫu này.
 
 Nói cách khác: **AI không thiếu gu thẩm mỹ, nó thiếu thông tin về gu thẩm mỹ CỦA BẠN.** Ba kỹ thuật dưới đây đều xoay quanh việc cung cấp đúng thông tin đó.
 
@@ -23,15 +23,15 @@ Nói cách khác: **AI không thiếu gu thẩm mỹ, nó thiếu thông tin v�
 
 Trước khi vào ba kỹ thuật, có một công cụ nền tảng đáng cài trước: **skill `frontend-design`** do chính đội ngũ Anthropic viết, chứa sẵn hướng dẫn giúp Claude Code tránh đúng những mẫu "UI phèn" kể trên, và ra quyết định thẩm mỹ có chủ đích hơn.
 
-**Cài đặt từng bước** (tại thời điểm viết, plugin này chưa có lệnh cài tự động — cài thủ công bằng cách tải file skill về thư mục skill cá nhân):
+**Cài đặt từng bước** (tại thời điểm viết, plugin này chưa có lệnh cài tự động - cài thủ công bằng cách tải file skill về thư mục skill cá nhân):
 
-**Bước 1 — Tạo thư mục đích:**
+**Bước 1 - Tạo thư mục đích:**
 ```bash
 mkdir -p ~/.claude/skills/frontend-design
 ```
-- Thư mục `~/.claude/skills/` là nơi Claude Code tìm các skill **cấp cá nhân** — cài một lần ở đây, dùng được cho **mọi dự án** trên máy bạn, không phải cài lại từng dự án.
+- Thư mục `~/.claude/skills/` là nơi Claude Code tìm các skill **cấp cá nhân** - cài một lần ở đây, dùng được cho **mọi dự án** trên máy bạn, không phải cài lại từng dự án.
 
-**Bước 2 — Tải file skill về đúng vị trí:**
+**Bước 2 - Tải file skill về đúng vị trí:**
 ```bash
 curl -fsSL -o ~/.claude/skills/frontend-design/SKILL.md \
   https://raw.githubusercontent.com/anthropics/claude-code/main/plugins/frontend-design/skills/frontend-design/SKILL.md
@@ -41,23 +41,23 @@ curl -fsSL -o ~/.claude/skills/frontend-design/SKILL.md \
 - `-L`: tự động đi theo nếu link bị chuyển hướng.
 - `-o ...`: lưu nội dung tải về đúng đường dẫn file skill.
 
-**Bước 3 — Kiểm tra đã cài đúng:**
+**Bước 3 - Kiểm tra đã cài đúng:**
 ```bash
 head -n 5 ~/.claude/skills/frontend-design/SKILL.md
 ```
-Thấy hiện ra phần đầu file với dòng `name: frontend-design` là tải đúng. Cách kiểm tra thực tế hơn: mở Claude Code ở bất kỳ dự án nào, giao một việc liên quan tới giao diện (ví dụ "làm trang chủ cho tôi") — nếu skill hoạt động, Claude Code thường sẽ tự nhắc đang áp dụng hướng dẫn thiết kế trước khi viết code. Nếu không chắc, hỏi thẳng: "bạn có đang thấy skill frontend-design không?"
+Thấy hiện ra phần đầu file với dòng `name: frontend-design` là tải đúng. Cách kiểm tra thực tế hơn: mở Claude Code ở bất kỳ dự án nào, giao một việc liên quan tới giao diện (ví dụ "làm trang chủ cho tôi") - nếu skill hoạt động, Claude Code thường sẽ tự nhắc đang áp dụng hướng dẫn thiết kế trước khi viết code. Nếu không chắc, hỏi thẳng: "bạn có đang thấy skill frontend-design không?"
 
-> Skill này chưa có kênh cài đặt chính thức qua hệ thống plugin tại thời điểm viết — luôn kiểm tra [README chính chủ](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) để có cách cài mới nhất, đề phòng Anthropic bổ sung cách cài tiện hơn sau này.
+> Skill này chưa có kênh cài đặt chính thức qua hệ thống plugin tại thời điểm viết - luôn kiểm tra [README chính chủ](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) để có cách cài mới nhất, đề phòng Anthropic bổ sung cách cài tiện hơn sau này.
 
 ## Ba kỹ thuật cho AI "khẩu vị"
 
 ### a) Đưa ảnh mẫu
 
-Claude Code đọc được ảnh bạn đính kèm trực tiếp vào cuộc trò chuyện — dùng luôn khả năng này để "chỉ tay" thay vì chỉ mô tả bằng lời (vốn rất khó diễn đạt chính xác cảm giác thẩm mỹ). Chụp màn hình một sản phẩm bạn thấy đẹp, kéo thả (hoặc dán) vào Claude Code, kèm mô tả bạn muốn học theo tinh thần gì, không phải copy y hệt:
+Claude Code đọc được ảnh bạn đính kèm trực tiếp vào cuộc trò chuyện - dùng luôn khả năng này để "chỉ tay" thay vì chỉ mô tả bằng lời (vốn rất khó diễn đạt chính xác cảm giác thẩm mỹ). Chụp màn hình một sản phẩm bạn thấy đẹp, kéo thả (hoặc dán) vào Claude Code, kèm mô tả bạn muốn học theo tinh thần gì, không phải copy y hệt:
 
 ```
 [đính kèm ảnh chụp màn hình một ứng dụng có giao diện tối giản]
-Tôi muốn trang dashboard của mình có tinh thần thiết kế giống ảnh này —
+Tôi muốn trang dashboard của mình có tinh thần thiết kế giống ảnh này -
 không cần giống y hệt, nhưng học theo: bảng màu tối giản (đen-trắng-một
 màu nhấn), khoảng trắng rộng rãi, không dùng card bo tròn kiểu mặc định,
 typography rõ ràng có phân cấp. Áp dụng tinh thần này cho trang quản lý
@@ -66,7 +66,7 @@ typography rõ ràng có phân cấp. Áp dụng tinh thần này cho trang qu�
 
 ### b) Khai báo khẩu vị trong CLAUDE.md
 
-Nhắc lại từ [`08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md`](../08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md): CLAUDE.md là nơi ghi quy ước AI **tự động đọc** mỗi phiên — thêm hẳn một mục thẩm mỹ vào đó để không phải nhắc lại mỗi lần.
+Nhắc lại từ [`08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md`](../08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md): CLAUDE.md là nơi ghi quy ước AI **tự động đọc** mỗi phiên - thêm hẳn một mục thẩm mỹ vào đó để không phải nhắc lại mỗi lần.
 
 **Template mẫu:**
 ```markdown
@@ -74,7 +74,7 @@ Nhắc lại từ [`08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md`](../08-chuan
 - Nền: [ví dụ: trắng ngà #FAFAF8]
 - Màu nhấn (accent) duy nhất: [ví dụ: xanh rêu đậm #2D4A3E]
 - Font: [ví dụ: Inter cho nội dung, một font có cá tính riêng cho tiêu đề lớn]
-- Bo góc: [ví dụ: 4px — không bo tròn kiểu "viên thuốc"]
+- Bo góc: [ví dụ: 4px - không bo tròn kiểu "viên thuốc"]
 - CẤM:
   - Gradient trang trí không có lý do
   - Card giống hệt nhau cho mọi loại nội dung, bất kể ý nghĩa
@@ -83,9 +83,9 @@ Nhắc lại từ [`08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md`](../08-chuan
   - Mũi tên "→" gắn mặc định cuối mọi nút
 ```
 
-**Cùng một app, hai bộ khẩu vị khác nhau ra hai chất hoàn toàn khác nhau** — ví dụ cho cùng yêu cầu "làm trang chủ giới thiệu sản phẩm":
+**Cùng một app, hai bộ khẩu vị khác nhau ra hai chất hoàn toàn khác nhau** - ví dụ cho cùng yêu cầu "làm trang chủ giới thiệu sản phẩm":
 
-**Bộ khẩu vị A — "Tối giản công sở"** (hợp cho web quản lý nội bộ, dashboard):
+**Bộ khẩu vị A - "Tối giản công sở"** (hợp cho web quản lý nội bộ, dashboard):
 ```
 Nền trắng, chữ đen, đúng một màu nhấn xanh navy. Font hệ thống
 (system-ui). Bo góc rất nhỏ (2-4px). Không hiệu ứng chuyển động ngoài
@@ -93,7 +93,7 @@ hover đổi màu nhẹ. Bố cục dạng bảng/lưới rõ ràng, ưu tiên m
 tin cao hơn là trang trí.
 ```
 
-**Bộ khẩu vị B — "Ấm áp thủ công"** (hợp cho landing page tiệm bánh, quán cà phê):
+**Bộ khẩu vị B - "Ấm áp thủ công"** (hợp cho landing page tiệm bánh, quán cà phê):
 ```
 Nền be/kem ấm, chữ nâu đậm, màu nhấn cam đất (terracotta). Font có
 chân (serif) cho tiêu đề, font không chân cho nội dung. Bo góc lớn,
@@ -101,17 +101,17 @@ mềm mại (12-16px). Ưu tiên ảnh chụp thật thay vì minh họa vector.
 Khoảng trắng rộng rãi, nhịp đọc chậm rãi.
 ```
 
-Cả hai đều **không phải** "UI phèn" — vì cả hai đều là lựa chọn có chủ đích, không phải mặc định AI tự chọn khi không được hỏi.
+Cả hai đều **không phải** "UI phèn" - vì cả hai đều là lựa chọn có chủ đích, không phải mặc định AI tự chọn khi không được hỏi.
 
 ### c) Vòng lặp sửa bằng ảnh
 
-Đừng chỉ đọc code để đánh giá giao diện — **chạy app thật, chụp màn hình chỗ đang xấu**, và mô tả chính xác cái gì sai (không nói chung chung "xấu quá", "chưa đẹp"). Đây chính là kỹ thuật đọc lỗi và mô tả cụ thể đã học ở [`01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md`](../01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md), áp dụng cho thẩm mỹ thay vì lỗi kỹ thuật.
+Đừng chỉ đọc code để đánh giá giao diện - **chạy app thật, chụp màn hình chỗ đang xấu**, và mô tả chính xác cái gì sai (không nói chung chung "xấu quá", "chưa đẹp"). Đây chính là kỹ thuật đọc lỗi và mô tả cụ thể đã học ở [`01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md`](../01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md), áp dụng cho thẩm mỹ thay vì lỗi kỹ thuật.
 
 **Ba câu prompt sửa mẫu** (luôn kèm ảnh chụp màn hình thật):
 
 ```
 [ảnh chụp màn hình] Cái card sản phẩm này đang dùng đúng công thức
-"UI phèn" — bo góc + bóng đổ mặc định. Đổi sang: viền mảnh 1px màu
+"UI phèn" - bo góc + bóng đổ mặc định. Đổi sang: viền mảnh 1px màu
 xám nhạt, không bóng đổ, bo góc chỉ 4px.
 ```
 
@@ -131,12 +131,12 @@ này lên rõ rệt.
 
 Càng xem nhiều thiết kế tốt, bạn càng dễ nhận ra và mô tả chính xác điều mình muốn (thay vì chỉ nói được "đẹp hơn" một cách mơ hồ). Vài nơi đáng xem, miễn phí:
 
-- **[Mobbin](https://mobbin.com)** — thư viện screenshot giao diện thật từ hàng nghìn app thật (không phải mockup), có bản miễn phí xem giới hạn — hữu ích vì đây là thiết kế đã thực sự chạy sản phẩm, không chỉ đẹp trên giấy.
-- **[Dribbble](https://dribbble.com)** — cộng đồng designer chia sẻ mockup, rất nhiều ý tưởng sáng tạo — lưu ý một số thiết kế ở đây thiên về "đẹp để khoe" hơn là thực tế để code/dùng thật, chọn lọc kỹ trước khi lấy làm tham khảo.
-- **[Land-book](https://land-book.com)** — tuyển chọn landing page đẹp, thực tế, đã lên sóng thật, phân loại theo ngành/phong cách.
-- **[Awwwards](https://www.awwwards.com)** — giải thưởng thiết kế web lâu đời, nhiều case chất lượng cao, thiên về sáng tạo/thử nghiệm hơn Land-book.
+- **[Mobbin](https://mobbin.com)** - thư viện screenshot giao diện thật từ hàng nghìn app thật (không phải mockup), có bản miễn phí xem giới hạn - hữu ích vì đây là thiết kế đã thực sự chạy sản phẩm, không chỉ đẹp trên giấy.
+- **[Dribbble](https://dribbble.com)** - cộng đồng designer chia sẻ mockup, rất nhiều ý tưởng sáng tạo - lưu ý một số thiết kế ở đây thiên về "đẹp để khoe" hơn là thực tế để code/dùng thật, chọn lọc kỹ trước khi lấy làm tham khảo.
+- **[Land-book](https://land-book.com)** - tuyển chọn landing page đẹp, thực tế, đã lên sóng thật, phân loại theo ngành/phong cách.
+- **[Awwwards](https://www.awwwards.com)** - giải thưởng thiết kế web lâu đời, nhiều case chất lượng cao, thiên về sáng tạo/thử nghiệm hơn Land-book.
 
-**Cách dùng đúng:** **không copy nguyên xi** một thiết kế của người khác (đặc biệt nếu sản phẩm của bạn dùng mục đích thương mại) — chỉ **mượn bố cục, bảng màu, tinh thần chung**, rồi áp dụng vào sản phẩm của bạn theo đúng kỹ thuật (a) ở trên: chụp lại ví dụ ưng ý, đưa cho AI kèm mô tả "học theo tinh thần này".
+**Cách dùng đúng:** **không copy nguyên xi** một thiết kế của người khác (đặc biệt nếu sản phẩm của bạn dùng mục đích thương mại) - chỉ **mượn bố cục, bảng màu, tinh thần chung**, rồi áp dụng vào sản phẩm của bạn theo đúng kỹ thuật (a) ở trên: chụp lại ví dụ ưng ý, đưa cho AI kèm mô tả "học theo tinh thần này".
 
 ## Chốt: checklist 5 câu tự hỏi trước khi khoe sản phẩm
 
@@ -148,9 +148,9 @@ Trước khi gửi link cho ai đó xem, tự hỏi:
 4. Có đang dùng icon emoji thay vì icon thiết kế riêng không?
 5. Mọi nút/link có đang tự động gắn thêm "→" ở cuối không?
 
-**Trả lời "có" từ 2 câu trở lên** — quay lại kỹ thuật (b), khai báo rõ khẩu vị vào CLAUDE.md, rồi chạy vòng lặp sửa bằng ảnh ở kỹ thuật (c) cho tới khi cả 5 câu đều "không".
+**Trả lời "có" từ 2 câu trở lên** - quay lại kỹ thuật (b), khai báo rõ khẩu vị vào CLAUDE.md, rồi chạy vòng lặp sửa bằng ảnh ở kỹ thuật (c) cho tới khi cả 5 câu đều "không".
 
-> Giao diện đã có chất riêng rồi thì cũng đừng vội khoe ngay — trước khi gửi link cho người khác dùng thử, còn một checklist khác đáng đi qua: [Bảo mật tối thiểu ở phần 10](../10-bao-mat/). Quay lại đó bất cứ lúc nào trước khi public, không cần đọc ngay bây giờ.
+> Giao diện đã có chất riêng rồi thì cũng đừng vội khoe ngay - trước khi gửi link cho người khác dùng thử, còn một checklist khác đáng đi qua: [Bảo mật tối thiểu ở phần 10](../10-bao-mat/). Quay lại đó bất cứ lúc nào trước khi public, không cần đọc ngay bây giờ.
 
 ## Bước tiếp theo
 

@@ -6,9 +6,9 @@ Phần nâng cao, **không bắt buộc** với hầu hết người học. Đa 
 
 ## Các bài trong phần này
 
-1. [Pre-train vs fine-tune vs RAG: khi nào cần gì](01-hieu-ve-training.md) — đọc bài này trước khi quyết định có cần phần này không
+1. [Pre-train vs fine-tune vs RAG: khi nào cần gì](01-hieu-ve-training.md) - đọc bài này trước khi quyết định có cần phần này không
 2. [Fine-tune thực hành: Llama/Qwen bằng LoRA trên cloud GPU, chi phí thật](02-fine-tune-thuc-hanh.md)
 3. [Dữ liệu tiếng Việt: tìm ở đâu, chuẩn bị thế nào](03-du-lieu-tieng-viet.md)
-4. [Tổng quan build LLM từ đầu (tham khảo — không khuyến khích người mới)](04-build-llm-tu-dau.md)
+4. [Tổng quan build LLM từ đầu (tham khảo - không khuyến khích người mới)](04-build-llm-tu-dau.md)
 
 Bắt đầu từ [bài 1](01-hieu-ve-training.md).

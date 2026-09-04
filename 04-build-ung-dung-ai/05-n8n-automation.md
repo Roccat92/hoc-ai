@@ -4,15 +4,15 @@ Bài này dành cho người muốn tự động hóa công việc lặp lại (
 
 ## n8n là gì?
 
-n8n là công cụ tự động hóa workflow theo kiểu **kéo-thả (low-code/no-code)** — bạn nối các "khối" (node) lại với nhau thành một luồng xử lý tự động: "khi có sự kiện X xảy ra → làm bước A → nếu điều kiện B đúng thì làm C → gửi thông báo D". Mỗi khối có thể là: nhận dữ liệu từ một nguồn (email, form, webhook), gọi một API (bao gồm API AI), ghi vào Google Sheet/database, gửi tin nhắn Slack/Telegram...
+n8n là công cụ tự động hóa workflow theo kiểu **kéo-thả (low-code/no-code)** - bạn nối các "khối" (node) lại với nhau thành một luồng xử lý tự động: "khi có sự kiện X xảy ra → làm bước A → nếu điều kiện B đúng thì làm C → gửi thông báo D". Mỗi khối có thể là: nhận dữ liệu từ một nguồn (email, form, webhook), gọi một API (bao gồm API AI), ghi vào Google Sheet/database, gửi tin nhắn Slack/Telegram...
 
-**Điểm khác biệt lớn nhất so với Zapier/Make** (hai công cụ tương tự phổ biến): n8n có thể **tự host miễn phí** (bạn tự chạy trên VPS của mình — xem lại [`03-ha-tang-thuc-chien/01-thue-vps.md`](../03-ha-tang-thuc-chien/01-thue-vps.md)), trong khi Zapier/Make chủ yếu là dịch vụ cloud trả phí theo số lượt chạy. Nếu bạn đã quen thuê VPS, tự host n8n giúp tiết kiệm đáng kể về lâu dài.
+**Điểm khác biệt lớn nhất so với Zapier/Make** (hai công cụ tương tự phổ biến): n8n có thể **tự host miễn phí** (bạn tự chạy trên VPS của mình - xem lại [`03-ha-tang-thuc-chien/01-thue-vps.md`](../03-ha-tang-thuc-chien/01-thue-vps.md)), trong khi Zapier/Make chủ yếu là dịch vụ cloud trả phí theo số lượt chạy. Nếu bạn đã quen thuê VPS, tự host n8n giúp tiết kiệm đáng kể về lâu dài.
 
 ## Cài đặt n8n
 
-**Cách 1 — dùng n8n Cloud** (nhanh nhất, không cần VPS): vào n8n.io, đăng ký, dùng ngay trên trình duyệt — có bản dùng thử, sau đó trả phí theo tháng.
+**Cách 1 - dùng n8n Cloud** (nhanh nhất, không cần VPS): vào n8n.io, đăng ký, dùng ngay trên trình duyệt - có bản dùng thử, sau đó trả phí theo tháng.
 
-**Cách 2 — tự host bằng Docker trên VPS** (miễn phí, chỉ tốn tiền VPS đã thuê):
+**Cách 2 - tự host bằng Docker trên VPS** (miễn phí, chỉ tốn tiền VPS đã thuê):
 
 ```bash
 docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
@@ -30,11 +30,11 @@ Nếu VPS chưa cài Docker, yêu cầu Claude Code cài giúp: "Cài Docker tr�
 **Ví dụ: Email khách hàng → AI tóm tắt + phân loại → lưu Google Sheet → thông báo Slack nếu khẩn cấp**
 
 Các khối (node) trong workflow này:
-1. **Trigger (khởi động):** node "Email Trigger" — kích hoạt mỗi khi có email mới tới một hộp thư cụ thể.
-2. **Xử lý AI:** node "HTTP Request" (hoặc node tích hợp sẵn cho Anthropic/OpenAI nếu n8n có) — gửi nội dung email tới API Claude, yêu cầu: "Tóm tắt email này trong 2 câu, và phân loại mức độ ưu tiên: Thấp/Trung bình/Khẩn cấp."
-3. **Điều kiện (IF):** kiểm tra kết quả phân loại — nếu là "Khẩn cấp" thì đi theo nhánh thông báo ngay.
-4. **Lưu dữ liệu:** node "Google Sheets" — ghi thêm một dòng mới gồm: người gửi, nội dung tóm tắt, mức độ ưu tiên, thời gian.
-5. **Thông báo (nếu khẩn cấp):** node "Slack" hoặc "Telegram" — gửi tin nhắn cảnh báo tới kênh nhóm.
+1. **Trigger (khởi động):** node "Email Trigger" - kích hoạt mỗi khi có email mới tới một hộp thư cụ thể.
+2. **Xử lý AI:** node "HTTP Request" (hoặc node tích hợp sẵn cho Anthropic/OpenAI nếu n8n có) - gửi nội dung email tới API Claude, yêu cầu: "Tóm tắt email này trong 2 câu, và phân loại mức độ ưu tiên: Thấp/Trung bình/Khẩn cấp."
+3. **Điều kiện (IF):** kiểm tra kết quả phân loại - nếu là "Khẩn cấp" thì đi theo nhánh thông báo ngay.
+4. **Lưu dữ liệu:** node "Google Sheets" - ghi thêm một dòng mới gồm: người gửi, nội dung tóm tắt, mức độ ưu tiên, thời gian.
+5. **Thông báo (nếu khẩn cấp):** node "Slack" hoặc "Telegram" - gửi tin nhắn cảnh báo tới kênh nhóm.
 
 Toàn bộ luồng này chạy **tự động, 24/7**, không cần bạn ngồi kiểm tra email thủ công.
 
@@ -49,11 +49,11 @@ Toàn bộ luồng này chạy **tự động, 24/7**, không cần bạn ngồi
 | Hình thức | Chi phí ước tính |
 |---|---|
 | Tự host trên VPS đã có sẵn | Miễn phí (chỉ tốn chi phí VPS đã tính ở [bài thuê VPS](../03-ha-tang-thuc-chien/01-thue-vps.md)) |
-| n8n Cloud | Có bản dùng thử, sau đó trả phí theo tháng theo số lượt workflow chạy — kiểm tra giá tại n8n.io/pricing |
+| n8n Cloud | Có bản dùng thử, sau đó trả phí theo tháng theo số lượt workflow chạy - kiểm tra giá tại n8n.io/pricing |
 | API AI dùng trong workflow | Tính riêng theo token, xem [bài gọi API LLM](01-goi-api-llm.md) |
 
 **Lời khuyên:** nếu bạn đã có VPS đang chạy dự án khác, tự host n8n trên cùng VPS đó (nếu cấu hình còn dư tài nguyên) là cách tiết kiệm nhất để bắt đầu thử nghiệm tự động hóa.
 
 ## Bước tiếp theo
 
-Đã đi qua toàn bộ kỹ năng build ứng dụng AI thực chiến — từ gọi API, RAG, agent, tới tích hợp và tự động hóa. Phần tiếp theo dành cho ai muốn đào sâu hơn về việc huấn luyện model — phần **nâng cao**, không bắt buộc với hầu hết người học: [Train và fine-tune →](../05-train-va-finetune/01-hieu-ve-training.md)
+Đã đi qua toàn bộ kỹ năng build ứng dụng AI thực chiến - từ gọi API, RAG, agent, tới tích hợp và tự động hóa. Phần tiếp theo dành cho ai muốn đào sâu hơn về việc huấn luyện model - phần **nâng cao**, không bắt buộc với hầu hết người học: [Train và fine-tune →](../05-train-va-finetune/01-hieu-ve-training.md)

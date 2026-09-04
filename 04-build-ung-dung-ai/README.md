@@ -2,7 +2,7 @@
 
 Từ "dùng AI để code" sang "code ra sản phẩm có AI bên trong": gọi API LLM bằng code, cho AI đọc tài liệu riêng (RAG), cho AI tự hành động nhiều bước (agent), gắn AI vào app đang chạy, và tự động hóa công việc với n8n.
 
-**Dành cho:** người đã deploy được web ở [Phần 3](../03-ha-tang-thuc-chien/). **Học xong:** tự build được chatbot hỏi đáp tài liệu, một agent nhỏ, và một luồng tự động hóa có AI — đây là nơi 95% giá trị thực tế nằm.
+**Dành cho:** người đã deploy được web ở [Phần 3](../03-ha-tang-thuc-chien/). **Học xong:** tự build được chatbot hỏi đáp tài liệu, một agent nhỏ, và một luồng tự động hóa có AI - đây là nơi 95% giá trị thực tế nằm.
 
 ## Các bài trong phần này
 
