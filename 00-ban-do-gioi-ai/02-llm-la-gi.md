@@ -22,6 +22,13 @@ Với **tiếng Việt**, mọi chuyện tốn kém hơn một chút: vì có d�
 1. **Giá tiền** khi gọi API LLM thường tính theo số token (cả token đầu vào lẫn đầu ra) — xem chi tiết giá ở [`04-build-ung-dung-ai/01-goi-api-llm.md`](../04-build-ung-dung-ai/01-goi-api-llm.md).
 2. **Giới hạn context window** (mục dưới đây) cũng được đo bằng token, không phải bằng chữ.
 
+<iframe
+  src="/minh-hoa/llm-token.html"
+  title="Minh họa: LLM tách token và sinh câu trả lời"
+  loading="lazy"
+  style="width:100%; height:440px; border:1px solid var(--vp-c-divider); border-radius:8px;">
+</iframe>
+
 ## Context window — "trí nhớ" trong một cuộc trò chuyện
 
 Context window (cửa sổ ngữ cảnh) là **số token tối đa** mà LLM có thể "nhìn thấy" cùng lúc trong một lần xử lý — bao gồm toàn bộ đoạn hội thoại từ đầu, file bạn đính kèm, và câu trả lời nó sắp tạo ra.

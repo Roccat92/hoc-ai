@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minh họa: LLM tách token và sinh câu trả lời</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1a1a; --muted:#6b7280; --line:#d9dde3;
+    --accent:#2f6f6a; --accent-soft:#2f6f6a22; --radius:8px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1b1b1f; --fg:#e6e6e6; --muted:#9aa0a6; --line:#33353a;
+      --accent:#5bb3ab; --accent-soft:#5bb3ab22;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1b1b1f; --fg:#e6e6e6; --muted:#9aa0a6; --line:#33353a;
+    --accent:#5bb3ab; --accent-soft:#5bb3ab22;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--bg); color:var(--fg);
+    font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    padding:16px;
+  }
+  .stage{position:relative; min-height:304px; max-width:720px; margin:0 auto;}
+  .caption{color:var(--muted); min-height:2.6em; margin:12px 0 0; font-size:14px;}
+  .controls{margin-top:8px;}
+  .btn{
+    font:inherit; color:var(--bg); background:var(--accent);
+    border:0; border-radius:var(--radius); padding:8px 14px; cursor:pointer;
+  }
+  .btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .diagram{display:grid; gap:10px; min-height:304px; align-content:start;}
+  .label{color:var(--muted); font-size:12px; margin-bottom:4px;}
+  .prompt,.model,.answer{border:1px solid var(--line); border-radius:var(--radius);}
+  .prompt{padding:10px 12px; opacity:0; transform:translateY(8px); transition:opacity .45s ease,transform .45s ease;}
+  .prompt strong{font-weight:650;}
+  .token-area{min-height:60px; opacity:0; transform:translateY(8px); transition:opacity .45s ease,transform .45s ease;}
+  .token-list{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
+  .token{
+    border:1px solid var(--accent); background:var(--accent-soft); border-radius:4px;
+    color:var(--fg); padding:4px 7px; font-size:13px; opacity:0; transform:translateY(-7px);
+    transition:opacity .3s ease,transform .3s ease;
+  }
+  .token small{color:var(--muted); font-size:10px;}
+  .connector{height:14px; border-left:1px solid var(--line); margin-left:50%; opacity:0; transition:opacity .35s ease;}
+  .model{
+    display:grid; place-items:center; min-height:68px; padding:10px 16px; position:relative;
+    font-weight:650; letter-spacing:.02em; transition:border-color .35s ease,background-color .35s ease;
+  }
+  .model-note{display:block; color:var(--muted); font-size:12px; font-weight:400; letter-spacing:0;}
+  .answer-area{min-height:66px; opacity:0; transform:translateY(8px); transition:opacity .45s ease,transform .45s ease;}
+  .answer{padding:10px 12px; min-height:50px; display:flex; gap:6px; align-items:center; flex-wrap:wrap;}
+  .answer-prefix{color:var(--muted); font-size:13px; margin-right:2px;}
+  .out-token{font-weight:650; opacity:0; transform:translateY(7px); transition:opacity .35s ease,transform .35s ease;}
+  .out-token:nth-of-type(2){transition-delay:.2s;}
+  .out-token:nth-of-type(3){transition-delay:.4s;}
+  .out-token:nth-of-type(4){transition-delay:.6s;}
+  .final-note{font-size:12px; color:var(--muted); margin-top:4px; opacity:0; transition:opacity .35s ease;}
+
+  .show-prompt .prompt,.show-tokens .token-area,.show-answer .answer-area{opacity:1; transform:none;}
+  .show-tokens .token,.show-answer .out-token,.show-final .final-note{opacity:1; transform:none;}
+  .show-tokens .connector,.show-answer .connector{opacity:1;}
+  .processing .model{border-color:var(--accent); background:var(--accent-soft); animation:process 1.2s ease-in-out infinite;}
+  @keyframes process{50%{background:var(--bg);}}
+  @media (max-width:390px){
+    body{padding:10px;}
+    .stage,.diagram{min-height:238px;}
+    .diagram{gap:2px;}
+    .label{margin-bottom:0;}
+    .prompt{padding:4px 7px;}
+    .token-area{min-height:44px;}
+    .token{padding:3px 6px;}
+    .connector{height:4px;}
+    .model{min-height:44px; padding:4px 12px;}
+    .answer-area{min-height:44px;}
+    .answer{min-height:38px; padding:4px 7px;}
+    .final-note{margin-top:1px; line-height:1.3;}
+    .caption{font-size:12px; line-height:1.35;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; animation:none !important;}
+  }
+</style>
+</head>
+<body>
+  <div class="stage" id="stage"></div>
+  <p class="caption" id="caption" aria-live="polite"></p>
+  <div class="controls"><button class="btn" id="replay" type="button">Chạy lại</button></div>
+
+<script>
+(function(){
+  var t = new URLSearchParams(location.search).get('theme');
+  if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  addEventListener('message', function(e){
+    if (e.data && (e.data.theme === 'dark' || e.data.theme === 'light'))
+      document.documentElement.setAttribute('data-theme', e.data.theme);
+  });
+
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var caption = document.getElementById('caption');
+  var stage = document.getElementById('stage');
+  var timer = null, i = 0;
+
+  function reset(){
+    stage.innerHTML =
+      '<div class="diagram" id="diagram">' +
+        '<div class="prompt"><div class="label">Câu bạn gửi</div><strong>“Thủ đô Việt Nam là gì?”</strong></div>' +
+        '<div class="token-area"><div class="label">Các mẩu token (minh họa)</div><div class="token-list">' +
+          '<span class="token">Thủ</span><span class="token">đô</span><span class="token">Vi</span><span class="token">ệt</span><span class="token">Nam</span><span class="token">là</span><span class="token">gì</span><span class="token">?</span>' +
+        '</div></div>' +
+        '<div class="connector"></div>' +
+        '<div class="model">MODEL<span class="model-note">đoán mẩu tiếp theo</span></div>' +
+        '<div class="connector"></div>' +
+        '<div class="answer-area"><div class="label">Câu trả lời đang được tạo</div><div class="answer"><span class="answer-prefix">Trả lời:</span><span class="out-token">Hà</span><span class="out-token">Nội</span><span class="out-token">.</span></div><div class="final-note">Mỗi token mới lại trở thành ngữ cảnh để đoán token tiếp theo.</div></div>' +
+      '</div>';
+  }
+
+  function diagram(){ return document.getElementById('diagram'); }
+  var steps = [
+    { text:'Bước 1: Bạn gửi câu hỏi bằng chữ.', run:function(){ diagram().classList.add('show-prompt'); } },
+    { text:'Bước 2: Model nhận các mẩu token, không nhất thiết là từng từ nguyên vẹn.', run:function(){ diagram().classList.add('show-tokens'); } },
+    { text:'Bước 3: Model dùng những token đã có để tính token nào nên xuất hiện tiếp theo.', run:function(){ diagram().classList.add('processing'); } },
+    { text:'Bước 4: Câu trả lời được sinh lần lượt từng token: “Hà”, rồi “Nội”, rồi dấu chấm.', run:function(){ diagram().classList.remove('processing'); diagram().classList.add('show-answer'); } },
+    { text:'Bước 5: Model đoán token tiếp theo, lặp lại tới khi xong câu.', run:function(){ diagram().classList.add('show-final'); } }
+  ];
+
+  function play(){
+    clearTimeout(timer); reset(); i = 0;
+    if (reduce){
+      steps.forEach(function(s){ s.run(); });
+      caption.innerHTML = [
+        '1. Nhận câu hỏi.',
+        '2. Tách câu thành các token.',
+        '3. Tính token nên xuất hiện tiếp theo.',
+        '4. Sinh “Hà”, “Nội”, rồi dấu chấm.',
+        '5. Lặp lại tới khi xong câu.'
+      ].join('<br>');
+      return;
+    }
+    (function next(){
+      if (i >= steps.length) return;
+      caption.textContent = steps[i].text;
+      steps[i].run();
+      i++;
+      timer = setTimeout(next, 1800);
+    })();
+  }
+  document.getElementById('replay').addEventListener('click', play);
+  play();
+
+  function reportHeight(){
+    try{ parent.postMessage({ type:'minhhoa-height', height:document.body.scrollHeight }, '*'); }catch(e){}
+  }
+  addEventListener('load', reportHeight);
+  if (window.ResizeObserver) new ResizeObserver(reportHeight).observe(document.body);
+})();
+</script>
+</body>
+</html>
