@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minh họa: AI, ML, Deep Learning và GenAI</title>
+<style>
+  :root{--bg:#fff;--fg:#1a1a1a;--muted:#6b7280;--line:#d9dde3;--accent:#2f6f6a;--soft:#2f6f6a22;--r:8px}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1b1f;--fg:#e6e6e6;--muted:#9aa0a6;--line:#33353a;--accent:#5bb3ab;--soft:#5bb3ab22}}
+  :root[data-theme="dark"]{--bg:#1b1b1f;--fg:#e6e6e6;--muted:#9aa0a6;--line:#33353a;--accent:#5bb3ab;--soft:#5bb3ab22}
+  *{box-sizing:border-box}html,body{margin:0}body{padding:16px;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+  .stage{min-height:315px;max-width:720px;margin:auto}.caption{min-height:2.6em;margin:12px 0 0;color:var(--muted);font-size:14px}.btn{margin-top:8px;padding:8px 14px;border:0;border-radius:8px;background:var(--accent);color:var(--bg);font:inherit;cursor:pointer}.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .diagram{height:315px;position:relative;overflow:hidden}.ring{position:absolute;left:50%;top:50%;border:1px solid var(--line);border-radius:50%;transform:translate(-50%,-50%) scale(.82);opacity:0;transition:opacity .5s ease,transform .55s ease,border-color .35s,background .35s}.ring.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.ring.active{border-color:var(--accent);background:var(--soft)}
+  .ai{width:300px;height:300px}.ml{width:226px;height:226px}.dl{width:150px;height:150px}.gen{width:82px;height:82px}.tag{position:absolute;color:var(--muted);font-size:13px;white-space:nowrap;opacity:0;transition:opacity .3s}.tag.show{opacity:1}.tag strong{color:var(--fg);font-weight:650}.tag-ai{top:20px;left:calc(50% - 104px)}.tag-ml{top:76px;left:calc(50% - 83px)}.tag-dl{top:125px;left:calc(50% - 65px)}.tag-gen{top:177px;left:50%;transform:translateX(-50%);text-align:center;color:var(--accent);line-height:1.25}.tag-gen strong{color:var(--accent)}
+  .note{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:max-content;max-width:100%;color:var(--muted);font-size:12px;text-align:center;opacity:0;transition:opacity .35s}.note.show{opacity:1}
+  @media(max-width:390px){body{padding:8px}.stage,.diagram{min-height:280px;height:280px}.ai{width:264px;height:264px}.ml{width:198px;height:198px}.dl{width:132px;height:132px}.gen{width:70px;height:70px}.tag{font-size:12px}.tag-ai{top:14px;left:calc(50% - 94px)}.tag-ml{top:64px;left:calc(50% - 74px)}.tag-dl{top:108px;left:calc(50% - 57px)}.tag-gen{top:154px}.caption{font-size:13px}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+  <div class="stage" id="stage"></div>
+  <p class="caption" id="caption" aria-live="polite"></p>
+  <button class="btn" id="replay" type="button">Chạy lại</button>
+<script>
+(function(){
+  var theme=new URLSearchParams(location.search).get('theme');
+  if(theme==='dark'||theme==='light')document.documentElement.dataset.theme=theme;
+  addEventListener('message',function(e){if(e.data&&(e.data.theme==='dark'||e.data.theme==='light'))document.documentElement.dataset.theme=e.data.theme});
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,stage=document.getElementById('stage'),caption=document.getElementById('caption'),timer,cycle,index;
+  function reset(){stage.innerHTML='<div class="diagram"><div class="ring ai" id="ai"></div><div class="ring ml" id="ml"></div><div class="ring dl" id="dl"></div><div class="ring gen" id="gen"></div><div class="tag tag-ai" id="ai-t"><strong>AI</strong> · Trí tuệ nhân tạo</div><div class="tag tag-ml" id="ml-t"><strong>Machine Learning</strong> · Máy học</div><div class="tag tag-dl" id="dl-t"><strong>Deep Learning</strong> · Học sâu</div><div class="tag tag-gen" id="gen-t"><strong>Generative AI</strong><br>AI tạo sinh</div><div class="note" id="note">Cái sau là một phần nhỏ hơn, chuyên biệt hơn của cái trước.</div></div>'}
+  function reveal(id){document.getElementById(id).classList.add('show');document.getElementById(id+'-t').classList.add('show')}
+  var steps=[
+    ['Bước 1: AI là vòng lớn nhất: máy làm những việc cần “trí thông minh”.',function(){reveal('ai');document.getElementById('ai').classList.add('active')}],
+    ['Bước 2: Machine Learning là một phần của AI: máy học quy luật từ dữ liệu.',function(){document.getElementById('ai').classList.remove('active');reveal('ml');document.getElementById('ml').classList.add('active')}],
+    ['Bước 3: Deep Learning là một phần của ML, dùng mạng neural nhiều lớp.',function(){document.getElementById('ml').classList.remove('active');reveal('dl');document.getElementById('dl').classList.add('active')}],
+    ['Bước 4: Generative AI là một phần của Deep Learning, chuyên tạo nội dung mới.',function(){document.getElementById('dl').classList.remove('active');reveal('gen');document.getElementById('gen').classList.add('active')}],
+    ['Bước 5: GenAI nằm trong Deep Learning, Deep Learning nằm trong ML, và ML nằm trong AI.',function(){document.getElementById('note').classList.add('show')}]
+  ];
+  function play(){clearTimeout(timer);clearTimeout(cycle);reset();index=0;if(reduce){steps.forEach(function(s){s[1]()});caption.textContent='1. AI.  2. Machine Learning thuộc AI.  3. Deep Learning thuộc ML.  4. GenAI thuộc Deep Learning.  5. Đây không phải bốn khái niệm ngang hàng.';return}(function next(){if(index>=steps.length){cycle=setTimeout(play,3200);return}caption.textContent=steps[index][0];steps[index++][1]();timer=setTimeout(next,1800)})()}
+  document.getElementById('replay').onclick=play;play();
+  function report(){try{parent.postMessage({type:'minhhoa-height',height:document.body.scrollHeight},'*')}catch(e){}}addEventListener('load',report);if(window.ResizeObserver)new ResizeObserver(report).observe(document.body);
+})();
+</script>
+</body>
+</html>

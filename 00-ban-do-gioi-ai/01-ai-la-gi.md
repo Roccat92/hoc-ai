@@ -6,21 +6,7 @@ Bài này dành cho người **chưa từng học AI ngày nào**, nghe người
 
 Đừng nghĩ AI, ML, Deep Learning, GenAI là bốn thứ ngang hàng, tách biệt. Chúng là **các vòng tròn lồng vào nhau**, cái sau là một phần nhỏ hơn, chuyên biệt hơn của cái trước:
 
-```
-┌─────────────────────────────────────────────┐
-│  AI (Trí tuệ nhân tạo)                       │
-│  ┌─────────────────────────────────────┐    │
-│  │  Machine Learning (Máy học)          │    │
-│  │  ┌─────────────────────────────┐    │    │
-│  │  │  Deep Learning (Học sâu)     │    │    │
-│  │  │  ┌───────────────────┐      │    │    │
-│  │  │  │  Generative AI     │      │    │    │
-│  │  │  │  (AI tạo sinh)     │      │    │    │
-│  │  │  └───────────────────┘      │    │    │
-│  │  └─────────────────────────────┘    │    │
-│  └─────────────────────────────────────┘    │
-└─────────────────────────────────────────────┘
-```
+<iframe src="/minh-hoa/ai-ml-dl-genai.html" title="Minh họa: AI, Machine Learning, Deep Learning và Generative AI" loading="lazy" style="width:100%; height:420px; border:1px solid var(--vp-c-divider); border-radius:8px;"></iframe>
 
 Nói cách khác: **mọi GenAI đều là Deep Learning, mọi Deep Learning đều là Machine Learning, mọi Machine Learning đều là AI** - nhưng chiều ngược lại thì không đúng.
 
