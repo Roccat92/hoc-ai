@@ -18,6 +18,10 @@ Cái tên phổ biến nhất với người dùng phổ thông nhờ ChatGPT ra
 
 Model của Google, có lợi thế tích hợp sâu vào hệ sinh thái Google (Gmail, Docs, Android, Search) và thường có **context window rất lớn**, khả năng xử lý đa phương tiện (ảnh, video, audio) tốt. Dùng qua Gemini app, tích hợp trong Google Workspace, hoặc API (Google AI Studio / Vertex AI).
 
+### xAI - Grok
+
+Model của xAI (công ty của Elon Musk), tích hợp thẳng vào mạng xã hội X (Twitter) nên có lợi thế **truy cập dữ liệu thời gian thực từ X**, phong cách trả lời thường "thẳng thắn", ít rào đón hơn. Là một cái tên mạnh, tiến bộ nhanh trong nhóm dẫn đầu. Dùng qua X (gói trả phí), app Grok riêng, hoặc API.
+
 ## Nhóm "open" - model mở, tải về chạy trên máy/server riêng được
 
 > Xem phân biệt kỹ hơn open vs closed ở bài tiếp theo: [`04-open-source-vs-closed.md`](04-open-source-vs-closed.md)
@@ -45,6 +49,7 @@ Startup Pháp, nổi tiếng với các model **nhỏ nhưng hiệu quả** - ch
 | Anthropic | Claude | Đóng | Code, làm theo hướng dẫn phức tạp, an toàn |
 | OpenAI | GPT / ChatGPT | Đóng | Phổ biến, hệ sinh thái rộng, đa phương tiện |
 | Google | Gemini | Đóng | Context window lớn, tích hợp Google, đa phương tiện |
+| xAI | Grok | Đóng | Dữ liệu thời gian thực từ X, phong cách thẳng thắn |
 | Meta | Llama | Mở | Cộng đồng lớn, nhiều tài liệu self-host |
 | DeepSeek | DeepSeek-V/-R | Mở | Hiệu năng/chi phí huấn luyện tốt, mạnh code & toán |
 | Alibaba | Qwen | Mở | Đa dạng kích thước, đa ngôn ngữ |
