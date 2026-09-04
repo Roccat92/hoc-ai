@@ -204,14 +204,14 @@ export default defineConfig({
         miniSearch: {
           options: {
             processTerm: (term: string) =>
-              term.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').replace(/đ/g, 'd'),
+              term.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd'),
           },
           searchOptions: {
             fuzzy: 0.2,
             prefix: true,
             boost: { title: 4, text: 2, titles: 1 },
             processTerm: (term: string) =>
-              term.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').replace(/đ/g, 'd'),
+              term.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd'),
           },
         },
       },
