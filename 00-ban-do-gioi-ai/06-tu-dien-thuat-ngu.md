@@ -44,6 +44,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **Backend** | Phần "hậu trường" của phần mềm - xử lý logic, dữ liệu, không phải phần bạn nhìn thấy trên màn hình |
 | **Branch (nhánh)** | Một "bản sao song song" của code trong Git, để bạn sửa thứ gì đó mà không ảnh hưởng bản chính - xem [`02-code-voi-ai/05-git-github-co-ban.md`](../02-code-voi-ai/05-git-github-co-ban.md) |
 | **CI/CD** | Continuous Integration/Continuous Deployment - quy trình tự động kiểm tra và triển khai code mỗi khi có thay đổi |
+| **cd (lệnh)** | "change directory" - lệnh terminal để đi vào một thư mục; `cd ..` để lùi ra thư mục cha. Xem [`01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md`](../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md) |
 | **CLI (Command Line Interface)** | Giao diện dòng lệnh - gõ lệnh chữ thay vì bấm chuột vào nút. Claude Code là một công cụ CLI |
 | **Clone** | Tải một repo về máy mình từ GitHub |
 | **Commit** | Một "điểm lưu" trong Git, ghi lại một cụm thay đổi cụ thể kèm mô tả |
@@ -68,6 +69,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **npm / pip** | Công cụ quản lý "gói thư viện" (package) - npm cho JavaScript, pip cho Python. Giúp cài đặt code người khác viết sẵn thay vì tự viết lại |
 | **Open source (Mã nguồn mở)** | Phần mềm công khai toàn bộ code, ai cũng xem/sửa/dùng lại được (thường kèm giấy phép cụ thể như MIT) |
 | **Package / Dependency** | Một thư viện code người khác viết sẵn mà dự án của bạn "phụ thuộc" vào để hoạt động |
+| **PowerShell / cmd** | Hai loại terminal (cửa sổ dòng lệnh) trên Windows - PowerShell hiện đại hơn, khuyên dùng; cmd (Command Prompt) cũ hơn. Trên Mac/Linux tương đương là "Terminal". Xem [`01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md`](../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md) |
 | **Production vs Development** | Development (dev): môi trường bạn đang code, thử nghiệm. Production (prod): môi trường thật, người dùng thật đang dùng |
 | **Pull Request (PR)** | Yêu cầu gộp thay đổi code của bạn vào repo chính, để người khác review trước khi chấp nhận |
 | **React** | Một thư viện JavaScript rất phổ biến để xây giao diện web, do Meta phát triển |
@@ -78,7 +80,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **Server** | Máy tính (thường ở xa, chạy 24/7) xử lý yêu cầu và phục vụ dữ liệu cho người dùng |
 | **SQL / NoSQL** | Hai kiểu cơ sở dữ liệu: SQL có cấu trúc bảng cố định chặt chẽ (ví dụ: PostgreSQL, MySQL), NoSQL linh hoạt hơn về cấu trúc (ví dụ: MongoDB) |
 | **Tech stack** | Tập hợp các công nghệ/công cụ được dùng để xây một sản phẩm cụ thể (ví dụ: "stack" gồm React + Node.js + PostgreSQL) |
-| **Terminal / Command line** | Cửa sổ để gõ lệnh chữ điều khiển máy tính trực tiếp, thay vì bấm chuột |
+| **Terminal / Command line** | Cửa sổ để gõ lệnh chữ điều khiển máy tính trực tiếp, thay vì bấm chuột - cách mở và các lệnh cơ bản xem [`01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md`](../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md) |
 | **TypeScript** | Phiên bản mở rộng của JavaScript, thêm kiểm tra kiểu dữ liệu (type) giúp phát hiện lỗi sớm hơn khi code |
 | **VPS (Virtual Private Server)** | Một "máy chủ ảo" bạn thuê để tự cài đặt, vận hành ứng dụng của mình - xem [`03-ha-tang-thuc-chien/01-thue-vps.md`](../03-ha-tang-thuc-chien/01-thue-vps.md) |
 | **Web app vs Mobile app** | Web app: chạy qua trình duyệt, không cần cài đặt. Mobile app: cài trực tiếp trên điện thoại (native hoặc qua React Native/Flutter) |

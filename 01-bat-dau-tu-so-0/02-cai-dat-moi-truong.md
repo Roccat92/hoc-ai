@@ -13,6 +13,51 @@ Bài này dành cho người **chưa từng cài công cụ lập trình nào** 
 
 Toàn bộ đều **miễn phí 100%**.
 
+## Trước tiên: Terminal là gì, mở ở đâu?
+
+Từ đây trở đi bạn sẽ thường xuyên nghe "mở terminal, gõ lệnh...". Đừng lo, phần này giải thích một lần cho rõ.
+
+**Terminal** (còn gọi là "command line" - dòng lệnh) là một **cửa sổ để gõ lệnh bằng chữ ra lệnh trực tiếp cho máy tính**, thay vì bấm chuột vào các nút. Ví dụ thay vì bấm chuột tạo một thư mục mới, bạn gõ lệnh `mkdir ten-thu-muc`. Nhìn thì "hacker" nhưng thực ra rất đơn giản: gõ một dòng chữ, nhấn Enter, máy làm theo.
+
+### Mở terminal ở đâu?
+
+| Hệ điều hành | Cách mở |
+|---|---|
+| **Windows** | Bấm nút Start (hoặc phím Windows), gõ chữ **"PowerShell"**, nhấn Enter - một cửa sổ nền xanh/đen hiện ra, đó là terminal. (Gõ **"cmd"** cũng ra một terminal khác, xem mục dưới.) |
+| **Mac** | Nhấn `Cmd + dấu cách` để mở Spotlight, gõ **"Terminal"**, nhấn Enter. |
+| **Linux** | Thường nhấn `Ctrl + Alt + T`, hoặc tìm ứng dụng tên "Terminal". |
+
+### PowerShell, cmd, Terminal - khác nhau gì, dùng cái nào?
+
+Đây đều là các **loại terminal**, chỉ khác tên theo hệ điều hành:
+- Trên **Windows** có hai loại phổ biến: **PowerShell** (hiện đại hơn, khuyên dùng) và **Command Prompt (cmd)** (cũ hơn). Windows 11 còn có sẵn "Windows Terminal" gộp cả hai.
+- Trên **Mac/Linux**, terminal thường chỉ gọi chung là "Terminal".
+
+**Dùng cái nào?** Với repo này, phần lớn lệnh (`git`, `npm`, `node`, `python`) chạy được ở cả PowerShell lẫn cmd lẫn Terminal Mac - không cần lo. Trên Windows, **khuyên dùng PowerShell** vì nó gần giống Mac/Linux hơn (nhiều lệnh dùng chung được). Một vài lệnh thao tác file có khác nhau đôi chút giữa Windows và Mac/Linux - khi nào có khác biệt đáng kể, bài viết sẽ ghi rõ.
+
+### Vài lệnh cơ bản cần biết
+
+Bạn không cần thuộc lòng, cứ tra lại khi cần:
+
+| Lệnh | Viết tắt của | Làm gì |
+|---|---|---|
+| `cd ten-thu-muc` | **c**hange **d**irectory | Đi *vào* một thư mục (giống bấm đúp mở một folder) |
+| `cd ..` | | Lùi *ra* thư mục cha (lên một cấp) |
+| `ls` (Mac/Linux/PowerShell) hoặc `dir` (cmd) | **l**i**s**t | Liệt kê các file/thư mục đang có ở thư mục hiện tại |
+| `mkdir ten-thu-muc` | **m**a**k**e **dir**ectory | Tạo một thư mục mới |
+| `pwd` | **p**rint **w**orking **d**irectory | Hiện đường dẫn thư mục bạn đang đứng (đang ở đâu) |
+
+> **"Đường dẫn" (path)** chỉ đơn giản là địa chỉ của một thư mục/file trên máy, ví dụ `C:\Users\Ban\Documents\du-an` (Windows) hay `/Users/ban/du-an` (Mac). Lệnh `cd` dùng để di chuyển giữa các đường dẫn này.
+
+### Mẹo dùng terminal cho người mới
+
+- **Copy lệnh từ bài viết rồi dán vào terminal**: bấm chuột phải trong cửa sổ terminal để dán (PowerShell/cmd), hoặc `Cmd + V` trên Mac. Sau đó nhấn **Enter** để chạy.
+- **Gõ xong luôn nhấn Enter** thì máy mới thực hiện lệnh.
+- **Thấy chữ đỏ / báo lỗi đừng hoảng** - đó là chuyện bình thường. Copy nguyên dòng lỗi, dán vào chatbot AI hỏi "lỗi này là gì, sửa sao" (đúng như [mẹo ở bài trước](03-dung-chatbot-de-hoc.md) - à mà bài đó ở ngay sau, cứ nhớ nguyên tắc này).
+- **Terminal luôn đang "đứng" ở một thư mục nào đó.** Trước khi gõ lệnh liên quan tới một dự án, thường bạn cần `cd` vào đúng thư mục dự án đó trước.
+
+Giờ thì bắt tay cài đặt.
+
 ## 1. Cài VS Code
 
 1. Vào [code.visualstudio.com](https://code.visualstudio.com), bấm nút tải về lớn màu xanh (trang tự nhận diện hệ điều hành của bạn - Windows/Mac/Linux).
