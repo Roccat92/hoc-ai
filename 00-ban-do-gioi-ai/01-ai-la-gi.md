@@ -38,7 +38,7 @@ Bài này dành cho người **chưa từng học AI ngày nào**, nghe người
     <text x="290" y="273">ChatGPT, Claude</text>
   </g>
 </svg>
-<figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Cái sau nằm trọn trong cái trước: AI tạo sinh ⊂ Học sâu ⊂ Máy học ⊂ AI.</figcaption>
+<figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">AI tạo sinh nằm trong Học sâu, Học sâu nằm trong Máy học, Máy học nằm trong AI.</figcaption>
 </figure>
 
 Nói cách khác: **mọi GenAI đều là Deep Learning, mọi Deep Learning đều là Machine Learning, mọi Machine Learning đều là AI** - nhưng chiều ngược lại thì không đúng.
