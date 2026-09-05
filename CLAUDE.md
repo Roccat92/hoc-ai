@@ -37,7 +37,7 @@ Có script `scripts/kiem-tra-chuoi.mjs` (`npm run kiem-tra-chuoi`, hoặc `npm r
 
 ## Nhận diện (logo, favicon)
 
-Hình gốc là chữ "ô" (vòng tròn + dấu mũ) trong `public/logo.svg`, `logo-dark.svg` (thanh menu, sáng/tối) và `favicon.svg` (huy hiệu nền màu). Các file PNG (`favicon-32.png`, `apple-touch-icon.png`, `og.png`) KHÔNG sửa tay - sinh lại bằng `powershell -ExecutionPolicy Bypass -File scripts/tao-icon.ps1` sau khi đổi SVG. Màu dùng đúng màu brand mặc định của VitePress, không thêm màu riêng; không dùng emoji làm icon.
+Hình gốc là số 0 đặc có lỗ tròn + dấu mũ hình nêm (gợi chữ "ô" và "từ con số 0") trong `public/logo.svg`, `logo-dark.svg` (thanh menu, màu chữ sáng/tối) và `favicon.svg` (huy hiệu nền đen `#111114`, glyph trắng). Các file PNG (`favicon-32.png`, `apple-touch-icon.png`, `og.png`) KHÔNG sửa tay - sinh lại bằng `powershell -ExecutionPolicy Bypass -File scripts/tao-icon.ps1` sau khi đổi SVG. Nhận diện dùng đen/trắng trung tính, không thêm màu riêng ngoài màu brand mặc định của VitePress; không dùng emoji làm icon.
 
 ## Lệnh
 
