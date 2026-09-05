@@ -1,7 +1,7 @@
 # NEXA: agent biết gọi công cụ, không phải chatbot trả lời suông
 
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
-**Thời gian thực hiện:** *(đang bổ sung)*
+**Thời gian thực hiện:** build chung trong hơn 1 tháng làm [StarteeX App](02-starteex-app.md), dùng gói [Claude Pro](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md); vẫn update thường xuyên
 **Trình độ trước khi bắt đầu:** đã có sẵn hệ thống vận hành xưởng, cần một lớp trợ lý đứng trước khách
 
 > NEXA đang chạy thật, là trợ lý của [StarteeX](02-starteex-app.md).
@@ -46,13 +46,13 @@ Nếu bạn muốn tự làm thứ tương tự ở quy mô nhỏ, đọc theo t
 
 ## Chi phí thực tế (VND)
 
-*Chi phí gọi API cho agent phụ thuộc lượng tin nhắn thật, đang tổng hợp lại theo hóa đơn.*
+Khác với các case study kia, chi phí lớn nhất của NEXA **không phải tiền build mà là tiền vận hành**: mỗi tin nhắn khách gửi đều tốn một ít tiền gọi API. Đây là điểm cần tính kỹ với bất kỳ chatbot nào - build một lần nhưng trả tiền mãi theo lượng dùng.
 
 | Khoản | Chi phí | Ghi chú |
 |---|---|---|
-| Gọi API LLM | *(đang bổ sung)* | Tính theo token, xem [cách tính](../04-build-ung-dung-ai/01-goi-api-llm.md) |
-| Hạ tầng chạy agent | *(đang bổ sung)* | |
-| Gói AI dùng để code | *(đang bổ sung)* | |
+| Gọi API LLM | phát sinh theo lượng tin nhắn thật | Tính theo token, xem [cách tính](../04-build-ung-dung-ai/01-goi-api-llm.md) |
+| Hạ tầng chạy agent | 0đ | Supabase và Vercel bậc miễn phí |
+| Gói AI để build | Claude Pro (chung với build app) | Xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
 
 ## Bài học rút ra
 

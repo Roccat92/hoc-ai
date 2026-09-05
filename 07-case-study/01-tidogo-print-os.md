@@ -1,8 +1,10 @@
 # TIDOGO (Print OS): phần mềm quản lý sản xuất cho xưởng in
 
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
-**Thời gian thực hiện:** *(đang bổ sung)*
+**Thời gian thực hiện:** khoảng 2 tuần, dùng gói [Claude Max 5x](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md)
 **Trình độ trước khi bắt đầu:** 9 năm vận hành xưởng sản xuất theo yêu cầu, tự học lập trình để giải bài toán của chính mình
+
+> **Cách làm:** dùng Claude Max 5x để build, kèm Codex/ChatGPT Pro để phản biện phương án và làm assets. Dùng hai AI phản biện chéo nhau là một cách hay để bớt sai - xem [chi phí các gói Codex](../02-code-voi-ai/09-chi-phi-cac-goi-codex.md).
 
 > Case study này viết từ một sản phẩm **đang chạy thật** tại [tidogo.com](https://tidogo.com), không phải bài tập mẫu.
 
@@ -43,14 +45,16 @@ Vài khái niệm trong bảng trên nếu bạn chưa quen: xem lại [từ đi
 
 ## Chi phí thực tế (VND)
 
-*Phần này đang tổng hợp lại từ hóa đơn thật và sẽ được điền đầy đủ - đúng cam kết của repo là không ghi số ước chừng cho có.*
+Điểm bất ngờ dễ chịu: gần như toàn bộ hạ tầng chạy ở **bậc miễn phí**. Khoản đáng kể duy nhất trả đều hàng tháng là gói AI dùng để build.
 
 | Khoản | Chi phí | Ghi chú |
 |---|---|---|
-| Tên miền `.com` | *(đang bổ sung)* | |
-| Supabase | *(đang bổ sung)* | Có bậc miễn phí, trả tiền khi vượt |
-| Hạ tầng chạy web | *(đang bổ sung)* | |
-| Gói AI dùng để code | *(đang bổ sung)* | Xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
+| Tên miền `.com` | ~300.000đ/năm | Tùy nhà cung cấp và đuôi tên miền |
+| Supabase | 0đ | Dùng bậc miễn phí |
+| Vercel (chạy web) | 0đ | Dùng bậc miễn phí |
+| GitHub | 0đ | Dùng bậc miễn phí |
+| Gói AI để build | Claude Max 5x, 100 USD/tháng <Vnd usd="100" sau="/tháng" /> | Trong 2 tuần build; xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
+| Codex/ChatGPT Pro (phản biện, assets) | phát sinh theo dùng | Xem [chi phí các gói Codex](../02-code-voi-ai/09-chi-phi-cac-goi-codex.md) |
 
 ## Bài học rút ra
 

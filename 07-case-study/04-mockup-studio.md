@@ -1,7 +1,7 @@
 # Mockup Studio: công cụ web xử lý ảnh ngay trên trình duyệt, gọi được từ dòng lệnh và MCP
 
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
-**Thời gian thực hiện:** *(đang bổ sung)*
+**Thời gian thực hiện:** khoảng 1 tuần, dùng gói [Claude Pro](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) (kèm Codex/ChatGPT Pro để phản biện và làm assets)
 **Trình độ trước khi bắt đầu:** đã làm thiết kế và xử lý file in nhiều năm bằng Photoshop, Illustrator
 
 > Công cụ dùng được miễn phí tại [mockup.startee.vn](https://mockup.startee.vn).
@@ -58,8 +58,8 @@ Ngoài giao diện web cho người dùng thường, công cụ còn dùng đư�
 |---|---|---|
 | Tên miền phụ `mockup.startee.vn` | 0đ | Dùng tên miền đã có |
 | Máy chủ xử lý ảnh | 0đ | Vì xử lý ở trình duyệt người dùng |
-| Hạ tầng chạy web | *(đang bổ sung)* | |
-| Gói AI dùng để code | *(đang bổ sung)* | |
+| Vercel (chạy web) | 0đ | Dùng bậc miễn phí |
+| Gói AI để build | Claude Pro, 20 USD/tháng <Vnd usd="20" sau="/tháng" /> | Trong 1 tuần build; xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
 
 ## Bài học rút ra
 
