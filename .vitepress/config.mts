@@ -6,9 +6,9 @@ import { fileURLToPath } from 'node:url'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
 // File .md công khai ở gốc repo — MỌI file .md khác ở gốc (CLAUDE.md, CONTEXT.md,
-// MO-RONG-REPO.md, PROMPT-CHO-CLAUDE-CODE.md, BACKLOG.md, và bất kỳ file nội bộ
-// nào thêm sau này) tự động bị loại khỏi bản build, không cần sửa danh sách này
-// mỗi khi có file nội bộ mới — chỉ cần KHÔNG thêm tên nó vào đây.
+// BACKLOG.md, và bất kỳ file nội bộ nào thêm sau này) tự động bị loại khỏi bản
+// build, không cần sửa danh sách này mỗi khi có file nội bộ mới — chỉ cần
+// KHÔNG thêm tên nó vào đây.
 const PUBLIC_ROOT_DOCS = new Set(['README.md', 'CONTRIBUTING.md'])
 const internalRootDocs = fs
   .readdirSync(root, { withFileTypes: true })
@@ -151,7 +151,10 @@ function buildSidebar(): DefaultTheme.SidebarItem[] {
     const sectionNumber = section.dir.match(/^(\d+)/)?.[1] ?? ''
     const text = `${sectionNumber}. ${section.text}`
     const link = `/${section.dir}/`
-    return lessons.length ? { text, link, collapsed: false, items: lessons } : { text, link }
+    // collapsed: true - thu gọn mặc định để sidebar không phải "wall of kiến thức"
+    // đập vào mắt người mới ngay lần mở đầu. VitePress tự bung đúng nhóm chứa
+    // trang đang đọc, nên không mất khả năng điều hướng khi đang ở giữa một phần.
+    return lessons.length ? { text, link, collapsed: true, items: lessons } : { text, link }
   })
   const phuLucDir = path.join(root, 'phu-luc-cong-cu')
   const phuLuc = {
