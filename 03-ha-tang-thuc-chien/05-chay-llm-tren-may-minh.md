@@ -69,4 +69,4 @@ Nếu máy bạn không đủ mạnh cho model muốn thử, hai lựa chọn: c
 
 ## Bước tiếp theo
 
-Đã có đủ nền tảng hạ tầng - từ deploy web tới chạy AI local/cloud, giờ bắt tay build ứng dụng AI thật: [Build ứng dụng AI →](../04-build-ung-dung-ai/01-goi-api-llm.md)
+Đã có đủ nền tảng hạ tầng - từ deploy web tới chạy AI local/cloud. Trước khi build ứng dụng AI thật, học cách tách môi trường, backup và giám sát để đưa sản phẩm ra internet cho vững: [Database production, CI/CD và vận hành tối thiểu →](06-database-production-ci-cd-monitoring.md)

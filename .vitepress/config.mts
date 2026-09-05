@@ -95,16 +95,26 @@ function buildSidebar(): DefaultTheme.SidebarItem[] {
     const isProjectSection = fs
       .readdirSync(dir, { withFileTypes: true })
       .some((d) => d.isDirectory() && /^du-an-\d+-/.test(d.name))
+    // Trong 09-du-an-thuc-hanh/, ngoài các thư mục dự án (du-an-NN-...) còn có
+    // thể có file bài học phẳng ở gốc phần (ví dụ 04-rubric-va-capstone.md) -
+    // gộp cả hai loại, dự án trước rồi tới các file phẳng, để không có bài nào
+    // "biến mất" khỏi sidebar chỉ vì phần này có cấu trúc hỗn hợp.
+    const flatLessonFiles = fs
+      .readdirSync(dir)
+      .filter((f) => /^\d+-.*\.md$/.test(f))
+      .sort()
     const lessons = isProjectSection
-      ? projectGroupsOf(dir, section.dir)
-      : fs
-          .readdirSync(dir)
-          .filter((f) => /^\d+-.*\.md$/.test(f))
-          .sort()
-          .map((f, i) => ({
-            text: `${i + 1}. ${shortTitle(headingOf(path.join(dir, f)))}`,
+      ? [
+          ...projectGroupsOf(dir, section.dir),
+          ...flatLessonFiles.map((f) => ({
+            text: shortTitle(headingOf(path.join(dir, f))),
             link: `/${section.dir}/${f.replace(/\.md$/, '')}`,
-          }))
+          })),
+        ]
+      : flatLessonFiles.map((f, i) => ({
+          text: `${i + 1}. ${shortTitle(headingOf(path.join(dir, f)))}`,
+          link: `/${section.dir}/${f.replace(/\.md$/, '')}`,
+        }))
     // Số hiển thị lấy từ chính tiền tố thư mục (vd "10-bao-mat" -> 10), không phải
     // vị trí trong mảng `sections` — để đúng ngay cả khi các phần chưa liền số
     // (ví dụ 09 chưa tồn tại nhưng 10 đã có).

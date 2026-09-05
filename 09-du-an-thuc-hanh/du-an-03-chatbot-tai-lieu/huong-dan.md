@@ -56,4 +56,4 @@ Câu nào chưa chắc - quay lại đúng phần đó, tự làm lại trước
 
 ## Bước tiếp theo
 
-Đã hoàn thành cả ba dự án thực hành. Trước khi cho người khác dùng thử bất kỳ sản phẩm nào trong số đó, đi qua checklist bảo mật tối thiểu: [Bảo mật →](../../10-bao-mat/)
+Đã hoàn thành cả ba dự án thực hành. Trước khi coi là xong, tự chấm bằng rubric và cân nhắc biến một dự án thành capstone: [Rubric tự chấm và capstone →](../04-rubric-va-capstone.md)

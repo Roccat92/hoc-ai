@@ -66,6 +66,10 @@ Bạn có thể nhờ AI soạn bản nháp ("viết Điều khoản sử dụng
 
 ## Tổng kết phần 11
 
-Ba bài của phần này ([đăng nhập](01-dang-nhap-google-apple-otp.md), [lên store](02-dua-app-len-store.md), pháp lý) là những thứ **thực tế ở Việt Nam mà gần như không khóa học miễn phí nào nhắc tới** - nhưng lại là chỗ người mới dễ mất tiền oan hoặc gặp rắc rối nhất khi đưa sản phẩm ra thị trường thật. Không cần thuộc lòng; chỉ cần biết chúng tồn tại để đúng lúc thì biết đường hỏi đúng người.
+Ba bài đầu của phần này ([đăng nhập](01-dang-nhap-google-apple-otp.md), [lên store](02-dua-app-len-store.md), pháp lý) là những thứ **thực tế ở Việt Nam mà gần như không khóa học miễn phí nào nhắc tới** - nhưng lại là chỗ người mới dễ mất tiền oan hoặc gặp rắc rối nhất khi đưa sản phẩm ra thị trường thật. Không cần thuộc lòng; chỉ cần biết chúng tồn tại để đúng lúc thì biết đường hỏi đúng người.
 
 Có kinh nghiệm thực chiến về mảng này (đã tự làm DUNS, tự thông báo Bộ Công Thương, tự tích hợp Zalo ZNS...)? Chia sẻ lại cho cộng đồng qua [CONTRIBUTING.md](../CONTRIBUTING.md) - đây đúng là loại kiến thức "xương máu" quý nhất của thư viện này.
+
+## Bước tiếp theo
+
+Pháp lý đã rõ, giờ trước khi build là phải biết chắc mình đang giải đúng vấn đề: [Xác thực vấn đề, analytics và phản hồi người dùng →](04-xac-thuc-van-de-va-analytics.md)

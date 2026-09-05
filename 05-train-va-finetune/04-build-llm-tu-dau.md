@@ -42,4 +42,4 @@ Hiểu lý thuyết về pre-training giúp bạn có cái nhìn sâu hơn về 
 
 ## Bước tiếp theo
 
-Đã đi hết phần nâng cao. Giờ khám phá kho tài nguyên để tiếp tục tự học sau khi hoàn thành lộ trình này: [Kho tài nguyên →](../06-kho-tai-nguyen/01-awesome-repos.md)
+Trước khi rời phần nâng cao này, học cách đo lường thay vì đoán mò: [Eval trước khi fine-tune →](05-eval-truoc-khi-fine-tune.md)

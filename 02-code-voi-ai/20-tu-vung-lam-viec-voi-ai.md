@@ -86,4 +86,4 @@ Ví dụ: *"**Refactor** hàm `xuLyDon` **trong `don-hang.js`** thành các hàm
 
 ## Bước tiếp theo
 
-Bạn đã có công cụ, biết chọn chỗ làm việc, biết diễn đạt cho AI hiểu. Giờ tới lúc đưa sản phẩm ra khỏi máy mình cho vững: [Cơ sở dữ liệu production, CI/CD và giám sát](../03-ha-tang-thuc-chien/06-database-production-ci-cd-monitoring.md)
+Bạn đã có công cụ, biết chọn chỗ làm việc, biết diễn đạt cho AI hiểu. Giờ tới lúc đưa sản phẩm ra khỏi máy mình cho người khác dùng được: [Thuê VPS: là gì, chọn nhà cung cấp nào →](../03-ha-tang-thuc-chien/01-thue-vps.md)

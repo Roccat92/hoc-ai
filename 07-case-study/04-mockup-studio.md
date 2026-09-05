@@ -74,4 +74,4 @@ Ngoài giao diện web cho người dùng thường, công cụ còn dùng đư�
 
 ## Bước tiếp theo
 
-Dự án tiếp theo của bạn lớn hơn, cần làm qua nhiều phiên, nhiều ngày? Học cách làm việc với AI có kỷ luật để khỏi loạn ngữ cảnh: [Chuẩn hóa dự án →](../08-chuan-hoa-du-an/)
+Dự án tiếp theo của bạn lớn hơn, cần làm qua nhiều phiên, nhiều ngày? Học cách làm việc với AI có kỷ luật để khỏi loạn ngữ cảnh: [Vì sao cần spec trước khi để AI code →](../08-chuan-hoa-du-an/01-tai-sao-can-spec.md)

@@ -49,4 +49,4 @@ Sáu bài trong phần này ([1](01-checklist-truoc-khi-public.md) đến bài n
 
 ## Bước tiếp theo
 
-Sản phẩm đã build xong, đã bảo mật cơ bản - giờ là những chuyện thực tế khi đưa nó ra thị trường thật ở Việt Nam (đăng nhập, lên store, pháp lý): [Ra thị trường thật →](../11-ra-thi-truong/)
+Nếu sản phẩm có chatbot RAG hoặc agent, còn một lớp bảo mật riêng cần biết trước khi public: [Bảo mật ứng dụng AI: prompt injection, tool và dữ liệu →](07-bao-mat-ung-dung-ai.md)
