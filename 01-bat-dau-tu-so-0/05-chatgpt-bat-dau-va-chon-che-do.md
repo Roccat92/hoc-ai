@@ -1,9 +1,5 @@
 # ChatGPT: bắt đầu đúng chỗ, đúng chế độ, đúng model
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người mới mở ChatGPT và chưa biết nên dùng Chat, Work hay Codex. Học xong bạn sẽ chọn được nơi làm việc phù hợp cho từng loại yêu cầu, biết khi nào nên mở cuộc trò chuyện mới và không còn mặc định dùng model mạnh nhất cho mọi việc.
 
 ## Ba kiểu việc, ba nơi bắt đầu
@@ -21,6 +17,12 @@ Bài này dành cho người mới mở ChatGPT và chưa biết nên dùng Chat
 Đừng hỏi “model nào mạnh nhất?” trước khi hỏi “sai ở việc này có đắt không?”. Việc lặp lại, phạm vi hẹp thì ưu tiên model nhỏ/nhanh; việc phân tích, code hoặc nhiều bước thì dùng model cân bằng; quyết định khó hoặc dữ liệu quan trọng thì dùng model suy luận mạnh rồi kiểm tra bằng nguồn hoặc test.
 
 Model, tên gói và quyền truy cập thay đổi theo thời gian. Hãy xem [OpenAI Docs](https://learn.chatgpt.com/) và menu model trong tài khoản thay vì chép tên từ ảnh chụp cũ.
+
+## Ba mức chi phí, đừng mặc định mua gói cao
+
+ChatGPT có nhiều gói: **Free** (0đ), **Go**, **Plus**, và **Pro** - trong đó Pro lại chia hai mức *5x* và *20x*, đúng kiểu bẫy đặt tên bạn sẽ gặp lại ở [Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md). Mốc hợp lý để bắt đầu làm việc thật thường là **Plus** (20 USD <Vnd usd="20" />/tháng). Đừng vội mua Pro chỉ vì sợ thiếu - dùng gói thấp trước, khi thường xuyên chạm trần mới nâng.
+
+Số tiền cụ thể từng gói, hạn mức và cách chọn có bảng đầy đủ (tự cập nhật theo tỉ giá) ở [chi phí các gói Codex/ChatGPT](../02-code-voi-ai/09-chi-phi-cac-goi-codex.md). Giá đổi khá nhanh - luôn mở lại [trang giá chính thức](https://learn.chatgpt.com/docs/pricing) trước khi trả tiền.
 
 ## Cách mở một cuộc trò chuyện sạch
 

@@ -1,9 +1,5 @@
 # Prompt thực dụng: giao việc cho ChatGPT như giao việc cho đồng đội
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người đã biết mở ChatGPT và muốn câu trả lời bớt chung chung. Học xong bạn sẽ viết được prompt có thể kiểm tra, biết dùng ví dụ và biết sửa prompt dựa trên lỗi của đầu ra thay vì gõ lại ngẫu nhiên.
 
 ## Khung năm phần
@@ -32,6 +28,18 @@ Constraints: Không suy đoán nguyên nhân nếu dữ liệu không nói tới
 - **Mở rộng:** từ ý ngắn thành dàn ý, rồi thành bản nháp có giới hạn.
 
 Hãy yêu cầu đầu ra dạng bảng, checklist, Markdown hoặc JSON khi máy khác cần đọc tiếp. Với dữ liệu quan trọng, nói rõ phải trả `unknown` thay vì tự đoán.
+
+## Một vòng hoàn chỉnh trông thế nào
+
+Lấy prompt "tóm tắt phản hồi khách hàng" ở trên, đầu ra rút gọn có thể trông như sau:
+
+| Vấn đề | Số lần | Trích ý | Đề xuất |
+|---|---|---|---|
+| Giao hàng trễ | 8 | "chờ hơn 1 tiếng mới tới" | Hiện thời gian giao dự kiến khi đặt |
+| Món bị nguội | 5 | "đồ ăn nguội ngắt" | Dùng túi giữ nhiệt cho đơn xa |
+| App khó dùng | 2 | "không tìm được nút hủy" | Xem lại vị trí nút hủy đơn |
+
+Đây mới là bản nháp của máy, không phải kết luận cuối. Việc của bạn: soi xem "8 lần", "5 lần" có khớp dữ liệu gốc không, và cột "Trích ý" có đúng là câu khách nói hay bị diễn giải thêm. Bước kiểm tra này là ranh giới giữa "AI làm hộ" và "AI làm loạn".
 
 ## Lặp có chủ đích
 

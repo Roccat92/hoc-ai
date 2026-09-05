@@ -4,11 +4,6 @@
 import fs from 'node:fs'
 
 const FILES = [
-  '01-bat-dau-tu-so-0/05-chatgpt-bat-dau-va-chon-che-do.md',
-  '01-bat-dau-tu-so-0/06-chatgpt-prompt-thuc-dung.md',
-  '01-bat-dau-tu-so-0/07-chatgpt-file-web-va-nghien-cuu.md',
-  '01-bat-dau-tu-so-0/08-chatgpt-phan-tich-du-lieu-va-tao-tai-lieu.md',
-  '01-bat-dau-tu-so-0/09-chatgpt-projects-bo-nho-va-rieng-tu.md',
   '01-bat-dau-tu-so-0/10-file-web-va-server-hoat-dong-the-nao.md',
   '01-bat-dau-tu-so-0/11-json-api-database-crud.md',
   '02-code-voi-ai/10-codex-cai-dat-va-chon-noi-lam-viec.md',

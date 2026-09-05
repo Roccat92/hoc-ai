@@ -1,9 +1,5 @@
 # Làm việc với file, web và nghiên cứu bằng ChatGPT
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người muốn đưa tài liệu thật vào ChatGPT nhưng sợ kết quả bịa hoặc dùng nhầm nguồn. Học xong bạn sẽ biết chuẩn bị file, chọn giữa kiến thức sẵn có và web search, yêu cầu trích nguồn, và kiểm tra một kết luận trước khi sử dụng.
 
 ## Chuẩn bị file trước khi tải lên
@@ -13,6 +9,8 @@ Bài này dành cho người muốn đưa tài liệu thật vào ChatGPT nhưng
 - Giữ tiêu đề cột, đơn vị và khoảng thời gian rõ ràng.
 - Nếu PDF là ảnh scan, kiểm tra chữ có đọc được không.
 - Chỉ tải phần tài liệu cần cho câu hỏi.
+
+> Số file, dung lượng mỗi file và các định dạng được phép **tùy theo gói tài khoản** và thay đổi theo thời gian - nếu tải lên báo lỗi, kiểm tra lại giới hạn của gói bạn đang dùng thay vì đoán.
 
 ## Khi nào dùng web search?
 
@@ -34,6 +32,18 @@ Link xuất hiện trong câu trả lời không tự động biến kết luậ
 3. Mở nguồn gốc, kiểm tra ngày và phạm vi áp dụng.
 4. Hỏi lại phần mâu thuẫn hoặc thiếu dữ liệu.
 5. Chỉ đưa kết luận vào báo cáo sau khi tự kiểm tra.
+
+## Đi một vòng: từ câu hỏi tới kết luận đã kiểm
+
+Giả sử bạn hỏi "nền tảng deploy miễn phí nào hỗ trợ region châu Á?". Một vòng làm đúng:
+
+1. **Hỏi hẹp, yêu cầu nguồn:** *"Liệt kê 3 nền tảng deploy có bậc miễn phí và có region châu Á. Mỗi dòng kèm link trang chính thức và ngày bạn đọc được thông tin."*
+2. **Đầu ra máy đưa** (rút gọn, minh họa): một bảng 3 dòng, mỗi dòng có tên + link.
+3. **Bạn tự mở từng link:** vào đúng trang giá/tài liệu, xác nhận "có region châu Á" là thật và còn hiệu lực.
+4. **Đánh dấu:** ô nào link xác nhận → giữ; ô nào link không nói rõ → sửa thành "chưa rõ, cần hỏi hỗ trợ".
+5. **Chỉ khi đó** con số/kết luận mới được đưa vào việc thật.
+
+Điểm mấu chốt: ChatGPT có gắn link không có nghĩa link đó *chứng minh* điều nó nói - có khi link đúng nhưng nội dung bị diễn giải sai. Người mở link vẫn là bạn.
 
 ## Bài tập: bảng so sánh có nguồn
 

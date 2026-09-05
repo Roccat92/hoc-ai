@@ -1,9 +1,5 @@
 # Phân tích dữ liệu và tạo tài liệu bằng ChatGPT
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho chủ shop, freelancer và người làm văn phòng muốn hỏi dữ liệu bằng ngôn ngữ tự nhiên. Học xong bạn sẽ đi được một vòng từ file thô tới báo cáo có bảng, biểu đồ, insight và phần giới hạn.
 
 ## Quy trình sáu bước
@@ -28,6 +24,28 @@ Không tự sửa file gốc; nếu phát hiện lỗi, tạo một bản đã l
 ```
 
 Luôn đối chiếu tổng số dòng, tổng tiền và một vài dòng mẫu. Nếu dùng cho quyết định tài chính, tự tính lại công thức quan trọng bằng spreadsheet hoặc script nhỏ. Biểu đồ đẹp không chứng minh công thức đúng.
+
+## Thử với một file nhỏ
+
+Bạn không cần dữ liệu lớn để luyện. Tạo file `don-hang.csv` vài dòng như thế này:
+
+```csv
+ma_don,ngay,san_pham,so_luong,thanh_tien,trang_thai
+1001,2026-08-03,Áo thun,2,300000,hoan_thanh
+1002,2026-08-05,Túi tote,1,120000,hoan_thanh
+1003,2026-08-05,Áo thun,1,150000,huy
+1004,2026-08-11,Hoodie,3,1050000,hoan_thanh
+```
+
+Tải lên, chạy prompt mẫu ở trên, đầu ra rút gọn có thể là:
+
+| Tháng | Doanh thu (hoàn thành) | Số đơn | Ghi chú |
+|---|---|---|---|
+| 08/2026 | 1.500.000đ | 3 | Đã loại 1 đơn trạng thái `huy` |
+
+Kiểm ngay: đơn `1003` bị hủy nên **không** được tính vào doanh thu - nếu bảng cộng cả nó (thành 1.650.000đ) thì AI đã bỏ qua bước lọc trạng thái. Đây chính là loại lỗi bạn phải bắt trước khi tin con số.
+
+> Tính năng phân tích dữ liệu và xuất file **tùy theo gói tài khoản**; nếu không thấy, kiểm tra lại gói bạn đang dùng.
 
 ## Bài tập
 

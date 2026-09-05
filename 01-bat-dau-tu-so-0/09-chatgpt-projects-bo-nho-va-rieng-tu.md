@@ -1,9 +1,5 @@
 # Projects, bộ nhớ và quyền riêng tư trong ChatGPT
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người có một công việc lặp lại nhiều ngày và không muốn dán lại toàn bộ bối cảnh ở mỗi cuộc trò chuyện. Học xong bạn sẽ biết khi nào dùng Project, cách viết hướng dẫn riêng gọn, phân biệt bộ nhớ với file nguồn, và giảm rủi ro khi đưa dữ liệu cá nhân vào AI.
 
 ## Project giải quyết vấn đề gì?
@@ -11,6 +7,18 @@ Bài này dành cho người có một công việc lặp lại nhiều ngày v�
 Một Project gom các cuộc trò chuyện, file nguồn và hướng dẫn chung quanh một mục tiêu. Ví dụ: Project “Nội dung cho shop” có chân dung khách hàng, bảng sản phẩm, giọng thương hiệu và checklist duyệt bài.
 
 Đừng biến Project thành kho chứa mọi thứ. Mỗi Project nên có một mục tiêu, một nhóm file liên quan và một quy tắc ngắn. Khi đổi khách hàng hoặc sản phẩm, tạo Project mới để tránh trộn dữ liệu.
+
+## Tạo một Project từng bước
+
+Vị trí nút và tên gọi có thể đổi theo phiên bản, nhưng luồng chung là:
+
+1. Ở thanh bên trái ChatGPT, tìm mục **Projects** và bấm tạo Project mới.
+2. Đặt tên theo mục tiêu, ví dụ "Nội dung cho shop".
+3. Mở phần **hướng dẫn** (instructions) của Project, dán quy tắc ngắn (mẫu ở dưới).
+4. Kéo thả các file nguồn cần tham chiếu vào Project (bảng sản phẩm, chân dung khách...).
+5. Từ nay, mở chat **bên trong** Project đó - nó tự đọc hướng dẫn và file, bạn khỏi dán lại mỗi lần.
+
+> Projects và bộ nhớ (memory) **phụ thuộc gói tài khoản** và thay đổi theo thời gian. Nếu không thấy mục Projects, kiểm tra lại gói bạn đang dùng thay vì cho là mình làm sai.
 
 ## Ba lớp ngữ cảnh
 
