@@ -6,10 +6,10 @@ Bài này dành cho người làm app di động (hoặc web app muốn đóng g
 
 | Chợ | Của | Phí tài khoản nhà phát triển |
 |---|---|---|
-| **App Store** | Apple (cho iPhone/iPad) | Apple Developer Program, khoảng **99 USD/năm** |
-| **Google Play** | Google (cho Android) | Google Play Console, phí đăng ký **một lần khoảng 25 USD** |
+| **App Store** | Apple (cho iPhone/iPad) | Apple Developer Program, khoảng **99 USD/năm** <Vnd usd="99" sau="/năm" /> |
+| **Google Play** | Google (cho Android) | Google Play Console, phí đăng ký **một lần khoảng 25 USD** <Vnd usd="25" /> |
 
-> Phí có thể thay đổi - kiểm tra developer.apple.com và play.google.com/console để có số mới nhất. Đây là phí bắt buộc của chính hãng, không phải qua trung gian.
+> Số tiền VND ở trên được quy đổi tự động theo tỉ giá lúc bạn mở trang, chỉ để ước lượng. Phí gốc tính bằng USD và có thể thay đổi - kiểm tra developer.apple.com và play.google.com/console để có số mới nhất. Đây là phí bắt buộc của chính hãng, không phải qua trung gian.
 
 ## Tài khoản cá nhân vs tổ chức - và vì sao xuất hiện mã D-U-N-S
 

@@ -56,7 +56,7 @@ Gửi mã qua tin nhắn điện thoại. Khác với email, **SMS tốn tiền 
 | Cách đăng nhập | Chi phí | Độ khó bật | Khi nào dùng |
 |---|---|---|---|
 | Google | Gần như miễn phí | Dễ (qua dịch vụ auth) | Nên có - phổ biến nhất |
-| Apple | Cần Apple Developer (~99 USD/năm) | Vừa | Bắt buộc nếu lên App Store và đã có login mạng xã hội khác |
+| Apple | Cần Apple Developer (~99 USD/năm <Vnd usd="99" />) | Vừa | Bắt buộc nếu lên App Store và đã có login mạng xã hội khác |
 | OTP email | Gần như miễn phí | Dễ | Nên có - ai cũng có email |
 | OTP SMS | Tốn tiền mỗi tin | Vừa | Khi cần xác thực số điện thoại thật |
 | OTP Zalo (ZNS) | Vài triệu + phí/tin, phải chờ duyệt | Khó | Chỉ khi thật sự cần kênh Zalo ở VN |
