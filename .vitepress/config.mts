@@ -2,6 +2,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { execFileSync } from 'node:child_process'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -181,10 +182,15 @@ const description =
 const CANONICAL_ORIGIN = 'https://hocaiviet.com'
 
 // Mô tả riêng từng bài, sinh cùng lúc với thumbnail (public/thumb/_mo-ta.json, không commit).
-const MO_TA_BAI: Record<string, string> = (() => {
-  const f = path.join(root, 'public', 'thumb', '_mo-ta.json')
-  try { return JSON.parse(fs.readFileSync(f, 'utf8')) } catch { return {} }
-})()
+// Đọc lười và chỉ đọc một lần, vì file này do plugin buildStart bên dưới sinh ra SAU khi
+// config được nạp.
+let moTaCache: Record<string, string> | null = null
+function moTaBai(relativePath: string): string | undefined {
+  if (!moTaCache) {
+    try { moTaCache = JSON.parse(fs.readFileSync(path.join(root, 'public', 'thumb', '_mo-ta.json'), 'utf8')) } catch { moTaCache = {} }
+  }
+  return moTaCache![relativePath]
+}
 
 // Suy ra đường dẫn công khai (sau rewrite, sau khi bỏ .md) từ relativePath VitePress
 // đưa vào transformPageData - relativePath ở bước này ĐÃ được áp rewrite
@@ -212,6 +218,21 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: [(url) => /LICENSE$/.test(url)],
+  vite: {
+    plugins: [
+      {
+        // Sinh thumbnail từng bài NGAY TRONG build (không phụ thuộc lệnh build cấu hình ở
+        // Cloudflare/CI có gọi "npm run docs:build" hay chỉ "vitepress build"). Chạy lần
+        // hai trong cùng build (client + server) gần như tức thì nhờ so mtime. Không chạy
+        // ở dev - máy dev muốn thấy ảnh thì "npm run tao-thumbnail" một lần.
+        name: 'hoc-ai-thumbnail',
+        apply: 'build',
+        buildStart() {
+          execFileSync(process.execPath, [path.join(root, 'scripts', 'tao-thumbnail.mjs')], { stdio: 'inherit' })
+        },
+      },
+    ],
+  },
   transformPageData(pageData) {
     if (pageData.relativePath === '404.md') return
     const head = (pageData.frontmatter.head ??= [])
@@ -226,7 +247,8 @@ export default defineConfig({
     const ogImage = coAnhRieng ? `${CANONICAL_ORIGIN}/thumb/${anhRieng}` : `${CANONICAL_ORIGIN}/og.png`
     const ogTitle = duongDan === '/' ? 'Học AI Việt' : `${pageData.title} | Học AI Việt`
     // Mô tả riêng từng bài (câu "học xong bạn sẽ...") do scripts/tao-thumbnail.mjs rút ra.
-    if (!pageData.description && MO_TA_BAI[pageData.relativePath]) pageData.description = MO_TA_BAI[pageData.relativePath]
+    const moTa = moTaBai(pageData.relativePath)
+    if (!pageData.description && moTa) pageData.description = moTa
     head.push(
       ['meta', { property: 'og:type', content: duongDan === '/' ? 'website' : 'article' }],
       ['meta', { property: 'og:url', content: `${CANONICAL_ORIGIN}${duongDan}` }],

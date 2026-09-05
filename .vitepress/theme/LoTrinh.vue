@@ -132,7 +132,8 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
       <ul class="cap-bai">
         <li v-for="b in cap.bai" :key="b.link" class="the" :class="{ 'da-xong': daXong[b.link] }">
           <a :href="b.link" class="the-anh" tabindex="-1" aria-hidden="true">
-            <img :src="'/thumb/nho' + b.link + '.png'" alt="" loading="lazy" width="480" height="252" />
+            <!-- Thiếu ảnh (chưa chạy npm run tao-thumbnail ở máy dev) thì ẩn khung ảnh, thẻ vẫn dùng được. -->
+            <img :src="'/thumb/nho' + b.link + '.png'" alt="" loading="lazy" width="480" height="252" @error="$event.target.closest('.the-anh').hidden = true" />
           </a>
           <div class="the-chu">
             <input
@@ -240,7 +241,7 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
   margin: 14px 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 16px 12px;
 }
 .the {
@@ -300,6 +301,23 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
   .the-anh, .the-anh:hover {
     transition: none;
     transform: none;
+  }
+}
+/* Điện thoại: thẻ nằm ngang (ảnh trái, tên phải) để 5 bài không kéo quá dài.
+   Phải đặt SAU các rule .the/.the-anh ở trên vì cùng độ ưu tiên, rule sau thắng. */
+@media (max-width: 480px) {
+  .cap-bai {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .the {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .the-anh {
+    width: 128px;
+    flex-shrink: 0;
   }
 }
 
