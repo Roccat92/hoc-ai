@@ -11,5 +11,9 @@ Từ "dùng AI để code" sang "code ra sản phẩm có AI bên trong": gọi 
 3. [AI Agent: tool use, MCP, build agent đầu tiên](03-ai-agent.md)
 4. [Tích hợp AI vào web/app có sẵn: case thật (app đặt hàng, CRM)](04-tich-hop-ai-vao-app.md)
 5. [Tự động hóa không cần code nhiều với n8n + AI](05-n8n-automation.md)
+6. [Structured output, function calling và reliability](06-structured-output-evals-va-reliability.md)
+7. [Evals và prompt versioning cho ứng dụng AI](07-evals-va-prompt-versioning.md)
+8. [RAG quality và bảo mật dữ liệu truy hồi](08-rag-quality-va-bao-mat.md)
+9. [Agent guardrail, human approval và quan sát production](09-agent-guardrail-va-quan-sat.md)
 
 Bắt đầu từ [bài 1](01-goi-api-llm.md).

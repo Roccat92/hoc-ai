@@ -12,5 +12,6 @@ Checklist bảo mật cho người **không chuyên** build app - mức "đủ a
 4. [Chống bot và spam: Cloudflare Turnstile, rate limiting, DDoS](04-chong-bot-va-spam.md)
 5. [Đăng nhập và mật khẩu: đừng tự chế, dùng thư viện/dịch vụ chuẩn](05-dang-nhap-va-mat-khau.md)
 6. [Nhờ AI rà soát bảo mật trước khi deploy](06-nho-ai-ra-soat-bao-mat.md)
+7. [Bảo mật ứng dụng AI: prompt injection, tool và dữ liệu](07-bao-mat-ung-dung-ai.md)
 
 Bắt đầu từ [bài 1](01-checklist-truoc-khi-public.md).

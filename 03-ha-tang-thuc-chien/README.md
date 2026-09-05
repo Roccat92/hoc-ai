@@ -11,5 +11,6 @@ Phần ít ai dạy miễn phí nhất: đưa sản phẩm lên internet cho ng�
 3. [Deploy miễn phí: Vercel, Netlify, Cloudflare Pages, Railway - khi nào chưa cần VPS](03-deploy-mien-phi.md) - với dự án nhỏ, đọc bài này trước khi thuê VPS
 4. [Thuê cloud GPU: RunPod, Vast.ai, Lambda, Google Colab](04-thue-cloud-gpu.md)
 5. [Chạy LLM trên máy mình: Ollama, LM Studio](05-chay-llm-tren-may-minh.md)
+6. [Database production, CI/CD và vận hành tối thiểu](06-database-production-ci-cd-monitoring.md)
 
 Bắt đầu từ [bài 1](01-thue-vps.md).

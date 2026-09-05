@@ -1,5 +1,9 @@
 # Debug, DevTools và Git nâng cao vừa đủ
 
+
+::: warning Bản nháp - đang hoàn thiện
+Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
+:::
 Bài này dành cho người đã build được app nhưng còn hoảng khi gặp lỗi hoặc merge conflict. Học xong bạn sẽ có một quy trình debug lặp lại được, biết dùng ba tab DevTools quan trọng và hiểu branch/pull request ở mức đủ làm việc an toàn.
 
 ## Quy trình debug năm bước

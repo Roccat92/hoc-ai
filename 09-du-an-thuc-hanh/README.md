@@ -11,6 +11,7 @@ Không cần tự nghĩ đề bài. Mỗi dự án trong phần này đã có s�
 | [01 - Landing page + form liên hệ](du-an-01-landing-page/spec.md) | Dễ | HTML/CSS/JS thuần, Formspree, Cloudflare Pages | Toàn bộ quy trình spec → backlog → build → deploy, không cần backend |
 | [02 - Quản lý đơn hàng cho shop nhỏ](du-an-02-quan-ly-don-hang/spec.md) | Vừa | React, Node.js + SQLite, đăng nhập bằng bcrypt + JWT | CRUD, database, xác thực người dùng cơ bản |
 | [03 - Chatbot hỏi đáp tài liệu riêng (RAG)](du-an-03-chatbot-tai-lieu/spec.md) | Vừa-khó | Python (FastAPI) + Chroma + API Claude | RAG thật: chunking, embedding, trả lời có trích dẫn nguồn, chống bịa |
+| [Rubric tự chấm và capstone](04-rubric-va-capstone.md) | Mọi trình độ | Link demo + GitHub + checklist | Chứng minh sản phẩm chạy thật, có test, bảo mật và bài học |
 
 ## Lộ trình gợi ý
 
@@ -31,4 +32,4 @@ Có ý tưởng dự án thực hành hay muốn thêm vào danh sách này? Vi�
 
 ## Bước tiếp theo
 
-Build xong sản phẩm rồi, trước khi cho người khác dùng thử: đi qua checklist bảo mật tối thiểu: [Bảo mật →](../10-bao-mat/)
+Đừng tự nghĩ đề bài - bắt đầu ngay với dự án dễ nhất, đọc spec trước: [Dự án 01 - Landing page + form liên hệ →](du-an-01-landing-page/spec.md)

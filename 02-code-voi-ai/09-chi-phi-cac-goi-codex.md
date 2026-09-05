@@ -138,4 +138,4 @@ Giá và hạn mức của Codex thay đổi khá nhanh. Trước khi trả ti�
 
 ## Bước tiếp theo
 
-Bạn đã biết Claude và Codex tốn bao nhiêu, nên chọn gói nào và khi nào cần API. Giờ tới lúc đưa sản phẩm ra khỏi máy mình để người khác truy cập được: [Hạ tầng thực chiến →](../03-ha-tang-thuc-chien/01-thue-vps.md)
+Bạn đã biết Codex tốn bao nhiêu; giờ học cách cài và chọn đúng nơi để bắt đầu: [Codex: cài đặt và chọn đúng nơi làm việc →](10-codex-cai-dat-va-chon-noi-lam-viec.md)

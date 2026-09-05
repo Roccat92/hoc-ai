@@ -62,4 +62,4 @@ Dài không đồng nghĩa với cụ thể. Một prompt 500 từ liệt kê m�
 
 ## Bước tiếp theo
 
-Đã nắm kỹ thuật prompt cơ bản, giờ áp dụng ngay vào công cụ code với AI thực chiến: [Claude Code →](../02-code-voi-ai/01-claude-code.md)
+Đã nắm kỹ thuật prompt cơ bản, giờ áp dụng vào workflow ChatGPT thực tế: [ChatGPT: bắt đầu đúng chỗ, đúng chế độ, đúng model →](05-chatgpt-bat-dau-va-chon-che-do.md)

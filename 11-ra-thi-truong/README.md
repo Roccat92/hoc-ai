@@ -9,5 +9,7 @@ Những thứ **thực tế ở Việt Nam mà gần như không khóa học mi�
 1. [Đăng nhập bằng Google, Apple, OTP email và Zalo](01-dang-nhap-google-apple-otp.md)
 2. [Đưa app lên App Store & Google Play (và chuyện mã D-U-N-S miễn phí)](02-dua-app-len-store.md)
 3. [Pháp lý cơ bản khi làm sản phẩm ở Việt Nam](03-phap-ly-viet-nam.md)
+4. [Xác thực vấn đề, analytics và phản hồi người dùng](04-xac-thuc-van-de-va-analytics.md)
+5. [Thanh toán, email và vận hành sau ra mắt](05-thanh-toan-email-va-van-hanh.md)
 
 Bắt đầu từ [bài 1](01-dang-nhap-google-apple-otp.md).

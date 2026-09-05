@@ -56,4 +56,4 @@ Toàn bộ luồng này chạy **tự động, 24/7**, không cần bạn ngồi
 
 ## Bước tiếp theo
 
-Đã đi qua toàn bộ kỹ năng build ứng dụng AI thực chiến - từ gọi API, RAG, agent, tới tích hợp và tự động hóa. Phần tiếp theo dành cho ai muốn đào sâu hơn về việc huấn luyện model - phần **nâng cao**, không bắt buộc với hầu hết người học: [Train và fine-tune →](../05-train-va-finetune/01-hieu-ve-training.md)
+Đã biết gọi API, RAG, agent, tích hợp và tự động hóa. Trước khi train model, hãy học cách làm đầu ra AI có schema, có eval và có đường xử lý lỗi: [Structured output, eval và AI reliability →](06-structured-output-evals-va-reliability.md)
