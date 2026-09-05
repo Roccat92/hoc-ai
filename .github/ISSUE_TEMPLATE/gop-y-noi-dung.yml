@@ -1,0 +1,41 @@
+name: Góp ý / báo lỗi nội dung
+description: Thấy thông tin sai, cũ, khó hiểu, hoặc muốn đề xuất bài mới cho thư viện.
+title: "[Góp ý] "
+labels: ["gop-y"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn bạn đã dành thời gian góp ý! Không cần biết Git hay code để điền form này -
+        chỉ cần mô tả bằng lời bình thường, càng cụ thể càng dễ sửa nhanh.
+
+        Không có tài khoản GitHub? Xem cách gửi góp ý không cần GitHub ở
+        [CONTRIBUTING.md](https://github.com/Roccat92/hoc-ai/blob/main/CONTRIBUTING.md#báo-lỗi--đề-xuất-ý-tưởng-issue).
+  - type: dropdown
+    id: loai
+    attributes:
+      label: Loại góp ý
+      options:
+        - Thông tin sai hoặc đã cũ (giá, tên model, lệnh cài đặt...)
+        - Đoạn viết khó hiểu, cần giải thích rõ hơn
+        - Link chết / hình ảnh, sơ đồ lỗi
+        - Đề xuất viết thêm bài mới
+        - Khác
+    validations:
+      required: true
+  - type: input
+    id: vi-tri
+    attributes:
+      label: Ở bài nào?
+      description: Dán link tới trang trên web, hoặc tên file nếu bạn biết (ví dụ 03-ha-tang-thuc-chien/01-thue-vps.md).
+      placeholder: https://hoc-ai.thunguyen.workers.dev/...
+    validations:
+      required: false
+  - type: textarea
+    id: mo-ta
+    attributes:
+      label: Mô tả cụ thể
+      description: Bạn thấy gì, mong đợi thấy gì thay vào đó? Càng chi tiết, người sửa càng nhanh hiểu.
+      placeholder: "Ví dụ: Bài thuê VPS ghi giá Vietnix là X đồng/tháng, nhưng mình vừa kiểm tra trang chủ thì giá đã đổi thành Y đồng/tháng (kiểm tra ngày ...)."
+    validations:
+      required: true

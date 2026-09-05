@@ -66,9 +66,9 @@ Sau đó vào GitHub, bấm **Compare & pull request** để mở PR.
 
 ## Báo lỗi / đề xuất ý tưởng (Issue)
 
-Không muốn tự sửa nhưng thấy vấn đề? Vào tab **Issues** trên trang GitHub của repo, bấm **New issue**, mô tả:
-- Bạn thấy gì chưa đúng/chưa rõ, ở file nào.
-- (Nếu là đề xuất bài mới) Bạn nghĩ nội dung nên có gì.
+Không muốn tự sửa nhưng thấy vấn đề? Vào tab **Issues** trên trang GitHub của repo, bấm **New issue**, chọn form **"Góp ý / báo lỗi nội dung"** - form có sẵn các câu hỏi (loại góp ý, bài nào, mô tả cụ thể), không cần tự nghĩ cách trình bày.
+
+**Chưa có tài khoản GitHub?** Gửi email trực tiếp tới thunguyen@startee.vn, ghi rõ: bài nào (link hoặc tên file), bạn thấy gì chưa đúng/chưa rõ, và mong đợi thấy gì thay vào đó - đúng những câu hỏi trong form Issue ở trên. Đây là kênh dành cho người không quen GitHub, không phải kênh hỗ trợ nhanh - phản hồi có thể mất vài ngày.
 
 ## Quy tắc ứng xử
 

@@ -1,0 +1,8 @@
+# Bật form có sẵn ở trên, tắt lựa chọn "issue trống" mặc định để người góp ý
+# luôn được dẫn qua form gop-y-noi-dung.yml (dễ điền hơn cho người không quen GitHub).
+# contact_links thêm một lối vào không cần tài khoản GitHub, hiện cùng trang chọn issue.
+blank_issues_enabled: false
+contact_links:
+  - name: Không có tài khoản GitHub? Gửi góp ý qua email
+    url: https://github.com/Roccat92/hoc-ai/blob/main/CONTRIBUTING.md#báo-lỗi--đề-xuất-ý-tưởng-issue
+    about: Xem địa chỉ email nhận góp ý cho người chưa dùng GitHub, trong CONTRIBUTING.md.

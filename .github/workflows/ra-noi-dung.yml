@@ -1,0 +1,116 @@
+# Rà nội dung dễ cũ theo lịch, dùng Claude Code kiểm tra thông tin thật rồi MỞ PULL
+# REQUEST đề xuất sửa - KHÔNG tự commit thẳng lên main, chủ dự án luôn phải duyệt
+# (đúng nguyên tắc ở CONTEXT.md mục 8: "làm xong 1 hạng mục DỪNG cho chủ dự án review").
+#
+# ĐIỀU KIỆN ĐỂ WORKFLOW NÀY CHẠY ĐƯỢC:
+# 1. Thêm secret ANTHROPIC_API_KEY trong Settings > Secrets and variables > Actions
+#    của repo trên GitHub (lấy API key tại console.anthropic.com - đây là API key
+#    tính phí riêng theo lượt dùng, KHÁC với gói Claude Pro/Max cá nhân).
+# 2. GITHUB_TOKEN mặc định của Actions đã đủ quyền mở PR nếu bật
+#    Settings > Actions > General > Workflow permissions > "Read and write permissions".
+#
+# CÁCH HOẠT ĐỘNG: script scripts/kiem-tra-ngay-cu.mjs tìm các mốc "(kiểm tra:
+# DD/MM/YYYY)" đã quá hạn (quy ước ở CONTEXT.md mục 3) - đây là những câu có
+# thông tin dễ đổi (giá, tên model, giới hạn gói...). Nếu có mốc quá hạn, Claude
+# Code được giao đúng danh sách đó, tự tra cứu thông tin hiện tại qua web, và CHỈ
+# sửa đúng những câu đã bị đánh dấu - không tự ý viết lại nội dung khác. Không có
+# mốc nào quá hạn thì workflow dừng sớm, không tốn lượt gọi API.
+name: Rà nội dung định kỳ
+
+on:
+  schedule:
+    # 07:00 sáng thứ Hai hàng tuần theo giờ Việt Nam (UTC+7) = 00:00 UTC thứ Hai.
+    # Đổi lịch tùy nhu cầu thật - nội dung giá/model không đổi mỗi ngày, hàng tuần
+    # là tần suất hợp lý để không tốn API key vô ích.
+    - cron: '0 0 * * 1'
+  workflow_dispatch: {} # cho phép bấm chạy tay từ tab Actions trên GitHub khi cần
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  ra-noi-dung:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Tìm mốc "kiểm tra ngày" đã quá hạn
+        id: ra-soat
+        run: |
+          node scripts/kiem-tra-ngay-cu.mjs --json > /tmp/ket-qua.json
+          SO_LUONG=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/ket-qua.json','utf8')).cu.length)")
+          echo "so-luong=$SO_LUONG" >> "$GITHUB_OUTPUT"
+          echo "Tìm thấy $SO_LUONG mốc quá hạn."
+
+      - name: Dừng sớm nếu không có gì cần rà
+        if: steps.ra-soat.outputs.so-luong == '0'
+        run: echo "Không có mốc nào quá hạn - không cần gọi Claude Code lần này."
+
+      - name: Cài Claude Code CLI
+        if: steps.ra-soat.outputs.so-luong != '0'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Nhờ Claude Code rà và sửa đúng các mốc đã quá hạn
+        if: steps.ra-soat.outputs.so-luong != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          git checkout -b ra-noi-dung-tu-dong-$(date +%Y%m%d)
+          HOM_NAY=$(date +%d/%m/%Y)
+
+          # Viết prompt ra file riêng thay vì nhét thẳng vào dòng lệnh - tránh lỗi
+          # escape dấu ngoặc kép/xuống dòng khi prompt dài và có tiếng Việt.
+          cat > /tmp/prompt.txt <<PROMPT_EOF
+          Đọc file /tmp/ket-qua.json - đây là danh sách các câu trong thư viện Học
+          AI Việt có mốc "(kiểm tra: DD/MM/YYYY)" đã quá hạn (trường "cu", mỗi mục
+          có file, line, boCau - đoạn văn bản chứa mốc đó).
+
+          Với MỖI mục: mở đúng file, tìm đúng dòng, tự tra cứu thông tin hiện tại
+          qua web (giá, tên model, giới hạn gói, hoặc số liệu kỹ thuật được nhắc
+          trong câu đó) từ nguồn chính thức. Nếu thông tin đã đổi, sửa lại đúng
+          số/tên trong câu đó và cập nhật mốc thành "(kiểm tra: $HOM_NAY)". Nếu
+          thông tin vẫn đúng, CHỈ cập nhật lại mốc ngày thành hôm nay, không đổi
+          gì khác.
+
+          KHÔNG được: viết lại cả đoạn văn, đổi văn phong, sửa bất kỳ câu nào khác
+          ngoài danh sách đã cho, hoặc tự bịa số liệu nếu không tìm được nguồn
+          đáng tin - trường hợp không chắc, giữ nguyên câu cũ và ghi lại trong
+          tóm tắt cuối cùng để người duyệt tự kiểm tra tay.
+
+          Sau khi sửa xong tất cả, in ra một bản tóm tắt ngắn gọn: đã đổi gì, giữ
+          nguyên gì và vì sao.
+          PROMPT_EOF
+
+          claude -p "$(cat /tmp/prompt.txt)" \
+            --permission-mode dontAsk \
+            --allowedTools "Read" "Edit" "WebSearch" "WebFetch" \
+            > /tmp/tom-tat.txt
+
+          cat /tmp/tom-tat.txt
+
+      - name: Mở Pull Request nếu có thay đổi
+        if: steps.ra-soat.outputs.so-luong != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet; then
+            echo "Claude Code không đổi gì (mọi thông tin vẫn đúng) - không mở PR."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Rà nội dung định kỳ: cập nhật các mốc kiểm tra ngày đã quá hạn"
+          git push origin HEAD
+          gh pr create \
+            --title "Rà nội dung định kỳ - $(date +%d/%m/%Y)" \
+            --body "Tự động mở bởi workflow \`ra-noi-dung.yml\`. **Cần chủ dự án tự xem lại trước khi merge** - Claude Code có thể tra sai nguồn hoặc hiểu nhầm bối cảnh, đúng nguyên tắc \"không tự commit vào main\" ở CONTEXT.md. Tóm tắt Claude Code báo lại:
+
+          \`\`\`
+          $(cat /tmp/tom-tat.txt)
+          \`\`\`"
