@@ -1,0 +1,23 @@
+name: Kiểm tra nội dung
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  kiem-tra-chuoi-va-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Cài dependency
+        run: npm ci
+      - name: Dò chuỗi "Bước tiếp theo"
+        run: npm run kiem-tra-chuoi
+      - name: Build VitePress (kiểm tra link nội bộ)
+        run: npm run docs:build

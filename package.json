@@ -7,7 +7,9 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "kiem-tra-chuoi": "node scripts/kiem-tra-chuoi.mjs",
+    "docs:check": "npm run kiem-tra-chuoi && npm run docs:build"
   },
   "devDependencies": {
     "vitepress": "^1.6.0"
