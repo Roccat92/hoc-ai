@@ -2,13 +2,26 @@
 
 Đây là nơi cộng đồng Học AI Việt chia sẻ **sản phẩm thật đã build bằng AI** - không phải bài tập mẫu, mà là thứ bạn thực sự làm ra, kèm chi phí thật đã bỏ ra và bài học rút ra được. Đọc case study của người khác là một trong những cách học nhanh nhất - thấy được cả những chỗ vấp ngã mà không bài hướng dẫn lý thuyết nào nói tới.
 
-## Hiện trạng
+## Các case study hiện có
 
-Chưa có case study nào - **hãy là người đầu tiên!** Nếu bạn đã đi qua lộ trình của repo này (hoặc tự học bằng cách khác) và build được một sản phẩm thật bằng AI, dù nhỏ tới đâu, chia sẻ lại theo hướng dẫn dưới đây.
+Bốn case study đầu tiên đến từ người duy trì repo này, viết từ **sản phẩm đang chạy thật** chứ không phải dự án mẫu:
+
+1. [TIDOGO (Print OS)](01-tidogo-print-os.md) - phần mềm quản lý sản xuất cho xưởng in. Bài học: chọn bài toán mình đã sống trong đó nhiều năm.
+2. [StarteeX App](02-starteex-app.md) - app đặt in theo yêu cầu, lên cả hai chợ ứng dụng. Bài học: đặt AI vào đúng chỗ tắc nghẽn, và chi phí bắt buộc khi lên chợ.
+3. [NEXA](03-nexa-agent.md) - agent biết gọi công cụ để tạo đơn thật, không phải chatbot trả lời suông. Bài học: agent chỉ hữu ích khi có hệ thống thật phía sau.
+4. [Mockup Studio](04-mockup-studio.md) - công cụ xử lý ảnh chạy ngay trong trình duyệt, gọi được qua CLI và MCP. Bài học: đẩy việc nặng về phía người dùng để chi phí vận hành gần bằng không.
+
+Vài sản phẩm khác cùng tác giả chưa có case study đầy đủ: **Startee Outreach** (công cụ CRM và tự động hóa tiếp cận khách B2B), **MYTORY** (game nhập vai với nhân vật AI, dùng pgvector), và chính **[Học AI Việt](https://hoc-ai.thunguyen.workers.dev)** - thư viện bạn đang đọc.
+
+> Các bảng chi phí trong những case study trên đang được tổng hợp lại từ hóa đơn thật. Repo này thà để trống còn hơn ghi số ước chừng cho có - đó là điểm khác biệt của nó so với các khóa học nói suông.
+
+## Còn bạn?
+
+Nếu bạn đã đi qua lộ trình của repo này (hoặc tự học bằng cách khác) và build được một sản phẩm thật bằng AI, dù nhỏ tới đâu, chia sẻ lại theo hướng dẫn dưới đây.
 
 ## Cách chia sẻ case study của bạn
 
-1. Tạo một file markdown mới trong thư mục `07-case-study/`, đặt tên theo mẫu `ten-du-an-cua-ban.md` (chữ thường, không dấu, cách nhau bằng dấu gạch ngang).
+1. Tạo một file markdown mới trong thư mục `07-case-study/`, đặt tên theo mẫu `NN-ten-du-an.md` - **bắt đầu bằng số thứ tự** (ví dụ `05-shop-ban-hoa.md`), chữ thường, không dấu, cách nhau bằng dấu gạch ngang. Tên phải bắt đầu bằng số thì bài mới hiện ra trong menu bên trái của web.
 2. Viết nội dung theo khung mẫu bên dưới.
 3. Mở Pull Request theo hướng dẫn ở [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -62,4 +75,4 @@ Cảm ơn bạn đã đóng góp cho phần thực chiến nhất của cả rep
 
 ## Bước tiếp theo
 
-Dự án tiếp theo của bạn lớn hơn, cần làm qua nhiều phiên, nhiều ngày? Học cách làm việc với AI có kỷ luật để khỏi loạn ngữ cảnh: [Chuẩn hóa dự án →](../08-chuan-hoa-du-an/)
+Đọc case study đầu tiên, về phần mềm quản lý sản xuất sinh ra từ chính bài toán của một xưởng in: [TIDOGO (Print OS)](01-tidogo-print-os.md)
