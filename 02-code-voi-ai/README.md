@@ -14,5 +14,6 @@ Bắt đầu làm ra sản phẩm thật. Cài Claude Code, biết các AI IDE k
 6. [Chữa bệnh "UI phèn": để sản phẩm không nhìn ra ngay là AI code](06-tri-benh-ui-phen.md)
 7. [Harness là gì? Chat, Code, Design, Cowork - chọn đúng chỗ cho đúng việc](07-harness-la-gi.md)
 8. [Chi phí và các gói Claude: gói nào đáng tiền, và cái bẫy trong tên gọi "20x"](08-chi-phi-cac-goi-claude.md)
+9. [Chi phí và các gói Codex: dùng gói ChatGPT hay API key?](09-chi-phi-cac-goi-codex.md)
 
 Bắt đầu từ [bài 1](01-claude-code.md).

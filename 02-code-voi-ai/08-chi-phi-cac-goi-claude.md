@@ -118,4 +118,4 @@ Mấy dấu hiệu nên tránh:
 
 ## Bước tiếp theo
 
-Đã có công cụ và biết mình sẽ tốn bao nhiêu, giờ tới lúc đưa sản phẩm ra khỏi máy mình để người khác truy cập được: [Hạ tầng thực chiến →](../03-ha-tang-thuc-chien/01-thue-vps.md)
+Claude không phải lựa chọn duy nhất. Trước khi trả tiền, hãy xem Codex tính phí khác thế nào và gói ChatGPT nào hợp với bạn: [Chi phí và các gói Codex →](09-chi-phi-cac-goi-codex.md)
