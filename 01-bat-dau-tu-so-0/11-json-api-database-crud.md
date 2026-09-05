@@ -52,7 +52,7 @@ curl -X POST https://jsonplaceholder.typicode.com/posts -H "Content-Type: applic
 
 ## Database giữ dữ liệu lâu dài
 
-Biến trong bộ nhớ của server sẽ mất khi server khởi động lại; database giữ dữ liệu trên đĩa hoặc dịch vụ quản lý, tồn tại qua mọi lần restart. SQLite (một file duy nhất trên đĩa) hợp để học và app nhỏ; khi nhiều người dùng cùng lúc hoặc cần scale, cân nhắc Postgres/managed database (xem [database production](../03-ha-tang-thuc-chien/06-database-production-ci-cd-monitoring.md)). Dù chọn gì, phải có migration (lịch sử thay đổi cấu trúc dữ liệu có thứ tự), backup và cách khôi phục đã thử qua ít nhất một lần - một bản backup chưa từng thử khôi phục không đáng tin.
+Biến trong bộ nhớ của server sẽ mất khi server khởi động lại; database giữ dữ liệu trên đĩa hoặc dịch vụ quản lý, tồn tại qua mọi lần restart. SQLite (một file duy nhất trên đĩa) hợp để học và app nhỏ; khi nhiều người dùng cùng lúc hoặc cần scale, cân nhắc Postgres/managed database (xem [database production](../03-ha-tang-thuc-chien/06-database-production-backup.md)). Dù chọn gì, phải có migration (lịch sử thay đổi cấu trúc dữ liệu có thứ tự), backup và cách khôi phục đã thử qua ít nhất một lần - một bản backup chưa từng thử khôi phục không đáng tin.
 
 ## Luồng đầy đủ: tạo một đơn hàng
 

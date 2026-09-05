@@ -69,4 +69,4 @@ Nếu máy bạn không đủ mạnh cho model muốn thử, hai lựa chọn: c
 
 ## Bước tiếp theo
 
-Đã có đủ nền tảng hạ tầng - từ deploy web tới chạy AI local/cloud. Trước khi build ứng dụng AI thật, học cách tách môi trường, backup và giám sát để đưa sản phẩm ra internet cho vững: [Database production, CI/CD và vận hành tối thiểu →](06-database-production-ci-cd-monitoring.md)
+Đã có đủ nền tảng hạ tầng - từ deploy web tới chạy AI local/cloud. Trước khi build ứng dụng AI thật, học cách giữ dữ liệu an toàn khi có người dùng thật: [Database production, migration và backup thật →](06-database-production-backup.md)
