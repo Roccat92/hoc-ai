@@ -1,8 +1,22 @@
 # Học AI Việt - ghi chú cho Claude Code
 
-Thư viện mở dạy lập trình với AI cho người Việt. Toàn bộ nội dung là file markdown trong các thư mục đánh số `00-` → `10-` (xem `CONTEXT.md` để biết bối cảnh đầy đủ và lộ trình tương lai - **đọc file đó trước** khi làm bất kỳ việc gì). Website đọc được dựng từ chính các file đó bằng VitePress (cấu hình ở `.vitepress/config.mts`), deploy miễn phí trên Cloudflare Pages. Người duy trì repo không phải dân kỹ thuật - giải thích ngắn gọn, tránh thuật ngữ khi không cần.
+## Hồ sơ dự án cần đọc trước khi làm
 
-`09-du-an-thuc-hanh/` khác cấu trúc các phần còn lại: mỗi thư mục con `du-an-NN-*/` chứa đúng 4 file (`spec.md`, `backlog.md`, `CLAUDE.md`, `huong-dan.md`), không phải bài học phẳng - sidebar có nhánh dựng riêng cho trường hợp này trong `config.mts` (hàm `projectGroupsOf`), tự nhận diện qua tên thư mục con.
+Đọc theo thứ tự sau trước khi sửa hoặc thêm nội dung:
+
+1. [`spec.md`](spec.md) — đặc tả cấp dự án: mục tiêu, phạm vi, lộ trình và tiêu chí hoàn thành.
+2. [`CONTEXT.md`](CONTEXT.md) — bối cảnh, triết lý biên tập và các quy tắc nội dung chi tiết.
+3. [`BACKLOG.md`](BACKLOG.md) — việc đã xong, việc đang làm và ưu tiên tiếp theo; cập nhật file này
+   sau mỗi hạng mục lớn để Claude có thể tiếp tục mà không mất trạng thái.
+
+`spec.md` là đặc tả tổng thể của thư viện. Các `spec.md` nằm trong
+`09-du-an-thuc-hanh/du-an-*/` là đặc tả riêng của từng dự án và có hiệu lực trong phạm vi dự án đó.
+
+Thư viện mở dạy lập trình với AI cho người Việt. Toàn bộ nội dung là file markdown trong các thư mục đánh số `00-` → `11-` (xem `spec.md` và `CONTEXT.md` để biết đặc tả, bối cảnh đầy đủ và lộ trình tương lai). Website đọc được dựng từ chính các file đó bằng VitePress (cấu hình ở `.vitepress/config.mts`), deploy miễn phí lên Cloudflare qua Workers static assets (cấu hình ở `wrangler.jsonc`, không phải Cloudflare Pages - hai sản phẩm khác nhau, đừng nhầm khi viết hướng dẫn deploy). Người duy trì repo không phải dân kỹ thuật - giải thích ngắn gọn, tránh thuật ngữ khi không cần.
+
+`09-du-an-thuc-hanh/` khác cấu trúc các phần còn lại: mỗi thư mục con `du-an-NN-*/` chứa đúng 4 file (`spec.md`, `backlog.md`, `CLAUDE.md`, `huong-dan.md`), không phải bài học phẳng - sidebar gộp các nhóm dự án đó với mọi file bài học phẳng còn lại trong cùng thư mục (ví dụ `04-rubric-va-capstone.md`) trong `config.mts` (hàm `projectGroupsOf` và khối `flatLessonFiles` trong `buildSidebar`), tự nhận diện qua tên thư mục con.
+
+Có script `scripts/kiem-tra-chuoi.mjs` (`npm run kiem-tra-chuoi`, hoặc `npm run docs:check` để chạy kèm build) dò chuỗi "Bước tiếp theo" từ bài đầu tiên - chạy trước khi commit nếu vừa thêm/sửa/sắp xếp lại bài, và luôn chạy trong CI (`.github/workflows/kiem-tra.yml`) trên mọi PR.
 
 ## Quy tắc nội dung (bắt buộc với mọi bài)
 

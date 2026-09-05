@@ -39,31 +39,33 @@ Bạn không cần biết trước bất kỳ thuật ngữ nào. Thấy chữ "
 | Thư mục | Nội dung |
 |---|---|
 | [`00-ban-do-gioi-ai/`](00-ban-do-gioi-ai/) | Bức tranh toàn cảnh giới AI: AI/ML/DL/GenAI khác nhau thế nào, các công ty và model lớn, các nghề trong ngành, từ điển thuật ngữ A-Z, AI làm được gì và cảnh giác "mỏ vàng" |
-| [`01-bat-dau-tu-so-0/`](01-bat-dau-tu-so-0/) | Tư duy học đúng cách, cài đặt môi trường, dùng chatbot để học, kỹ thuật prompt cơ bản |
-| [`02-code-voi-ai/`](02-code-voi-ai/) | Code cùng AI: Claude Code, Cursor/Windsurf/Copilot, build dự án đầu tiên, đọc hiểu code AI viết, Git/GitHub cơ bản |
-| [`03-ha-tang-thuc-chien/`](03-ha-tang-thuc-chien/) | Hạ tầng thực chiến: thuê VPS, deploy web, deploy miễn phí, thuê cloud GPU, chạy LLM trên máy mình |
-| [`04-build-ung-dung-ai/`](04-build-ung-dung-ai/) | Build ứng dụng AI thật: gọi API LLM, RAG, AI agent, tích hợp AI vào app có sẵn, automation với n8n |
+| [`01-bat-dau-tu-so-0/`](01-bat-dau-tu-so-0/) | Tư duy học đúng cách, cài môi trường, ChatGPT từ prompt tới file/dữ liệu/Projects, và nền tảng web cho người mới |
+| [`02-code-voi-ai/`](02-code-voi-ai/) | Code cùng AI: Claude Code, Codex, Cursor/Windsurf/Copilot, build dự án, debug, test, review và Git/GitHub |
+| [`03-ha-tang-thuc-chien/`](03-ha-tang-thuc-chien/) | Hạ tầng thực chiến: deploy, VPS, cloud GPU, LLM local, database production, CI/CD và monitoring |
+| [`04-build-ung-dung-ai/`](04-build-ung-dung-ai/) | Build ứng dụng AI thật: API, RAG, agent, structured output, eval, reliability, tích hợp và automation |
 | [`05-train-va-finetune/`](05-train-va-finetune/) | Nâng cao: hiểu về training, fine-tune thực hành, dữ liệu tiếng Việt, tổng quan build LLM từ đầu |
 | [`06-kho-tai-nguyen/`](06-kho-tai-nguyen/) | Kho tài nguyên: repo GitHub đáng học, khóa học miễn phí, Claude skills & MCP, cộng đồng Việt, kênh theo dõi |
 | [`07-case-study/`](07-case-study/) | Cộng đồng chia sẻ dự án thật đã build bằng AI, kèm chi phí và bài học |
 | [`08-chuan-hoa-du-an/`](08-chuan-hoa-du-an/) | Nâng cao: làm việc với AI có kỷ luật - spec.md, backlog.md, CLAUDE.md, quy trình một phiên làm việc chuẩn |
-| [`09-du-an-thuc-hanh/`](09-du-an-thuc-hanh/) | Dự án thực hành có sẵn spec - copy ra, build, tùy biến thành sản phẩm của riêng bạn |
-| [`10-bao-mat/`](10-bao-mat/) | Checklist bảo mật tối thiểu trước khi cho người khác dùng: SSL, giấu API key, chống bot/spam, đăng nhập an toàn |
-| [`11-ra-thi-truong/`](11-ra-thi-truong/) | Thực tế ở Việt Nam khi ra thị trường: đăng nhập Google/Apple/OTP/Zalo, đưa app lên store (mã D-U-N-S miễn phí), pháp lý cơ bản |
+| [`09-du-an-thuc-hanh/`](09-du-an-thuc-hanh/) | Dự án thực hành có sẵn spec, rubric và capstone - copy ra, build, tùy biến thành sản phẩm của riêng bạn |
+| [`10-bao-mat/`](10-bao-mat/) | Checklist bảo mật web và AI: SSL, secret, chống bot, đăng nhập, prompt injection, tool và dữ liệu |
+| [`11-ra-thi-truong/`](11-ra-thi-truong/) | Thực tế ở Việt Nam khi ra thị trường: auth, store, pháp lý, xác thực vấn đề, analytics, thanh toán và vận hành |
 
-## Lộ trình gợi ý (8 tuần)
+## Lộ trình gợi ý (10-12 tuần)
 
-Đây là lộ trình tham khảo - nếu bạn học nhanh hơn hoặc chậm hơn đều bình thường, không có ai chấm điểm bạn cả.
+Đây là lộ trình tham khảo - nếu bạn học nhanh hơn hoặc chậm hơn đều bình thường, không có ai chấm điểm bạn cả. Đi theo đúng thứ tự "Bước tiếp theo" cuối mỗi bài là cách chắc ăn nhất để không bỏ sót bài nào.
 
 | Tuần | Làm gì | Đọc ở đâu |
 |---|---|---|
-| 1-2 | Nắm nền tảng: AI là gì, LLM hoạt động ra sao, cài môi trường, học cách prompt | `00-ban-do-gioi-ai/`, `01-bat-dau-tu-so-0/` |
-| 3-4 | Code cùng AI: cài Claude Code, làm dự án web đầu tiên, học Git/GitHub | `02-code-voi-ai/` |
-| 5 | Hạ tầng: hiểu VPS, deploy thử một trang lên internet | `03-ha-tang-thuc-chien/` |
-| 6-7 | Build ứng dụng AI: gọi API, làm chatbot RAG, thử AI agent | `04-build-ung-dung-ai/` |
-| 8 | Tự chọn một ý tưởng, tự build từ đầu đến khi deploy được - dự án riêng của bạn | Toàn bộ những gì đã học |
+| 1 | Nắm nền tảng: AI là gì, LLM hoạt động ra sao | `00-ban-do-gioi-ai/` |
+| 2 | Cài môi trường, học cách prompt, dùng ChatGPT thành thạo (chế độ, file/web, Projects), hiểu nền tảng web/API/database | `01-bat-dau-tu-so-0/` |
+| 3-4 | Code cùng AI: cài Claude Code hoặc Codex, làm dự án web đầu tiên, học Git/GitHub, debug và review | `02-code-voi-ai/` |
+| 5 | Hạ tầng: hiểu VPS, deploy thử một trang lên internet, database production cơ bản | `03-ha-tang-thuc-chien/` |
+| 6-7 | Build ứng dụng AI: gọi API, làm chatbot RAG, thử AI agent, structured output và eval | `04-build-ung-dung-ai/` |
+| 8 | Tự chọn một ý tưởng, tự build từ đầu đến khi deploy được - dự án riêng của bạn, hoặc một trong ba dự án có sẵn spec | `09-du-an-thuc-hanh/` |
+| 9-10 | Bảo mật tối thiểu trước khi cho người khác dùng, rồi các bước thực tế khi ra thị trường ở Việt Nam | `10-bao-mat/`, `11-ra-thi-truong/` |
 
-Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng cao, có thể học sau tuần 8 khi đã có nhu cầu cụ thể - xem `05-train-va-finetune/`. Khi dự án của bạn lớn hơn, làm qua nhiều phiên, nhiều ngày - học cách làm việc với AI có kỷ luật ở `08-chuan-hoa-du-an/`, rồi luyện tập ngay quy trình đó với spec có sẵn ở `09-du-an-thuc-hanh/`. Trước khi cho người khác dùng thử sản phẩm, đi qua checklist bảo mật tối thiểu ở `10-bao-mat/`. Và khi đưa sản phẩm ra thị trường thật ở Việt Nam (đăng nhập, lên store, pháp lý), xem `11-ra-thi-truong/` - những thứ thực tế mà gần như không nơi nào dạy miễn phí.
+Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng cao, có thể học sau khi đã có nhu cầu cụ thể - xem `05-train-va-finetune/`. Khi dự án của bạn lớn hơn, làm qua nhiều phiên, nhiều ngày - học cách làm việc với AI có kỷ luật ở `08-chuan-hoa-du-an/` trước khi vào `09-du-an-thuc-hanh/`. Đọc `06-kho-tai-nguyen/` và `07-case-study/` bất cứ lúc nào để tự học thêm và xem sản phẩm thật đã build được.
 
 ## Chi phí thực tế tối thiểu
 
@@ -73,7 +75,7 @@ Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng ca
 |---|---|---|---|
 | Máy tính, mạng internet | Bắt buộc | Đã có sẵn | Không cần máy mạnh để bắt đầu |
 | Tài khoản chatbot AI (Claude/ChatGPT/Gemini) | Không | 0đ (bản free) | Bản free đủ dùng để học; nâng cấp khi cần dùng nhiều |
-| Claude Code / Cursor (AI code) | Không | 0đ (có gói free/dùng thử) | Xem chi tiết giá ở `02-code-voi-ai/01-claude-code.md` |
+| Claude Code / Codex / Cursor (AI code) | Không | 0đ (có gói free/dùng thử) | Xem chi tiết giá ở `02-code-voi-ai/08-chi-phi-cac-goi-claude.md` và `02-code-voi-ai/09-chi-phi-cac-goi-codex.md` |
 | Tên miền riêng (domain) | Không | ~150.000-350.000đ/năm | Chỉ cần khi muốn có địa chỉ web riêng thay vì domain miễn phí của nền tảng deploy |
 | VPS (máy chủ riêng) | Không | ~50.000-150.000đ/tháng | Chỉ cần khi deploy miễn phí (Vercel/Railway...) không đủ đáp ứng |
 | Thuê cloud GPU (để fine-tune) | Không | Tính theo giờ, xem `03-ha-tang-thuc-chien/04-thue-cloud-gpu.md` | Chỉ cần ở giai đoạn nâng cao |

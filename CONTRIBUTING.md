@@ -30,8 +30,8 @@ Nội dung chính của repo tập trung vào **nhánh code** - dùng AI để b
 Nếu bạn chưa quen các bước dưới đây, tham khảo [`02-code-voi-ai/05-git-github-co-ban.md`](02-code-voi-ai/05-git-github-co-ban.md) trước.
 
 ```bash
-git clone https://github.com/<ten-cua-ban>/learn-ai-vietnamese.git
-cd learn-ai-vietnamese
+git clone https://github.com/<ten-cua-ban>/hoc-ai.git
+cd hoc-ai
 git checkout -b sua-loi-gia-vps
 ```
 
