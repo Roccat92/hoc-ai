@@ -23,6 +23,16 @@
 @keyframes mh-skill-g  { 0%, 100% { stroke-opacity: 1 } 45% { stroke-opacity: .4 } 70% { stroke-opacity: 1 } }
 @keyframes mh-skill-in { 0%, 30% { opacity: 0 } 45% { opacity: 1 } 90% { opacity: 1 } 100% { opacity: 0 } }
 
+/* Sơ đồ 3 hộp (ví dụ: Trình duyệt -> Server -> Database) đi một vòng khứ hồi
+   trong một chu kỳ duy nhất - mỗi keyframe chỉ "sống" trong đúng 1/4 chu kỳ,
+   im lặng (opacity 0) phần còn lại. Dùng chung cho nhiều sơ đồ 3 hộp khác
+   nhau (01-bat-dau-tu-so-0/10 và /11), chỉ cần đổi nhãn chữ và animation-delay
+   nếu muốn lệch pha. */
+@keyframes mh-3hop-a { 0% { transform: translateX(0); opacity: 0 } 3% { opacity: 1 } 22% { transform: translateX(56px); opacity: 1 } 25% { opacity: 0 } 100% { opacity: 0 } }
+@keyframes mh-3hop-b { 0%, 24% { opacity: 0 } 25% { transform: translateX(0); opacity: 0 } 28% { opacity: 1 } 47% { transform: translateX(56px); opacity: 1 } 50% { opacity: 0 } 100% { opacity: 0 } }
+@keyframes mh-3hop-c { 0%, 49% { opacity: 0 } 50% { transform: translateX(0); opacity: 0 } 53% { opacity: 1 } 72% { transform: translateX(-56px); opacity: 1 } 75% { opacity: 0 } 100% { opacity: 0 } }
+@keyframes mh-3hop-d { 0%, 74% { opacity: 0 } 75% { transform: translateX(0); opacity: 0 } 78% { opacity: 1 } 97% { transform: translateX(-56px); opacity: 1 } 100% { opacity: 0 } }
+
 @media (prefers-reduced-motion: reduce) {
   .mh-anim { animation: none !important; }
   .mh-dot  { opacity: 0 !important; }
