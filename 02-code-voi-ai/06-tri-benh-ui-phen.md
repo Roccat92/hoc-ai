@@ -61,6 +61,8 @@ Bài này dành cho người đã build được vài dự án ([dự án đầu
 
 <p class="uid-note">Hai bên nội dung y hệt nhau — chỉ khác ở các quyết định thẩm mỹ. Bên phải không "đẹp hơn" một cách tuyệt đối, nó chỉ <strong>không rơi vào mẫu mặc định</strong> mà ai cũng nhận ra.</p>
 
+> Hai thứ quyết định "chất" nhiều nhất - **font chữ** và **icon** (bỏ emoji, dùng icon thiết kế) - có một bài riêng đi sâu, kèm nguồn font miễn phí hỗ trợ tiếng Việt và cách cài vào dự án: [Font và icon](19-font-va-icon.md).
+
 ## Vì sao AI hay ra kiểu này?
 
 Không phải vì AI "dốt thẩm mỹ". Nhắc lại cách LLM hoạt động ở [`00-ban-do-gioi-ai/02-llm-la-gi.md`](../00-ban-do-gioi-ai/02-llm-la-gi.md): AI dự đoán "cái gì có khả năng cao nhất" dựa trên những gì đã thấy trong dữ liệu huấn luyện. Khi bạn **không cho nó biết khẩu vị cụ thể** - không nói rõ thương hiệu, phong cách, cảm xúc bạn muốn truyền tải - nó buộc phải tự chọn, và lựa chọn "an toàn nhất" luôn là **phương án trung bình cộng**: những mẫu xuất hiện dày đặc nhất trong hàng loạt template SaaS, dashboard, landing page phổ biến trên internet những năm gần đây. Gradient tím, card bo tròn, bóng đổ nhạt... đều là những mẫu cực kỳ phổ biến trong dữ liệu đó - nên khi không bị ràng buộc gì khác, AI có xu hướng hội tụ về đúng những mẫu này.
