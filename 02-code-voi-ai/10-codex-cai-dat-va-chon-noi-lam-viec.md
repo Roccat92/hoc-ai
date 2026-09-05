@@ -1,16 +1,16 @@
-# Codex: cài đặt và chọn đúng nơi làm việc
+# Cài đặt và chọn đúng nơi làm việc với coding agent
 
-Bài này dành cho người đã biết một AI coding agent là gì (ví dụ đã đọc [bài Claude Code](01-claude-code.md)) và muốn bắt đầu với Codex. Học xong bạn sẽ cài được Codex CLI, phân biệt desktop/web, CLI và IDE extension, chọn local hay cloud, đăng nhập đúng cách và thực hiện một task chỉ đọc an toàn.
+Bài này dành cho người đã build được dự án đầu tiên với [Claude Code](01-claude-code.md) và muốn biết dùng Codex - hoặc một coding agent khác - có gì khác không. Học xong bạn sẽ cài được Codex CLI, phân biệt desktop/web, CLI và IDE extension, chọn local hay cloud, đăng nhập đúng cách và thực hiện một task chỉ đọc an toàn. Toàn bộ luồng tư duy trong bài áp dụng y hệt cho Claude Code - chỉ đổi tên lệnh.
 
 ## Codex có những bề mặt nào?
 
 | Bề mặt | Hợp với | Đặc điểm |
 |---|---|---|
-| **CLI** | Người thích terminal, script và CI | Đọc/sửa file, chạy lệnh, có `codex exec` cho workflow không tương tác (script/CI) |
-| **IDE extension** | Người muốn thấy code và diff cạnh nhau | Dùng file đang mở hoặc đoạn code được chọn làm ngữ cảnh |
+| **CLI** | Người thích terminal, script và CI | Đọc/sửa file, chạy lệnh, có `codex exec` cho workflow không tương tác (script/CI) - Claude Code gọi tương ứng là `claude` (tương tác) và `claude -p` (không tương tác) |
+| **IDE extension** | Người muốn thấy code và diff cạnh nhau | Dùng file đang mở hoặc đoạn code được chọn làm ngữ cảnh - cả Codex lẫn Claude Code đều có extension cho VS Code |
 | **Desktop/web/cloud** | Task dài, cần giao diện hoặc môi trường từ xa | Có thể làm việc với project và tích hợp cloud tùy gói |
 
-Nguyên lý giống nhau: Codex nhận mục tiêu, đọc ngữ cảnh được phép, đề xuất hoặc thực hiện thay đổi và trả bằng chứng. Khác nhau chủ yếu là nơi code chạy và quyền truy cập. Bài này tập trung vào CLI vì đó là bề mặt dùng được ngay trên máy bạn, không cần chờ mời tham gia bản cloud.
+Nguyên lý giống nhau dù dùng agent nào: nhận mục tiêu, đọc ngữ cảnh được phép, đề xuất hoặc thực hiện thay đổi và trả bằng chứng. Khác nhau chủ yếu là nơi code chạy, quyền truy cập và tên lệnh gõ trên terminal. Bài này tập trung vào CLI vì đó là bề mặt dùng được ngay trên máy bạn, không cần chờ mời tham gia bản cloud.
 
 ## Cài đặt
 

@@ -1,6 +1,6 @@
-# Skills, plugins và MCP trong Codex
+# Skills, plugins và MCP cho coding agent
 
-Bài này dành cho người thấy nhiều gói mở rộng nhưng chưa biết cái nào đáng cài. Học xong bạn sẽ phân biệt skill, plugin và MCP, đánh giá quyền truy cập, và thử một kết nối chỉ đọc.
+Bài này dành cho người thấy nhiều gói mở rộng nhưng chưa biết cái nào đáng cài - cả Codex lẫn Claude Code đều có ba loại mở rộng này, tên gọi giống nhau vì cùng khái niệm. Học xong bạn sẽ phân biệt skill, plugin và MCP, đánh giá quyền truy cập, và thử một kết nối chỉ đọc.
 
 ## Ba khái niệm
 
@@ -41,6 +41,8 @@ args = ["--doc", "duong-dan-hoac-url"]
 ```
 
 > Đây là sơ đồ để bạn hình dung, **không phải cú pháp copy-paste**. Vị trí file cấu hình và cú pháp chính xác đổi theo phiên bản Codex - luôn lấy từ [tài liệu chính thức](https://developers.openai.com/codex) hoặc `codex --help`, đừng chép nguyên từ đây.
+
+**Ở Claude Code:** ba khái niệm này cũng tồn tại y hệt - Skills là sổ tay quy trình Claude tự đọc khi thấy phù hợp (nằm trong `.claude/skills/` của dự án hoặc cài từ một plugin), Plugins đóng gói skill/lệnh/MCP để cài một lần dùng lại nhiều dự án, và MCP nối Claude với công cụ/dữ liệu ngoài (đúng loại tool có tiền tố `mcp__` bạn sẽ thấy khi Claude Code liệt kê công cụ đang có). Checklist năm câu ở trên áp dụng được nguyên vẹn - chỉ đổi nơi cấu hình (thường quản lý qua lệnh `claude mcp` hoặc file cấu hình dự án) thay vì `mcp_servers` như Codex.
 
 ## Bài tập
 

@@ -1,6 +1,6 @@
-# Subagent, làm song song và tự động hóa với Codex
+# Subagent, làm song song và tự động hóa với coding agent
 
-Bài này dành cho người có nhiều task độc lập hoặc muốn chạy Codex trong script/CI. Học xong bạn sẽ biết khi nào tách agent, khi nào giữ một luồng, và cách đặt điểm dừng trước hành động không hoàn tác.
+Bài này dành cho người có nhiều task độc lập hoặc muốn chạy coding agent trong script/CI - ví dụ dùng Codex, nhưng Claude Code có đúng hai khái niệm tương đương (xem cuối bài). Học xong bạn sẽ biết khi nào tách agent, khi nào giữ một luồng, và cách đặt điểm dừng trước hành động không hoàn tác.
 
 ## Chỉ song song khi thật sự độc lập
 
@@ -48,6 +48,10 @@ jobs:
 ```
 - `secrets.OPENAI_API_KEY`: khóa để trong GitHub Secrets, **không** viết thẳng vào file - xem [giấu API key](../10-bao-mat/03-giau-api-key-va-secret.md).
 - Job này chỉ đọc và in báo cáo; commit hay deploy thì tách bước riêng có phê duyệt.
+
+## Ở Claude Code: subagent và chế độ không tương tác
+
+Claude Code có hai khái niệm tương đương. **Subagent** (đôi khi gọi là Agent hoặc Task) là một phiên Claude con được giao một việc thu hẹp, chạy độc lập rồi báo kết quả về - dùng cho đúng trường hợp "việc thật sự độc lập" như đã nói ở trên (một agent đọc tài liệu, một agent rà test), không dùng cho hai việc cùng sửa một file. **Chế độ không tương tác** dùng cờ `-p` (print/headless), ví dụ `claude -p "Rà link chết trong docs/, in báo cáo. Không sửa file."` - vai trò giống hệt `codex exec`: nhận thẳng prompt, không hỏi lại, hợp cho script và CI. Mọi nguyên tắc về hợp đồng đầu vào/đầu ra và không tự động hóa side effect nguy hiểm ở trên áp dụng y hệt.
 
 ## Bài tập
 

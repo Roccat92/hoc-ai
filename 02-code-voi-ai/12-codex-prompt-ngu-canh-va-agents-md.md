@@ -1,10 +1,10 @@
-# Prompt, ngữ cảnh và AGENTS.md cho Codex
+# Prompt, ngữ cảnh và file hướng dẫn cho coding agent
 
-Bài này dành cho người thấy Codex “đoán sai dự án” hoặc lặp lại cùng một câu hỏi ở nhiều phiên. Học xong bạn sẽ biết chia thông tin thành đúng file, viết `AGENTS.md` ngắn và giao task có bằng chứng tái hiện.
+Bài này dành cho người thấy agent "đoán sai dự án" hoặc lặp lại cùng một câu hỏi ở nhiều phiên - gặp ở cả Codex lẫn Claude Code. Học xong bạn sẽ biết chia thông tin thành đúng file, viết file hướng dẫn ngắn (`AGENTS.md` cho Codex, `CLAUDE.md` cho Claude Code) và giao task có bằng chứng tái hiện.
 
 ## Agent cần bối cảnh nào?
 
-Codex cần biết mục tiêu, cấu trúc liên quan, quy ước, lệnh kiểm tra và điều không được làm. Không cần dán toàn bộ repo vào prompt. Hãy chỉ file, dòng, đường dẫn hoặc lỗi thực tế liên quan.
+Agent cần biết mục tiêu, cấu trúc liên quan, quy ước, lệnh kiểm tra và điều không được làm - dù là Codex hay Claude Code. Không cần dán toàn bộ repo vào prompt. Hãy chỉ file, dòng, đường dẫn hoặc lỗi thực tế liên quan.
 
 ## Bốn file, bốn vai trò
 
@@ -12,14 +12,16 @@ Codex cần biết mục tiêu, cấu trúc liên quan, quy ước, lệnh kiể
 |---|---|
 | `spec.md` | Sản phẩm phải làm gì? |
 | `backlog.md` | Việc nào làm trước, việc nào sau? |
-| `AGENTS.md` | Agent phải tuân thủ quy ước nào? |
-| `CLAUDE.md` | Quy tắc dành riêng cho Claude Code (nếu dự án còn dùng) |
+| `AGENTS.md` | Codex phải tuân thủ quy ước nào? |
+| `CLAUDE.md` | Claude Code phải tuân thủ quy ước nào? (xem [bài viết CLAUDE.md](../08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md)) |
+
+Hai file `AGENTS.md` và `CLAUDE.md` đóng cùng một vai trò cho hai công cụ khác nhau - nội dung nên gần giống nhau (cùng stack, cùng lệnh test, cùng khu vực nhạy cảm), chỉ khác tên file. Nếu dự án dùng cả hai công cụ, viết một bản đầy đủ rồi để bản kia trỏ sang ("xem AGENTS.md") thay vì chép hai lần dễ lệch.
 
 `AGENTS.md` nên ghi stack, lệnh test, quy ước đặt tên, khu vực nhạy cảm và điều cấm. Quy tắc đặt ở thư mục con chỉ áp dụng cho phạm vi đó. Đừng chép cùng một nội dung vào bốn file; khi sửa một quy tắc sẽ rất dễ lệch.
 
 ## Một `AGENTS.md` thật trông thế nào
 
-Đặt file này ở **thư mục gốc dự án**; Codex tự đọc mỗi phiên. Ví dụ cho một web app quản lý đơn hàng:
+Đặt file này ở **thư mục gốc dự án**; Codex tự đọc `AGENTS.md` mỗi phiên (Claude Code tự đọc `CLAUDE.md` tương tự). Ví dụ cho một web app quản lý đơn hàng:
 
 ```markdown
 # AGENTS.md - quy ước cho agent

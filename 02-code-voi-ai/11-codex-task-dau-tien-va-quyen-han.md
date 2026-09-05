@@ -1,6 +1,6 @@
-# Task đầu tiên và quyền hạn an toàn trong Codex
+# Task đầu tiên và quyền hạn an toàn khi dùng coding agent
 
-Bài này dành cho người mới sợ AI tự ý sửa hoặc chạy nhầm lệnh. Học xong bạn sẽ viết task có phạm vi rõ, đọc và hiểu một yêu cầu cấp quyền thật, và biết khi nào phải dừng để xác nhận.
+Bài này dành cho người mới sợ AI tự ý sửa hoặc chạy nhầm lệnh - dùng Codex hay Claude Code đều gặp đúng nỗi lo này. Học xong bạn sẽ viết task có phạm vi rõ, đọc và hiểu một yêu cầu cấp quyền thật, và biết khi nào phải dừng để xác nhận.
 
 ## Một task tốt có bốn phần
 
@@ -36,6 +36,8 @@ Cho phép chạy? [y/n]
 ```
 
 Trước khi gõ `y`, luôn nhìn đúng ba thứ trong hộp thoại này: **lệnh đang chạy** (đọc hết, không lướt), **thư mục/phạm vi tác động** (có đúng trong project không, hay đang chạm ra ngoài), và **side effect** (lệnh này có thể gây hậu quả gì nếu sai). Đặc biệt cẩn thận với các lệnh: `rm` (xóa file/thư mục), bất cứ gì đụng tới database hoặc migration, thay đổi secret/biến môi trường, deploy lên production, gửi request ra ngoài project (gọi API thật, không phải API test), hoặc cài package lạ chưa từng nghe tên.
+
+**Ở Claude Code:** luồng giống hệt - mỗi lệnh có khả năng gây side effect (chạy `bash`, sửa file ngoài phạm vi đang làm...) sẽ hiện hộp thoại xin phép trước khi chạy, trừ khi bạn chủ động bật chế độ tự động chấp nhận cho phiên đó. Ba thứ cần nhìn trước khi bấm "Yes" y hệt như trên: lệnh, phạm vi, side effect.
 
 ## Luồng an toàn từng bước
 

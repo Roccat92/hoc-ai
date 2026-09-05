@@ -1,6 +1,6 @@
-# Xử lý lỗi thường gặp khi dùng Codex
+# Xử lý lỗi thường gặp khi dùng coding agent
 
-Bài này dành cho người bị kẹt vì Codex không thấy file, test không chạy hoặc agent sửa quá rộng. Học xong bạn sẽ phân loại lỗi trước khi sửa và biết cách bàn giao trạng thái cho phiên mới.
+Bài này dành cho người bị kẹt vì agent không thấy file, test không chạy hoặc agent sửa quá rộng - đúng bốn nhóm lỗi này lặp lại y hệt dù dùng Codex, Claude Code hay công cụ nào khác. Học xong bạn sẽ phân loại lỗi trước khi sửa và biết cách bàn giao trạng thái cho phiên mới.
 
 ## Bốn nhóm lỗi
 
@@ -18,7 +18,7 @@ Trước khi nhờ agent "sửa hộ", tự chạy vài lệnh để biết lỗ
 ```bash
 node -v            # kiểm tra Node đã cài và đúng phiên bản chưa (nhóm Môi trường)
 npm -v             # npm có sẵn không
-codex --version    # Codex đã cài đúng chưa (nhóm Quyền/kết nối, Môi trường)
+codex --version    # (hoặc claude --version) - agent đã cài đúng chưa (nhóm Quyền/kết nối, Môi trường)
 git status         # đang ở nhánh nào, có gì dang dở (nhóm Ngữ cảnh)
 npm test           # tái hiện test đỏ để đọc lỗi thật (nhóm Code)
 ```

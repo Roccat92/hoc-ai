@@ -1,11 +1,11 @@
-# Codex: sửa code, chạy test và review diff
+# Sửa code, chạy test và review diff cùng coding agent
 
-Bài này dành cho người muốn AI làm nhanh nhưng vẫn hiểu và kiểm soát kết quả. Học xong bạn sẽ dùng được vòng lặp khảo sát → sửa nhỏ → test → review → commit, và tự đọc được một diff thật mà không cần đoán mò.
+Bài này dành cho người muốn AI làm nhanh nhưng vẫn hiểu và kiểm soát kết quả - vòng lặp dưới đây dùng được y hệt với Codex, Claude Code hay bất kỳ coding agent nào khác. Học xong bạn sẽ dùng được vòng lặp khảo sát → sửa nhỏ → test → review → commit, và tự đọc được một diff thật mà không cần đoán mò.
 
 ## Vòng lặp chuẩn
 
 1. **Khảo sát:** xác định file, luồng dữ liệu và test hiện có.
-2. **Đề xuất:** yêu cầu Codex nói ngắn gọn cách sửa trước khi đổi nhiều file.
+2. **Đề xuất:** yêu cầu agent nói ngắn gọn cách sửa trước khi đổi nhiều file.
 3. **Sửa nhỏ:** mỗi task một mục tiêu.
 4. **Test:** chạy test gần với hành vi vừa đổi.
 5. **Review diff:** xem cả thay đổi ngoài ý muốn.
