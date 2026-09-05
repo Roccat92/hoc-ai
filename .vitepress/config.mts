@@ -200,6 +200,13 @@ export default defineConfig({
     ],
     ['meta', { property: 'og:title', content: 'Học AI Việt' }],
     ['meta', { property: 'og:description', content: description }],
+    // Google Analytics (gtag.js) - theo dõi lượt xem trang, không gắn thông tin cá nhân.
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-Y4CJYVYEV4' }],
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-Y4CJYVYEV4');",
+    ],
   ],
   themeConfig: {
     siteTitle: 'Học AI Việt',
