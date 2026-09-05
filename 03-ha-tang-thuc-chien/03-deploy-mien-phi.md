@@ -33,7 +33,7 @@ Khác nhóm với ba cái trên - Railway không chỉ deploy frontend tĩnh mà
 | Cloudflare Pages | Static site, cần tốc độ CDN toàn cầu | Có (Cloudflare Workers) |
 | Railway | Backend chạy liên tục + database | Có (đầy đủ, gần giống VPS) |
 
-Cả bốn đều có **gói miễn phí** cho dự án cá nhân, kèm **gói trả phí** khi vượt giới hạn (băng thông, số lượt build, tài nguyên...). Giới hạn cụ thể và giá gói trả phí thay đổi khá thường xuyên - kiểm tra trực tiếp trang giá từng nền tảng (vercel.com/pricing, netlify.com/pricing, pages.cloudflare.com, railway.app/pricing) để có số mới nhất.
+Cả bốn đều có **gói miễn phí** cho dự án cá nhân, kèm **gói trả phí** khi vượt giới hạn (băng thông, số lượt build, tài nguyên...). Giới hạn cụ thể và giá gói trả phí thay đổi khá thường xuyên *(kiểm tra: 05/09/2026)* - kiểm tra trực tiếp trang giá từng nền tảng (vercel.com/pricing, netlify.com/pricing, pages.cloudflare.com, railway.app/pricing) để có số mới nhất.
 
 ## Cách deploy nhanh (ví dụ với Vercel)
 
@@ -57,6 +57,8 @@ Gắn domain riêng thay vì dùng `.vercel.app`: vào phần cài đặt projec
 | Lượng truy cập cực lớn, chi phí free tier trở nên tốn kém hơn tự quản lý | Cân nhắc VPS hoặc gói trả phí của nền tảng deploy |
 
 **Lời khuyên:** người mới nên bắt đầu với deploy miễn phí - chỉ chuyển sang VPS khi thật sự chạm giới hạn hoặc có nhu cầu kỹ thuật cụ thể mà deploy miễn phí không đáp ứng được.
+
+**Một câu để nhớ:** bắt đầu bằng deploy miễn phí, chỉ chuyển sang VPS khi thật sự chạm giới hạn - đừng đi đường khó trước khi cần.
 
 ## Bước tiếp theo
 

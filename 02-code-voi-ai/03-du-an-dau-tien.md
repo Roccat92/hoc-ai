@@ -85,6 +85,8 @@ Sau 6 bước, bạn có một ứng dụng to-do list **hoàn chỉnh, chạy t
 
 **Thử thách thêm (tự làm, không có hướng dẫn sẵn):** thử tự mô tả yêu cầu thêm một tính năng mới, ví dụ "phân loại việc theo mức ưu tiên" hoặc "cho phép kéo-thả để sắp xếp lại thứ tự". Đây là cách luyện tập tốt nhất - áp dụng lại đúng quy trình vừa học.
 
+**Một câu để nhớ:** sản phẩm chạy được sau 6 bước nhỏ, kiểm tra kỹ từng bước - không phải sau một yêu cầu khổng lồ làm một lần.
+
 ## Bước tiếp theo
 
 Có sản phẩm đầu tiên rồi, giờ học cách đọc hiểu sâu hơn những gì AI vừa viết cho bạn: [Đọc hiểu code AI viết](04-doc-hieu-code-ai-viet.md)

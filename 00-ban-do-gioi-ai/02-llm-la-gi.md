@@ -6,7 +6,7 @@ Bài này dành cho người muốn hiểu **Claude, ChatGPT, Gemini thực ch�
 
 LLM (Large Language Model - Mô hình ngôn ngữ lớn) là một chương trình AI được huấn luyện trên một lượng văn bản khổng lồ (sách, web, code, bài báo...) để làm một việc tưởng chừng đơn giản: **dự đoán từ/cụm từ tiếp theo có khả năng xuất hiện cao nhất**, dựa trên những gì đã có trước đó.
 
-Nghe có vẻ đơn giản, nhưng khi mô hình đủ lớn (hàng tỷ đến hàng nghìn tỷ tham số) và được huấn luyện trên đủ dữ liệu, khả năng "đoán từ tiếp theo" này tạo ra hiệu ứng bất ngờ: mô hình có thể trả lời câu hỏi, viết code, tóm tắt văn bản, dịch ngôn ngữ, lý luận từng bước - dù chưa từng được dạy trực tiếp từng kỹ năng này.
+Khi mô hình đủ lớn và được huấn luyện trên đủ dữ liệu, khả năng "đoán từ tiếp theo" này tạo ra hiệu ứng bất ngờ: mô hình trả lời câu hỏi, viết code, tóm tắt, dịch, lý luận từng bước - dù chưa từng được dạy trực tiếp từng kỹ năng này.
 
 Claude (Anthropic), GPT (OpenAI), Gemini (Google) đều là LLM - khác nhau ở cách huấn luyện, dữ liệu, và cách "tinh chỉnh" (fine-tune) để trả lời hữu ích, an toàn.
 
@@ -53,7 +53,7 @@ Context window (cửa sổ ngữ cảnh) là **số token tối đa** mà LLM c�
 
 Hãy tưởng tượng context window như **một cái bàn làm việc có kích thước cố định**. Mọi thứ liên quan đến cuộc trò chuyện phải nằm gọn trên bàn đó thì AI mới "nhìn thấy" và dùng được. Khi cuộc trò chuyện quá dài, vượt quá kích thước bàn, những phần cũ nhất sẽ bị đẩy ra khỏi "tầm nhìn" - đó là lý do đôi khi AI có vẻ "quên" điều bạn nói cách đây rất lâu trong cùng một cuộc chat.
 
-Các model hiện đại (2025-2026) thường có context window từ 128.000 đến hơn 1.000.000 token tùy model - đủ chứa từ vài trăm trang đến cả một cuốn sách. Con số chính xác thay đổi liên tục theo từng bản cập nhật, nên **kiểm tra trang chủ nhà cung cấp để có số mới nhất** thay vì tin vào một con số cố định.
+Các model hiện đại thường có context window từ 128.000 đến hơn 1.000.000 token tùy model *(kiểm tra: 05/09/2026)* - đủ chứa từ vài trăm trang đến cả một cuốn sách. Con số đổi liên tục theo bản cập nhật, nên kiểm tra trang chủ nhà cung cấp để có số mới nhất thay vì tin vào một con số cố định.
 
 **Mẹo thực tế:** nếu cuộc trò chuyện quá dài và AI bắt đầu trả lời "lạc đề" hoặc quên context, hãy mở cuộc trò chuyện mới và tóm tắt lại những gì cần thiết - đừng cố kéo dài một thread vô hạn.
 
@@ -61,10 +61,10 @@ Các model hiện đại (2025-2026) thường có context window từ 128.000 �
 
 Khi LLM dự đoán từ tiếp theo, nó thực ra tính ra một **danh sách xác suất** cho nhiều từ có thể đứng tiếp theo, rồi chọn một từ trong số đó. **Temperature** là tham số điều chỉnh việc "chọn" này diễn ra táo bạo hay an toàn đến đâu:
 
-- **Temperature thấp** (gần 0): gần như luôn chọn từ có xác suất cao nhất → câu trả lời ổn định, ít thay đổi giữa các lần hỏi, phù hợp cho việc cần độ chính xác cao (viết code, trích xuất dữ liệu, trả lời có căn cứ).
-- **Temperature cao** (gần 1 hoặc hơn, tùy nền tảng): sẵn sàng chọn cả những từ ít khả năng hơn → câu trả lời đa dạng, sáng tạo hơn, nhưng cũng dễ "lạc hướng" hơn, phù hợp cho việc viết sáng tạo, brainstorm ý tưởng.
+- **Temperature thấp** (gần 0): gần như luôn chọn từ xác suất cao nhất → câu trả lời ổn định, phù hợp việc cần chính xác (viết code, trích xuất dữ liệu).
+- **Temperature cao** (gần 1 hoặc hơn): sẵn sàng chọn từ ít khả năng hơn → câu trả lời đa dạng, sáng tạo hơn nhưng dễ "lạc hướng" hơn, phù hợp brainstorm.
 
-Khi dùng chatbot thường (Claude.ai, ChatGPT) bạn hiếm khi chỉnh temperature trực tiếp - nó chỉ hiện ra khi bạn gọi API bằng code. Nhưng hiểu khái niệm này giúp bạn hiểu vì sao hỏi AI cùng một câu hai lần có thể ra hai câu trả lời hơi khác nhau.
+Chatbot thường (Claude.ai, ChatGPT) hiếm khi cho chỉnh temperature trực tiếp - nó chỉ hiện khi gọi API bằng code. Hiểu khái niệm này giúp bạn hiểu vì sao hỏi AI cùng một câu hai lần có thể ra hai câu trả lời hơi khác nhau.
 
 ## Vì sao AI đôi khi "bịa" (hallucination)?
 
@@ -75,6 +75,8 @@ Vì bản chất LLM là **dự đoán từ có khả năng cao nhất**, không
 - Yêu cầu AI trích dẫn nguồn hoặc giải thích cách nó suy ra kết luận.
 - Với việc code: chạy thử code, đừng tin code "trông đúng" mà chưa chạy.
 - Dùng kỹ thuật RAG (cho AI đọc tài liệu thật thay vì chỉ dựa vào trí nhớ huấn luyện) khi cần độ chính xác cao - xem [`04-build-ung-dung-ai/02-rag-la-gi-va-build.md`](../04-build-ung-dung-ai/02-rag-la-gi-va-build.md).
+
+**Một câu để nhớ:** LLM chỉ đang đoán từ tiếp theo có khả năng cao nhất, không tra cứu sự thật - với thông tin quan trọng, luôn kiểm tra chéo, đừng tin tuyệt đối.
 
 ## Bước tiếp theo
 

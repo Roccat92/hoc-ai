@@ -119,6 +119,8 @@ python --version
 
 Đây là chuyện rất bình thường - mỗi máy mỗi khác. Cách xử lý nhanh nhất: **chụp màn hình thông báo lỗi, hoặc copy nguyên văn dòng chữ lỗi, dán vào chatbot AI (Claude/ChatGPT) và hỏi "tôi đang làm theo hướng dẫn cài [tên công cụ] trên [Windows/Mac], gặp lỗi này, giờ làm sao?"**. Đây chính là kỹ năng cốt lõi bạn sẽ dùng suốt hành trình học - không cần thuộc lòng cách sửa mọi lỗi, chỉ cần biết cách hỏi đúng.
 
+**Một câu để nhớ:** gặp lỗi khi cài đặt là chuyện bình thường - kỹ năng thật là biết dán lỗi cho AI hỏi đúng cách, không phải nhớ cách sửa mọi lỗi.
+
 ## Bước tiếp theo
 
 Môi trường đã sẵn sàng, giờ học cách khai thác chatbot AI hiệu quả nhất khi học: [Dùng chatbot để học](03-dung-chatbot-de-hoc.md)

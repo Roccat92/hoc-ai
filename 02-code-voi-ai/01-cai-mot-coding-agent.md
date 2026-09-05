@@ -12,7 +12,7 @@ Cả hai làm cùng một việc: nhận yêu cầu bằng tiếng Việt, đọ
 | Kiểm tra | `claude --version` | `codex --version` |
 | Mở phiên | `claude` | `codex` |
 
-Chưa chắc chọn cái nào? Cứ chọn một cái, làm quen, đổi sau cũng không mất gì - cách làm việc học được ở đây dùng chung cho cả hai. Lệnh cài đặt có thể đổi theo phiên bản; nếu báo lỗi, xem [phụ lục Claude Code](../phu-luc-cong-cu/claude-code/01-cai-dat-va-lenh-co-ban.md) hoặc [phụ lục Codex](../phu-luc-cong-cu/codex/01-cai-dat-va-lenh-co-ban.md) - nơi có hướng dẫn đầy đủ và bảng giá quy ra VND cho từng công cụ.
+Chưa chắc chọn cái nào? Cứ chọn một cái, làm quen, đổi sau cũng không mất gì - cách làm việc học được ở đây dùng chung cho cả hai. Lệnh cài đặt có thể đổi theo phiên bản *(kiểm tra: 05/09/2026)*; nếu báo lỗi, xem [phụ lục Claude Code](../phu-luc-cong-cu/claude-code/01-cai-dat-va-lenh-co-ban.md) hoặc [phụ lục Codex](../phu-luc-cong-cu/codex/01-cai-dat-va-lenh-co-ban.md) - nơi có hướng dẫn đầy đủ và bảng giá quy ra VND cho từng công cụ.
 
 ## Đăng nhập lần đầu
 
@@ -40,6 +40,8 @@ Cài một coding agent, đăng nhập, mở một thư mục dự án bất k�
 - [ ] Cài được một coding agent và kiểm tra được phiên bản.
 - [ ] Đăng nhập mà không làm lộ API key.
 - [ ] Chạy được task chỉ đọc và đọc hiểu câu trả lời.
+
+**Một câu để nhớ:** task chỉ đọc đầu tiên không phải bước thừa - nó cho bạn biết agent có hiểu đúng dự án trước khi giao việc sửa thật.
 
 ## Bước tiếp theo
 

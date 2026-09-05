@@ -19,7 +19,7 @@ Trước khi đi vào bản đồ đầy đủ, hình dung nhanh vài việc AI 
 
 ## Bản đồ năng lực AI hiện nay
 
-Sáu nhóm năng lực chính mà AI (chủ yếu là GenAI - xem [`01-ai-la-gi.md`](01-ai-la-gi.md)) đang làm tốt. Tên công cụ liệt kê bên dưới **đổi rất nhanh** - công cụ hot nhất hôm nay có thể bị thay thế trong vài tháng - nên chỉ coi là ví dụ tham khảo, đừng học thuộc.
+Sáu nhóm năng lực chính mà AI (chủ yếu là GenAI - xem [`01-ai-la-gi.md`](01-ai-la-gi.md)) đang làm tốt. Tên công cụ liệt kê bên dưới **đổi rất nhanh** *(kiểm tra: 05/09/2026)* - chỉ coi là ví dụ tham khảo, đừng học thuộc.
 
 ### Văn bản
 
@@ -29,7 +29,7 @@ Công cụ tiêu biểu (tên đổi nhanh, chỉ để tham khảo): Claude, Ch
 
 ### Code
 
-**Đây là trọng tâm của thư viện Học AI Việt.** AI viết code, build web/app hoàn chỉnh, tự động hóa quy trình làm việc - khác với "viết văn bản" (đầu ra là chữ để đọc), đầu ra ở đây là **chương trình chạy được thật**: một trang web, một app, một script tự động. Đây là nhánh mà một người chưa từng biết lập trình vẫn có thể tự tay tạo ra sản phẩm dùng được, không chỉ dừng ở ý tưởng trên giấy - đúng như bạn đã (hoặc sắp) trải nghiệm ở [phần 2](../02-code-voi-ai/) và [phần 4](../04-build-ung-dung-ai/).
+**Đây là trọng tâm của thư viện Học AI Việt.** AI viết code, build web/app hoàn chỉnh, tự động hóa quy trình - khác "viết văn bản" (đầu ra là chữ để đọc), đầu ra ở đây là **chương trình chạy được thật**. Một người chưa từng biết lập trình vẫn tự tay tạo ra sản phẩm dùng được - đúng như bạn đã/sắp trải nghiệm ở [phần 2](../02-code-voi-ai/) và [phần 4](../04-build-ung-dung-ai/).
 
 Công cụ tiêu biểu: Claude Code, Cursor, GitHub Copilot.
 
@@ -61,15 +61,17 @@ Công cụ tiêu biểu: kết hợp API LLM với vector database (Chroma, Pine
 
 Bạn chắc đã thấy công thức bài viral quen thuộc trên mạng xã hội: **"TIN NÓNG: công cụ AI [tên công cụ] giúp kiếm [một-vài-nghìn] đô/tháng - comment 'AI' để nhận link hướng dẫn miễn phí"**. Công thức này lặp lại đều đặn mỗi khi có công cụ AI mới ra mắt - đặc biệt các công cụ tạo ảnh/video - và đáng để hiểu rõ bản chất trước khi tin theo.
 
-**Sự thật:** khi một công cụ AI ai cũng bấm được, ai cũng tạo ra kết quả gần giống nhau - hàng nghìn người cùng lúc tạo nội dung na ná nhau, bằng cùng một công cụ, thậm chí cùng một vài prompt phổ biến được chia sẻ tràn lan khắp nơi. Thị trường (người xem, người mua) không thể hấp thụ nổi lượng cung tăng đột biến đó, nên phần lớn người "làm theo đúng hướng dẫn" kiếm được rất ít, hoặc không kiếm được gì. **Thu nhập thực sự chảy chủ yếu về phía người BÁN khóa học dạy cách làm** - họ kiếm tiền từ việc dạy, không phải từ việc tự mình dùng công cụ đó tạo ra sản phẩm, và họ có lợi thế bán được cho hàng nghìn người cùng lúc trong khi mỗi học viên lại đang cạnh tranh trực tiếp với nhau.
+**Sự thật:** khi một công cụ AI ai cũng bấm được, ai cũng ra kết quả gần giống nhau - hàng nghìn người cùng tạo nội dung na ná nhau, thị trường không hấp thụ nổi lượng cung đó, nên phần lớn người "làm theo đúng hướng dẫn" kiếm được rất ít. **Thu nhập thực sự chảy về phía người BÁN khóa học dạy cách làm** - họ bán được cho hàng nghìn người cùng lúc, trong khi các học viên lại đang cạnh tranh trực tiếp với nhau.
 
-**Quy tắc để tự kiểm tra bất kỳ lời hứa "kiếm tiền bằng AI" nào:** nghề dùng AI kiếm tiền bền vững luôn có dạng **chuyên môn riêng + AI**, không phải **AI thay thế chuyên môn**. Một người đã giỏi marketing dùng AI để làm marketing nhanh hơn, nhiều hơn - bền, vì chuyên môn (hiểu khách hàng, hiểu sản phẩm, óc thẩm mỹ) vẫn là của riêng họ, AI chỉ tăng tốc. Một người chưa biết gì về một lĩnh vực, chỉ học "cách bấm công cụ AI X" rồi mong kiếm tiền ngay - rủi ro rất cao, vì đúng lúc đó có hàng nghìn người khác cũng đang học đúng công thức giống hệt bạn.
+**Quy tắc tự kiểm tra:** nghề dùng AI kiếm tiền bền vững luôn có dạng **chuyên môn riêng + AI**, không phải **AI thay thế chuyên môn**. Người đã giỏi marketing dùng AI để làm nhanh hơn - bền, vì chuyên môn vẫn là của riêng họ. Người chưa biết gì, chỉ học "cách bấm công cụ AI X" rồi mong kiếm tiền ngay - rủi ro cao, vì hàng nghìn người khác đang học đúng công thức giống hệt bạn.
 
 ## Phạm vi của thư viện này
 
 Trong sáu nhóm năng lực kể trên, **Học AI Việt tập trung vào đúng một nhánh: CODE** - dùng AI để build sản phẩm phần mềm thật và tự động hóa công việc. Không phải vì các nhánh khác (ảnh, video, âm thanh) không đáng học - mà vì tập trung sâu vào một nhánh, dạy tới nơi tới chốn, tốt hơn dàn trải nông ở cả sáu nhóm cùng lúc.
 
-Nhánh media/video/ảnh hiện **để mở cho cộng đồng đóng góp**. Nếu bạn có kinh nghiệm thực chiến với quy trình làm việc (workflow) trong các nhánh này - không chỉ biết dùng một công cụ, mà đã từng tạo ra sản phẩm/thu nhập thật từ đó - tạo một thư mục mới theo đúng hướng dẫn ở [CONTRIBUTING.md](../CONTRIBUTING.md). Yêu cầu chất lượng giữ nguyên như phần còn lại của repo: **thực chiến, có chi phí thật kèm theo, tuyệt đối không phải một khóa học trá hình núp bóng nội dung mở** - đúng tinh thần "mỏ vàng" mà bài này vừa cảnh báo, chính là thứ chúng ta không muốn lặp lại ở đây.
+Nhánh media/video/ảnh hiện **để mở cho cộng đồng đóng góp** - có kinh nghiệm thực chiến (đã từng tạo ra sản phẩm/thu nhập thật, không chỉ biết bấm một công cụ) thì đóng góp theo [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+**Một câu để nhớ:** AI làm được rất nhiều, nhưng ai cũng bấm được y hệt bạn - tiền thật nằm ở chuyên môn bạn cộng thêm vào, không nằm ở cái nút bấm.
 
 ## Bước tiếp theo
 

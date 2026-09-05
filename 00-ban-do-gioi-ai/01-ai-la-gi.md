@@ -90,6 +90,8 @@ GenAI là một **tập con của Deep Learning**, chuyên biệt cho việc **t
 
 Toàn bộ repo Học AI Việt này sẽ tập trung chủ yếu vào nhánh **Generative AI** - cụ thể là học cách dùng LLM để code và build sản phẩm - vì đây là thứ bạn có thể ứng dụng ngay, không cần hiểu sâu toán học đằng sau.
 
+**Một câu để nhớ:** AI → Máy học → Học sâu → AI tạo sinh là bốn vòng tròn lồng nhau, không phải bốn thứ ngang hàng - Claude và ChatGPT nằm ở vòng trong cùng.
+
 ## Bước tiếp theo
 
 Đã hiểu bốn vòng tròn lồng nhau, giờ đi sâu vào phần quan trọng nhất với repo này: [LLM là gì, hoạt động ra sao?](02-llm-la-gi.md)

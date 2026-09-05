@@ -56,6 +56,8 @@ So sánh hai cách hỏi:
 
 Người mới thường sợ "lỡ làm hỏng gì đó thì sao". Thực tế: hầu hết lỗi khi học code đều **hoàn toàn sửa được**, và việc gặp lỗi rồi tự tay sửa (hoặc nhờ AI sửa và hiểu vì sao) chính là cách bạn học nhanh nhất - nhanh hơn nhiều so với đọc lý thuyết suông. Ở bài [`02-code-voi-ai/05-git-github-co-ban.md`](../02-code-voi-ai/05-git-github-co-ban.md) bạn sẽ học cách dùng Git để luôn có thể "quay lại phiên bản trước đó" nếu làm hỏng gì - nên đừng ngại thử.
 
+**Một câu để nhớ:** hiểu để sửa nghĩa là hiểu ở tầm chủ sản phẩm - biết nó phải làm gì và chỗ nào sai thì đắt, không phải thuộc lòng cú pháp.
+
 ## Bước tiếp theo
 
 Có tư duy đúng rồi, giờ chuẩn bị công cụ: [Cài đặt môi trường](02-cai-dat-moi-truong.md)

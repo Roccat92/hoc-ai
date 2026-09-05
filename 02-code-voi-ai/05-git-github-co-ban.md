@@ -98,6 +98,8 @@ node_modules/
 
 Yêu cầu Claude Code tạo file này giúp bạn cũng được: "Tạo file .gitignore phù hợp cho dự án này." **Đây là bước quan trọng để bảo vệ thông tin nhạy cảm** - một khi API key đã bị đẩy lên GitHub công khai, coi như nó đã lộ, cần đổi key mới ngay cả khi xóa lại sau đó.
 
+**Một câu để nhớ:** commit thường xuyên là nút "lưu game" của bạn - không có nó, mọi thử nghiệm với AI đều mang rủi ro mất trắng.
+
 ## Bước tiếp theo
 
 Trước khi đưa sản phẩm lên internet thật, một việc đáng làm trước: sửa cho giao diện hết "nhìn như AI code": [Chữa bệnh "UI phèn"](06-tri-benh-ui-phen.md)
