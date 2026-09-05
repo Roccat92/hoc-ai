@@ -4,8 +4,15 @@
   // "npx wrangler deploy" đọc file này và tải thư mục đó lên phục vụ.
   "name": "hoc-ai",
   "compatibility_date": "2025-09-01",
+  // Worker đứng trước assets: chỉ để 301 redirect hai domain phụ (ai.startee.vn,
+  // ai.starteex.app) về domain chính hocaiviet.com cho SEO - xem worker/index.js.
+  // Domain chính và các URL *.workers.dev vẫn được phục vụ y hệt như trước,
+  // không đổi hành vi.
+  "main": "worker/index.js",
   "assets": {
     "directory": ".vitepress/dist",
+    // Cần đặt tên binding để worker/index.js gọi được env.ASSETS.fetch(request).
+    "binding": "ASSETS",
     // Đường dẫn lạ (không có file) sẽ trả trang 404 riêng của VitePress
     // thay vì lỗi trống.
     "not_found_handling": "404-page"

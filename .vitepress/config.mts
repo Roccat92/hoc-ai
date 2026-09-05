@@ -174,6 +174,22 @@ function buildSidebar(): DefaultTheme.SidebarItem[] {
 const description =
   'Thư viện mở, miễn phí, tiếng Việt: học lập trình và build sản phẩm với AI từ con số 0.'
 
+// hocaiviet.com là domain chính cho SEO - ai.startee.vn và ai.starteex.app cùng
+// trỏ vào bản build này (xem worker/index.js: hai domain đó bị 301 redirect
+// thẳng về đây) nên mọi trang phải khai canonical về đúng domain chính, tránh
+// bị công cụ tìm kiếm coi là nội dung trùng lặp giữa nhiều domain.
+const CANONICAL_ORIGIN = 'https://hocaiviet.com'
+
+// Suy ra đường dẫn công khai (sau rewrite, sau khi bỏ .md) từ relativePath VitePress
+// đưa vào transformPageData - relativePath ở bước này ĐÃ được áp rewrite
+// (README.md -> index.md) nên chỉ cần bỏ .md và xử lý riêng trang "index".
+function canonicalPathOf(relativePath: string): string {
+  const clean = relativePath.replace(/\.md$/, '')
+  if (clean === 'index') return '/'
+  if (clean.endsWith('/index')) return `/${clean.slice(0, -'index'.length)}`
+  return `/${clean}`
+}
+
 export default defineConfig({
   lang: 'vi-VN',
   title: 'Học AI Việt',
@@ -190,6 +206,13 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: [(url) => /LICENSE$/.test(url)],
+  transformPageData(pageData) {
+    if (pageData.relativePath === '404.md') return
+    ;(pageData.frontmatter.head ??= []).push([
+      'link',
+      { rel: 'canonical', href: `${CANONICAL_ORIGIN}${canonicalPathOf(pageData.relativePath)}` },
+    ])
+  },
   head: [
     [
       'link',
