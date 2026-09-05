@@ -7,3 +7,6 @@ CONTEXT.md
 BACKLOG.md
 KE-HOACH-BO-SUNG-NOI-DUNG.md
 DANH-GIA-NOI-DUNG-VA-LO-TRINH.md
+
+# Thumbnail từng bài sinh lúc build bởi scripts/tao-thumbnail.mjs
+public/thumb/

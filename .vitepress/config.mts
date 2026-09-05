@@ -180,6 +180,12 @@ const description =
 // bị công cụ tìm kiếm coi là nội dung trùng lặp giữa nhiều domain.
 const CANONICAL_ORIGIN = 'https://hocaiviet.com'
 
+// Mô tả riêng từng bài, sinh cùng lúc với thumbnail (public/thumb/_mo-ta.json, không commit).
+const MO_TA_BAI: Record<string, string> = (() => {
+  const f = path.join(root, 'public', 'thumb', '_mo-ta.json')
+  try { return JSON.parse(fs.readFileSync(f, 'utf8')) } catch { return {} }
+})()
+
 // Suy ra đường dẫn công khai (sau rewrite, sau khi bỏ .md) từ relativePath VitePress
 // đưa vào transformPageData - relativePath ở bước này ĐÃ được áp rewrite
 // (README.md -> index.md) nên chỉ cần bỏ .md và xử lý riêng trang "index".
@@ -208,22 +214,38 @@ export default defineConfig({
   ignoreDeadLinks: [(url) => /LICENSE$/.test(url)],
   transformPageData(pageData) {
     if (pageData.relativePath === '404.md') return
-    ;(pageData.frontmatter.head ??= []).push([
-      'link',
-      { rel: 'canonical', href: `${CANONICAL_ORIGIN}${canonicalPathOf(pageData.relativePath)}` },
-    ])
+    const head = (pageData.frontmatter.head ??= [])
+    const duongDan = canonicalPathOf(pageData.relativePath)
+    head.push(['link', { rel: 'canonical', href: `${CANONICAL_ORIGIN}${duongDan}` }])
+    // Thẻ Open Graph theo TỪNG trang: tiêu đề bài, mô tả và ảnh thumbnail riêng
+    // (public/thumb/... do scripts/tao-thumbnail.mjs sinh trước khi build - xem
+    // "docs:build" trong package.json). Trang chủ hoặc trang chưa có ảnh riêng
+    // thì dùng ảnh chung /og.png (trang chủ cũng có thẻ riêng: thumb/index.png).
+    const anhRieng = pageData.relativePath.replace(/.md$/, '.png')
+    const coAnhRieng = fs.existsSync(path.join(root, 'public', 'thumb', anhRieng))
+    const ogImage = coAnhRieng ? `${CANONICAL_ORIGIN}/thumb/${anhRieng}` : `${CANONICAL_ORIGIN}/og.png`
+    const ogTitle = duongDan === '/' ? 'Học AI Việt' : `${pageData.title} | Học AI Việt`
+    // Mô tả riêng từng bài (câu "học xong bạn sẽ...") do scripts/tao-thumbnail.mjs rút ra.
+    if (!pageData.description && MO_TA_BAI[pageData.relativePath]) pageData.description = MO_TA_BAI[pageData.relativePath]
+    head.push(
+      ['meta', { property: 'og:type', content: duongDan === '/' ? 'website' : 'article' }],
+      ['meta', { property: 'og:url', content: `${CANONICAL_ORIGIN}${duongDan}` }],
+      ['meta', { property: 'og:title', content: ogTitle }],
+      ['meta', { property: 'og:description', content: pageData.description || description }],
+      ['meta', { property: 'og:image', content: ogImage }],
+      ['meta', { property: 'og:image:width', content: '1200' }],
+      ['meta', { property: 'og:image:height', content: '630' }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: ogTitle }],
+      ['meta', { name: 'twitter:image', content: ogImage }],
+    )
   },
   head: [
-    // Nhận diện: chữ "ô" (vòng tròn + dấu mũ) - file gốc ở public/, PNG sinh bằng scripts/tao-icon.ps1.
+    // Nhận diện: số 0 có lỗ + dấu mũ nêm, nền đen - file gốc ở public/, PNG sinh bằng scripts/tao-icon.ps1.
+    // Thẻ og:*/twitter:* sinh theo từng trang trong transformPageData ở trên.
     ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
     ["link", { rel: "icon", href: "/favicon-32.png", type: "image/png", sizes: "32x32" }],
     ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }],
-    ['meta', { property: 'og:title', content: 'Học AI Việt' }],
-    ['meta', { property: 'og:description', content: description }],
-    ["meta", { property: "og:image", content: `${CANONICAL_ORIGIN}/og.png` }],
-    ["meta", { property: "og:image:width", content: "1200" }],
-    ["meta", { property: "og:image:height", content: "630" }],
-    ["meta", { name: "twitter:card", content: "summary_large_image" }],
     // Google Analytics (gtag.js) - theo dõi lượt xem trang, không gắn thông tin cá nhân.
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-Y4CJYVYEV4' }],
     [

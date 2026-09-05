@@ -6,13 +6,16 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "node scripts/tao-thumbnail.mjs && vitepress build",
     "docs:preview": "vitepress preview",
     "kiem-tra-chuoi": "node scripts/kiem-tra-chuoi.mjs",
     "kiem-tra-ngay-cu": "node scripts/kiem-tra-ngay-cu.mjs",
-    "docs:check": "npm run kiem-tra-chuoi && npm run docs:build"
+    "docs:check": "npm run kiem-tra-chuoi && npm run docs:build",
+    "tao-thumbnail": "node scripts/tao-thumbnail.mjs"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.33.4",
     "vitepress": "^1.6.0"
   },
   "engines": {

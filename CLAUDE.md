@@ -39,7 +39,12 @@ Có script `scripts/kiem-tra-chuoi.mjs` (`npm run kiem-tra-chuoi`, hoặc `npm r
 
 Hình gốc là số 0 đặc có lỗ tròn + dấu mũ hình nêm (gợi chữ "ô" và "từ con số 0") trong `public/logo.svg`, `logo-dark.svg` (thanh menu, màu chữ sáng/tối) và `favicon.svg` (huy hiệu nền đen `#111114`, glyph trắng). Các file PNG (`favicon-32.png`, `apple-touch-icon.png`, `og.png`) KHÔNG sửa tay - sinh lại bằng `powershell -ExecutionPolicy Bypass -File scripts/tao-icon.ps1` sau khi đổi SVG. Nhận diện dùng đen/trắng trung tính, không thêm màu riêng ngoài màu brand mặc định của VitePress; không dùng emoji làm icon.
 
+## Thumbnail từng bài (ảnh khi chia sẻ link)
+
+`scripts/tao-thumbnail.mjs` sinh ảnh 1200x630 cho mọi bài vào `public/thumb/` (không commit) bằng satori + resvg, font ở `scripts/fonts/`. `npm run docs:build` tự chạy nó trước khi build; `transformPageData` trong `config.mts` gắn `og:image`/`og:title`/`og:description` theo từng trang từ đó. Không cần làm gì khi thêm bài mới - tiêu đề, phần, số bài, cấp độ và câu "học xong bạn sẽ..." đều rút từ nội dung. Phong cách mặc định là "dark" (chủ dự án chọn); thử nhanh một bài: `node scripts/tao-thumbnail.mjs <một-phần-tên-file>`.
+
 ## Lệnh
 
 - `npm run docs:dev` - xem web ở máy (http://localhost:5173)
-- `npm run docs:build` - build ra `.vitepress/dist` và kiểm tra link
+- `npm run docs:build` - sinh thumbnail rồi build ra `.vitepress/dist` và kiểm tra link
+- `npm run tao-thumbnail` - chỉ sinh lại thumbnail (nhanh, chỉ vẽ bài có sửa)
