@@ -14,7 +14,9 @@ cd nha-sach-xinh
 
 ## Bước 2: Chạy đúng quy trình đã học ở phần 8
 
-Mở Claude Code trong thư mục vừa tạo, làm theo [quy trình một phiên làm việc chuẩn](../../08-chuan-hoa-du-an/05-quy-trinh-1-phien-lam-viec.md): mở backlog.md, chọn task đầu tiên, yêu cầu AI đọc spec.md và CLAUDE.md trước, làm, kiểm tra, commit, tick backlog - lặp lại tới hết.
+Mở coding agent (Claude Code hoặc Codex) trong thư mục vừa tạo, làm theo [quy trình một phiên làm việc chuẩn](../../08-chuan-hoa-du-an/05-quy-trinh-1-phien-lam-viec.md): mở backlog.md, chọn task đầu tiên, yêu cầu AI đọc spec.md và CLAUDE.md trước, làm, kiểm tra, commit, tick backlog - lặp lại tới hết.
+
+Đi từng task như vậy là đúng cho dự án đầu tiên này, để bạn nắm chắc quy trình. Sau khi quen nhịp này, cách giao việc trọn gói hơn (và cấp quyền cho agent theo đúng khuyến nghị chính thức, không phải chỉ nới lỏng dần) nằm ở [bài setup một lần để agent tự chạy](../../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md) - dùng cho dự án 02, 03 hoặc dự án thật sau này.
 
 Prompt bắt đầu phiên đầu tiên:
 ```
@@ -43,7 +45,7 @@ Trả lời được các câu dưới đây nghĩa là bạn đã thật sự h
 - [ ] Bạn giải thích được cho người khác: khi khách bấm "Gửi" trên form, dữ liệu đi qua những đâu để tới được email của bạn?
 - [ ] Formspree báo lỗi (ví dụ gửi không thành công), bạn biết tự tra cứu hoặc hỏi AI đúng cách để sửa, không cần chép nguyên xi lỗi đi hỏi khắp nơi mà không hiểu mình đang hỏi gì?
 - [ ] Bạn tự đổi được màu sắc/bố cục một phần nhỏ mà không cần nhờ AI viết lại toàn bộ trang từ đầu?
-- [ ] Bạn tự deploy lại được lên Cloudflare Pages sau khi sửa, không cần giở lại hướng dẫn từng bước ở [phần 3](../../03-ha-tang-thuc-chien/03-deploy-mien-phi.md)?
+- [ ] Bạn tự deploy lại được lên nền tảng miễn phí bạn đã chọn (Vercel, Netlify, Cloudflare Pages...) sau khi sửa, không cần giở lại hướng dẫn từng bước ở [phần 3](../../03-ha-tang-thuc-chien/03-deploy-mien-phi.md)?
 - [ ] Bạn giải thích được vì sao dự án này dùng Formspree thay vì tự viết backend riêng?
 
 Câu nào còn "chưa chắc" - quay lại đúng phần đó, tự thử làm lại (đừng nhờ AI ngay lần đầu) trước khi chuyển sang dự án khác. Hiểu chậm mà chắc luôn tốt hơn chạy nhanh mà không hiểu gì.

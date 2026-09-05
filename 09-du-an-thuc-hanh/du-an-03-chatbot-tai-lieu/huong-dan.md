@@ -14,6 +14,8 @@ cd tro-ly-tai-lieu
 
 Dự án này có nhiều phần mới (chunking, embedding, vector database) hơn hai dự án trước - càng cần làm **từng task nhỏ, kiểm tra kỹ, commit thường xuyên** (xem lại [quy trình một phiên làm việc chuẩn](../../08-chuan-hoa-du-an/05-quy-trinh-1-phien-lam-viec.md)). Đừng nhảy cóc sang task "API hỏi đáp" khi task "chunking + embedding" chưa chạy đúng - bạn sẽ không biết lỗi nằm ở khâu nào.
 
+Nếu đã quen cách giao việc trọn gói ở [bài setup một lần để agent tự chạy](../../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md) từ dự án 02, áp dụng lại ở đây: mỗi nhóm task lớn (chunking, embedding, API hỏi đáp) một nhánh riêng, xem bản xem thử trước khi gộp - đặc biệt hữu ích khi tài liệu test là dữ liệu nội bộ nhạy cảm, vì bản xem thử vẫn tách khỏi bản thật.
+
 Prompt bắt đầu phiên đầu tiên:
 ```
 Đọc spec.md và CLAUDE.md trước. Task đầu tiên trong backlog.md là "Khởi

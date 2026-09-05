@@ -14,6 +14,8 @@ cd quan-ly-don-hang
 
 Giống dự án 01, nhưng backlog dài hơn nên **càng cần nghiêm túc làm từng task một, commit sau mỗi task** (xem lại [quy trình một phiên làm việc chuẩn](../../08-chuan-hoa-du-an/05-quy-trinh-1-phien-lam-viec.md)). Dự án có backend, một task làm hỏng có thể ảnh hưởng tới các task sau - càng nhiều lý do để commit thường xuyên.
 
+Đây cũng là dự án hợp lý để bắt đầu áp dụng cách giao việc trọn gói và tách nhánh/bản xem thử đã học ở [bài setup một lần để agent tự chạy](../../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md), thay vì tick từng task thủ công như dự án 01 - dự án có database thật nên chuyện dev/prod tách riêng đáng giá hơn hẳn.
+
 Prompt bắt đầu phiên đầu tiên:
 ```
 Đọc spec.md và CLAUDE.md trước. Task đầu tiên trong backlog.md là "Khởi
