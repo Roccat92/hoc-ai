@@ -1,0 +1,140 @@
+/* Demo so sánh "UI phèn" vs "có chủ đích" cho bài 06-tri-benh-ui-phen.
+   HTML nằm trong markdown; CSS phải ở đây vì VitePress/Vue loại bỏ thẻ <style>
+   đặt thẳng trong markdown. Các mẫu bên trong cố tình dùng màu/kiểu cố định
+   (gradient tím, bóng đổ, hoặc bảng màu có chủ đích) — đó chính là thứ đang
+   minh họa, nên KHÔNG lấy theo màu chủ đề của web. */
+
+.uid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+@media (max-width: 640px) {
+  .uid { grid-template-columns: 1fr; }
+}
+
+.uid__col {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--vp-c-bg-soft);
+}
+
+.uid__tag {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+.uid__tag--bad  { color: #b4232a; background: rgba(220, 60, 60, .08); }
+.uid__tag--good { color: #1a7f52; background: rgba(30, 150, 90, .08); }
+
+/* "Màn hình" mẫu bên trong — như xem một ảnh chụp UI, luôn nền sáng */
+.uid__stage {
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  min-height: 150px;
+  justify-content: center;
+}
+.uid__stage--light { background: #ffffff; }
+.uid__stage--cream { background: #f6efe4; }
+
+/* ---------- Mẫu NÚT ---------- */
+.uid-btn {
+  border: none;
+  cursor: default;
+  font-size: 15px;
+}
+/* Nút phèn: gradient tím-hồng, bo viên thuốc, đổ bóng, ALL-CAPS */
+.uid-btn--bad {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, .45);
+}
+/* Nút có chủ đích: một màu nhấn đặc, bo nhỏ, chữ thường */
+.uid-btn--good {
+  background: #1e3a5f;
+  color: #fff;
+  padding: 11px 22px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* ---------- Mẫu CARD ---------- */
+.uid-card { width: 100%; max-width: 230px; }
+/* Card phèn: bo tròn to, bóng đổ xám, nhãn ALL-CAPS, emoji */
+.uid-card--bad {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .14);
+  padding: 18px;
+}
+.uid-card--bad .uid-card__label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  color: #9333ea;
+  font-weight: 700;
+}
+/* Card có chủ đích: viền mảnh 1px, bo nhỏ, không bóng */
+.uid-card--good {
+  background: #fff;
+  border: 1px solid #e2e2e0;
+  border-radius: 4px;
+  padding: 18px;
+}
+.uid-card--good .uid-card__label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+}
+.uid-card__title {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 6px 0 4px;
+}
+.uid-card__body { color: #555; font-size: 13px; line-height: 1.5; margin: 0; }
+
+/* ---------- Hai khẩu vị A / B ---------- */
+.uid-hero { width: 100%; text-align: left; }
+/* A — Tối giản công sở */
+.uid-hero--a {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+}
+.uid-hero--a .uid-hero__kicker { color: #1e3a5f; font-size: 12px; font-weight: 600; }
+.uid-hero--a .uid-hero__h { color: #111827; font-size: 20px; font-weight: 700; margin: 6px 0 8px; line-height: 1.25; }
+.uid-hero--a .uid-hero__p { color: #4b5563; font-size: 13px; margin: 0 0 14px; line-height: 1.5; }
+.uid-hero--a .uid-hero__cta { background: #1e3a5f; color: #fff; border-radius: 3px; padding: 9px 16px; font-size: 13px; font-weight: 600; display: inline-block; }
+
+/* B — Ấm áp thủ công */
+.uid-hero--b {
+  background: #f3e9d8;
+  border: 1px solid #e4d3b8;
+  border-radius: 16px;
+  padding: 22px;
+}
+.uid-hero--b .uid-hero__kicker { color: #b5651d; font-size: 12px; font-weight: 600; letter-spacing: .3px; }
+.uid-hero--b .uid-hero__h { color: #4a3222; font-family: Georgia, "Times New Roman", serif; font-size: 23px; font-weight: 700; margin: 8px 0 10px; line-height: 1.25; }
+.uid-hero--b .uid-hero__p { color: #6b5240; font-size: 13px; margin: 0 0 16px; line-height: 1.6; }
+.uid-hero--b .uid-hero__cta { background: #c66a3a; color: #fff; border-radius: 12px; padding: 10px 18px; font-size: 13px; font-weight: 600; display: inline-block; }
+
+.uid-note {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin: -6px 0 24px;
+  font-style: italic;
+}

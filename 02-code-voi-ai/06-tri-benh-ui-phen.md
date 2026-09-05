@@ -13,6 +13,54 @@ Bài này dành cho người đã build được vài dự án ([dự án đầu
 - **Icon emoji** (🚀 ✨ 💡) thay cho icon thiết kế riêng - nhanh, tiện, nhưng không có bản sắc.
 - **Mũi tên "→"** gắn tự động ở cuối mọi nút bấm và đường link, như một tick không ai còn để ý.
 
+### Nhìn tận mắt: đặt cạnh nhau cho dễ nhận ra
+
+Đọc mô tả thì trừu tượng. Dưới đây là **phần tử thật render ngay trong trang** - bên trái là kiểu "phèn", bên phải là cùng thành phần đó nhưng có chủ đích. Nhìn quen mắt hai bên rồi, bạn sẽ tự soi ra "bệnh" trong sản phẩm của mình.
+
+**Nút bấm chính:**
+
+<div class="uid">
+  <div class="uid__col">
+    <div class="uid__tag uid__tag--bad">✗ Phèn: gradient tím, bo viên thuốc, đổ bóng, ALL-CAPS, emoji + mũi tên</div>
+    <div class="uid__stage uid__stage--light">
+      <button class="uid-btn uid-btn--bad">🚀 BẮT ĐẦU NGAY →</button>
+    </div>
+  </div>
+  <div class="uid__col">
+    <div class="uid__tag uid__tag--good">✓ Có chủ đích: một màu nhấn đặc, bo nhỏ, chữ thường, không trang trí thừa</div>
+    <div class="uid__stage uid__stage--light">
+      <button class="uid-btn uid-btn--good">Bắt đầu ngay</button>
+    </div>
+  </div>
+</div>
+
+**Thẻ (card) nội dung:**
+
+<div class="uid">
+  <div class="uid__col">
+    <div class="uid__tag uid__tag--bad">✗ Phèn: bo góc lớn, bóng đổ xám, nhãn ALL-CAPS tím, emoji</div>
+    <div class="uid__stage uid__stage--light">
+      <div class="uid-card uid-card--bad">
+        <div class="uid-card__label">✨ TÍNH NĂNG</div>
+        <p class="uid-card__title">Nhanh &amp; Mượt</p>
+        <p class="uid-card__body">Trải nghiệm siêu tốc cho người dùng của bạn.</p>
+      </div>
+    </div>
+  </div>
+  <div class="uid__col">
+    <div class="uid__tag uid__tag--good">✓ Có chủ đích: viền mảnh 1px, bo 4px, không bóng, nhãn thường</div>
+    <div class="uid__stage uid__stage--light">
+      <div class="uid-card uid-card--good">
+        <div class="uid-card__label">Tính năng</div>
+        <p class="uid-card__title">Nhanh và mượt</p>
+        <p class="uid-card__body">Trải nghiệm siêu tốc cho người dùng của bạn.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="uid-note">Hai bên nội dung y hệt nhau — chỉ khác ở các quyết định thẩm mỹ. Bên phải không "đẹp hơn" một cách tuyệt đối, nó chỉ <strong>không rơi vào mẫu mặc định</strong> mà ai cũng nhận ra.</p>
+
 ## Vì sao AI hay ra kiểu này?
 
 Không phải vì AI "dốt thẩm mỹ". Nhắc lại cách LLM hoạt động ở [`00-ban-do-gioi-ai/02-llm-la-gi.md`](../00-ban-do-gioi-ai/02-llm-la-gi.md): AI dự đoán "cái gì có khả năng cao nhất" dựa trên những gì đã thấy trong dữ liệu huấn luyện. Khi bạn **không cho nó biết khẩu vị cụ thể** - không nói rõ thương hiệu, phong cách, cảm xúc bạn muốn truyền tải - nó buộc phải tự chọn, và lựa chọn "an toàn nhất" luôn là **phương án trung bình cộng**: những mẫu xuất hiện dày đặc nhất trong hàng loạt template SaaS, dashboard, landing page phổ biến trên internet những năm gần đây. Gradient tím, card bo tròn, bóng đổ nhạt... đều là những mẫu cực kỳ phổ biến trong dữ liệu đó - nên khi không bị ràng buộc gì khác, AI có xu hướng hội tụ về đúng những mẫu này.
@@ -101,7 +149,34 @@ mềm mại (12-16px). Ưu tiên ảnh chụp thật thay vì minh họa vector.
 Khoảng trắng rộng rãi, nhịp đọc chậm rãi.
 ```
 
-Cả hai đều **không phải** "UI phèn" - vì cả hai đều là lựa chọn có chủ đích, không phải mặc định AI tự chọn khi không được hỏi.
+**Hai khẩu vị đó render ra trông thế nào** - cùng một nội dung "trang chủ giới thiệu sản phẩm", hai chất hoàn toàn khác:
+
+<div class="uid">
+  <div class="uid__col">
+    <div class="uid__tag uid__tag--good">Khẩu vị A — Tối giản công sở</div>
+    <div class="uid__stage uid__stage--light">
+      <div class="uid-hero uid-hero--a">
+        <div class="uid-hero__kicker">Quản lý đơn hàng</div>
+        <div class="uid-hero__h">Nắm toàn bộ xưởng trong một màn hình</div>
+        <p class="uid-hero__p">Theo dõi tiến độ từng công đoạn, không cần gọi điện hỏi nhau.</p>
+        <span class="uid-hero__cta">Dùng thử</span>
+      </div>
+    </div>
+  </div>
+  <div class="uid__col">
+    <div class="uid__tag uid__tag--good">Khẩu vị B — Ấm áp thủ công</div>
+    <div class="uid__stage uid__stage--cream">
+      <div class="uid-hero uid-hero--b">
+        <div class="uid-hero__kicker">Tiệm bánh nhà làm</div>
+        <div class="uid-hero__h">Mẻ bánh ra lò mỗi sáng</div>
+        <p class="uid-hero__p">Nguyên liệu chọn tay, nướng trong ngày, giao tận nơi khi còn ấm.</p>
+        <span class="uid-hero__cta">Đặt bánh</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+Cả hai đều **không phải** "UI phèn" - vì cả hai đều là lựa chọn có chủ đích, không phải mặc định AI tự chọn khi không được hỏi. Để ý: bên nào cũng dùng đúng **một** màu nhấn, không có gradient tím, không emoji, không mũi tên gắn thừa.
 
 ### c) Vòng lặp sửa bằng ảnh
 

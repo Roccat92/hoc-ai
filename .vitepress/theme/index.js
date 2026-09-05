@@ -4,6 +4,7 @@
 // - <TyGia />: dòng ghi chú cho biết đang dùng tỉ giá nào
 import DefaultTheme from 'vitepress/theme'
 import './minh-hoa.css'
+import './ui-demo.css'
 import Vnd from './Vnd.vue'
 import TyGia from './TyGia.vue'
 
