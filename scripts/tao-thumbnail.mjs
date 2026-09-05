@@ -69,6 +69,10 @@ function boMarkdown(s) {
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
     .replace(/\*\*([^*]+)\*\*/g, '$1')
     .replace(/[*_`]/g, '')
+    // VitePress chèn description thẳng vào thuộc tính content="..." không escape,
+    // nên dấu " sẽ cắt cụt thẻ meta - đổi sang ‘ ’ và bỏ < > cho an toàn.
+    .replace(/"([^"]*)"/g, '‘$1’')
+    .replace(/["<>]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
 }
