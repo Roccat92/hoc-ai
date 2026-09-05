@@ -1,10 +1,12 @@
 # StarteeX App: đưa app đặt in theo yêu cầu lên hai chợ ứng dụng
 
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
-**Thời gian thực hiện:** hơn 1 tháng cho app (gồm cả hệ thống quản trị admin và trợ lý NEXA), dùng gói [Claude Pro](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md). Trang web landing [starteex.app](https://starteex.app) là một phần build riêng, mất khoảng 1 tuần.
+**Thời gian thực hiện:** cả **hệ sinh thái StarteeX** - app di động, trợ lý [NEXA](03-nexa-agent.md), hệ quản trị admin, web landing [starteex.app](https://starteex.app), và [Mockup Studio](04-mockup-studio.md) - build trong khoảng 2 tháng: **~1 tháng dùng gói [Claude Pro](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md), rồi ~1 tháng gói Claude Max 5x**.
 **Trình độ trước khi bắt đầu:** vận hành xưởng sản xuất, không xuất thân lập trình di động
 
-> **Vẫn đang update thường xuyên.** Đây không phải dự án "làm xong để đó" - con số hơn 1 tháng là tới lúc chạy được thật, sau đó vẫn thêm tính năng đều. Nhiều phần dùng thêm Codex/ChatGPT Pro để phản biện phương án và làm assets.
+> **Vẫn đang update thường xuyên.** Đây không phải dự án "làm xong để đó" - hai tháng ở trên là tới lúc chạy được thật, sau đó vẫn thêm tính năng và fix bug đều (hiện làm bằng gói Max 5x). Nhiều phần dùng thêm Codex/ChatGPT Pro để phản biện phương án và làm assets.
+>
+> Con số "1 tháng Pro + 1 tháng Max 5x" là chi phí AI **chung cho cả hệ sinh thái** - không phải mỗi sản phẩm con một gói riêng. Vì vậy các case study NEXA và Mockup Studio không cộng thêm tiền gói AI của riêng chúng.
 
 > Sản phẩm đang chạy thật tại [starteex.app](https://starteex.app).
 
@@ -49,7 +51,7 @@ Hai khoản dưới đây là **phí bắt buộc của chính hai hãng**, ai �
 | Expo (build app di động) | 20 USD/tháng <Vnd usd="20" sau="/tháng" /> | Dùng trong giai đoạn build và phát hành |
 | Supabase | 0đ | Dùng bậc miễn phí |
 | Vercel, GitHub | 0đ | Dùng bậc miễn phí |
-| Gói AI để build | Claude Pro, 20 USD/tháng <Vnd usd="20" sau="/tháng" /> | Xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
+| Gói AI để build cả hệ sinh thái | 1 tháng Claude Pro <Vnd usd="20" /> + 1 tháng Max 5x <Vnd usd="100" /> | Dùng chung cho app, NEXA, admin, web, mockup - xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
 | API cho trợ lý NEXA | phát sinh theo lượng dùng | Tính theo tin nhắn thật, xem [case study NEXA](03-nexa-agent.md) |
 | Codex/ChatGPT Pro | phát sinh theo dùng | Phản biện phương án, làm assets |
 

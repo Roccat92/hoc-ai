@@ -6,19 +6,18 @@
 
 Bốn case study đầu tiên đến từ người duy trì repo này, viết từ **sản phẩm đang chạy thật** chứ không phải dự án mẫu:
 
-1. [TIDOGO (Print OS)](01-tidogo-print-os.md) - phần mềm quản lý sản xuất cho xưởng in. Build ~2 tuần với Claude Max 5x. Bài học: chọn bài toán mình đã sống trong đó nhiều năm.
-2. [StarteeX App](02-starteex-app.md) - app đặt in theo yêu cầu, lên cả hai chợ ứng dụng. Build hơn 1 tháng với Claude Pro (gồm cả admin và NEXA). Bài học: đặt AI vào đúng chỗ tắc nghẽn, và chi phí bắt buộc khi lên chợ.
+1. [TIDOGO (Print OS)](01-tidogo-print-os.md) - phần mềm quản lý sản xuất cho xưởng in. Build hơn 1 tháng với Claude Max 5x (2 tuần đầu mới ra được MVP). Bài học: chọn bài toán mình đã sống trong đó nhiều năm.
+2. [StarteeX App](02-starteex-app.md) - app đặt in theo yêu cầu, lên cả hai chợ ứng dụng. Bài học: đặt AI vào đúng chỗ tắc nghẽn, và chi phí bắt buộc khi lên chợ.
 3. [NEXA](03-nexa-agent.md) - agent biết gọi công cụ để tạo đơn thật, không phải chatbot trả lời suông. Bài học: agent chỉ hữu ích khi có hệ thống thật phía sau, và chi phí lớn nhất là tiền API vận hành.
-4. [Mockup Studio](04-mockup-studio.md) - công cụ xử lý ảnh chạy ngay trong trình duyệt, gọi được qua CLI và MCP. Build ~1 tuần với Claude Pro. Bài học: đẩy việc nặng về phía người dùng để chi phí vận hành gần bằng không.
+4. [Mockup Studio](04-mockup-studio.md) - công cụ xử lý ảnh chạy ngay trong trình duyệt, gọi được qua CLI và MCP. Bài học: đẩy việc nặng về phía người dùng để chi phí vận hành gần bằng không.
 
-Hai ví dụ ngắn về tốc độ, cùng tác giả, chưa tách thành case study riêng vì bài học gói gọn trong một dòng:
+Ba sản phẩm (2), (3), (4) cùng với hệ quản trị admin và web landing tạo thành **hệ sinh thái StarteeX**, build chung trong khoảng 2 tháng: ~1 tháng gói Claude Pro rồi ~1 tháng gói Claude Max 5x. Đây là chi phí AI dùng chung, không phải mỗi sản phẩm một gói riêng.
 
-- **Web landing [starteex.app](https://starteex.app)** - build ~1 tuần với Claude Pro (tách khỏi app di động).
-- **Redesign [startee.vn](https://startee.vn)** từ landing page cũ - chỉ mất ~1 buổi với Claude Max 5x. Việc "làm lại giao diện từ bản có sẵn" là loại việc AI làm rất nhanh.
+Một ví dụ ngắn nữa về tốc độ, cùng tác giả, chưa tách thành case study riêng vì bài học gói gọn trong một dòng: **redesign [startee.vn](https://startee.vn)** từ landing page cũ chỉ mất ~1 buổi với Claude Max 5x - "làm lại giao diện từ bản có sẵn" là loại việc AI làm rất nhanh.
 
 Vài sản phẩm khác cùng tác giả chưa có case study đầy đủ: **Startee Outreach** (công cụ CRM và tự động hóa tiếp cận khách B2B), **MYTORY** (game nhập vai với nhân vật AI, dùng pgvector), và chính **[Học AI Việt](https://hoc-ai.thunguyen.workers.dev)** - thư viện bạn đang đọc.
 
-> **Hai điểm chung đáng học từ cả nhóm case study trên.** Một là gần như toàn bộ hạ tầng (Vercel, GitHub, Supabase) chạy ở **bậc miễn phí** - khoản trả tiền chính là gói AI để build và tiền API cho chatbot tính theo dùng. Hai là nhiều dự án dùng **cả Claude lẫn Codex/ChatGPT Pro**, để hai AI phản biện chéo nhau và chia việc làm assets.
+> **Ba điểm chung đáng học từ cả nhóm case study trên.** Một là gần như toàn bộ hạ tầng (Vercel, GitHub, Supabase) chạy ở **bậc miễn phí** - khoản trả tiền chính là gói AI để build và tiền API cho chatbot tính theo dùng. Hai là nhiều dự án dùng **cả Claude lẫn Codex/ChatGPT Pro**, để hai AI phản biện chéo nhau và chia việc làm assets. Ba là **không có sản phẩm nào "xong rồi để đó"** - tất cả vẫn được thêm tính năng và fix bug đều, hiện làm bằng gói Max 5x.
 
 ## Còn bạn?
 
