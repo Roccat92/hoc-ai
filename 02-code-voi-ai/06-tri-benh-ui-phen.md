@@ -154,4 +154,4 @@ Trước khi gửi link cho ai đó xem, tự hỏi:
 
 ## Bước tiếp theo
 
-Giao diện đã có chất riêng, giờ quay lại mạch chính: đưa sản phẩm lên internet thật: [Hạ tầng thực chiến →](../03-ha-tang-thuc-chien/01-thue-vps.md)
+Giao diện đã có chất riêng. Trước khi đưa sản phẩm lên internet, dừng một nhịp để hiểu công cụ mình đang cầm: vì sao cùng một Claude mà mỗi chỗ làm được việc khác nhau: [Harness là gì?](07-harness-la-gi.md)

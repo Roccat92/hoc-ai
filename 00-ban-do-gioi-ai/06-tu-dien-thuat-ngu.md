@@ -17,6 +17,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **Fine-tune** | Huấn luyện tiếp một model đã có sẵn trên một tập dữ liệu nhỏ, chuyên biệt, để nó làm tốt hơn một việc cụ thể - xem [`05-train-va-finetune/`](../05-train-va-finetune/) |
 | **GenAI (Generative AI)** | AI tạo sinh - tạo nội dung mới (văn bản, ảnh, nhạc...) - xem [`01-ai-la-gi.md`](01-ai-la-gi.md) |
 | **Hallucination (Ảo giác)** | Khi AI tạo ra thông tin sai nhưng trình bày rất tự tin, trôi chảy - xem [`02-llm-la-gi.md`](02-llm-la-gi.md) |
+| **Harness** | Lớp chương trình bao quanh model để biến khả năng "đoán chữ tiếp theo" thành công cụ làm được việc: vòng lặp, công cụ, quyền, ngữ cảnh. Cùng một model, đổi harness thì ra sản phẩm khác hẳn - xem [`02-code-voi-ai/07-harness-la-gi.md`](../02-code-voi-ai/07-harness-la-gi.md) |
 | **Inference** | Quá trình model đã huấn luyện xong được dùng để tạo ra câu trả lời (khác với "training" - quá trình huấn luyện ra model). Mỗi lần bạn hỏi AI một câu là một lần "inference" |
 | **LLM (Large Language Model)** | Mô hình ngôn ngữ lớn - nền tảng của Claude, ChatGPT, Gemini - xem [`02-llm-la-gi.md`](02-llm-la-gi.md) |
 | **MCP (Model Context Protocol)** | Một chuẩn giao tiếp mở (do Anthropic khởi xướng) cho phép AI kết nối với công cụ/dữ liệu bên ngoài (file, database, ứng dụng khác) theo cách chuẩn hóa, thay vì mỗi nơi làm một kiểu riêng |
