@@ -1,15 +1,17 @@
 <script setup>
 import { computed, onMounted } from 'vue'
-import { tiGia, ngayTiGia, laTiGiaThat, layTiGia } from './ty-gia.js'
+import { tiGia, ngayTiGia, laTiGiaThat, layTiGia, THUE_VAT } from './ty-gia.js'
 
 onMounted(layTiGia)
 
 const so = computed(() => Math.round(tiGia.value).toLocaleString('vi-VN'))
+const phanTramThue = Math.round(THUE_VAT * 100)
 </script>
 
 <template>
   <p class="ty-gia">
-    Mọi số tiền VND trong bài được quy đổi theo tỉ giá
+    Số tiền VND trong bài là <strong>số bạn thực trả</strong>: đã cộng thuế VAT
+    {{ phanTramThue }}% cho dịch vụ mua từ nước ngoài, quy đổi theo tỉ giá
     <strong>1 USD ≈ {{ so }}đ</strong>.
     <template v-if="laTiGiaThat">
       Tỉ giá này trang tự lấy mới khi bạn mở bài<template v-if="ngayTiGia">
@@ -19,8 +21,8 @@ const so = computed(() => Math.round(tiGia.value).toLocaleString('vi-VN'))
     <template v-else>
       Đây là tỉ giá dự phòng vì trình duyệt chưa lấy được tỉ giá mới.
     </template>
-    Giá gốc do hãng công bố bằng USD và có thể thay đổi - luôn kiểm tra lại trang chủ của
-    hãng trước khi quyết định trả tiền.
+    Cột USD là giá hãng công bố, chưa thuế. Giá gốc có thể thay đổi - luôn kiểm tra lại
+    trang chủ của hãng trước khi quyết định trả tiền.
   </p>
 </template>
 

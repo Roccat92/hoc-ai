@@ -15,7 +15,7 @@ Hai cách này tính tiền hoàn toàn khác nhau. Bài này nói về **gói t
 
 <TyGia />
 
-| Gói | Giá theo tháng | Trả cả năm (rẻ hơn) | Có gì đáng chú ý |
+| Gói | Giá theo tháng (chưa thuế) | Trả cả năm (rẻ hơn) | Có gì đáng chú ý |
 |---|---|---|---|
 | **Free** | 0đ | - | Chat cơ bản, đủ để thử xem có hợp không. Không có Claude Code |
 | **Pro** | 20 USD <Vnd usd="20" /> | 17 USD/tháng <Vnd usd="17" /> | Mốc quan trọng nhất: từ đây mới có **Claude Code**, Design, Cowork |
@@ -26,7 +26,7 @@ Hai cách này tính tiền hoàn toàn khác nhau. Bài này nói về **gói t
 
 ## Các gói cho nhóm
 
-| Gói | Giá theo tháng | Trả cả năm | Ghi chú |
+| Gói | Giá theo tháng (chưa thuế) | Trả cả năm | Ghi chú |
 |---|---|---|---|
 | **Team - ghế thường** | 25 USD/người <Vnd usd="25" /> | 20 USD/người <Vnd usd="20" /> | Thêm quản lý thành viên, đăng nhập tập trung |
 | **Team - ghế cao cấp** | 125 USD/người <Vnd usd="125" /> | 100 USD/người <Vnd usd="100" /> | Hạn mức gấp khoảng 5 lần ghế thường |
@@ -84,8 +84,35 @@ Nhiều người dùng cả hai gói phản ánh mức tăng theo tuần chỉ k
 ## Vài lưu ý khi thanh toán từ Việt Nam
 
 - Anthropic thu tiền bằng **USD**, cần thẻ quốc tế (Visa/Mastercard, gồm cả thẻ ghi nợ quốc tế mà các ngân hàng trong nước đều phát hành được).
-- Số tiền trừ thực tế có thể lệch chút so với bảng trên do **tỉ giá của ngân hàng** và **phí chuyển đổi ngoại tệ** (thường 1-4% tùy ngân hàng), chưa kể thuế nếu có.
-- Số VND trong bài này được quy đổi tự động theo tỉ giá thị trường tại lúc bạn mở trang, nên nó là con số để ước lượng, không phải số ngân hàng sẽ trừ chính xác.
+- **Giá hãng công bố là giá chưa thuế.** Mua dịch vụ số từ nhà cung cấp nước ngoài, người mua ở Việt Nam bị cộng thêm **thuế VAT 10%**. Gói Pro 20 USD nghĩa là hóa đơn thật của bạn là 22 USD. Các số VND trong bài này **đã cộng sẵn 10% đó**, nên chúng là số bạn thực trả chứ không phải giá niêm yết.
+- **Ngoài thuế còn phí ngân hàng.** Ngân hàng dùng tỉ giá bán ra của họ (cao hơn tỉ giá thị trường một chút) và thường thu thêm **phí chuyển đổi ngoại tệ khoảng 1-4%** tùy ngân hàng. Nên con số ngân hàng trừ thật thường nhỉnh hơn số trong bài vài phần trăm.
+- Tóm lại thứ tự cộng dồn là: **giá niêm yết USD, cộng VAT 10%, đổi theo tỉ giá ngân hàng, cộng phí ngoại tệ**. Bài này tính giúp bạn hai bước đầu.
+
+## Mua qua trung gian: loại nào tạm ổn, loại nào dễ mất trắng
+
+Tính ra tiền Việt thì các gói không rẻ, nên trên mạng có nhiều nơi rao bán lại rẻ hơn hẳn. Cần tách làm hai loại, vì mức rủi ro khác nhau rất xa.
+
+**Loại 1 - trả hộ vào chính tài khoản của bạn.** Bạn tự đăng ký tài khoản mang tên bạn, tự giữ mật khẩu; trung gian chỉ quẹt thẻ quốc tế hộ và bạn hoàn lại bằng tiền Việt kèm phí. Tài khoản vẫn là của bạn. Đây là kiểu rủi ro thấp nhất, và rủi ro còn lại chủ yếu là chuyện tiền nong với người trả hộ, không phải mất tài khoản.
+
+**Loại 2 - mua tài khoản dựng sẵn hoặc dùng chung.** Bạn được đưa cho một tài khoản có sẵn, hoặc được thêm vào một tài khoản nhiều người xài chung. Đây là loại dễ mất trắng, vì bốn lý do:
+
+- **Dùng chung tài khoản là vi phạm điều khoản.** Nhiều lượt đăng nhập từ nhiều nơi, nhiều thiết bị là thứ hãng phát hiện được, và khóa tài khoản là kết cục thường gặp.
+- **Rẻ bất thường thường đi kèm nguồn gốc bất thường** - trả bằng thẻ đánh cắp, lợi dụng ưu đãi sinh viên hoặc doanh nghiệp, đăng ký hàng loạt. Khi hãng rà ra thì khóa cả cụm, và người chịu thiệt cuối cùng là người mua.
+- **Mất tiền thì không đòi được.** Bạn không phải chủ tài khoản, không có hóa đơn mang tên mình, nên không khiếu nại được với hãng; còn người bán thì thường chỉ liên lạc qua mạng xã hội.
+- **Người bán vẫn nắm quyền.** Họ giữ email khôi phục, đổi mật khẩu lúc nào cũng được. Trả tiền cả năm rồi mất quyền truy cập từ tháng thứ hai là chuyện có thật.
+
+Còn một rủi ro ít người nghĩ tới: **mọi thứ bạn gõ vào đều nằm trong tay người quản trị tài khoản đó** - lịch sử trò chuyện, file bạn tải lên, code dự án của bạn. Với việc cá nhân thì phiền; với dữ liệu khách hàng hay khóa API thì là chuyện nghiêm trọng, xem [checklist bảo mật](../10-bao-mat/01-checklist-truoc-khi-public.md) và [giấu API key](../10-bao-mat/03-giau-api-key-va-secret.md).
+
+**Nói cho công bằng: không phải chỗ bán nào cũng lừa.** Có người bán đàng hoàng, có người mua dùng cả năm không sao. Vấn đề không nằm ở chuyện người bán tốt hay xấu, mà ở chỗ **bạn không kiểm soát được rủi ro**: quyền khóa nằm ở hãng, và khi bị khóa thì bạn không có tư cách gì để đòi lại.
+
+Mấy dấu hiệu nên tránh:
+
+- Giá rẻ hơn giá gốc quá xa, kiểu "Max 20x chỉ 500 nghìn một tháng".
+- Các chữ "unlimited", "không giới hạn", "vĩnh viễn".
+- Bắt bạn đăng nhập vào một tài khoản có sẵn thay vì tài khoản bạn tự tạo.
+- Không cho bạn đổi mật khẩu và email khôi phục sang của mình.
+
+**Cách chắc ăn nhất vẫn là tự đăng ký bằng thẻ của mình.** Thẻ ghi nợ quốc tế hiện mở được online ở hầu hết ngân hàng trong nước, phí thường niên nhỏ, và vì nạp bao nhiêu tiêu bấy nhiêu nên cũng chặn được rủi ro bị trừ ngoài ý muốn. Nếu chưa đủ tiền cho Pro thì cứ dùng bản Free lâu thêm một thời gian - thà chậm còn hơn mất cả tiền lẫn tài khoản.
 
 **Giá và hạn mức các gói thay đổi theo thời gian.** Luôn kiểm tra trực tiếp tại trang giá chính thức của Anthropic hoặc ngay trong tài khoản Claude của bạn trước khi trả tiền - đừng dựa vào con số cố định trong bất kỳ bài viết nào, kể cả bài này.
 

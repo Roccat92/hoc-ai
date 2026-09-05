@@ -1,22 +1,31 @@
 <script setup>
 import { computed, onMounted } from 'vue'
-import { tiGia, doiSangVnd, layTiGia, laTiGiaThat } from './ty-gia.js'
+import { tiGia, doiSangVnd, layTiGia, laTiGiaThat, THUE_VAT } from './ty-gia.js'
 
 const props = defineProps({
   usd: { type: [Number, String], required: true },
-  sau: { type: String, default: '' }
+  sau: { type: String, default: '' },
+  // Mặc định cộng VAT vì đây là số người mua ở Việt Nam thực trả.
+  // Dùng <Vnd usd="10" khong-thue /> cho khoản không chịu thuế.
+  khongThue: { type: Boolean, default: false }
 })
 
 onMounted(layTiGia)
 
-const soTien = computed(() => doiSangVnd(props.usd).toLocaleString('vi-VN'))
-const chuThich = computed(
-  () =>
-    '1 USD ≈ ' +
-    Math.round(tiGia.value).toLocaleString('vi-VN') +
-    'đ' +
-    (laTiGiaThat.value ? ' (tỉ giá thật, tự cập nhật)' : ' (tỉ giá dự phòng)')
+const soTien = computed(() =>
+  doiSangVnd(props.usd, !props.khongThue).toLocaleString('vi-VN')
 )
+
+const chuThich = computed(() => {
+  const tg = Math.round(tiGia.value).toLocaleString('vi-VN')
+  return (
+    props.usd +
+    ' USD' +
+    (props.khongThue ? '' : ' cộng VAT ' + Math.round(THUE_VAT * 100) + '%') +
+    ', tỉ giá 1 USD ≈ ' + tg + 'đ' +
+    (laTiGiaThat.value ? ' (tỉ giá thật, tự cập nhật)' : ' (tỉ giá dự phòng)')
+  )
+})
 </script>
 
 <template>

@@ -8,6 +8,11 @@ import { ref } from 'vue'
 // Số dự phòng, cũng là số hiện ra trong bản build tĩnh trước khi trình duyệt lấy được tỉ giá thật.
 export const TI_GIA_DU_PHONG = 26000
 
+// Thuế VAT cho dịch vụ số mua từ nhà cung cấp nước ngoài. Giá hãng công bố là giá
+// chưa thuế, người mua ở Việt Nam bị cộng thêm khoản này, nên mặc định tính luôn vào
+// để số hiện ra đúng bằng số thực trả. Nếu nhà nước đổi mức thuế thì sửa đúng dòng này.
+export const THUE_VAT = 0.1
+
 export const tiGia = ref(TI_GIA_DU_PHONG)
 export const ngayTiGia = ref('')
 export const laTiGiaThat = ref(false)
@@ -68,8 +73,9 @@ export function layTiGia() {
 }
 
 // Quy đổi và làm tròn cho dễ đọc: dưới 1 triệu làm tròn nghìn, từ 1 triệu làm tròn chục nghìn.
-export function doiSangVnd(usd) {
-  const so = Number(usd) * tiGia.value
+// Mặc định cộng thuế VAT; truyền coThue = false cho khoản không chịu thuế.
+export function doiSangVnd(usd, coThue = true) {
+  const so = Number(usd) * (coThue ? 1 + THUE_VAT : 1) * tiGia.value
   const buoc = so >= 1000000 ? 10000 : 1000
   return Math.round(so / buoc) * buoc
 }
