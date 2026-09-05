@@ -1,9 +1,5 @@
 # Xác thực vấn đề, analytics và phản hồi người dùng
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người sắp public sản phẩm và muốn biết người dùng có thật sự cần nó không. Học xong bạn sẽ phỏng vấn không dẫn dắt, chọn vài metric có ích, đo luồng chính và biến phản hồi thành backlog.
 
 ## Phỏng vấn trước khi build thêm
@@ -21,6 +17,27 @@ Ghi lại vấn đề, cách giải quyết hiện tại, tần suất, chi phí
 - Phản hồi tốt/xấu gắn với phiên bản.
 
 Đặt tên sự kiện rõ, không thu thập dữ liệu không cần. Thông báo mục đích, thời gian lưu và quyền xóa nếu có dữ liệu cá nhân.
+
+## Gắn analytics tôn trọng riêng tư
+
+Không cần Google Analytics để đo vài metric cơ bản. Một công cụ mã nguồn mở như [Umami](https://umami.is) đo lượt xem và sự kiện mà không theo dõi cá nhân xuyên trang, tự host được (miễn phí, dữ liệu nằm trên máy chủ của bạn) hoặc dùng bản cloud. Gắn vào trang bằng một dòng:
+
+```html
+<script defer src="https://cloud.umami.is/script.js" data-website-id="MA-WEBSITE-CUA-BAN"></script>
+```
+- `defer`: tải script sau khi trang hiện xong, không làm chậm lần mở đầu.
+- `data-website-id`: mã định danh trang, lấy trong bảng điều khiển Umami sau khi tạo site.
+
+Đo một **sự kiện** cụ thể (ví dụ khách bấm hoàn thành đặt hàng) - gọi trong code chỗ việc đó xảy ra:
+
+```js
+// gọi khi khách đặt hàng thành công
+umami.track('hoan-thanh-dat-hang');
+```
+- Tên sự kiện đặt rõ nghĩa, gạch nối, không dấu - để sau đọc báo cáo hiểu ngay.
+- Chỉ gắn ở đúng chỗ hành động thật xảy ra, đừng rải khắp nơi "cho chắc".
+
+> Tên thuộc tính và cách gọi có thể đổi theo phiên bản - lấy đoạn nhúng chuẩn từ [tài liệu Umami](https://umami.is/docs) thay vì chép nguyên từ đây. Nếu tự host, bạn chỉ tốn tiền máy chủ chạy nó (xem [thuê VPS](../03-ha-tang-thuc-chien/01-thue-vps.md)); bản cloud có bậc miễn phí cho lưu lượng nhỏ, kiểm tra trang giá trước khi vượt.
 
 ## Vòng lặp phản hồi
 

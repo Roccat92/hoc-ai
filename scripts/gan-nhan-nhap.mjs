@@ -1,22 +1,10 @@
 // Chèn khối "Bản nháp" (VitePress custom container) ngay sau tiêu đề H1 của
-// từng file trong danh sách. Chạy một lần, không phải script kiểm tra dài hạn -
-// xóa khối này thủ công khi bài đã làm dày đủ 6 khối theo BACKLOG.md.
+// từng file trong danh sách. Chạy một lần, không phải script kiểm tra dài hạn.
+// TẤT CẢ bài nháp đã được làm dày và gỡ nhãn -> danh sách rỗng. Chỉ thêm lại
+// đường dẫn vào đây khi có bài nháp mới cần gắn nhãn tạm.
 import fs from 'node:fs'
 
-const FILES = [
-  '01-bat-dau-tu-so-0/10-file-web-va-server-hoat-dong-the-nao.md',
-  '01-bat-dau-tu-so-0/11-json-api-database-crud.md',
-  '03-ha-tang-thuc-chien/06-database-production-ci-cd-monitoring.md',
-  '04-build-ung-dung-ai/06-structured-output-evals-va-reliability.md',
-  '04-build-ung-dung-ai/07-evals-va-prompt-versioning.md',
-  '04-build-ung-dung-ai/08-rag-quality-va-bao-mat.md',
-  '04-build-ung-dung-ai/09-agent-guardrail-va-quan-sat.md',
-  '05-train-va-finetune/05-eval-truoc-khi-fine-tune.md',
-  '09-du-an-thuc-hanh/04-rubric-va-capstone.md',
-  '10-bao-mat/07-bao-mat-ung-dung-ai.md',
-  '11-ra-thi-truong/04-xac-thuc-van-de-va-analytics.md',
-  '11-ra-thi-truong/05-thanh-toan-email-va-van-hanh.md',
-]
+const FILES = []
 
 const BLOCK = [
   '::: warning Bản nháp - đang hoàn thiện',
