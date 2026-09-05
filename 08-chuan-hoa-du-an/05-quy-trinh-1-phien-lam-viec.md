@@ -55,4 +55,4 @@ Bốn bài trong phần này ([1](01-tai-sao-can-spec.md), [2](02-viet-spec-md.m
 
 ## Bước tiếp theo
 
-Luyện tập ngay quy trình vừa học với một spec có sẵn, không cần tự nghĩ đề bài: [Dự án thực hành →](../09-du-an-thuc-hanh/)
+Quy trình từng phiên đã có, giờ dựng bàn làm việc để agent tự chạy trọn vòng commit - push - deploy mà bạn chỉ cần nghiệm thu: [Setup dự án một lần để agent tự chạy →](06-setup-mot-lan-de-agent-tu-chay.md)

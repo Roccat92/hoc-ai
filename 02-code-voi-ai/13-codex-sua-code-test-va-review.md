@@ -2,6 +2,8 @@
 
 Bài này dành cho người muốn AI làm nhanh nhưng vẫn hiểu và kiểm soát kết quả - vòng lặp dưới đây dùng được y hệt với Codex, Claude Code hay bất kỳ coding agent nào khác. Học xong bạn sẽ dùng được vòng lặp khảo sát → sửa nhỏ → test → review → commit, và tự đọc được một diff thật mà không cần đoán mò.
 
+Nói rõ trước: **bạn không cần đọc diff của mọi task.** Khi đã [setup để agent tự chạy](../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md), cách nghiệm thu chính là mở link preview và dùng thử. Kỹ năng đọc diff trong bài này dành cho ba lúc: task chạm tới tiền, dữ liệu người dùng hoặc đăng nhập; cùng một lỗi quay lại lần thứ ba; và trước khi merge lên production.
+
 ## Vòng lặp chuẩn
 
 1. **Khảo sát:** xác định file, luồng dữ liệu và test hiện có.

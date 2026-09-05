@@ -1,6 +1,6 @@
 # Database production, migration và backup thật
 
-Bài này dành cho người đã deploy được app nhưng chưa biết giữ dữ liệu an toàn khi có người dùng thật. Học xong bạn sẽ tách được môi trường, viết một migration thật, và tự tay thử backup/restore ít nhất một lần - không chỉ đọc lý thuyết.
+Bài này dành cho người đã deploy được app nhưng chưa biết giữ dữ liệu an toàn khi có người dùng thật. Học xong bạn sẽ tách được môi trường, viết một migration thật, và tự tay thử backup/restore ít nhất một lần - không chỉ đọc lý thuyết. Ngày thường, agent là bên viết và chạy migration ở môi trường thử; bài này để bạn hiểu nó đang làm gì và tự làm được đúng một việc quan trọng nhất: khôi phục dữ liệu khi có chuyện.
 
 ## Ba môi trường
 

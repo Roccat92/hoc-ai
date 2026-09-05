@@ -46,7 +46,7 @@ Bạn không cần biết trước bất kỳ thuật ngữ nào. Thấy chữ "
 | [`05-train-va-finetune/`](05-train-va-finetune/) | Nâng cao: hiểu về training, fine-tune thực hành, dữ liệu tiếng Việt, tổng quan build LLM từ đầu |
 | [`06-kho-tai-nguyen/`](06-kho-tai-nguyen/) | Kho tài nguyên: repo GitHub đáng học, khóa học miễn phí, Claude skills & MCP, cộng đồng Việt, kênh theo dõi |
 | [`07-case-study/`](07-case-study/) | Cộng đồng chia sẻ dự án thật đã build bằng AI, kèm chi phí và bài học |
-| [`08-chuan-hoa-du-an/`](08-chuan-hoa-du-an/) | Nâng cao: làm việc với AI có kỷ luật - spec.md, backlog.md, CLAUDE.md, quy trình một phiên làm việc chuẩn |
+| [`08-chuan-hoa-du-an/`](08-chuan-hoa-du-an/) | Làm việc với AI có kỷ luật: spec.md, backlog.md, CLAUDE.md, quy trình một phiên, và setup một lần để agent tự commit/deploy - cách các sản phẩm thật trong repo này được build |
 | [`09-du-an-thuc-hanh/`](09-du-an-thuc-hanh/) | Dự án thực hành có sẵn spec, rubric và capstone - copy ra, build, tùy biến thành sản phẩm của riêng bạn |
 | [`10-bao-mat/`](10-bao-mat/) | Checklist bảo mật web và AI: SSL, secret, chống bot, đăng nhập, prompt injection, tool và dữ liệu |
 | [`11-ra-thi-truong/`](11-ra-thi-truong/) | Thực tế ở Việt Nam khi ra thị trường: auth, store, pháp lý, xác thực vấn đề, analytics, thanh toán và vận hành |
@@ -65,7 +65,7 @@ Bạn không cần biết trước bất kỳ thuật ngữ nào. Thấy chữ "
 | 8 | Tự chọn một ý tưởng, tự build từ đầu đến khi deploy được - dự án riêng của bạn, hoặc một trong ba dự án có sẵn spec | `09-du-an-thuc-hanh/` |
 | 9-10 | Bảo mật tối thiểu trước khi cho người khác dùng, rồi các bước thực tế khi ra thị trường ở Việt Nam | `10-bao-mat/`, `11-ra-thi-truong/` |
 
-Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng cao, có thể học sau khi đã có nhu cầu cụ thể - xem `05-train-va-finetune/`. Khi dự án của bạn lớn hơn, làm qua nhiều phiên, nhiều ngày - học cách làm việc với AI có kỷ luật ở `08-chuan-hoa-du-an/` trước khi vào `09-du-an-thuc-hanh/`. Đọc `06-kho-tai-nguyen/` và `07-case-study/` bất cứ lúc nào để tự học thêm và xem sản phẩm thật đã build được.
+Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng cao, có thể học sau khi đã có nhu cầu cụ thể - xem `05-train-va-finetune/`. Trước khi vào `09-du-an-thuc-hanh/`, đi qua `08-chuan-hoa-du-an/` - đặc biệt bài cuối, [setup một lần để agent tự chạy](08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md): đó là cách làm việc thật sự bạn sẽ dùng về sau, mô tả bằng tiếng Việt và nghiệm thu bằng cách dùng thử, không tự gõ từng lệnh. Các bài đi sâu vào chi tiết kỹ thuật ở phần 01-03 là để bạn biết mình đang giao cái gì và kiểm tra cái gì, không phải việc phải làm mỗi ngày. Đọc `06-kho-tai-nguyen/` và `07-case-study/` bất cứ lúc nào để tự học thêm và xem sản phẩm thật đã build được.
 
 ## Chi phí thực tế tối thiểu
 

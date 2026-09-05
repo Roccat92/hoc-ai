@@ -58,7 +58,7 @@ Khi chạy local, `localhost:3000` nghĩa là máy bạn, cổng 3000. Domain l�
 
 ## Nhìn tận mắt một request thật
 
-Lý thuyết ở trên sẽ rõ hơn nhiều nếu bạn tự thấy nó xảy ra. Hai cách, làm cả hai:
+Lý thuyết ở trên sẽ rõ hơn nhiều nếu bạn tự thấy nó xảy ra. Làm một lần cho biết; về sau đây là công cụ bạn rút ra khi agent nói "đã sửa xong" mà trang vẫn hỏng - bạn cần một cách tự thấy sự thật mà không phải đọc code. Hai cách, làm cả hai:
 
 **Cách 1 - dòng lệnh, xem thẳng response thô:**
 

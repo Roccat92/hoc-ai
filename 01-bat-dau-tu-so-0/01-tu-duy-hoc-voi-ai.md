@@ -22,6 +22,16 @@ Kỹ năng thật sự bạn cần học không phải là "thuộc cú pháp l�
 2. **Kiểm tra kết quả thực tế** - chạy thử, xem có đúng như mong đợi không, thay vì tin vào việc "trông có vẻ đúng".
 3. **Đặt câu hỏi đúng cho AI** khi có gì đó không ổn - mô tả chính xác bạn thấy gì, mong đợi gì.
 
+## "Hiểu" tới mức nào là đủ?
+
+Nói thẳng để bạn khỏi sợ: người xây bốn sản phẩm thật trong [phần case study](../07-case-study/README.md) của thư viện này **không đọc từng dòng code, không tự gõ từng lệnh terminal**. Họ hiểu ở tầm **chủ sản phẩm**, và đó là mức đủ:
+
+- **Hiểu sản phẩm phải làm gì** - đủ để mô tả rõ cho AI và đủ để biết kết quả đúng hay sai khi dùng thử.
+- **Hiểu kiến trúc ở mức sơ đồ** - có giao diện, có phần xử lý, có chỗ lưu dữ liệu, chúng nói chuyện với nhau ra sao (bạn sẽ học ở [bài nền tảng web](10-file-web-va-server-hoat-dong-the-nao.md)).
+- **Hiểu chỗ nào sai thì đắt** - tiền, dữ liệu người dùng, mật khẩu, xóa dữ liệu. Đó là những chỗ duy nhất bạn phải chậm lại và soi kỹ.
+
+Cách làm việc bạn sẽ hướng tới không phải "tự làm mọi thứ", mà là: **setup một lần cho AI đủ quyền, giao việc bằng tiếng Việt, và kiểm tra ở ba điểm** - trước khi giao (yêu cầu đã rõ chưa), sau khi AI báo xong (tự dùng thử như khách hàng), và trước khi đưa cho người khác dùng (bảo mật, tiền). Toàn bộ cách dựng bàn làm việc đó nằm ở [bài setup một lần để agent tự chạy](../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md); các bài trước đó dạy bạn đủ nền để tới lúc ấy biết mình đang giao cái gì và kiểm tra cái gì. Những bài đi vào chi tiết kỹ thuật (đọc diff, mở DevTools, chạy backup) là công cụ để dùng khi có chuyện, không phải việc phải làm mỗi ngày.
+
 ## Bốn nguyên tắc thực hành
 
 ### 1. Luôn hỏi "giải thích cho mình đoạn này làm gì" trước khi chấp nhận code lớn

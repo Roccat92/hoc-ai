@@ -95,6 +95,8 @@ Chỗ này quan trọng không kém, và ít người nói thẳng:
 2. **Chia nhỏ.** Một yêu cầu = một việc kiểm chứng được. Yêu cầu càng to, chỗ sai càng khó tìm.
 3. **Cho nó cách tự biết mình sai.** Trong Claude Code: bảo nó chạy test, mở trang lên xem, đọc log lỗi. Harness có công cụ - đừng bắt nó đoán mò khi nó có thể tự kiểm tra.
 
+> **Đích đến của cả phần này:** dù chọn harness nào, cách làm việc thật sự về sau là dựng "bàn làm việc" một lần (đăng nhập GitHub, Vercel, Supabase; cấp quyền cho harness; tách môi trường thử với thật) rồi giao việc trọn gói bằng tiếng Việt - agent tự commit, push, deploy, bạn nghiệm thu bằng cách dùng thử. Bài hướng dẫn trọn bộ nằm ở [phần 8, setup một lần để agent tự chạy](../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md); các bài từ đây tới đó cho bạn đủ nền để biết mình đang giao gì và kiểm tra gì.
+
 ## Bước tiếp theo
 
 Hiểu chỗ nào làm việc gì rồi, giờ tới phần thực tế nhất: mỗi chỗ đó tốn bao nhiêu tiền, gói nào đáng mua, và một cái bẫy trong cách đặt tên gói mà nhiều người trả tiền xong mới biết: [Chi phí và các gói Claude](08-chi-phi-cac-goi-claude.md)
