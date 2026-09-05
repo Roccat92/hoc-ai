@@ -1,9 +1,5 @@
 # Rubric tự chấm và capstone: chứng minh mình đã build được
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người đã hoàn thành ít nhất một dự án thực hành và muốn biết “đã hiểu chưa” bằng bằng chứng, không bằng cảm giác. Học xong bạn sẽ tự chấm sản phẩm, biết thiếu lớp nào và chuẩn bị được một capstone có link kiểm chứng.
 
 ## Rubric 100 điểm
@@ -20,6 +16,16 @@ Bài này dành cho người đã hoàn thành ít nhất một dự án thực 
 | Giải thích và bài học | 5 | Demo ngắn, quyết định kỹ thuật, điều làm sai |
 
 Không cần đạt 100 điểm ở bản đầu. Một MVP 65 điểm nhưng có bằng chứng và biết giới hạn đáng giá hơn một app nhiều tính năng nhưng không chạy ổn.
+
+## Hai bản mẫu được chấm
+
+Để thấy rubric dùng thế nào, đây là hai capstone giả định:
+
+**Bản A - 65 điểm (đạt, đáng nộp):** một trang quản lý đơn hàng nhỏ. Luồng chính chạy được (20/20), có README và code gọn (13/15), có vài test cho phần tính tiền (10/15), đã đi checklist bảo mật cơ bản và phân quyền (12/15), deploy live có URL (10/10), không dùng AI (0/10, không áp dụng), có video demo và ghi lại một quyết định sai (5/5), vấn đề rõ nhưng mới hỏi 1 người (5/10). → **Đáng nộp**: chạy thật, có bằng chứng, tác giả biết mình thiếu phỏng vấn và test.
+
+**Bản B - 85 điểm:** cùng ý tưởng nhưng phỏng vấn đủ 3 người (10/10), có eval nhỏ cho phần AI phân loại đơn kèm đường fallback (10/10), test phủ các bug từng gặp (14/15), có hướng dẫn rollback (10/10). Khoảng cách A→B **không phải nhiều tính năng hơn**, mà là nhiều *bằng chứng* hơn: phỏng vấn, test, eval, rollback.
+
+Điểm mấu chốt: đừng nhồi tính năng để lên điểm. Bổ sung đúng những ô "Bằng chứng" đang trống.
 
 ## Ba checkpoint
 

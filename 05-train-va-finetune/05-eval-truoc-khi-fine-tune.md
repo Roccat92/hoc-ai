@@ -1,9 +1,5 @@
 # Eval trước khi fine-tune: đo rồi mới train
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người đang nghĩ fine-tune sẽ giải quyết mọi vấn đề của ứng dụng AI. Học xong bạn sẽ tạo được baseline, chia dữ liệu đúng cách, so sánh prompt/RAG với fine-tune và biết khi nào nên dừng vì chưa có đủ bằng chứng.
 
 ## Fine-tune không sửa mọi lỗi
@@ -25,6 +21,21 @@ Không cho cùng một nội dung hoặc biến thể gần như y hệt xuất 
 ## So sánh công bằng
 
 Chạy cùng bộ test cho: prompt hiện tại, prompt + RAG, model nhỏ hơn và model fine-tune. Chấm cả chất lượng, chi phí, tốc độ, độ ổn định và lỗi nguy hiểm. Nếu fine-tune chỉ đẹp hơn ở ví dụ train nhưng kém ở test, đó là overfit chứ không phải tiến bộ.
+
+## Bảng so sánh mẫu
+
+Ghi kết quả vào một bảng như dưới đây (số chỉ để minh họa cách trình bày - bạn điền số đo thật của mình). "Tỉ lệ đạt" lấy từ script chấm ở [bài evals](../04-build-ung-dung-ai/07-evals-va-prompt-versioning.md); cột chi phí và tốc độ đo ngay khi chạy eval:
+
+| Phương án | Tỉ lệ đạt | Độ trễ | Chi phí tương đối | Ghi chú |
+|---|---|---|---|---|
+| Prompt hiện tại | 14/20 | nhanh | $ | Rẻ nhất, làm baseline |
+| Prompt + RAG | 18/20 | vừa | $$ | Cải thiện rõ, chưa cần train |
+| Model nhỏ + prompt | 12/20 | rất nhanh | $ | Rẻ nhưng chất lượng tụt |
+| Fine-tune | 18/20 | vừa | $$$ | Bằng RAG nhưng đắt và tốn công hơn |
+
+Với bảng ví dụ này, kết luận là **không nên fine-tune**: prompt + RAG đã đạt bằng, rẻ hơn và không tốn công train. Dùng cột "Chi phí tương đối" ($/$$/$$$) khi bạn chưa có số tiền chính xác - điền dấu theo cảm nhận chi phí rồi thay bằng số thật khi đo được.
+
+> Fine-tune có **hai khoản tiền**: chi phí train một lần (tính theo lượng token huấn luyện) và chi phí mỗi lần gọi model sau đó (có khi cao hơn model gốc). Con số tùy nhà cung cấp và đổi theo thời gian - lấy từ trang giá chính thức của bên bạn dùng, đừng ước bừa. Phần lớn trường hợp của người mới, prompt + RAG đủ rẻ và đủ tốt.
 
 ## Bài tập
 
