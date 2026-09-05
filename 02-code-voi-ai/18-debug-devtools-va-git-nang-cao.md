@@ -1,9 +1,5 @@
 # Debug, DevTools và Git nâng cao vừa đủ
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người đã build được app nhưng còn hoảng khi gặp lỗi hoặc merge conflict. Học xong bạn sẽ có một quy trình debug lặp lại được, biết dùng ba tab DevTools quan trọng và hiểu branch/pull request ở mức đủ làm việc an toàn.
 
 ## Quy trình debug năm bước
@@ -35,6 +31,21 @@ Không cần test mọi dòng. Hãy test hành vi quan trọng và bug từng x�
 ## Branch và pull request
 
 Branch là bản làm việc tách khỏi `main`. Một branch nên có một mục tiêu; pull request là nơi người khác xem diff, test và góp ý trước khi merge. Khi conflict, đừng chọn “accept all” mù: đọc hai thay đổi, hỏi quy tắc sản phẩm, rồi chạy test lại.
+
+Vài lệnh đủ dùng hằng ngày:
+
+```bash
+git switch -c sua-nut-gui      # tạo nhánh mới và chuyển sang nó
+git status                     # xem đang sửa gì, đang ở nhánh nào
+git diff                       # đọc thay đổi trước khi commit
+git add -p                     # chọn từng đoạn để đưa vào commit, không add mù cả file
+git commit -m “Sửa nút Gửi bị bấm hai lần”
+git switch main               # quay về nhánh chính
+git merge sua-nut-gui         # gộp nhánh vừa làm vào main
+```
+- `switch -c`: tạo nhánh mới (bản Git cũ dùng `checkout -b`). Một nhánh một mục tiêu.
+- `git add -p`: duyệt từng đoạn thay đổi - cách tốt để không lỡ tay đưa file secret hay code rác vào commit.
+- Khi `git merge` báo conflict, mở file thấy các dấu `<<<<<<<`, `=======`, `>>>>>>>`: phần trên là bản ở nhánh hiện tại, phần dưới là bản nhánh gộp vào. Chọn/ghép cho đúng, xóa ba dấu đó, rồi `git add` file và commit. Không “accept all” khi chưa hiểu hai bên khác gì.
 
 ## Bài tập
 

@@ -1,9 +1,5 @@
 # Skills, plugins và MCP trong Codex
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người thấy nhiều gói mở rộng nhưng chưa biết cái nào đáng cài. Học xong bạn sẽ phân biệt skill, plugin và MCP, đánh giá quyền truy cập, và thử một kết nối chỉ đọc.
 
 ## Ba khái niệm
@@ -23,6 +19,28 @@ Prompt thường là đủ cho một task đơn lẻ. Chỉ thêm mở rộng kh
 5. Cách gỡ và cách thu hồi token là gì?
 
 Không cài hàng loạt plugin theo danh sách trên mạng. Mỗi kết nối thêm vào làm tăng bề mặt tấn công, lượng ngữ cảnh và đôi khi cả chi phí.
+
+## Áp checklist vào một ví dụ thật
+
+Giả sử bạn muốn cho Codex đọc tài liệu của một thư viện qua một MCP chỉ-đọc. Trước khi cài, điền đúng bảng năm câu:
+
+| Câu hỏi | Trả lời cho MCP đọc-tài-liệu này |
+|---|---|
+| Nguồn có đáng tin, còn duy trì? | Repo chính chủ của thư viện, cập nhật gần đây |
+| Đọc được gì? | Chỉ nội dung tài liệu công khai |
+| Có quyền ghi/xóa/deploy/gửi dữ liệu? | Không - chỉ truy vấn đọc |
+| Chạy chỉ-đọc trước được không? | Được, đây vốn là MCP chỉ đọc |
+| Cách gỡ / thu hồi? | Xóa khai báo trong file cấu hình |
+
+Điền được cả năm mới cài. Về mặt cấu hình, MCP được **khai báo trong file cấu hình của Codex** (tên MCP + lệnh chạy + tham số) - sơ đồ đại khái:
+
+```text
+[mcp_servers.tai-lieu]
+command = "lệnh-khởi-động-mcp"
+args = ["--doc", "duong-dan-hoac-url"]
+```
+
+> Đây là sơ đồ để bạn hình dung, **không phải cú pháp copy-paste**. Vị trí file cấu hình và cú pháp chính xác đổi theo phiên bản Codex - luôn lấy từ [tài liệu chính thức](https://developers.openai.com/codex) hoặc `codex --help`, đừng chép nguyên từ đây.
 
 ## Bài tập
 

@@ -1,9 +1,5 @@
 # Prompt, ngữ cảnh và AGENTS.md cho Codex
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người thấy Codex “đoán sai dự án” hoặc lặp lại cùng một câu hỏi ở nhiều phiên. Học xong bạn sẽ biết chia thông tin thành đúng file, viết `AGENTS.md` ngắn và giao task có bằng chứng tái hiện.
 
 ## Agent cần bối cảnh nào?
@@ -20,6 +16,36 @@ Codex cần biết mục tiêu, cấu trúc liên quan, quy ước, lệnh kiể
 | `CLAUDE.md` | Quy tắc dành riêng cho Claude Code (nếu dự án còn dùng) |
 
 `AGENTS.md` nên ghi stack, lệnh test, quy ước đặt tên, khu vực nhạy cảm và điều cấm. Quy tắc đặt ở thư mục con chỉ áp dụng cho phạm vi đó. Đừng chép cùng một nội dung vào bốn file; khi sửa một quy tắc sẽ rất dễ lệch.
+
+## Một `AGENTS.md` thật trông thế nào
+
+Đặt file này ở **thư mục gốc dự án**; Codex tự đọc mỗi phiên. Ví dụ cho một web app quản lý đơn hàng:
+
+```markdown
+# AGENTS.md - quy ước cho agent
+
+## Stack
+- Next.js + TypeScript, database Supabase.
+
+## Lệnh kiểm tra (chạy trước khi coi là xong)
+- Cài: `npm install`
+- Chạy test: `npm test`
+- Build: `npm run build`
+
+## Quy ước
+- Tên biến/hàm bằng tiếng Anh, comment giải thích "vì sao" bằng tiếng Việt.
+- Tiền luôn lưu bằng số nguyên (đơn vị đồng), không dùng số thực.
+
+## Khu vực nhạy cảm - hỏi trước khi đụng
+- Thư mục `migrations/`: đổi schema database.
+- File `.env`: biến môi trường và secret.
+
+## Cấm
+- Không commit khi test đang đỏ.
+- Không thêm dependency mới nếu chưa hỏi.
+```
+
+Để ngắn và cụ thể. Một `AGENTS.md` 10-20 dòng agent đọc hết còn hơn 200 dòng nó bỏ qua nửa chừng. Nếu một thư mục con có quy ước riêng, đặt một `AGENTS.md` nhỏ ngay trong thư mục đó cho phạm vi hẹp.
 
 ## Prompt sửa bug có thể tái hiện
 

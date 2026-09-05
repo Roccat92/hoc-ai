@@ -1,9 +1,5 @@
 # Chọn model, reasoning và hạn mức Codex
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người dùng Codex nhưng không hiểu vì sao hai task tương tự tiêu hao khác nhau. Học xong bạn sẽ chọn cấu hình dựa trên rủi ro, hiểu context và biết xem số liệu sử dụng.
 
 ## Quy tắc chọn nhanh
@@ -24,7 +20,11 @@ Trong CLI, dùng:
 /status
 ```
 
-Lệnh này hiển thị cấu hình phiên và phần hạn mức còn lại. Dùng `/model` để xem hoặc đổi model/reasoning. Kiểm tra [trang giá và hạn mức chính thức](https://learn.chatgpt.com/docs/pricing) vì các con số có thể thay đổi.
+Lệnh này hiển thị cấu hình phiên và phần hạn mức còn lại. Khi xem, chú ý ba thứ: **model/reasoning đang dùng** (có đúng mức bạn định không), **phần hạn mức còn lại** trong cửa sổ tính (thường theo giờ và theo tuần), và **gói tài khoản** đang áp. Dùng `/model` để xem hoặc đổi model/reasoning ngay trong phiên. Tên cờ và bố cục màn hình có thể đổi theo phiên bản - nếu không thấy lệnh, gõ `/help` để xem danh sách hiện có thay vì đoán.
+
+## Hạn mức và tiền: đừng đoán
+
+Hạn mức Codex đi kèm gói ChatGPT (Free/Go/Plus/Pro 5x/Pro 20x), và giống Claude, hai mức Pro "5x" với "20x" chỉ khác nhau ở lượng hạn mức chứ không phải model xịn hơn. Bảng giá VND đầy đủ (tự cập nhật theo tỉ giá) và cách chọn gói nằm ở [chi phí các gói Codex](09-chi-phi-cac-goi-codex.md); mốc khởi đầu hợp lý thường là Plus (20 USD <Vnd usd="20" />/tháng). Con số hạn mức công bố thay đổi khá nhanh - luôn xem [trang giá và hạn mức chính thức](https://learn.chatgpt.com/docs/pricing) trước khi trả tiền.
 
 ## Bài tập
 

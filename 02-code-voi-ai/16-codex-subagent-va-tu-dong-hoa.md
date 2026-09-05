@@ -1,9 +1,5 @@
 # Subagent, làm song song và tự động hóa với Codex
 
-
-::: warning Bản nháp - đang hoàn thiện
-Bài này mới là khung nội dung: đủ ý chính nhưng còn thiếu ví dụ chạy được, lệnh cụ thể hoặc chi phí ước tính so với chuẩn của thư viện. Đang được làm dày dần - xem tiến độ ở `BACKLOG.md`. Nội dung dưới đây vẫn đúng hướng, chỉ chưa đầy đủ.
-:::
 Bài này dành cho người có nhiều task độc lập hoặc muốn chạy Codex trong script/CI. Học xong bạn sẽ biết khi nào tách agent, khi nào giữ một luồng, và cách đặt điểm dừng trước hành động không hoàn tác.
 
 ## Chỉ song song khi thật sự độc lập
@@ -23,6 +19,35 @@ Output: báo cáo lỗi theo JSON, không sửa file.
 Không được phép: truy cập mạng, commit, deploy hoặc gửi dữ liệu.
 Nếu thiếu file hoặc lệnh lỗi: trả trạng thái blocked và log ngắn.
 ```
+
+## `codex exec` trông thế nào
+
+Chế độ không tương tác nhận thẳng prompt trên dòng lệnh, không hỏi lại:
+
+```bash
+codex exec "Rà tất cả file Markdown trong docs/, liệt kê link chết theo dạng bảng. Chỉ đọc, không sửa file."
+```
+- `codex exec`: chạy Codex một lượt rồi thoát, hợp cho script/CI (khác `codex` bản tương tác ngồi hỏi đáp).
+- Chuỗi trong ngoặc kép: prompt - phải tự chứa đủ input, output mong muốn và giới hạn, vì không có ai ngồi làm rõ giữa chừng.
+- Xem `codex exec --help` để biết các cờ hiện có (chọn model, thư mục làm việc, định dạng đầu ra...) - tên cờ đổi theo phiên bản nên đừng chép từ bài cũ.
+
+Dùng trong GitHub Actions, ví dụ rà link mỗi khi có pull request:
+
+```yaml
+name: Rà link tài liệu
+on: [pull_request]
+jobs:
+  ra-link:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install -g @openai/codex
+      - run: codex exec "Rà link chết trong docs/, in báo cáo. Không sửa file."
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+```
+- `secrets.OPENAI_API_KEY`: khóa để trong GitHub Secrets, **không** viết thẳng vào file - xem [giấu API key](../10-bao-mat/03-giau-api-key-va-secret.md).
+- Job này chỉ đọc và in báo cáo; commit hay deploy thì tách bước riêng có phê duyệt.
 
 ## Bài tập
 
