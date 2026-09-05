@@ -214,15 +214,16 @@ export default defineConfig({
     ])
   },
   head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E",
-      },
-    ],
+    // Nhận diện: chữ "ô" (vòng tròn + dấu mũ) - file gốc ở public/, PNG sinh bằng scripts/tao-icon.ps1.
+    ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
+    ["link", { rel: "icon", href: "/favicon-32.png", type: "image/png", sizes: "32x32" }],
+    ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }],
     ['meta', { property: 'og:title', content: 'Học AI Việt' }],
     ['meta', { property: 'og:description', content: description }],
+    ["meta", { property: "og:image", content: `${CANONICAL_ORIGIN}/og.png` }],
+    ["meta", { property: "og:image:width", content: "1200" }],
+    ["meta", { property: "og:image:height", content: "630" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
     // Google Analytics (gtag.js) - theo dõi lượt xem trang, không gắn thông tin cá nhân.
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-Y4CJYVYEV4' }],
     [
@@ -232,6 +233,7 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
+    logo: { light: "/logo.svg", dark: "/logo-dark.svg", alt: "" },
     siteTitle: 'Học AI Việt',
     nav: [
       { text: 'Bắt đầu học', link: '/00-ban-do-gioi-ai/00-ai-lam-duoc-gi' },

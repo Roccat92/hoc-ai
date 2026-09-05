@@ -35,6 +35,10 @@ Có script `scripts/kiem-tra-chuoi.mjs` (`npm run kiem-tra-chuoi`, hoặc `npm r
 - File nội bộ (không public) ở gốc repo: mọi `.md` ở gốc **trừ** `README.md`/`CONTRIBUTING.md` tự động bị loại khỏi bản build (xem `PUBLIC_ROOT_DOCS` trong `config.mts`) - không cần sửa gì khi thêm file nội bộ mới, chỉ cần KHÔNG thêm tên nó vào whitelist đó.
 - Kiểm tra link nội bộ bằng `npm run docs:build` - build thất bại nếu có link chết.
 
+## Nhận diện (logo, favicon)
+
+Hình gốc là chữ "ô" (vòng tròn + dấu mũ) trong `public/logo.svg`, `logo-dark.svg` (thanh menu, sáng/tối) và `favicon.svg` (huy hiệu nền màu). Các file PNG (`favicon-32.png`, `apple-touch-icon.png`, `og.png`) KHÔNG sửa tay - sinh lại bằng `powershell -ExecutionPolicy Bypass -File scripts/tao-icon.ps1` sau khi đổi SVG. Màu dùng đúng màu brand mặc định của VitePress, không thêm màu riêng; không dùng emoji làm icon.
+
 ## Lệnh
 
 - `npm run docs:dev` - xem web ở máy (http://localhost:5173)
