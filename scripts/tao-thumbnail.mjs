@@ -8,6 +8,7 @@
 //
 // Kết quả ghi vào public/thumb/<đường-dẫn-bài>.png (thư mục này KHÔNG commit -
 // xem .gitignore); config.mts đọc đúng đường dẫn đó để gắn thẻ og:image cho từng trang.
+// Kèm bản nhỏ 480px ở public/thumb/nho/... cho thẻ bài trên trang chủ (theme/LoTrinh.vue).
 // Chỉ vẽ lại ảnh nào có file .md mới hơn ảnh (hoặc script này mới hơn), nên chạy
 // lần hai rất nhanh.
 //
@@ -324,17 +325,21 @@ const fonts = [400, 600, 700].map((weight) => ({
 
 async function venAnh(b) {
   const svg = await satori(veMau(b), { width: W, height: H, fonts })
-  const png = new Resvg(svg, { fitTo: { mode: 'width', value: W } }).render().asPng()
   const out = duongDanRa(b)
   fs.mkdirSync(path.dirname(out), { recursive: true })
-  fs.writeFileSync(out, png)
+  fs.writeFileSync(out, new Resvg(svg, { fitTo: { mode: 'width', value: W } }).render().asPng())
+  // Bản nhỏ 480px cho thẻ bài trên trang chủ (LoTrinh.vue) - nhẹ hơn ~5 lần.
+  const nho = duongDanNho(b)
+  fs.mkdirSync(path.dirname(nho), { recursive: true })
+  fs.writeFileSync(nho, new Resvg(svg, { fitTo: { mode: 'width', value: 480 } }).render().asPng())
 }
 
 const duongDanRa = (b) => (OUT_DIR === OUT ? b.outPng : path.join(OUT_DIR, path.relative(OUT, b.outPng)))
+const duongDanNho = (b) => path.join(OUT_DIR, 'nho', path.relative(OUT, b.outPng))
 
 function canVeLai(b) {
   const out = duongDanRa(b)
-  if (!fs.existsSync(out)) return true
+  if (!fs.existsSync(out) || !fs.existsSync(duongDanNho(b))) return true
   const t = fs.statSync(out).mtimeMs
   return fs.statSync(b.file).mtimeMs > t || fs.statSync(SELF).mtimeMs > t
 }

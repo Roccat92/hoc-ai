@@ -126,15 +126,23 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
         </div>
         <div class="cap-dem">{{ soXongCua(cap) }}/{{ cap.bai.length }}</div>
       </div>
+      <!-- Mỗi bài là một thẻ: ảnh thumbnail (sinh bởi scripts/tao-thumbnail.mjs, bản 480px
+           ở /thumb/nho/...), bên dưới là ô tick + tên bài. Ảnh chỉ là minh họa (alt rỗng),
+           tên bài mới là nội dung đọc được. -->
       <ul class="cap-bai">
-        <li v-for="b in cap.bai" :key="b.link">
-          <input
-            type="checkbox"
-            :checked="!!daXong[b.link]"
-            :aria-label="'Đánh dấu đã xong: ' + b.ten"
-            @change="doiTrangThai(b.link)"
-          />
-          <a :href="b.link" :class="{ 'da-xong': daXong[b.link] }">{{ b.ten }}</a>
+        <li v-for="b in cap.bai" :key="b.link" class="the" :class="{ 'da-xong': daXong[b.link] }">
+          <a :href="b.link" class="the-anh" tabindex="-1" aria-hidden="true">
+            <img :src="'/thumb/nho' + b.link + '.png'" alt="" loading="lazy" width="480" height="252" />
+          </a>
+          <div class="the-chu">
+            <input
+              type="checkbox"
+              :checked="!!daXong[b.link]"
+              :aria-label="'Đánh dấu đã xong: ' + b.ten"
+              @change="doiTrangThai(b.link)"
+            />
+            <a :href="b.link">{{ b.ten }}</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -229,30 +237,70 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
 
 .cap-bai {
   list-style: none;
-  margin: 10px 0 0;
+  margin: 14px 0 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px 12px;
 }
-.cap-bai li {
+.the {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
   gap: 8px;
-  margin: 6px 0;
+  margin: 0;
 }
-.cap-bai input {
-  margin-top: 2px;
+.the-anh {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  background: #000;
+  line-height: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+}
+.the-anh:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+.the-anh img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  margin: 0;
+}
+.the.da-xong .the-anh {
+  opacity: 0.5;
+}
+.the-chu {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+.the-chu input {
+  margin-top: 3px;
   cursor: pointer;
   flex-shrink: 0;
 }
-.cap-bai a {
+.the-chu a {
   color: var(--vp-c-text-1);
   text-decoration: none;
+  font-weight: 500;
 }
-.cap-bai a:hover {
+.the-chu a:hover {
   color: var(--vp-c-brand-1);
 }
-.cap-bai a.da-xong {
+.the.da-xong .the-chu a {
   color: var(--vp-c-text-2);
   text-decoration: line-through;
+}
+@media (prefers-reduced-motion: reduce) {
+  .the-anh, .the-anh:hover {
+    transition: none;
+    transform: none;
+  }
 }
 
 .ghi-chu {

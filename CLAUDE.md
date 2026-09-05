@@ -41,7 +41,7 @@ Hình gốc là số 0 đặc có lỗ tròn + dấu mũ hình nêm (gợi chữ
 
 ## Thumbnail từng bài (ảnh khi chia sẻ link)
 
-`scripts/tao-thumbnail.mjs` sinh ảnh 1200x630 cho mọi bài vào `public/thumb/` (không commit) bằng satori + resvg, font ở `scripts/fonts/`. `npm run docs:build` tự chạy nó trước khi build; `transformPageData` trong `config.mts` gắn `og:image`/`og:title`/`og:description` theo từng trang từ đó. Không cần làm gì khi thêm bài mới - tiêu đề, phần, số bài, cấp độ và câu "học xong bạn sẽ..." đều rút từ nội dung. Phong cách mặc định là "dark" (chủ dự án chọn); thử nhanh một bài: `node scripts/tao-thumbnail.mjs <một-phần-tên-file>`.
+`scripts/tao-thumbnail.mjs` sinh ảnh 1200x630 cho mọi bài vào `public/thumb/` (không commit) bằng satori + resvg, font ở `scripts/fonts/`. kèm bản nhỏ 480px ở `public/thumb/nho/` làm thẻ bài trong lộ trình 5 cấp trên trang chủ (`theme/LoTrinh.vue`). `npm run docs:build` tự chạy nó trước khi build; `transformPageData` trong `config.mts` gắn `og:image`/`og:title`/`og:description` theo từng trang từ đó. Không cần làm gì khi thêm bài mới - tiêu đề, phần, số bài, cấp độ và câu "học xong bạn sẽ..." đều rút từ nội dung. Phong cách mặc định là "dark" (chủ dự án chọn); thử nhanh một bài: `node scripts/tao-thumbnail.mjs <một-phần-tên-file>`.
 
 ## Lệnh
 
