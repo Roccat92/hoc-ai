@@ -60,6 +60,8 @@ Prompt thứ hai rõ ràng, chia nhỏ phạm vi (chỉ trang chủ trước), n
 
 Dài không đồng nghĩa với cụ thể. Một prompt 500 từ liệt kê mọi tính năng mơ ước nhưng không có ví dụ, không có ràng buộc rõ ràng, vẫn sẽ ra kết quả mơ hồ. Ưu tiên **rõ ràng và có cấu trúc** hơn là dài.
 
+Muốn đào sâu riêng cách dùng ChatGPT (chọn chế độ, Projects, phân tích dữ liệu, nghiên cứu có kiểm nguồn), có một nhóm bài riêng ở [phụ lục: ChatGPT](../phu-luc-cong-cu/chatgpt/01-bat-dau-va-chon-che-do.md) - không bắt buộc, đọc khi cần.
+
 ## Bước tiếp theo
 
-Đã nắm kỹ thuật prompt cơ bản, giờ áp dụng vào workflow ChatGPT thực tế: [ChatGPT: bắt đầu đúng chỗ, đúng chế độ, đúng model →](05-chatgpt-bat-dau-va-chon-che-do.md)
+Đã nắm kỹ thuật prompt cơ bản, giờ nắm mô hình web/API để biết mình đang giao AI xây cái gì: [File, web và server hoạt động thế nào →](10-file-web-va-server-hoat-dong-the-nao.md)

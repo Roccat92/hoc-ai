@@ -20,38 +20,11 @@ Không được phép: truy cập mạng, commit, deploy hoặc gửi dữ liệ
 Nếu thiếu file hoặc lệnh lỗi: trả trạng thái blocked và log ngắn.
 ```
 
-## `codex exec` trông thế nào
+## Chế độ không tương tác cho script và CI
 
-Chế độ không tương tác nhận thẳng prompt trên dòng lệnh, không hỏi lại:
+Mỗi coding agent có một cách gọi tương tự nhau để chạy không hỏi lại, nhận thẳng prompt và tự thoát khi xong - Codex dùng `codex exec "..."`, Claude Code dùng `claude -p "..."`. Cả hai đều hợp để chạy trong GitHub Actions (ví dụ rà link chết mỗi khi có pull request) hay bất kỳ script lặp lại nào. Cú pháp đầy đủ và một ví dụ workflow CI thật nằm ở phụ lục [Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#codex-exec-chạy-không-tương-tác) hoặc [Claude Code](../phu-luc-cong-cu/claude-code/03-cau-hinh-nang-cao.md#subagent-và-chế-độ-không-tương-tác).
 
-```bash
-codex exec "Rà tất cả file Markdown trong docs/, liệt kê link chết theo dạng bảng. Chỉ đọc, không sửa file."
-```
-- `codex exec`: chạy Codex một lượt rồi thoát, hợp cho script/CI (khác `codex` bản tương tác ngồi hỏi đáp).
-- Chuỗi trong ngoặc kép: prompt - phải tự chứa đủ input, output mong muốn và giới hạn, vì không có ai ngồi làm rõ giữa chừng.
-- Xem `codex exec --help` để biết các cờ hiện có (chọn model, thư mục làm việc, định dạng đầu ra...) - tên cờ đổi theo phiên bản nên đừng chép từ bài cũ.
-
-Dùng trong GitHub Actions, ví dụ rà link mỗi khi có pull request:
-
-```yaml
-name: Rà link tài liệu
-on: [pull_request]
-jobs:
-  ra-link:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: npm install -g @openai/codex
-      - run: codex exec "Rà link chết trong docs/, in báo cáo. Không sửa file."
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-```
-- `secrets.OPENAI_API_KEY`: khóa để trong GitHub Secrets, **không** viết thẳng vào file - xem [giấu API key](../10-bao-mat/03-giau-api-key-va-secret.md).
-- Job này chỉ đọc và in báo cáo; commit hay deploy thì tách bước riêng có phê duyệt.
-
-## Ở Claude Code: subagent và chế độ không tương tác
-
-Claude Code có hai khái niệm tương đương. **Subagent** (đôi khi gọi là Agent hoặc Task) là một phiên Claude con được giao một việc thu hẹp, chạy độc lập rồi báo kết quả về - dùng cho đúng trường hợp "việc thật sự độc lập" như đã nói ở trên (một agent đọc tài liệu, một agent rà test), không dùng cho hai việc cùng sửa một file. **Chế độ không tương tác** dùng cờ `-p` (print/headless), ví dụ `claude -p "Rà link chết trong docs/, in báo cáo. Không sửa file."` - vai trò giống hệt `codex exec`: nhận thẳng prompt, không hỏi lại, hợp cho script và CI. Mọi nguyên tắc về hợp đồng đầu vào/đầu ra và không tự động hóa side effect nguy hiểm ở trên áp dụng y hệt.
+Với Claude Code, **subagent** (đôi khi gọi là Agent hoặc Task) là một phiên Claude con được giao một việc thu hẹp, chạy độc lập rồi báo kết quả về - dùng cho đúng trường hợp "việc thật sự độc lập" như đã nói ở trên, không dùng cho hai việc cùng sửa một file.
 
 ## Bài tập
 

@@ -24,7 +24,7 @@ Kỹ năng thật sự bạn cần học không phải là "thuộc cú pháp l�
 
 ## "Hiểu" tới mức nào là đủ?
 
-Nói thẳng để bạn khỏi sợ: người xây bốn sản phẩm thật trong [phần case study](../07-case-study/README.md) của thư viện này **không đọc từng dòng code, không tự gõ từng lệnh terminal**. Họ hiểu ở tầm **chủ sản phẩm**, và đó là mức đủ:
+Nói thẳng để bạn khỏi sợ: người xây bốn sản phẩm thật trong [phần case study](../07-case-study/) của thư viện này **không đọc từng dòng code, không tự gõ từng lệnh terminal**. Họ hiểu ở tầm **chủ sản phẩm**, và đó là mức đủ:
 
 - **Hiểu sản phẩm phải làm gì** - đủ để mô tả rõ cho AI và đủ để biết kết quả đúng hay sai khi dùng thử.
 - **Hiểu kiến trúc ở mức sơ đồ** - có giao diện, có phần xử lý, có chỗ lưu dữ liệu, chúng nói chuyện với nhau ra sao (bạn sẽ học ở [bài nền tảng web](10-file-web-va-server-hoat-dong-the-nao.md)).

@@ -1,10 +1,10 @@
 # TIDOGO (Print OS): phần mềm quản lý sản xuất cho xưởng in
 
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
-**Thời gian thực hiện:** hơn 1 tháng, dùng gói [Claude Max 5x](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md). Khoảng 2 tuần đầu mới ra được bản chạy tối thiểu (MVP), phần còn lại là hoàn thiện cho dùng thật.
+**Thời gian thực hiện:** hơn 1 tháng, dùng gói [Claude Max 5x](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md). Khoảng 2 tuần đầu mới ra được bản chạy tối thiểu (MVP), phần còn lại là hoàn thiện cho dùng thật.
 **Trình độ trước khi bắt đầu:** 9 năm vận hành xưởng sản xuất theo yêu cầu, tự học lập trình để giải bài toán của chính mình
 
-> **Cách làm:** dùng Claude Max 5x để build, kèm Codex/ChatGPT Pro để phản biện phương án và làm assets. Dùng hai AI phản biện chéo nhau là một cách hay để bớt sai - xem [chi phí các gói Codex](../02-code-voi-ai/09-chi-phi-cac-goi-codex.md). Tới giờ vẫn được thêm tính năng và fix bug đều, hiện làm bằng gói Max 5x.
+> **Cách làm:** dùng Claude Max 5x để build, kèm Codex/ChatGPT Pro để phản biện phương án và làm assets. Dùng hai AI phản biện chéo nhau là một cách hay để bớt sai - xem [chi phí các gói Codex](../phu-luc-cong-cu/codex/02-chi-phi-cac-goi.md). Tới giờ vẫn được thêm tính năng và fix bug đều, hiện làm bằng gói Max 5x.
 
 > Case study này viết từ một sản phẩm **đang chạy thật** tại [tidogo.com](https://tidogo.com), không phải bài tập mẫu.
 
@@ -53,8 +53,8 @@ Vài khái niệm trong bảng trên nếu bạn chưa quen: xem lại [từ đi
 | Supabase | 0đ | Dùng bậc miễn phí |
 | Vercel (chạy web) | 0đ | Dùng bậc miễn phí |
 | GitHub | 0đ | Dùng bậc miễn phí |
-| Gói AI để build | Claude Max 5x, 100 USD/tháng <Vnd usd="100" sau="/tháng" /> | Hơn 1 tháng build, và vẫn dùng để bảo trì; xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
-| Codex/ChatGPT Pro (phản biện, assets) | phát sinh theo dùng | Xem [chi phí các gói Codex](../02-code-voi-ai/09-chi-phi-cac-goi-codex.md) |
+| Gói AI để build | Claude Max 5x, 100 USD/tháng <Vnd usd="100" sau="/tháng" /> | Hơn 1 tháng build, và vẫn dùng để bảo trì; xem [chi phí các gói Claude](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md) |
+| Codex/ChatGPT Pro (phản biện, assets) | phát sinh theo dùng | Xem [chi phí các gói Codex](../phu-luc-cong-cu/codex/02-chi-phi-cac-goi.md) |
 
 ## Bài học rút ra
 

@@ -1,6 +1,6 @@
 # Cài đặt và chọn đúng nơi làm việc với coding agent
 
-Bài này dành cho người đã build được dự án đầu tiên với [Claude Code](01-claude-code.md) và muốn biết dùng Codex - hoặc một coding agent khác - có gì khác không. Học xong bạn sẽ cài được Codex CLI, phân biệt desktop/web, CLI và IDE extension, chọn local hay cloud, đăng nhập đúng cách và thực hiện một task chỉ đọc an toàn. Toàn bộ luồng tư duy trong bài áp dụng y hệt cho Claude Code - chỉ đổi tên lệnh.
+Bài này dành cho người đã build được dự án đầu tiên với [Claude Code](../claude-code/01-cai-dat-va-lenh-co-ban.md) và muốn biết dùng Codex - hoặc một coding agent khác - có gì khác không. Học xong bạn sẽ cài được Codex CLI, phân biệt desktop/web, CLI và IDE extension, chọn local hay cloud, đăng nhập đúng cách và thực hiện một task chỉ đọc an toàn. Toàn bộ luồng tư duy trong bài áp dụng y hệt cho Claude Code - chỉ đổi tên lệnh.
 
 ## Codex có những bề mặt nào?
 
@@ -14,7 +14,7 @@ Nguyên lý giống nhau dù dùng agent nào: nhận mục tiêu, đọc ngữ 
 
 ## Cài đặt
 
-Cách phổ biến nhất là qua npm (đã cài Node.js ở [bài cài môi trường](../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md)):
+Cách phổ biến nhất là qua npm (đã cài Node.js ở [bài cài môi trường](../../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md)):
 
 ```bash
 npm install -g @openai/codex
@@ -42,7 +42,7 @@ codex
 - Dòng 1: di chuyển vào thư mục dự án (thay `duong-dan-den-thu-muc-du-an` bằng đường dẫn thật).
 - Dòng 2: khởi động Codex, mở phiên tương tác trong thư mục hiện tại.
 
-Lần đầu chạy, Codex sẽ hỏi bạn đăng nhập bằng tài khoản ChatGPT (nếu bạn có gói Plus/Pro/Team - xem [chi phí các gói Codex](09-chi-phi-cac-goi-codex.md)) hoặc bằng API key riêng. Làm theo hướng dẫn trên màn hình - thường sẽ mở trình duyệt để bạn xác nhận. **Đừng dán API key trực tiếp vào chat** với Codex, và đừng commit key vào repo - xem lại [giấu API key và secret](../10-bao-mat/03-giau-api-key-va-secret.md).
+Lần đầu chạy, Codex sẽ hỏi bạn đăng nhập bằng tài khoản ChatGPT (nếu bạn có gói Plus/Pro/Team - xem [chi phí các gói Codex](02-chi-phi-cac-goi.md)) hoặc bằng API key riêng. Làm theo hướng dẫn trên màn hình - thường sẽ mở trình duyệt để bạn xác nhận. **Đừng dán API key trực tiếp vào chat** với Codex, và đừng commit key vào repo - xem lại [giấu API key và secret](../../10-bao-mat/03-giau-api-key-va-secret.md).
 
 ## Chọn local, worktree hay cloud
 
@@ -63,7 +63,7 @@ Hãy chỉ đọc, chưa sửa file nào.
 3. Nêu ba điều bạn chưa chắc về dự án này.
 ```
 
-Với dự án landing page ở [phần 09](../09-du-an-thuc-hanh/du-an-01-landing-page/spec.md), câu trả lời hợp lý sẽ nêu đúng: đây là trang tĩnh HTML/CSS/JS thuần không cần bước build, form gửi qua Formspree, chưa có test tự động. Nếu Codex trả lời sai cấu trúc cơ bản này, dừng lại và hỏi thêm trước khi giao task sửa code.
+Với dự án landing page ở [phần 09](../../09-du-an-thuc-hanh/du-an-01-landing-page/spec.md), câu trả lời hợp lý sẽ nêu đúng: đây là trang tĩnh HTML/CSS/JS thuần không cần bước build, form gửi qua Formspree, chưa có test tự động. Nếu Codex trả lời sai cấu trúc cơ bản này, dừng lại và hỏi thêm trước khi giao task sửa code.
 
 ## Bài tập
 
@@ -78,6 +78,6 @@ Cài Codex, đăng nhập, mở thử thư mục dự án landing page (hoặc b
 - [ ] Thực hiện được task chỉ đọc và đối chiếu câu trả lời với thực tế.
 - [ ] Có checkpoint Git (`git status` sạch hoặc đã commit) trước khi cho agent sửa.
 
-## Bước tiếp theo
+## Xem thêm
 
-Đã mở đúng nơi, giờ giao task đầu tiên và kiểm soát quyền Codex: [Task đầu tiên và quyền hạn an toàn →](11-codex-task-dau-tien-va-quyen-han.md)
+Đây là trang phụ lục, không nằm trong lộ trình chính. Cấu hình nâng cao (AGENTS.md, MCP, tự động hóa) nằm ở [bài cấu hình nâng cao](03-cau-hinh-nang-cao.md). Cách giao task và kiểm soát quyền - dùng chung cho mọi coding agent - nằm trong lộ trình chính ở [Task đầu tiên và quyền hạn an toàn](../../02-code-voi-ai/11-codex-task-dau-tien-va-quyen-han.md).

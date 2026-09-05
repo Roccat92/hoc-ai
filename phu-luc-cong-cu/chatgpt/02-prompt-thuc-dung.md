@@ -76,4 +76,4 @@ Không dùng các từ “tốt nhất”, “số 1”, “cam kết 100%”.
 
 ## Bước tiếp theo
 
-Prompt đã rõ, giờ đưa file và nguồn vào đúng cách: [Làm việc với file, web và nghiên cứu →](07-chatgpt-file-web-va-nghien-cuu.md)
+Prompt đã rõ, giờ đưa file và nguồn vào đúng cách: [Làm việc với file, web và nghiên cứu →](03-file-web-va-nghien-cuu.md)

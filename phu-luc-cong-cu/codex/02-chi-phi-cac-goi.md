@@ -92,7 +92,7 @@ API key hợp lý khi bạn cần:
 - Theo dõi và tách chi phí theo dự án bằng lượng token thực tế.
 - Tiếp tục chạy local sau khi đã hết hạn mức gói ChatGPT.
 
-API key lại kém phù hợp nếu mục tiêu của bạn là có một khoản chi cố định dễ đoán hoặc cần Codex cloud, review GitHub tự động và các tích hợp cloud. Giá API phụ thuộc model và token, nên một tác vụ đọc nhiều file hoặc sinh đầu ra dài có thể tốn hơn bạn đoán. Xem cách tính ở bài [Gọi API LLM](../04-build-ung-dung-ai/01-goi-api-llm.md).
+API key lại kém phù hợp nếu mục tiêu của bạn là có một khoản chi cố định dễ đoán hoặc cần Codex cloud, review GitHub tự động và các tích hợp cloud. Giá API phụ thuộc model và token, nên một tác vụ đọc nhiều file hoặc sinh đầu ra dài có thể tốn hơn bạn đoán. Xem cách tính ở bài [Gọi API LLM](../../04-build-ung-dung-ai/01-goi-api-llm.md).
 
 ## Chọn gói nào
 
@@ -132,10 +132,10 @@ Lệnh `/status` hiển thị cấu hình của phiên hiện tại và phần h
 - Số tiền thực trả có thể gồm thuế áp dụng tại Việt Nam, chênh lệch tỉ giá và phí chuyển đổi ngoại tệ của ngân hàng.
 - Thẻ ghi nợ quốc tế giúp dễ kiểm soát hơn: chỉ nạp số tiền cần dùng và bật thông báo giao dịch.
 - Đừng mua tài khoản dựng sẵn hoặc tài khoản dùng chung. Bạn có thể mất quyền truy cập, lịch sử task và cả code đã đưa vào tài khoản đó.
-- Không đưa API key cho người bán hộ, không dán key vào source code và không commit key lên GitHub. Xem [Giấu API key và secret](../10-bao-mat/03-giau-api-key-va-secret.md).
+- Không đưa API key cho người bán hộ, không dán key vào source code và không commit key lên GitHub. Xem [Giấu API key và secret](../../10-bao-mat/03-giau-api-key-va-secret.md).
 
 Giá và hạn mức của Codex thay đổi khá nhanh. Trước khi trả tiền, hãy mở lại [OpenAI Docs - Pricing](https://learn.chatgpt.com/docs/pricing), xem đúng gói đang hiện trong tài khoản và kiểm tra số tiền cuối cùng ở bước thanh toán.
 
-## Bước tiếp theo
+## Xem thêm
 
-Bạn đã biết Codex tốn bao nhiêu; giờ học cách cài và chọn đúng nơi để bắt đầu: [Codex: cài đặt và chọn đúng nơi làm việc →](10-codex-cai-dat-va-chon-noi-lam-viec.md)
+Bạn đã biết Codex tốn bao nhiêu; cách cài và chọn đúng nơi làm việc nằm ở [bài 1](01-cai-dat-va-lenh-co-ban.md). Muốn so sánh, xem [Chi phí và các gói Claude Code](../claude-code/02-chi-phi-cac-goi.md). Quay lại [lộ trình chính](../../02-code-voi-ai/).

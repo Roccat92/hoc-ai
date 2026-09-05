@@ -109,4 +109,4 @@ Biến trong bộ nhớ của server sẽ mất khi server khởi động lại;
 
 ## Bước tiếp theo
 
-Nền tảng đã đủ để đọc code AI viết; giờ quay lại quy trình xây sản phẩm: [Claude Code: cài đặt và bắt đầu →](../02-code-voi-ai/01-claude-code.md)
+Nền tảng đã đủ để đọc code AI viết; giờ quay lại quy trình xây sản phẩm: [Cài một coding agent và chạy task đầu tiên →](../02-code-voi-ai/01-cai-mot-coding-agent.md)

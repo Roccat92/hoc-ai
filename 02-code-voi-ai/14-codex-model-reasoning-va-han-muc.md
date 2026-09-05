@@ -26,7 +26,7 @@ Lệnh này hiển thị cấu hình phiên và phần hạn mức còn lại. K
 
 ## Hạn mức và tiền: đừng đoán
 
-Hạn mức Codex đi kèm gói ChatGPT (Free/Go/Plus/Pro 5x/Pro 20x); hạn mức Claude Code đi kèm gói Claude (Free/Pro/Max 5x/Max 20x) - cả hai đều có cùng một cái bẫy đặt tên: "5x" và "20x" chỉ khác nhau ở lượng hạn mức, không phải model xịn hơn. Bảng giá VND đầy đủ (tự cập nhật theo tỉ giá) nằm ở [chi phí các gói Codex](09-chi-phi-cac-goi-codex.md) và [chi phí các gói Claude](08-chi-phi-cac-goi-claude.md); mốc khởi đầu hợp lý cho cả hai thường là gói giữa (Plus hoặc Pro), khoảng 20 USD <Vnd usd="20" />/tháng. Con số hạn mức công bố thay đổi khá nhanh - luôn xem trang giá chính thức của công cụ bạn dùng trước khi trả tiền.
+Hạn mức Codex đi kèm gói ChatGPT (Free/Go/Plus/Pro 5x/Pro 20x); hạn mức Claude Code đi kèm gói Claude (Free/Pro/Max 5x/Max 20x) - cả hai đều có cùng một cái bẫy đặt tên: "5x" và "20x" chỉ khác nhau ở lượng hạn mức, không phải model xịn hơn. Bảng giá VND đầy đủ (tự cập nhật theo tỉ giá) và cách chọn gói nằm ở phụ lục [chi phí Codex](../phu-luc-cong-cu/codex/02-chi-phi-cac-goi.md) và [chi phí Claude Code](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md). Con số hạn mức công bố thay đổi khá nhanh - luôn xem trang giá chính thức của công cụ bạn dùng trước khi trả tiền.
 
 ## Bài tập
 

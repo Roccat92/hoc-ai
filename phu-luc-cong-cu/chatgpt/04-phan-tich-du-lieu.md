@@ -49,7 +49,7 @@ Kiểm ngay: đơn `1003` bị hủy nên **không** được tính vào doanh t
 
 ## Bài tập
 
-Dùng dữ liệu giả của dự án quản lý đơn hàng ở [Phần 9](../09-du-an-thuc-hanh/du-an-02-quan-ly-don-hang/spec.md). Tạo báo cáo một trang gồm doanh thu theo tháng, ba sản phẩm bán chạy, tỷ lệ đơn hủy, hai đề xuất và một đoạn “không thể kết luận từ dữ liệu hiện có”.
+Dùng dữ liệu giả của dự án quản lý đơn hàng ở [Phần 9](../../09-du-an-thuc-hanh/du-an-02-quan-ly-don-hang/spec.md). Tạo báo cáo một trang gồm doanh thu theo tháng, ba sản phẩm bán chạy, tỷ lệ đơn hủy, hai đề xuất và một đoạn “không thể kết luận từ dữ liệu hiện có”.
 
 ## Checklist đạt bài
 
@@ -61,4 +61,4 @@ Dùng dữ liệu giả của dự án quản lý đơn hàng ở [Phần 9](../
 
 ## Bước tiếp theo
 
-Workflow đã chạy được một lần, giờ gom file và quy tắc thành một không gian làm việc tái sử dụng: [Projects, bộ nhớ và quyền riêng tư →](09-chatgpt-projects-bo-nho-va-rieng-tu.md)
+Workflow đã chạy được một lần, giờ gom file và quy tắc thành một không gian làm việc tái sử dụng: [Projects, bộ nhớ và quyền riêng tư →](05-projects-bo-nho-rieng-tu.md)

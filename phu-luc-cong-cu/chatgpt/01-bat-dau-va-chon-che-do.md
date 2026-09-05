@@ -20,9 +20,9 @@ Model, tên gói và quyền truy cập thay đổi theo thời gian. Hãy xem [
 
 ## Ba mức chi phí, đừng mặc định mua gói cao
 
-ChatGPT có nhiều gói: **Free** (0đ), **Go**, **Plus**, và **Pro** - trong đó Pro lại chia hai mức *5x* và *20x*, đúng kiểu bẫy đặt tên bạn sẽ gặp lại ở [Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md). Mốc hợp lý để bắt đầu làm việc thật thường là **Plus** (20 USD <Vnd usd="20" />/tháng). Đừng vội mua Pro chỉ vì sợ thiếu - dùng gói thấp trước, khi thường xuyên chạm trần mới nâng.
+ChatGPT có nhiều gói: **Free** (0đ), **Go**, **Plus**, và **Pro** - trong đó Pro lại chia hai mức *5x* và *20x*, đúng kiểu bẫy đặt tên bạn sẽ gặp lại ở [Claude](../claude-code/02-chi-phi-cac-goi.md). Mốc hợp lý để bắt đầu làm việc thật thường là **Plus** (20 USD <Vnd usd="20" />/tháng). Đừng vội mua Pro chỉ vì sợ thiếu - dùng gói thấp trước, khi thường xuyên chạm trần mới nâng.
 
-Số tiền cụ thể từng gói, hạn mức và cách chọn có bảng đầy đủ (tự cập nhật theo tỉ giá) ở [chi phí các gói Codex/ChatGPT](../02-code-voi-ai/09-chi-phi-cac-goi-codex.md). Giá đổi khá nhanh - luôn mở lại [trang giá chính thức](https://learn.chatgpt.com/docs/pricing) trước khi trả tiền.
+Số tiền cụ thể từng gói, hạn mức và cách chọn có bảng đầy đủ (tự cập nhật theo tỉ giá) ở [chi phí các gói Codex/ChatGPT](../codex/02-chi-phi-cac-goi.md). Giá đổi khá nhanh - luôn mở lại [trang giá chính thức](https://learn.chatgpt.com/docs/pricing) trước khi trả tiền.
 
 ## Cách mở một cuộc trò chuyện sạch
 
@@ -51,4 +51,4 @@ Chọn ba việc bạn thật sự làm trong tuần này: học một khái ni�
 
 ## Bước tiếp theo
 
-Biết chọn đúng nơi rồi, giờ học cách viết yêu cầu cho ra kết quả ổn định: [Prompt thực dụng và quy trình lặp →](06-chatgpt-prompt-thuc-dung.md)
+Biết chọn đúng nơi rồi, giờ học cách viết yêu cầu cho ra kết quả ổn định: [Prompt thực dụng và quy trình lặp →](02-prompt-thuc-dung.md)

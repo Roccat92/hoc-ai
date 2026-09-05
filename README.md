@@ -75,7 +75,7 @@ Muốn học sâu hơn về train/fine-tune model thì đó là chặng nâng ca
 |---|---|---|---|
 | Máy tính, mạng internet | Bắt buộc | Đã có sẵn | Không cần máy mạnh để bắt đầu |
 | Tài khoản chatbot AI (Claude/ChatGPT/Gemini) | Không | 0đ (bản free) | Bản free đủ dùng để học; nâng cấp khi cần dùng nhiều |
-| Claude Code / Codex / Cursor (AI code) | Không | 0đ (có gói free/dùng thử) | Xem chi tiết giá ở `02-code-voi-ai/08-chi-phi-cac-goi-claude.md` và `02-code-voi-ai/09-chi-phi-cac-goi-codex.md` |
+| Claude Code / Codex / Cursor (AI code) | Không | 0đ (có gói free/dùng thử) | Xem chi tiết giá ở `phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md` và `phu-luc-cong-cu/codex/02-chi-phi-cac-goi.md` |
 | Tên miền riêng (domain) | Không | ~150.000-350.000đ/năm | Chỉ cần khi muốn có địa chỉ web riêng thay vì domain miễn phí của nền tảng deploy |
 | VPS (máy chủ riêng) | Không | ~50.000-150.000đ/tháng | Chỉ cần khi deploy miễn phí (Vercel/Railway...) không đủ đáp ứng |
 | Thuê cloud GPU (để fine-tune) | Không | Tính theo giờ, xem `03-ha-tang-thuc-chien/04-thue-cloud-gpu.md` | Chỉ cần ở giai đoạn nâng cao |

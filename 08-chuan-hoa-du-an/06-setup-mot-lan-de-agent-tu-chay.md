@@ -4,7 +4,7 @@ Bài này dành cho người đã build được vài thứ với coding agent n
 
 ## Đây là cách các sản phẩm trong thư viện này thật sự được build
 
-Bốn sản phẩm ở [phần case study](../07-case-study/README.md) không được build bằng cách người làm ngồi đọc từng dòng code hay gõ từng lệnh. Chúng được build bằng cách: setup GitHub, Vercel, Supabase một lần, cho agent đủ quyền, rồi mô tả tính năng bằng tiếng Việt và nghiệm thu bằng cách **dùng thử sản phẩm**. Các bài chi tiết trước đó trong thư viện (đọc diff, mở DevTools, chạy backup) là kỹ năng để dùng khi có chuyện, không phải việc làm mỗi ngày.
+Bốn sản phẩm ở [phần case study](../07-case-study/) không được build bằng cách người làm ngồi đọc từng dòng code hay gõ từng lệnh. Chúng được build bằng cách: setup GitHub, Vercel, Supabase một lần, cho agent đủ quyền, rồi mô tả tính năng bằng tiếng Việt và nghiệm thu bằng cách **dùng thử sản phẩm**. Các bài chi tiết trước đó trong thư viện (đọc diff, mở DevTools, chạy backup) là kỹ năng để dùng khi có chuyện, không phải việc làm mỗi ngày.
 
 "Hiểu để sửa, không copy mù" ở [bài đầu tiên](../01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md) vẫn đúng - nhưng "hiểu" ở đây là hiểu ở tầm chủ sản phẩm: sản phẩm phải làm gì, dữ liệu nằm đâu, chỗ nào sai thì mất tiền hoặc mất dữ liệu. Không phải hiểu cú pháp.
 
@@ -26,7 +26,7 @@ Bốn sản phẩm ở [phần case study](../07-case-study/README.md) không đ
    Lên production chỉ qua MỘT cổng: bạn bấm merge.
 ```
 
-Ba dịch vụ này đều có bậc miễn phí đủ cho dự án cá nhân và giai đoạn đầu của sản phẩm thật - đúng như [chi phí thật ghi trong case study](../07-case-study/01-tidogo-print-os.md#chi-phí-thực-tế-vnd). Khoản trả tiền chính là gói AI để chạy agent, xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) hoặc [Codex](../02-code-voi-ai/09-chi-phi-cac-goi-codex.md). Giới hạn của bậc miễn phí có thể thay đổi, kiểm tra trang chủ từng dịch vụ.
+Ba dịch vụ này đều có bậc miễn phí đủ cho dự án cá nhân và giai đoạn đầu của sản phẩm thật - đúng như [chi phí thật ghi trong case study](../07-case-study/01-tidogo-print-os.md#chi-phí-thực-tế-vnd). Khoản trả tiền chính là gói AI để chạy agent, xem [chi phí các gói Claude](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md) hoặc [Codex](../phu-luc-cong-cu/codex/02-chi-phi-cac-goi.md). Giới hạn của bậc miễn phí có thể thay đổi, kiểm tra trang chủ từng dịch vụ.
 
 ## Bước 1: tài khoản
 

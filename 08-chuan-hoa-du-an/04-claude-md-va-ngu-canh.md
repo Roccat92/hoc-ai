@@ -4,7 +4,7 @@ Bài này dành cho người đã có [spec.md](02-viet-spec-md.md) và [backlog
 
 ## CLAUDE.md là gì?
 
-Đã giới thiệu sơ qua ở [`02-code-voi-ai/01-claude-code.md`](../02-code-voi-ai/01-claude-code.md): `CLAUDE.md` là file đặt ở **gốc dự án**, ghi lại các **quy ước** mà bạn muốn Claude Code luôn tuân theo mỗi khi làm việc trong thư mục đó - không mô tả "làm cái gì" (đó là việc của spec.md), mà mô tả "**làm theo cách nào**".
+Đã giới thiệu sơ qua ở [phụ lục Claude Code](../phu-luc-cong-cu/claude-code/01-cai-dat-va-lenh-co-ban.md): `CLAUDE.md` là file đặt ở **gốc dự án**, ghi lại các **quy ước** mà bạn muốn Claude Code luôn tuân theo mỗi khi làm việc trong thư mục đó - không mô tả "làm cái gì" (đó là việc của spec.md), mà mô tả "**làm theo cách nào**".
 
 Khác biệt với spec.md và backlog.md: hai file đó bạn đọc lại thủ công bằng cách nhắc AI ("đọc spec.md trước"), còn CLAUDE.md **Claude Code tự động đọc** mỗi khi khởi động trong thư mục dự án - không cần bạn nhắc.
 

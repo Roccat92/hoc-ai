@@ -1,0 +1,12 @@
+# Chuyển hướng các URL cũ sau khi tách phần cài đặt/chi phí riêng từng công cụ và
+# mini-track ChatGPT ra phụ lục (2026-09-05). Định dạng theo chuẩn Cloudflare
+# (Workers static assets đọc file này giống Pages).
+/02-code-voi-ai/01-claude-code /phu-luc-cong-cu/claude-code/01-cai-dat-va-lenh-co-ban 301
+/02-code-voi-ai/08-chi-phi-cac-goi-claude /phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi 301
+/02-code-voi-ai/09-chi-phi-cac-goi-codex /phu-luc-cong-cu/codex/02-chi-phi-cac-goi 301
+/02-code-voi-ai/10-codex-cai-dat-va-chon-noi-lam-viec /phu-luc-cong-cu/codex/01-cai-dat-va-lenh-co-ban 301
+/01-bat-dau-tu-so-0/05-chatgpt-bat-dau-va-chon-che-do /phu-luc-cong-cu/chatgpt/01-bat-dau-va-chon-che-do 301
+/01-bat-dau-tu-so-0/06-chatgpt-prompt-thuc-dung /phu-luc-cong-cu/chatgpt/02-prompt-thuc-dung 301
+/01-bat-dau-tu-so-0/07-chatgpt-file-web-va-nghien-cuu /phu-luc-cong-cu/chatgpt/03-file-web-va-nghien-cuu 301
+/01-bat-dau-tu-so-0/08-chatgpt-phan-tich-du-lieu-va-tao-tai-lieu /phu-luc-cong-cu/chatgpt/04-phan-tich-du-lieu 301
+/01-bat-dau-tu-so-0/09-chatgpt-projects-bo-nho-va-rieng-tu /phu-luc-cong-cu/chatgpt/05-projects-bo-nho-rieng-tu 301

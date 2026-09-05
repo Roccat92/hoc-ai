@@ -1,6 +1,6 @@
 # Cursor, Windsurf, Copilot - so sánh các AI IDE, chọn cái nào?
 
-Bài này dành cho người đã biết dùng Claude Code ([bài trước](01-claude-code.md)) và tò mò về các công cụ khác hay được nhắc tới: Cursor, Windsurf, GitHub Copilot. Học xong bạn sẽ hiểu chúng khác Claude Code ở đâu, và không cần phân vân "phải chọn một cái duy nhất" - vì thực tế nhiều người dùng kết hợp.
+Bài này dành cho người đã cài một coding agent ([bài trước](01-cai-mot-coding-agent.md)) và tò mò về các công cụ khác hay được nhắc tới: Cursor, Windsurf, GitHub Copilot. Học xong bạn sẽ hiểu chúng khác Claude Code/Codex ở đâu, và không cần phân vân "phải chọn một cái duy nhất" - vì thực tế nhiều người dùng kết hợp.
 
 ## AI IDE là gì, khác Claude Code (CLI) thế nào?
 

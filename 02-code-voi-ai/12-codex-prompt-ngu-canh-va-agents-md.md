@@ -19,35 +19,9 @@ Hai file `AGENTS.md` và `CLAUDE.md` đóng cùng một vai trò cho hai công c
 
 `AGENTS.md` nên ghi stack, lệnh test, quy ước đặt tên, khu vực nhạy cảm và điều cấm. Quy tắc đặt ở thư mục con chỉ áp dụng cho phạm vi đó. Đừng chép cùng một nội dung vào bốn file; khi sửa một quy tắc sẽ rất dễ lệch.
 
-## Một `AGENTS.md` thật trông thế nào
+## Một file hướng dẫn tốt trông thế nào
 
-Đặt file này ở **thư mục gốc dự án**; Codex tự đọc `AGENTS.md` mỗi phiên (Claude Code tự đọc `CLAUDE.md` tương tự). Ví dụ cho một web app quản lý đơn hàng:
-
-```markdown
-# AGENTS.md - quy ước cho agent
-
-## Stack
-- Next.js + TypeScript, database Supabase.
-
-## Lệnh kiểm tra (chạy trước khi coi là xong)
-- Cài: `npm install`
-- Chạy test: `npm test`
-- Build: `npm run build`
-
-## Quy ước
-- Tên biến/hàm bằng tiếng Anh, comment giải thích "vì sao" bằng tiếng Việt.
-- Tiền luôn lưu bằng số nguyên (đơn vị đồng), không dùng số thực.
-
-## Khu vực nhạy cảm - hỏi trước khi đụng
-- Thư mục `migrations/`: đổi schema database.
-- File `.env`: biến môi trường và secret.
-
-## Cấm
-- Không commit khi test đang đỏ.
-- Không thêm dependency mới nếu chưa hỏi.
-```
-
-Để ngắn và cụ thể. Một `AGENTS.md` 10-20 dòng agent đọc hết còn hơn 200 dòng nó bỏ qua nửa chừng. Nếu một thư mục con có quy ước riêng, đặt một `AGENTS.md` nhỏ ngay trong thư mục đó cho phạm vi hẹp.
+Đặt file này ở **thư mục gốc dự án**; agent tự đọc mỗi phiên (`AGENTS.md` với Codex, `CLAUDE.md` với Claude Code). Nội dung cốt lõi luôn có bốn phần: stack đang dùng, lệnh kiểm tra (cài/test/build), quy ước đặt tên và định dạng dữ liệu, khu vực nhạy cảm cần hỏi trước khi đụng. Để ngắn và cụ thể - một file 10-20 dòng agent đọc hết còn hơn 200 dòng nó bỏ qua nửa chừng. Ví dụ đầy đủ cho một dự án thật: [AGENTS.md ở phụ lục Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#agentsmd-đầy-đủ).
 
 ## Prompt sửa bug có thể tái hiện
 

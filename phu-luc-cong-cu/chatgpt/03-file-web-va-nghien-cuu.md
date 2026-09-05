@@ -59,4 +59,4 @@ Chọn ba nền tảng deploy miễn phí. Yêu cầu ChatGPT tạo bảng gồm
 
 ## Bước tiếp theo
 
-File đã vào đúng ngữ cảnh, giờ biến dữ liệu thành insight và sản phẩm công việc: [Phân tích dữ liệu và tạo tài liệu →](08-chatgpt-phan-tich-du-lieu-va-tao-tai-lieu.md)
+File đã vào đúng ngữ cảnh, giờ biến dữ liệu thành insight và sản phẩm công việc: [Phân tích dữ liệu và tạo tài liệu →](04-phan-tich-du-lieu.md)

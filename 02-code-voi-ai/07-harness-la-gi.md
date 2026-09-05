@@ -41,7 +41,7 @@ Một harness thường gồm bốn thứ:
 1. **Vòng lặp.** Model trả lời một phát rồi thôi. Harness cho nó chạy đi chạy lại: nghĩ, làm một việc, nhìn kết quả, nghĩ tiếp - tới khi xong. Đây chính là vòng lặp agent đã vẽ ở [bài AI Agent](../04-build-ung-dung-ai/03-ai-agent.md).
 2. **Công cụ.** Đọc file, ghi file, chạy lệnh terminal, tìm kiếm web, gọi API. Model không tự có; harness đưa cho nó và mô tả cách dùng. Chuẩn cắm công cụ phổ biến hiện nay là MCP, xem [Skills và MCP](../06-kho-tai-nguyen/03-skills-va-mcp.md).
 3. **Quyền.** Việc gì được tự làm, việc gì phải hỏi bạn trước. Đây là lý do Claude Code hay dừng lại xin phép trước khi xóa file hay chạy lệnh lạ.
-4. **Ngữ cảnh và quy tắc.** Harness quyết định model được "nhìn thấy" những gì trong [context window](../00-ban-do-gioi-ai/02-llm-la-gi.md): file nào, đoạn hội thoại nào, quy tắc nào. File `CLAUDE.md` bạn viết ([bài 1](01-claude-code.md)) chính là bạn đang can thiệp vào phần này.
+4. **Ngữ cảnh và quy tắc.** Harness quyết định model được "nhìn thấy" những gì trong [context window](../00-ban-do-gioi-ai/02-llm-la-gi.md): file nào, đoạn hội thoại nào, quy tắc nào. File hướng dẫn dự án bạn viết ([CLAUDE.md](../08-chuan-hoa-du-an/04-claude-md-va-ngu-canh.md) hoặc AGENTS.md) chính là bạn đang can thiệp vào phần này.
 
 **Điều rút ra:** khi bạn nghe "model mới ra, mạnh hơn hẳn", hãy nhớ rằng phần lớn cảm giác "mạnh hơn" trong lúc làm việc thật đến từ harness tốt lên, chứ không chỉ từ model. Và ngược lại: một model rất giỏi đặt trong harness tồi vẫn cho ra kết quả tệ.
 
@@ -99,4 +99,4 @@ Chỗ này quan trọng không kém, và ít người nói thẳng:
 
 ## Bước tiếp theo
 
-Hiểu chỗ nào làm việc gì rồi, giờ tới phần thực tế nhất: mỗi chỗ đó tốn bao nhiêu tiền, gói nào đáng mua, và một cái bẫy trong cách đặt tên gói mà nhiều người trả tiền xong mới biết: [Chi phí và các gói Claude](08-chi-phi-cac-goi-claude.md)
+Hiểu chỗ nào làm việc gì rồi, giờ học cách giao task có phạm vi rõ và kiểm soát quyền hạn của agent: [Task đầu tiên và quyền hạn an toàn →](11-codex-task-dau-tien-va-quyen-han.md)

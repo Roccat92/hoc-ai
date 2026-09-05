@@ -65,4 +65,4 @@ Viết runbook một trang cho dự án có form liên hệ: email lỗi, spam t
 
 ## Bước tiếp theo
 
-Ghi chi phí và bài học vào [case study](../07-case-study/README.md), để người học sau thấy cả phần vận hành chứ không chỉ ảnh demo.
+Ghi chi phí và bài học vào [case study](../07-case-study/), để người học sau thấy cả phần vận hành chứ không chỉ ảnh demo.

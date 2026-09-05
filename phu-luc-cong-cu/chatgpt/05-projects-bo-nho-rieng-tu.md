@@ -56,6 +56,6 @@ Tạo Project “Dự án landing page”. Thêm một file spec, một file kh�
 - [ ] Biết ẩn danh dữ liệu và kiểm tra cài đặt.
 - [ ] Có thể tái chạy một workflow ở chat mới.
 
-## Bước tiếp theo
+## Xem thêm
 
-ChatGPT giúp chuẩn bị ý tưởng và tài liệu; trước khi giao AI build, hãy nắm luồng web và dữ liệu: [File, web và server hoạt động thế nào →](10-file-web-va-server-hoat-dong-the-nao.md)
+ChatGPT giúp chuẩn bị ý tưởng và tài liệu; khi cần giao AI build sản phẩm, quay lại lộ trình chính từ [nền tảng web](../../01-bat-dau-tu-so-0/10-file-web-va-server-hoat-dong-the-nao.md).

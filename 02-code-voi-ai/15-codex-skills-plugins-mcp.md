@@ -32,17 +32,7 @@ Giả sử bạn muốn cho Codex đọc tài liệu của một thư viện qua
 | Chạy chỉ-đọc trước được không? | Được, đây vốn là MCP chỉ đọc |
 | Cách gỡ / thu hồi? | Xóa khai báo trong file cấu hình |
 
-Điền được cả năm mới cài. Về mặt cấu hình, MCP được **khai báo trong file cấu hình của Codex** (tên MCP + lệnh chạy + tham số) - sơ đồ đại khái:
-
-```text
-[mcp_servers.tai-lieu]
-command = "lệnh-khởi-động-mcp"
-args = ["--doc", "duong-dan-hoac-url"]
-```
-
-> Đây là sơ đồ để bạn hình dung, **không phải cú pháp copy-paste**. Vị trí file cấu hình và cú pháp chính xác đổi theo phiên bản Codex - luôn lấy từ [tài liệu chính thức](https://developers.openai.com/codex) hoặc `codex --help`, đừng chép nguyên từ đây.
-
-**Ở Claude Code:** ba khái niệm này cũng tồn tại y hệt - Skills là sổ tay quy trình Claude tự đọc khi thấy phù hợp (nằm trong `.claude/skills/` của dự án hoặc cài từ một plugin), Plugins đóng gói skill/lệnh/MCP để cài một lần dùng lại nhiều dự án, và MCP nối Claude với công cụ/dữ liệu ngoài (đúng loại tool có tiền tố `mcp__` bạn sẽ thấy khi Claude Code liệt kê công cụ đang có). Checklist năm câu ở trên áp dụng được nguyên vẹn - chỉ đổi nơi cấu hình (thường quản lý qua lệnh `claude mcp` hoặc file cấu hình dự án) thay vì `mcp_servers` như Codex.
+Điền được cả năm mới cài. Về mặt cấu hình, MCP được khai báo trong một file cấu hình của agent (tên MCP + lệnh chạy + tham số) - cú pháp chính xác khác nhau giữa Codex và Claude Code, và đổi theo phiên bản, nên xem ví dụ cụ thể ở phụ lục [Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#mcp-khai-báo-trong-file-cấu-hình) hoặc [Claude Code](../phu-luc-cong-cu/claude-code/03-cau-hinh-nang-cao.md#skills-plugins-mcp) thay vì chép nguyên một sơ đồ dễ lỗi thời ở đây.
 
 ## Bài tập
 

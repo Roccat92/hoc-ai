@@ -7,7 +7,7 @@ Bài này dành cho người đã dùng thử Claude và đang cân nhắc có n
 | Cách | Trả thế nào | Hợp với ai |
 |---|---|---|
 | **Gói thuê bao** (Free, Pro, Max, Team) | Trả cố định hàng tháng, dùng trong hạn mức của gói | Người ngồi làm việc trực tiếp với Claude: chat, code, thiết kế |
-| **API trả theo dùng** | Trả đúng số token đã dùng, không có hạn mức tháng | Người viết ứng dụng gọi Claude từ code của mình - xem [gọi API LLM](../04-build-ung-dung-ai/01-goi-api-llm.md) |
+| **API trả theo dùng** | Trả đúng số token đã dùng, không có hạn mức tháng | Người viết ứng dụng gọi Claude từ code của mình - xem [gọi API LLM](../../04-build-ung-dung-ai/01-goi-api-llm.md) |
 
 Hai cách này tính tiền hoàn toàn khác nhau. Bài này nói về **gói thuê bao**. Nếu bạn đang build một ứng dụng có AI bên trong thì cái bạn cần là API, không phải gói thuê bao.
 
@@ -77,7 +77,7 @@ Nhiều người dùng cả hai gói phản ánh mức tăng theo tuần chỉ k
 
 - **Dùng đúng model cho đúng việc.** Việc lặt vặt để Sonnet làm, để dành Opus cho việc khó.
 - **Dọn hội thoại thường xuyên.** Hội thoại càng dài thì mỗi lượt càng tốn, vì toàn bộ lịch sử được gửi lại. Xong một việc thì `/clear` rồi bắt đầu việc mới.
-- **Viết `CLAUDE.md` cho dự án.** Đỡ phải nhắc lại bối cảnh mỗi phiên, vừa nhanh vừa đỡ tốn - xem [bài 1](01-claude-code.md).
+- **Viết `CLAUDE.md` cho dự án.** Đỡ phải nhắc lại bối cảnh mỗi phiên, vừa nhanh vừa đỡ tốn - xem [bài 1](01-cai-dat-va-lenh-co-ban.md).
 - **Chia việc nhỏ, kiểm tra sớm.** Một yêu cầu quá to thường phải làm lại nhiều lần, và mỗi lần làm lại đều tính tiền.
 - **Trả theo năm nếu chắc chắn dùng lâu.** Pro trả năm rẻ hơn khoảng 15% so với trả tháng.
 
@@ -101,7 +101,7 @@ Tính ra tiền Việt thì các gói không rẻ, nên trên mạng có nhiều
 - **Mất tiền thì không đòi được.** Bạn không phải chủ tài khoản, không có hóa đơn mang tên mình, nên không khiếu nại được với hãng; còn người bán thì thường chỉ liên lạc qua mạng xã hội.
 - **Người bán vẫn nắm quyền.** Họ giữ email khôi phục, đổi mật khẩu lúc nào cũng được. Trả tiền cả năm rồi mất quyền truy cập từ tháng thứ hai là chuyện có thật.
 
-Còn một rủi ro ít người nghĩ tới: **mọi thứ bạn gõ vào đều nằm trong tay người quản trị tài khoản đó** - lịch sử trò chuyện, file bạn tải lên, code dự án của bạn. Với việc cá nhân thì phiền; với dữ liệu khách hàng hay khóa API thì là chuyện nghiêm trọng, xem [checklist bảo mật](../10-bao-mat/01-checklist-truoc-khi-public.md) và [giấu API key](../10-bao-mat/03-giau-api-key-va-secret.md).
+Còn một rủi ro ít người nghĩ tới: **mọi thứ bạn gõ vào đều nằm trong tay người quản trị tài khoản đó** - lịch sử trò chuyện, file bạn tải lên, code dự án của bạn. Với việc cá nhân thì phiền; với dữ liệu khách hàng hay khóa API thì là chuyện nghiêm trọng, xem [checklist bảo mật](../../10-bao-mat/01-checklist-truoc-khi-public.md) và [giấu API key](../../10-bao-mat/03-giau-api-key-va-secret.md).
 
 **Nói cho công bằng: không phải chỗ bán nào cũng lừa.** Có người bán đàng hoàng, có người mua dùng cả năm không sao. Vấn đề không nằm ở chuyện người bán tốt hay xấu, mà ở chỗ **bạn không kiểm soát được rủi ro**: quyền khóa nằm ở hãng, và khi bị khóa thì bạn không có tư cách gì để đòi lại.
 
@@ -116,6 +116,6 @@ Mấy dấu hiệu nên tránh:
 
 **Giá và hạn mức các gói thay đổi theo thời gian.** Luôn kiểm tra trực tiếp tại trang giá chính thức của Anthropic hoặc ngay trong tài khoản Claude của bạn trước khi trả tiền - đừng dựa vào con số cố định trong bất kỳ bài viết nào, kể cả bài này.
 
-## Bước tiếp theo
+## Xem thêm
 
-Claude không phải lựa chọn duy nhất. Trước khi trả tiền, hãy xem Codex tính phí khác thế nào và gói ChatGPT nào hợp với bạn: [Chi phí và các gói Codex →](09-chi-phi-cac-goi-codex.md)
+Claude không phải lựa chọn duy nhất. Muốn so sánh, xem [Chi phí và các gói Codex](../codex/02-chi-phi-cac-goi.md). Quay lại [lộ trình chính](../../02-code-voi-ai/).

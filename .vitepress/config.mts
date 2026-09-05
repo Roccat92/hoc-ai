@@ -89,6 +89,36 @@ function projectGroupsOf(dir: string, sectionDir: string): DefaultTheme.SidebarI
     })
 }
 
+// phu-luc-cong-cu/ nằm ngoài lộ trình chính (00-11): không đánh số, không bắt buộc
+// đọc theo thứ tự. Mỗi thư mục con (chatgpt/, claude-code/, codex/) là một nhóm
+// công cụ, có README.md riêng làm trang giới thiệu nhóm và các file NN-*.md bên
+// trong liệt kê theo thứ tự số.
+function toolGroupsOf(dir: string, sectionDir: string): DefaultTheme.SidebarItem[] {
+  return fs
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name)
+    .sort()
+    .map((toolDir) => {
+      const tdir = path.join(dir, toolDir)
+      const readme = path.join(tdir, 'README.md')
+      const label = fs.existsSync(readme) ? headingOf(readme).replace(/^Phụ lục:\s*/i, '') : toolDir
+      const files = fs
+        .readdirSync(tdir)
+        .filter((f) => /^\d+-.*\.md$/.test(f))
+        .sort()
+      return {
+        text: label,
+        collapsed: true,
+        link: fs.existsSync(readme) ? `/${sectionDir}/${toolDir}/` : undefined,
+        items: files.map((f) => ({
+          text: shortTitle(headingOf(path.join(tdir, f))),
+          link: `/${sectionDir}/${toolDir}/${f.replace(/\.md$/, '')}`,
+        })),
+      }
+    })
+}
+
 function buildSidebar(): DefaultTheme.SidebarItem[] {
   const groups = sections.map((section) => {
     const dir = path.join(root, section.dir)
@@ -123,9 +153,17 @@ function buildSidebar(): DefaultTheme.SidebarItem[] {
     const link = `/${section.dir}/`
     return lessons.length ? { text, link, collapsed: false, items: lessons } : { text, link }
   })
+  const phuLucDir = path.join(root, 'phu-luc-cong-cu')
+  const phuLuc = {
+    text: 'Phụ lục: hướng dẫn theo công cụ',
+    link: '/phu-luc-cong-cu/',
+    collapsed: true,
+    items: toolGroupsOf(phuLucDir, 'phu-luc-cong-cu'),
+  }
   return [
     { text: 'Trang chủ & lộ trình', link: '/' },
     ...groups,
+    phuLuc,
     { text: 'Đóng góp cho thư viện', link: '/CONTRIBUTING' },
   ]
 }
@@ -141,6 +179,10 @@ export default defineConfig({
   rewrites: {
     'README.md': 'index.md',
     ':dir/README.md': ':dir/index.md',
+    // phu-luc-cong-cu/ có thêm một cấp thư mục con theo công cụ (chatgpt/,
+    // claude-code/, codex/), nên cần khai riêng - quy tắc ":dir/README.md" ở trên
+    // chỉ khớp đúng một cấp.
+    'phu-luc-cong-cu/:tool/README.md': 'phu-luc-cong-cu/:tool/index.md',
   },
   cleanUrls: true,
   lastUpdated: true,

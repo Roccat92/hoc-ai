@@ -1,7 +1,7 @@
 # StarteeX App: đưa app đặt in theo yêu cầu lên hai chợ ứng dụng
 
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
-**Thời gian thực hiện:** cả **hệ sinh thái StarteeX** - app di động, trợ lý [NEXA](03-nexa-agent.md), hệ quản trị admin, web landing [starteex.app](https://starteex.app), và [Mockup Studio](04-mockup-studio.md) - build trong khoảng 2 tháng: **~1 tháng dùng gói [Claude Pro](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md), rồi ~1 tháng gói Claude Max 5x**.
+**Thời gian thực hiện:** cả **hệ sinh thái StarteeX** - app di động, trợ lý [NEXA](03-nexa-agent.md), hệ quản trị admin, web landing [starteex.app](https://starteex.app), và [Mockup Studio](04-mockup-studio.md) - build trong khoảng 2 tháng: **~1 tháng dùng gói [Claude Pro](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md), rồi ~1 tháng gói Claude Max 5x**.
 **Trình độ trước khi bắt đầu:** vận hành xưởng sản xuất, không xuất thân lập trình di động
 
 > **Vẫn đang update thường xuyên.** Đây không phải dự án "làm xong để đó" - hai tháng ở trên là tới lúc chạy được thật, sau đó vẫn thêm tính năng và fix bug đều (hiện làm bằng gói Max 5x). Nhiều phần dùng thêm Codex/ChatGPT Pro để phản biện phương án và làm assets.
@@ -51,11 +51,11 @@ Hai khoản dưới đây là **phí bắt buộc của chính hai hãng**, ai �
 | Expo (build app di động) | 20 USD/tháng <Vnd usd="20" sau="/tháng" /> | Dùng trong giai đoạn build và phát hành |
 | Supabase | 0đ | Dùng bậc miễn phí |
 | Vercel, GitHub | 0đ | Dùng bậc miễn phí |
-| Gói AI để build cả hệ sinh thái | 1 tháng Claude Pro <Vnd usd="20" /> + 1 tháng Max 5x <Vnd usd="100" /> | Dùng chung cho app, NEXA, admin, web, mockup - xem [chi phí các gói Claude](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md) |
+| Gói AI để build cả hệ sinh thái | 1 tháng Claude Pro <Vnd usd="20" /> + 1 tháng Max 5x <Vnd usd="100" /> | Dùng chung cho app, NEXA, admin, web, mockup - xem [chi phí các gói Claude](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md) |
 | API cho trợ lý NEXA | phát sinh theo lượng dùng | Tính theo tin nhắn thật, xem [case study NEXA](03-nexa-agent.md) |
 | Codex/ChatGPT Pro | phát sinh theo dùng | Phản biện phương án, làm assets |
 
-Số VND ở trên đã gồm thuế và tự cập nhật theo tỉ giá - xem cách tính ở [bài chi phí](../02-code-voi-ai/08-chi-phi-cac-goi-claude.md). Chi tiết thủ tục đưa app lên hai chợ, kể cả mẹo xin mã D-U-N-S miễn phí thay vì mua qua trung gian, nằm ở [bài đưa app lên store](../11-ra-thi-truong/02-dua-app-len-store.md).
+Số VND ở trên đã gồm thuế và tự cập nhật theo tỉ giá - xem cách tính ở [bài chi phí](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md). Chi tiết thủ tục đưa app lên hai chợ, kể cả mẹo xin mã D-U-N-S miễn phí thay vì mua qua trung gian, nằm ở [bài đưa app lên store](../11-ra-thi-truong/02-dua-app-len-store.md).
 
 Điểm đáng chú ý về chi phí: **cơ sở dữ liệu, hạ tầng web và lưu mã nguồn đều chạy ở bậc miễn phí**. Khoản bắt buộc trả tiền chỉ có phí hai chợ ứng dụng, Expo trong lúc build, gói AI, và tiền API cho chatbot tính theo dùng.
 
