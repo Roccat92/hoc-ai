@@ -41,9 +41,9 @@ Tải lên, chạy prompt mẫu ở trên, đầu ra rút gọn có thể là:
 
 | Tháng | Doanh thu (hoàn thành) | Số đơn | Ghi chú |
 |---|---|---|---|
-| 08/2026 | 1.500.000đ | 3 | Đã loại 1 đơn trạng thái `huy` |
+| 08/2026 | 1.470.000đ | 3 | Đã loại 1 đơn trạng thái `huy` |
 
-Kiểm ngay: đơn `1003` bị hủy nên **không** được tính vào doanh thu - nếu bảng cộng cả nó (thành 1.650.000đ) thì AI đã bỏ qua bước lọc trạng thái. Đây chính là loại lỗi bạn phải bắt trước khi tin con số.
+Kiểm ngay: đơn `1003` bị hủy nên **không** được tính vào doanh thu - nếu bảng cộng cả nó (thành 1.620.000đ) thì AI đã bỏ qua bước lọc trạng thái. Đây chính là loại lỗi bạn phải bắt trước khi tin con số.
 
 > Tính năng phân tích dữ liệu và xuất file **tùy theo gói tài khoản**; nếu không thấy, kiểm tra lại gói bạn đang dùng.
 
