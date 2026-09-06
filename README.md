@@ -84,7 +84,7 @@ Ngoài đóng góp thủ công, nội dung còn được giữ cập nhật bằ
 
 ## Người thực hiện
 
-Học AI Việt được viết bởi **Nguyễn Ngọc Thư**, cùng **Claude** (Anthropic) và **ChatGPT** (OpenAI) - đúng cách các sản phẩm trong [case study](07-case-study/) của chính tác giả được build: mô tả ý tưởng bằng tiếng Việt, để AI viết phần lớn nội dung, người làm đọc lại, kiểm tra và quyết định.
+Học AI Việt được viết bởi **Nguyễn Ngọc Thư** - Giám đốc công ty TNHH StarteeX, cùng **Claude** (Anthropic) và **ChatGPT** (OpenAI) - đúng cách các sản phẩm trong [case study](07-case-study/) của chính tác giả được build: mô tả ý tưởng bằng tiếng Việt, để AI viết phần lớn nội dung, người làm đọc lại, kiểm tra và quyết định.
 
 ## Giấy phép
 
