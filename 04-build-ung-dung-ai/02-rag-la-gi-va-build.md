@@ -45,7 +45,7 @@ Câu hỏi người dùng → Tạo embedding câu hỏi → Tìm đoạn tài l
   <text x="382" y="145" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">được lấy ra</text>
   <rect x="12" y="202" width="132" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
   <text x="78" y="218" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">câu hỏi</text>
-  <text x="78" y="234" style="fill:currentColor;font-size:14px;font-weight:600;font-size:12px;text-anchor:middle">"Nghỉ phép mấy ngày?"</text>
+  <text x="78" y="234" style="fill:currentColor;font-weight:600;font-size:11px;text-anchor:middle">"Nghỉ phép mấy ngày?"</text>
 <path d="M150 222 H174 M167 217 L174 222 L167 227" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
   <rect x="180" y="200" width="120" height="44" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2"/>
   <text x="240" y="219" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>

@@ -33,7 +33,7 @@ Với **tiếng Việt**, mọi chuyện tốn kém hơn một chút: vì có d�
   <g><rect x="260" y="32" width="32" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="276" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">gì</text></g>
   <g><rect x="300" y="32" width="24" height="30" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/><text x="312" y="52" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">?</text></g>
 <path d="M240 70 V98 M235 91 L240 98 L245 91" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <rect class="mh-anim" x="170" y="100" width="140" height="46" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-tok-g 6s ease-in-out infinite"/>
+  <rect class="mh-anim" x="164" y="100" width="152" height="46" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-tok-g 6s ease-in-out infinite"/>
   <text x="240" y="119" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>
   <text x="240" y="136" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">đoán token kế tiếp, lặp lại</text>
 <path d="M240 152 V180 M235 173 L240 180 L245 173" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
