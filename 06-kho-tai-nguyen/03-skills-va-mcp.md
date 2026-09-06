@@ -56,6 +56,8 @@ Skill và MCP server có thể **cho phép AI thực hiện hành động thật
 - **Đọc qua mã nguồn** (hoặc nhờ Claude Code đọc và tóm tắt giúp: "đọc qua MCP server này và cho tôi biết nó làm gì, có gì đáng lo về bảo mật không") trước khi cấp quyền truy cập vào dữ liệu nhạy cảm.
 - **Không cấp quyền rộng hơn mức cần thiết** - ví dụ nếu chỉ cần MCP server đọc file trong một thư mục cụ thể, đừng cấu hình cho nó quyền truy cập toàn bộ ổ đĩa.
 
+Một lớp rủi ro khác, tách biệt với việc chọn nguồn cài: **cài đúng MCP server đáng tin không có nghĩa mọi nội dung nó mang về đều đáng tin** - ví dụ một MCP tìm kiếm web hoàn toàn chính chủ vẫn có thể đọc phải một trang chứa lệnh giả gài vào. Đây chính là prompt injection, xem cách nhận diện và phòng ở [bài bảo mật ứng dụng AI](../10-bao-mat/07-bao-mat-ung-dung-ai.md#rui-ro-y-het-voi-chinh-coding-agent-ban-dung-hang-ngay).
+
 ## Bước tiếp theo
 
 Ngoài công cụ, học cùng cộng đồng cũng là cách học nhanh - xem các nhóm, diễn đàn tiếng Việt về AI: [Cộng đồng Việt](04-cong-dong-viet.md)
