@@ -1,4 +1,4 @@
-# Học AI Việt - học lập trình và build sản phẩm với AI từ con số 0 🇻🇳
+# Học AI Việt - học lập trình và build sản phẩm với AI từ con số 0 <img src="/favicon.svg" alt="" width="28" height="28" style="vertical-align:-4px;border-radius:6px">
 
 **Thư viện mở, hoàn toàn miễn phí, viết bằng tiếng Việt** - cho người chưa biết code muốn tự build web, app, chatbot bằng AI, và cho dev muốn làm việc nhanh hơn với coding agent.
 
@@ -85,6 +85,8 @@ Ngoài đóng góp thủ công, nội dung còn được giữ cập nhật bằ
 ## Người thực hiện
 
 Học AI Việt được viết bởi **Nguyễn Ngọc Thư** - Giám đốc công ty TNHH StarteeX, cùng **Claude** (Anthropic) và **ChatGPT** (OpenAI) - đúng cách các sản phẩm trong [case study](07-case-study/) của chính tác giả được build: mô tả ý tưởng bằng tiếng Việt, để AI viết phần lớn nội dung, người làm đọc lại, kiểm tra và quyết định.
+
+*(Khi có đóng góp đáng kể từ cộng đồng, mục này sẽ được thay bằng một trang credit chi tiết hơn - lúc đó thư viện không còn là công sức của riêng một người nữa.)*
 
 ## Giấy phép
 

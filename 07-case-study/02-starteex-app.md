@@ -66,6 +66,7 @@ Số VND ở trên đã gồm thuế và tự cập nhật theo tỉ giá - xem 
 3. **Phí lên chợ là chi phí cố định phải tính trước.** Riêng phí Apple đã là khoản trả hàng năm, dừng trả thì app biến mất khỏi App Store - cần tính vào chi phí duy trì chứ không phải chi phí một lần.
 
 4. **Apple duyệt kỹ hơn tưởng tượng, Google Play thì chậm chứ không khó.** Bị Apple từ chối vì thiếu chế độ dùng thử không cần đăng ký, vì chưa khai rõ dữ liệu chat gửi cho nhà cung cấp AI nào, và vì một tính năng "trông có vẻ" chưa xong dù chạy đúng. Chi tiết từng lý do và cách xử lý ở [checklist trong bài đưa app lên store](../11-ra-thi-truong/02-dua-app-len-store.md#ly-do-bi-apple-tu-choi-checklist-rut-tu-trai-nghiem-that).
+5. **Codex cũng tự dựng được video hướng dẫn, không chỉ viết code.** Video onboarding cho affiliate (đối tác giới thiệu khách) được dựng gần như tự động trong một phiên làm việc: Codex tự chạy Playwright để quay lại từng bước thao tác trên giao diện, ghép các đoạn quay thành video hoàn chỉnh, kèm giọng đọc tạo bằng Vieneu (text-to-speech mã nguồn mở, chạy local, miễn phí) - không cần phần mềm edit video chuyên dụng hay tự quay tay bằng công cụ ghi màn hình.
 
 ## Link
 
