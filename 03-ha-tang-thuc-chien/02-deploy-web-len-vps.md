@@ -1,5 +1,9 @@
 # Deploy web lên VPS: Nginx, PM2, domain, SSL miễn phí
 
+::: warning Bài này ở mức nhập môn
+Đủ để bạn bắt đầu, chưa phải kinh nghiệm vận hành chuyên sâu. Người viết chủ yếu deploy bằng dịch vụ miễn phí (Vercel/Cloudflare) và mới thử nghiệm cloud GPU. Nếu bạn có kinh nghiệm thực chiến mảng này, rất mong bạn đóng góp - xem [CONTRIBUTING.md](../CONTRIBUTING.md).
+:::
+
 Bài này dành cho người đã có VPS Ubuntu sẵn sàng ([bài trước](01-thue-vps.md)) và một dự án đã đẩy lên GitHub ([xem lại Git/GitHub](../02-code-voi-ai/05-git-github-co-ban.md)). Học xong bạn sẽ có website chạy thật trên internet, có domain riêng, có ổ khóa HTTPS (SSL) miễn phí.
 
 ## Ba mảnh ghép cần hiểu trước khi bắt đầu

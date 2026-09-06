@@ -1,5 +1,9 @@
 # Thuê cloud GPU: RunPod, Vast.ai, Lambda, Google Colab
 
+::: warning Bài này ở mức nhập môn
+Đủ để bạn bắt đầu, chưa phải kinh nghiệm vận hành chuyên sâu. Người viết chủ yếu deploy bằng dịch vụ miễn phí (Vercel/Cloudflare) và mới thử nghiệm cloud GPU. Nếu bạn có kinh nghiệm thực chiến mảng này, rất mong bạn đóng góp - xem [CONTRIBUTING.md](../CONTRIBUTING.md).
+:::
+
 Bài này dành cho người bắt đầu cần sức mạnh tính toán vượt quá máy cá nhân - thường là khi muốn **fine-tune** một model AI ([xem tổng quan ở phần 05](../05-train-va-finetune/01-hieu-ve-training.md)) hoặc chạy thử model mở (open-weight) cỡ lớn. Học xong bạn sẽ biết các nhà cung cấp phổ biến, cách ước tính chi phí, và chọn loại GPU phù hợp với việc mình đang làm - tránh thuê nhầm GPU quá mạnh (tốn tiền oan) hoặc quá yếu (không chạy nổi).
 
 ## Khi nào cần thuê GPU cloud?
@@ -13,7 +17,7 @@ Hầu hết việc học code với AI trong repo này (dùng Claude Code, gọi
 
 ### RunPod
 
-Nền tảng cho thuê GPU khá linh hoạt, giao diện dễ dùng, được cộng đồng làm AI/ML ưa chuộng vì dễ khởi động một "pod" (máy ảo có GPU) chỉ trong vài phút, có sẵn nhiều template cài đặt trước (đã có sẵn PyTorch, các công cụ fine-tune phổ biến).
+Nền tảng cho thuê GPU khá linh hoạt, giao diện dễ dùng - theo tài liệu chính chủ và đánh giá phổ biến trên mạng, dễ khởi động một "pod" (máy ảo có GPU) chỉ trong vài phút, có sẵn nhiều template cài đặt trước (đã có sẵn PyTorch, các công cụ fine-tune phổ biến).
 
 ### Vast.ai
 
@@ -21,7 +25,7 @@ Hoạt động theo mô hình **chợ (marketplace)** - người có GPU dư th�
 
 ### Lambda (Lambda Labs)
 
-Cloud GPU chuyên biệt cho AI/ML, được nhiều đội ngũ nghiên cứu tin dùng, uy tín ổn định - thường giá không rẻ nhất thị trường nhưng đổi lại chất lượng dịch vụ và tài liệu hỗ trợ tốt.
+Cloud GPU chuyên biệt cho AI/ML - theo mô tả trên trang chính chủ và đánh giá phổ biến, được nhiều đội ngũ nghiên cứu dùng, thường giá không rẻ nhất thị trường nhưng đổi lại chất lượng dịch vụ và tài liệu hỗ trợ tốt. Người viết bài này mới thử nghiệm ở mức cơ bản, chưa vận hành lâu dài trên nền tảng này.
 
 ### Google Colab
 

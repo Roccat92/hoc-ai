@@ -11,9 +11,13 @@ Cảm ơn bạn đã muốn đóng góp cho Học AI Việt! Repo này được 
 - **Viết thêm bài mới** - nếu thấy thiếu chủ đề, mở issue đề xuất trước khi viết để tránh trùng công sức với người khác.
 - **Dịch thuật ngữ cho dễ hiểu hơn** - nếu bạn có cách giải thích một khái niệm dễ hiểu hơn bản hiện tại, cứ đề xuất.
 
-### Phạm vi dự án
+### Đóng góp mảng mới (media, AI tạo sinh ảnh/video/âm thanh...)
 
-Nội dung chính của repo tập trung vào **nhánh code** - dùng AI để build sản phẩm phần mềm. Mảng media/video (dùng AI tạo ảnh, video, âm thanh...) hiện **để mở cho cộng đồng đóng góp** - nếu bạn muốn thêm nội dung về hướng này, mở issue đề xuất trước để bàn cấu trúc phù hợp, tránh lạc khỏi trọng tâm hiện tại của repo.
+Nội dung chính của repo tập trung vào **nhánh code** - dùng AI để build sản phẩm phần mềm. Mảng media (AI tạo ảnh, video, âm thanh, giọng nói...) hiện **để mở cho cộng đồng đóng góp thành một phần mới**, không phải nhồi rải rác vào các phần đã có. Nếu bạn muốn mở mảng này:
+
+1. **Mở issue đề xuất trước khi viết**, để bàn cấu trúc và tránh trùng công sức với người khác đang làm cùng ý tưởng.
+2. **Tạo một thư mục cấp cao mới theo đúng mẫu cấu trúc sẵn có**: một file `README.md` giới thiệu phần đó + tóm tắt các bài, và các bài học đánh số `NN-ten-khong-dau.md` - xem cách một phần hiện có tổ chức, ví dụ [`04-build-ung-dung-ai/`](04-build-ung-dung-ai/). Đặt tên thư mục theo đúng số thứ tự **tiếp theo còn trống** ở gốc repo - ví dụ tại thời điểm viết dòng này, số tiếp theo là `12-ten-mang-moi/` (tự kiểm tra lại số hiện có trước khi đặt tên, vì lúc bạn đọc dòng này có thể đã có phần khác chiếm số đó).
+3. **Áp dụng đúng mọi quy tắc nội dung ở mục dưới đây** (giọng "bạn - mình", thực chiến, có bảng giá thật ước tính bằng VND kèm "giá có thể thay đổi, kiểm tra trang chủ", không giật tít/FOMO) - và thêm hai điều riêng cho mảng media vì rủi ro quảng cáo trá hình ở đây cao hơn nhánh code: **không gắn link affiliate**, và **không dùng bài viết để quảng cáo trá hình cho khóa học trả phí** (của chính bạn hay bên thứ ba). Nhắc tới một công cụ/khóa học trả phí chỉ khi nội dung thực sự đáng nhắc, không phải vì có hoa hồng.
 
 ## Cách 1: Sửa trực tiếp trên GitHub (không cần cài gì cả)
 

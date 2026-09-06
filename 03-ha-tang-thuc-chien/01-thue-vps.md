@@ -1,5 +1,9 @@
 # Thuê VPS: là gì, chọn nhà cung cấp nào, setup Ubuntu từng lệnh
 
+::: warning Bài này ở mức nhập môn
+Đủ để bạn bắt đầu, chưa phải kinh nghiệm vận hành chuyên sâu. Người viết chủ yếu deploy bằng dịch vụ miễn phí (Vercel/Cloudflare) và mới thử nghiệm cloud GPU. Nếu bạn có kinh nghiệm thực chiến mảng này, rất mong bạn đóng góp - xem [CONTRIBUTING.md](../CONTRIBUTING.md).
+:::
+
 Bài này dành cho người muốn đưa sản phẩm lên internet để **ai cũng truy cập được**, không chỉ chạy trên máy mình. Học xong bạn sẽ hiểu VPS là gì, biết chọn nhà cung cấp phù hợp túi tiền, và tự setup được một server Ubuntu sạch từ đầu.
 
 > **Cân nhắc trước khi thuê:** không phải dự án nào cũng cần VPS ngay từ đầu - nhiều dịch vụ deploy miễn phí (Vercel, Netlify, Railway...) đủ dùng cho phần lớn dự án cá nhân/nhỏ. Đọc [`03-deploy-mien-phi.md`](03-deploy-mien-phi.md) trước để biết khi nào thật sự cần VPS. Bài này dành cho khi bạn đã xác định cần một server riêng - ví dụ chạy backend phức tạp, cần toàn quyền kiểm soát, hoặc dự án vượt quá giới hạn miễn phí.
