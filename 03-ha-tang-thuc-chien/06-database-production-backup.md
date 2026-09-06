@@ -52,6 +52,18 @@ sqlite3 database-restore-test.db "SELECT COUNT(*) FROM don_hang;"
 
 **Với Postgres hoặc managed database:** dùng `pg_dump`/`pg_restore` (Postgres) hoặc công cụ backup có sẵn của nhà cung cấp (Supabase, Railway, Neon...) - cú pháp và tần suất backup tự động khác nhau theo từng dịch vụ, luôn đọc tài liệu chính thức của nhà cung cấp bạn đang dùng thay vì chép nguyên lệnh từ dự án khác.
 
+## File người dùng tải lên: đừng nhét vào database
+
+Ảnh đại diện, ảnh sản phẩm, file PDF khách gửi lên - nhiều người mới có phản xạ lưu thẳng nội dung file vào một cột trong database. Đừng làm vậy: database phình rất nhanh, chậm dần theo thời gian, và bản backup/restore vừa học ở trên cũng nặng nề hơn hẳn vì phải kéo theo toàn bộ dữ liệu nhị phân đó mỗi lần.
+
+Cách làm chuẩn: lưu file ở một dịch vụ **object storage** riêng (chuyên lưu file, tách khỏi database) - ví dụ [Cloudinary](https://cloudinary.com) (tối ưu sẵn cho ảnh/video, có bậc miễn phí), Cloudflare R2, hoặc Supabase Storage nếu dự án đã dùng Supabase cho database - rồi chỉ lưu **đường dẫn (URL)** của file đó trong một cột database bình thường, không lưu chính file. Giá và giới hạn bậc miễn phí của các dịch vụ này thay đổi theo thời gian, luôn kiểm tra trang chủ trước khi chọn.
+
+```text
+Nhờ Claude Code: "thêm chức năng upload ảnh sản phẩm lên Cloudinary, lưu URL
+Cloudinary trả về vào cột anh_url của bảng san_pham, không lưu file trực tiếp
+vào database."
+```
+
 ## Quyền tối thiểu
 
 App chỉ nên có quyền cần thiết trên database (đọc/ghi đúng bảng nó dùng), không dùng chung tài khoản admin cho mọi việc. Nếu có thể, tách tài khoản chạy migration khỏi tài khoản app dùng lúc chạy bình thường - lỡ app có lỗ hổng, kẻ tấn công cũng không tự sửa được cấu trúc database.

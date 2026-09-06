@@ -71,6 +71,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **Localhost** | Địa chỉ web trỏ về chính máy bạn đang dùng - dùng để test ứng dụng trước khi deploy lên internet thật |
 | **Native app** | Ứng dụng được viết riêng cho một hệ điều hành cụ thể (ví dụ: viết riêng cho iOS, riêng cho Android) để tận dụng tối đa hiệu năng máy |
 | **Node.js** | Môi trường cho phép chạy JavaScript ở phía backend/máy chủ (JavaScript vốn sinh ra để chạy trên trình duyệt) |
+| **Object storage** | Dịch vụ chuyên lưu file (ảnh, video, PDF...) tách khỏi database - database chỉ lưu đường dẫn (URL) tới file, không lưu chính file. Ví dụ: Cloudinary, Cloudflare R2, Supabase Storage. Xem [`03-ha-tang-thuc-chien/06-database-production-backup.md`](../03-ha-tang-thuc-chien/06-database-production-backup.md) |
 | **npm / pip** | Công cụ quản lý "gói thư viện" (package) - npm cho JavaScript, pip cho Python. Giúp cài đặt code người khác viết sẵn thay vì tự viết lại |
 | **Open source (Mã nguồn mở)** | Phần mềm công khai toàn bộ code, ai cũng xem/sửa/dùng lại được (thường kèm giấy phép cụ thể như MIT) |
 | **Package / Dependency** | Một thư viện code người khác viết sẵn mà dự án của bạn "phụ thuộc" vào để hoạt động |

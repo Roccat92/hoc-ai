@@ -44,7 +44,7 @@ Ba tài khoản dùng cho hầu hết dự án, đều miễn phí để bắt �
 
 Thêm khi dự án cần, không phải lúc nào cũng dùng hết:
 - **Domain + SSL:** mua tên miền rồi trỏ qua Cloudflare để có SSL miễn phí và bảo vệ DDoS cơ bản - xem [SSL và HTTPS](../10-bao-mat/02-ssl-va-https.md).
-- **Lưu trữ ảnh/file:** [Cloudinary](https://cloudinary.com) - có bậc miễn phí, xử lý và phân phối ảnh/video tốt hơn tự lưu trên server. Đọc tài liệu chính thức khi setup vì cú pháp SDK và giới hạn bậc miễn phí đổi theo thời gian.
+- **Lưu trữ ảnh/file:** [Cloudinary](https://cloudinary.com) - có bậc miễn phí, xử lý và phân phối ảnh/video tốt hơn tự lưu trên server (xem vì sao không nhét file vào database ở [bài database production](../03-ha-tang-thuc-chien/06-database-production-backup.md)). Đọc tài liệu chính thức khi setup vì cú pháp SDK và giới hạn bậc miễn phí đổi theo thời gian.
 - **API AI:** Gemini (Google AI Studio) hoặc [OpenRouter](https://openrouter.ai) (một API key gọi được nhiều model của nhiều hãng) - xem [gọi API LLM](../04-build-ung-dung-ai/01-goi-api-llm.md).
 
 Về database: tạo **hai project Supabase** ngay từ đầu, một `-dev` và một chính thức (prod) - không phải bước "thêm cho chắc" mà là mặc định nên làm. Agent link vào project `-dev`, tự do chạy thử migration ở đó; project chính chỉ nhận migration sau khi bạn đã xem bản xem thử chạy đúng (bước 4). Hai project miễn phí là đủ cho giai đoạn này; kiểm tra trang chủ Supabase vì số lượng project miễn phí mỗi tổ chức có thể thay đổi theo thời gian.
