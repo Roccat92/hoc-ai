@@ -15,7 +15,7 @@ Ba sản phẩm (2), (3), (4) cùng với hệ quản trị admin và web landin
 
 Một ví dụ ngắn nữa về tốc độ, cùng tác giả, chưa tách thành case study riêng vì bài học gói gọn trong một dòng: **redesign [startee.vn](https://startee.vn)** từ landing page cũ chỉ mất ~1 buổi với Claude Max 5x - "làm lại giao diện từ bản có sẵn" là loại việc AI làm rất nhanh.
 
-Vài sản phẩm khác cùng tác giả chưa có case study đầy đủ: **Startee Outreach** (công cụ CRM và tự động hóa tiếp cận khách B2B), **MYTORY** (game nhập vai với nhân vật AI, dùng pgvector), và chính **[Học AI Việt](https://hoc-ai.thunguyen.workers.dev)** - thư viện bạn đang đọc.
+Vài sản phẩm khác cùng tác giả chưa có case study đầy đủ: **Startee Outreach** (công cụ CRM và tự động hóa tiếp cận khách B2B), **MYTORY** (game nhập vai với nhân vật AI, dùng pgvector), và chính **[Học AI Việt](https://hocaiviet.com)** - thư viện bạn đang đọc.
 
 > **Ba điểm chung đáng học từ cả nhóm case study trên.** Một là gần như toàn bộ hạ tầng (Vercel, GitHub, Supabase) chạy ở **bậc miễn phí** - khoản trả tiền chính là gói AI để build và tiền API cho chatbot tính theo dùng. Hai là nhiều dự án dùng **cả Claude lẫn Codex/ChatGPT Pro**, để hai AI phản biện chéo nhau và chia việc làm assets. Ba là **không có sản phẩm nào "xong rồi để đó"** - tất cả vẫn được thêm tính năng và fix bug đều, hiện làm bằng gói Max 5x.
 
