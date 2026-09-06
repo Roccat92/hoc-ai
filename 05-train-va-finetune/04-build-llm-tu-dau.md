@@ -24,7 +24,7 @@ Bài này dành cho người **tò mò về mặt kiến thức** muốn hiểu 
 Vì mọi nhu cầu thực tế gần như luôn được giải quyết tốt hơn, rẻ hơn, nhanh hơn bằng cách **dùng model có sẵn** (đóng hoặc mở) kết hợp với:
 - **Prompt tốt** - miễn phí, tức thì.
 - **RAG** - chi phí thấp, cho AI biết dữ liệu riêng của bạn.
-- **Fine-tune LoRA** - chi phí vài chục tới vài trăm nghìn đồng (xem [bài trước](02-fine-tune-thuc-hanh.md)), điều chỉnh hành vi/phong cách theo nhu cầu hẹp.
+- **Fine-tune LoRA** - chi phí vài chục tới vài trăm nghìn đồng (xem [bài Fine-tune thực hành bằng LoRA](02-fine-tune-thuc-hanh.md)), điều chỉnh hành vi/phong cách theo nhu cầu hẹp.
 
 So với chi phí hàng triệu đô để pre-train from scratch, ba lựa chọn trên đáp ứng được hầu như mọi nhu cầu thực tế của cá nhân, startup, hay cả doanh nghiệp vừa và lớn.
 
