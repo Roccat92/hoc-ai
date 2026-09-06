@@ -80,6 +80,10 @@ Trên mạng đã có rất nhiều nơi dạy lập trình - từ các khóa d�
 
 Repo này sống được là nhờ cộng đồng bổ sung, sửa lỗi, cập nhật giá cả/model mới. Xem hướng dẫn chi tiết (kể cả nếu đây là lần đầu bạn tạo Pull Request) tại [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Người thực hiện
+
+Học AI Việt được viết bởi **Nguyễn Ngọc Thư**, cùng **Claude** (Anthropic) và **ChatGPT** (OpenAI) - đúng cách các sản phẩm trong [case study](07-case-study/) của chính tác giả được build: mô tả ý tưởng bằng tiếng Việt, để AI viết phần lớn nội dung, người làm đọc lại, kiểm tra và quyết định.
+
 ## Giấy phép
 
 Phát hành theo giấy phép [MIT](LICENSE) - dùng, sửa, chia sẻ lại thoải mái, kể cả cho mục đích thương mại.
