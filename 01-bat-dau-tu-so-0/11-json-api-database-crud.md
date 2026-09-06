@@ -1,6 +1,6 @@
 # JSON, API, database và CRUD
 
-Bài này dành cho người chuẩn bị làm ứng dụng có dữ liệu như đơn hàng, thành viên hoặc bài viết. Học xong bạn sẽ hiểu một bản ghi đi từ form tới database và quay lại màn hình ra sao, và tự tay gọi thử một API thật bằng một lệnh terminal duy nhất.
+Bài này dành cho người chuẩn bị làm ứng dụng có dữ liệu như đơn hàng, thành viên hoặc bài viết. Học xong bạn sẽ hiểu một bản ghi đi từ form tới database và quay lại màn hình ra sao, và tự tay gọi thử một API thật bằng một lệnh terminal duy nhất. Ba câu hỏi "JSON là gì", "API là gì" và "CRUD là gì" - hay bị hỏi riêng lẻ trên mạng - được gộp vào đúng một bài vì chúng luôn đi cùng nhau trong thực tế.
 
 ## JSON là gói dữ liệu
 

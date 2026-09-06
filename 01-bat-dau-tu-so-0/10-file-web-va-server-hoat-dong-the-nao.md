@@ -1,6 +1,6 @@
 # File, web và server hoạt động thế nào?
 
-Bài này dành cho người chưa biết code nhưng muốn hiểu mình đang giao AI xây cái gì. Học xong bạn sẽ phân biệt file dự án, trình duyệt, server, database, domain, port, và tự tay nhìn thấy một request/response thật bằng công cụ có sẵn trên trình duyệt - không cần học thuộc thuật ngữ suông.
+Bài này dành cho người chưa biết code nhưng muốn hiểu mình đang giao AI xây cái gì. Học xong bạn sẽ phân biệt file dự án, trình duyệt, server, database, domain, port, và tự tay nhìn thấy một request/response thật bằng công cụ có sẵn trên trình duyệt - không cần học thuộc thuật ngữ suông. Nếu bạn từng thắc mắc "client server là gì" hay "web hoạt động như thế nào", đây là bài giải thích bằng ví dụ nhìn thấy được, không phải sơ đồ lý thuyết suông.
 
 ## Bốn bước của một request
 

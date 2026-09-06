@@ -1,7 +1,7 @@
 # Spec: Quản lý đơn hàng Shop ABC
 
 ## Mục tiêu
-Giúp chủ shop quần áo online (bán qua Facebook/Zalo) theo dõi đơn hàng qua một web nội bộ có đăng nhập, thay vì ghi vào sổ tay hay Excel rời rạc.
+Giúp chủ shop quần áo online (bán qua Facebook/Zalo) theo dõi đơn hàng qua một web nội bộ có đăng nhập, thay vì ghi vào sổ tay hay Excel rời rạc. Đây là ví dụ thực hành cho ai đang tìm cách tự làm web quản lý đơn hàng bằng AI mà không cần thuê lập trình viên.
 
 ## Người dùng
 Một người dùng duy nhất: chủ shop, đăng nhập bằng tài khoản admin (không cần đăng ký, không cần nhiều tài khoản ở bản đầu).

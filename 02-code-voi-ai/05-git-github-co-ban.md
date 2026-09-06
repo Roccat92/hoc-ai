@@ -1,6 +1,6 @@
 # Git, GitHub cơ bản: lưu code, đẩy lên GitHub, không sợ mất
 
-Bài này dành cho người đã có sản phẩm đầu tiên chạy được và **sợ lỡ làm hỏng gì đó thì mất hết công sức**. Học xong bạn sẽ biết cách lưu lại lịch sử thay đổi code, tự tin quay lại phiên bản trước nếu làm hỏng, và đẩy dự án lên GitHub để không bao giờ mất dữ liệu dù máy tính có hỏng.
+Bài này dành cho người đã có sản phẩm đầu tiên chạy được và **sợ lỡ làm hỏng gì đó thì mất hết công sức**. Học xong bạn sẽ biết cách lưu lại lịch sử thay đổi code, tự tin quay lại phiên bản trước nếu làm hỏng, và đẩy dự án lên GitHub để không bao giờ mất dữ liệu dù máy tính có hỏng. Đây cũng là lúc bạn làm quen với khái niệm "quản lý phiên bản" (version control) - thứ lập trình viên nào cũng dùng hàng ngày.
 
 ## Git là gì, vì sao cần?
 

@@ -1,6 +1,6 @@
 # Rubric tự chấm và capstone: chứng minh mình đã build được
 
-Bài này dành cho người đã hoàn thành ít nhất một dự án thực hành và muốn biết “đã hiểu chưa” bằng bằng chứng, không bằng cảm giác. Học xong bạn sẽ tự chấm sản phẩm, biết thiếu lớp nào và chuẩn bị được một capstone có link kiểm chứng.
+Bài này dành cho người đã hoàn thành ít nhất một dự án thực hành và muốn biết “đã hiểu chưa” bằng bằng chứng, không bằng cảm giác. Học xong bạn sẽ tự chấm sản phẩm, biết thiếu lớp nào và chuẩn bị được một capstone có link kiểm chứng. Nếu bạn cần một "capstone project" để đưa vào portfolio khi tìm việc hoặc chứng minh năng lực build sản phẩm bằng AI, đây là cách tự chấm và chuẩn bị nó.
 
 ## Rubric 100 điểm
 

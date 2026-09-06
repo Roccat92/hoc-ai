@@ -1,6 +1,6 @@
 # Gọi API Claude/OpenAI/Gemini bằng code, tính chi phí token
 
-Bài này dành cho người đã build xong dự án web đầu tiên (chạy hoàn toàn trên trình duyệt) và muốn học bước tiếp theo: cho code của mình **tự gọi tới AI** để xử lý gì đó (trả lời câu hỏi, tóm tắt văn bản, phân loại nội dung...) thay vì bạn tự chat thủ công trên claude.ai. Học xong bạn sẽ tự gọi được API LLM bằng code, và tính được chi phí thực tế theo token.
+Bài này dành cho người đã build xong dự án web đầu tiên (chạy hoàn toàn trên trình duyệt) và muốn học bước tiếp theo: cho code của mình **tự gọi tới AI** để xử lý gì đó (trả lời câu hỏi, tóm tắt văn bản, phân loại nội dung...) thay vì bạn tự chat thủ công trên claude.ai. Học xong bạn sẽ tự gọi được API LLM bằng code, và tính được chi phí thực tế theo token. Nếu bạn tìm "cách gọi API Claude/ChatGPT bằng code" hoặc "API key AI là gì", đây là bài thực hành từ số 0, không giả định bạn biết trước điều gì.
 
 ## Vì sao cần gọi API thay vì chỉ dùng chatbot?
 

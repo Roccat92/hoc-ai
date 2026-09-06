@@ -1,6 +1,6 @@
 # Structured output, function calling và reliability
 
-Bài này dành cho người đã gọi được API ở [bài trước](01-goi-api-llm.md) và muốn kết quả đủ ổn định để app xử lý tiếp, không phải đọc bằng mắt rồi copy tay. Học xong bạn sẽ tự viết được code lấy JSON có cấu trúc từ model, thiết kế một function tool an toàn, và thêm timeout/retry để app không sập khi API chập chờn.
+Bài này dành cho người đã gọi được API ở [bài trước](01-goi-api-llm.md) và muốn kết quả đủ ổn định để app xử lý tiếp, không phải đọc bằng mắt rồi copy tay. Học xong bạn sẽ tự viết được code lấy JSON có cấu trúc từ model, thiết kế một function tool an toàn, và thêm timeout/retry để app không sập khi API chập chờn. Hai khái niệm hay gặp riêng lẻ trên mạng - "structured output là gì" và "function calling là gì" - thực ra chỉ là hai cách gọi của cùng một kỹ thuật, và bài này dạy cả hai.
 
 ## Đừng parse văn bản tự do khi dữ liệu quan trọng
 

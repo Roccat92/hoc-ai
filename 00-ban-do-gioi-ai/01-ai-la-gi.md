@@ -1,6 +1,6 @@
 # AI, ML, Deep Learning, GenAI khác nhau thế nào?
 
-Bài này dành cho người **chưa từng học AI ngày nào**, nghe người ta nói "AI", "Machine Learning", "Deep Learning", "GenAI" mà không biết chúng khác nhau ở đâu, có phải bốn thứ tách biệt hay không. Đọc xong bạn sẽ tự tin phân biệt được bốn khái niệm này khi nghe ai đó nhắc tới, và hiểu vì sao ChatGPT/Claude được gọi là "GenAI".
+Bài này dành cho người **chưa từng học AI ngày nào**, nghe người ta nói "AI", "Machine Learning", "Deep Learning", "GenAI" mà không biết chúng khác nhau ở đâu, có phải bốn thứ tách biệt hay không. Đọc xong bạn sẽ tự tin phân biệt được bốn khái niệm này khi nghe ai đó nhắc tới, và hiểu vì sao ChatGPT/Claude được gọi là "GenAI". Nếu bạn từng gõ tìm riêng lẻ "AI là gì", "machine learning là gì" hay "deep learning khác AI ở đâu" mà vẫn mù mờ, bài này gộp cả bốn câu hỏi vào một chỗ.
 
 ## Hình dung nhanh: bốn vòng tròn lồng nhau
 

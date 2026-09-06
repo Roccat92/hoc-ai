@@ -1,6 +1,6 @@
 # LLM là gì? Token, context, temperature - giải thích không cần biết toán
 
-Bài này dành cho người muốn hiểu **Claude, ChatGPT, Gemini thực chất đang làm gì** khi bạn gõ câu hỏi và nhận được câu trả lời - không cần biết lập trình hay toán học. Học xong bạn sẽ hiểu vì sao AI đôi khi "quên" những gì bạn nói lúc đầu cuộc trò chuyện, vì sao AI đôi khi bịa thông tin, và các thuật ngữ "token", "context window", "temperature" nghĩa là gì mỗi khi bạn thấy chúng.
+Bài này dành cho người muốn hiểu **Claude, ChatGPT, Gemini thực chất đang làm gì** khi bạn gõ câu hỏi và nhận được câu trả lời - không cần biết lập trình hay toán học. Học xong bạn sẽ hiểu vì sao AI đôi khi "quên" những gì bạn nói lúc đầu cuộc trò chuyện, vì sao AI đôi khi bịa thông tin, và các thuật ngữ "token", "context window", "temperature" nghĩa là gì mỗi khi bạn thấy chúng. Đây cũng là bài giải thích "mô hình ngôn ngữ lớn" (tên đầy đủ của LLM) bằng tiếng Việt dễ hiểu, không cần nền tảng toán hay lập trình.
 
 ## LLM là gì?
 

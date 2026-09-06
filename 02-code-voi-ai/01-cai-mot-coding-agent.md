@@ -1,6 +1,6 @@
 # Cài một coding agent và chạy task đầu tiên
 
-Bài này dành cho người đã cài xong Node.js ([bài trước](../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md)) và muốn bắt đầu code cùng AI thật sự. Học xong bạn sẽ cài được một coding agent (công cụ dòng lệnh đọc/sửa file, chạy lệnh thay bạn), đăng nhập, và tự tay chạy một task chỉ đọc đầu tiên để thấy nó hoạt động ra sao trước khi giao việc thật.
+Bài này dành cho người đã cài xong Node.js ([bài trước](../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md)) và muốn bắt đầu code cùng AI thật sự. Học xong bạn sẽ cài được một coding agent (công cụ dòng lệnh đọc/sửa file, chạy lệnh thay bạn), đăng nhập, và tự tay chạy một task chỉ đọc đầu tiên để thấy nó hoạt động ra sao trước khi giao việc thật. Nếu bạn đang tìm "Claude Code là gì", "Codex CLI là gì" hay "coding agent là gì", đây là bài trả lời bằng thực hành thay vì định nghĩa suông.
 
 ## Chọn Claude Code hay Codex?
 

@@ -1,6 +1,6 @@
 # Xác thực vấn đề, analytics và phản hồi người dùng
 
-Bài này dành cho người sắp public sản phẩm và muốn biết người dùng có thật sự cần nó không. Học xong bạn sẽ phỏng vấn không dẫn dắt, chọn vài metric có ích, đo luồng chính và biến phản hồi thành backlog.
+Bài này dành cho người sắp public sản phẩm và muốn biết người dùng có thật sự cần nó không. Học xong bạn sẽ phỏng vấn không dẫn dắt, chọn vài metric có ích, đo luồng chính và biến phản hồi thành backlog. Đây là cách "xác thực ý tưởng sản phẩm" (product validation) bằng phỏng vấn thật và vài chỉ số đo được, thay vì đoán mò rồi build cho đã mới biết có ai cần không.
 
 ## Phỏng vấn trước khi build thêm
 

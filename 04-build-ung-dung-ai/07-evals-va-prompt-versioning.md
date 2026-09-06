@@ -1,6 +1,6 @@
 # Evals và prompt versioning cho ứng dụng AI
 
-Bài này dành cho người hay sửa prompt theo cảm giác và không biết bản mới có tốt hơn không. Học xong bạn sẽ có một bộ 20 câu hỏi mẫu, một script tự chấm bằng chính API AI, và biết lưu prompt như một phần của source code thay vì sửa trực tiếp trên production.
+Bài này dành cho người hay sửa prompt theo cảm giác và không biết bản mới có tốt hơn không. Học xong bạn sẽ có một bộ 20 câu hỏi mẫu, một script tự chấm bằng chính API AI, và biết lưu prompt như một phần của source code thay vì sửa trực tiếp trên production. Nếu bạn đang tìm "cách đánh giá chất lượng chatbot AI" hay "eval AI là gì", đây là cách làm cụ thể bằng một bộ câu hỏi mẫu và một script tự chấm, không phải khái niệm suông.
 
 ## Một eval nhỏ nhưng hữu ích
 

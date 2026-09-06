@@ -1,6 +1,6 @@
 # Checklist bảo mật trước khi public
 
-Bài này dành cho người sắp cho người khác (không chỉ riêng mình) dùng sản phẩm vừa build - dù chỉ là chia sẻ link cho vài người bạn dùng thử. Học xong bạn sẽ có một checklist tick được, ở mức **"đủ an toàn để public"** - không phải một giáo trình bảo mật đầy đủ, chỉ là những lỗi phổ biến nhất mà người mới hay bỏ sót, gây hậu quả thật (mất tiền, lộ dữ liệu người dùng).
+Bài này dành cho người sắp cho người khác (không chỉ riêng mình) dùng sản phẩm vừa build - dù chỉ là chia sẻ link cho vài người bạn dùng thử. Học xong bạn sẽ có một checklist tick được, ở mức **"đủ an toàn để public"** - không phải một giáo trình bảo mật đầy đủ, chỉ là những lỗi phổ biến nhất mà người mới hay bỏ sót, gây hậu quả thật (mất tiền, lộ dữ liệu người dùng). Đây là checklist bảo mật website cơ bản cho người mới, đủ dùng trước khi chia sẻ sản phẩm cho người ngoài, không cần biết thuật ngữ an ninh mạng.
 
 ## Vì sao cần checklist riêng, không lồng vào phần deploy?
 

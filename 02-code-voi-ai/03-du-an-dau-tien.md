@@ -1,6 +1,6 @@
 # Build dự án đầu tiên: một web app hoàn chỉnh chỉ bằng mô tả tiếng Việt
 
-Bài này dành cho người đã cài xong một coding agent ([bài 01](01-cai-mot-coding-agent.md)) và muốn tự tay (à không, tự "mồm") build ra một sản phẩm chạy thật, nhìn thấy được, ngay trên trình duyệt. Học xong bạn sẽ có một ứng dụng "Danh sách công việc" (to-do list) hoàn chỉnh - thêm việc, đánh dấu xong, xóa việc, và **tự nhớ lại danh sách khi bạn tắt rồi mở lại trình duyệt** - toàn bộ chỉ bằng cách mô tả bằng tiếng Việt cho agent (bài này minh họa bằng Claude Code, Codex làm được y hệt).
+Bài này dành cho người đã cài xong một coding agent ([bài 01](01-cai-mot-coding-agent.md)) và muốn tự tay (à không, tự "mồm") build ra một sản phẩm chạy thật, nhìn thấy được, ngay trên trình duyệt. Học xong bạn sẽ có một ứng dụng "Danh sách công việc" (to-do list) hoàn chỉnh - thêm việc, đánh dấu xong, xóa việc, và **tự nhớ lại danh sách khi bạn tắt rồi mở lại trình duyệt** - toàn bộ chỉ bằng cách mô tả bằng tiếng Việt cho agent (bài này minh họa bằng Claude Code, Codex làm được y hệt). Đây chính là kiểu "build web app bằng AI không cần biết code" mà nhiều người tìm kiếm - khác biệt là bạn sẽ hiểu được sản phẩm của mình, không chỉ copy kết quả.
 
 Đây là lúc áp dụng mọi thứ đã học: tư duy làm từng bước nhỏ ([bài này](../01-bat-dau-tu-so-0/01-tu-duy-hoc-voi-ai.md)) và kỹ thuật prompt ([bài này](../01-bat-dau-tu-so-0/04-prompt-co-ban.md)).
 

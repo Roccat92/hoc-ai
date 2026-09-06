@@ -1,7 +1,7 @@
 # Spec: Trợ Lý Tài Liệu - chatbot hỏi đáp tài liệu công ty (RAG)
 
 ## Mục tiêu
-Một chatbot nội bộ giúp nhân viên hỏi đáp nhanh về tài liệu công ty (quy định, hướng dẫn quy trình, chính sách) thay vì phải tự lục tìm trong hàng chục file - mọi câu trả lời đều kèm trích dẫn nguồn (tên file, đoạn nào) để người hỏi tự kiểm tra lại được, không phải tin mù theo AI.
+Một chatbot nội bộ giúp nhân viên hỏi đáp nhanh về tài liệu công ty (quy định, hướng dẫn quy trình, chính sách) thay vì phải tự lục tìm trong hàng chục file - mọi câu trả lời đều kèm trích dẫn nguồn (tên file, đoạn nào) để người hỏi tự kiểm tra lại được, không phải tin mù theo AI. Đây là ví dụ thực hành cho ai đang tìm cách làm chatbot RAG hỏi đáp tài liệu công ty bằng AI, có trích dẫn nguồn rõ ràng.
 
 ## Người dùng
 Nhân viên trong một công ty/tổ chức nhỏ (dưới 50 người), truy cập qua trình duyệt nội bộ. Có hai vai trò: **admin** (upload/quản lý tài liệu) và **nhân viên** (chỉ hỏi đáp).

@@ -1,6 +1,6 @@
 # Cài đặt môi trường: VS Code, Git, Node, Python
 
-Bài này dành cho người **chưa từng cài công cụ lập trình nào** trên máy. Học xong (làm theo từng bước) máy bạn sẽ sẵn sàng đầy đủ để bắt đầu code cùng AI ở các bài sau.
+Bài này dành cho người **chưa từng cài công cụ lập trình nào** trên máy. Học xong (làm theo từng bước) máy bạn sẽ sẵn sàng đầy đủ để bắt đầu code cùng AI ở các bài sau. Nói cách khác: đây là hướng dẫn cài đặt môi trường lập trình cho người mới bắt đầu, làm một lần duy nhất trước khi code cùng AI.
 
 > **Về ảnh minh họa:** Giao diện các công cụ dưới đây thay đổi theo từng phiên bản, nên bài này mô tả từng bước bằng chữ thật chi tiết thay vì ảnh chụp màn hình (dễ lỗi thời). Nếu bạn có ảnh minh họa mới nhất muốn đóng góp, xem [CONTRIBUTING.md](../CONTRIBUTING.md). Trong lúc cài, nếu màn hình bạn thấy khác mô tả (do bản cập nhật mới), cứ chụp màn hình gửi cho chatbot AI hỏi "giờ tôi bấm gì tiếp" - cách này luôn hoạt động dù giao diện đổi thế nào.
 

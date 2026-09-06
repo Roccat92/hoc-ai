@@ -1,6 +1,6 @@
 # Bảo mật ứng dụng AI: prompt injection, tool và dữ liệu
 
-Bài này dành cho người đã có chatbot RAG hoặc agent (như [dự án 03](../09-du-an-thuc-hanh/du-an-03-chatbot-tai-lieu/spec.md)) và muốn public mà không biến model thành một cửa hậu. Học xong bạn sẽ nhận diện được một cuộc tấn công prompt injection thật, biết cách tách instruction khỏi dữ liệu, giới hạn quyền của tool, và có sẵn 10 câu red-team để tự kiểm tra trước khi public.
+Bài này dành cho người đã có chatbot RAG hoặc agent (như [dự án 03](../09-du-an-thuc-hanh/du-an-03-chatbot-tai-lieu/spec.md)) và muốn public mà không biến model thành một cửa hậu. Học xong bạn sẽ nhận diện được một cuộc tấn công prompt injection thật, biết cách tách instruction khỏi dữ liệu, giới hạn quyền của tool, và có sẵn 10 câu red-team để tự kiểm tra trước khi public. Nếu bạn tìm "prompt injection là gì" hoặc lo AI của mình bị lợi dụng để lộ dữ liệu, đây là bài trả lời bằng ví dụ tấn công thật, không phải cảnh báo chung chung.
 
 ## Tài liệu truy hồi không phải lệnh
 

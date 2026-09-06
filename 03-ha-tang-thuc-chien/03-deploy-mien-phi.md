@@ -1,6 +1,6 @@
 # Deploy miễn phí: Vercel, Netlify, Cloudflare Pages, Railway - khi nào chưa cần VPS
 
-Bài này dành cho người vừa đọc qua hai bài thuê VPS/deploy VPS và nghĩ "nhiều bước vậy, có cách nào nhanh hơn không?" - có, và với phần lớn dự án cá nhân/nhỏ, đây mới là lựa chọn nên thử **trước tiên**. Học xong bạn sẽ deploy được một website lên internet chỉ trong vài phút, miễn phí, không cần đụng tới VPS hay lệnh Linux nào.
+Bài này dành cho người vừa đọc qua hai bài thuê VPS/deploy VPS và nghĩ "nhiều bước vậy, có cách nào nhanh hơn không?" - có, và với phần lớn dự án cá nhân/nhỏ, đây mới là lựa chọn nên thử **trước tiên**. Học xong bạn sẽ deploy được một website lên internet chỉ trong vài phút, miễn phí, không cần đụng tới VPS hay lệnh Linux nào. Nếu bạn đang tìm cách deploy website miễn phí hoặc hosting web không mất tiền, các nền tảng trong bài này (Vercel, Netlify, Cloudflare Pages) là lựa chọn thực tế nhất hiện nay.
 
 ## Vì sao có lựa chọn "miễn phí, không cần VPS"?
 

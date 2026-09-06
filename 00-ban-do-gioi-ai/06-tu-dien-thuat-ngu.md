@@ -1,6 +1,6 @@
 # Từ điển thuật ngữ A-Z
 
-Bài này dành cho **bất kỳ ai** đọc tới đây mà gặp một từ lạ không hiểu - kể cả khi ai đó hỏi bạn "đây là code bằng React Native à?" và bạn không biết trả lời sao. Đây là trang bạn nên **bookmark lại** để tra cứu bất cứ lúc nào trong suốt quá trình học, không cần đọc hết một lần.
+Bài này dành cho **bất kỳ ai** đọc tới đây mà gặp một từ lạ không hiểu - kể cả khi ai đó hỏi bạn "đây là code bằng React Native à?" và bạn không biết trả lời sao. Đây là trang bạn nên **bookmark lại** để tra cứu bất cứ lúc nào trong suốt quá trình học, không cần đọc hết một lần. Coi đây là từ điển thuật ngữ AI tiếng Việt của riêng bạn - tra nhanh mọi từ AI và lập trình mà không cần rời khỏi trang.
 
 Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập trình/công nghệ nói chung (vì khi build sản phẩm với AI, bạn sẽ liên tục gặp cả hai loại).
 

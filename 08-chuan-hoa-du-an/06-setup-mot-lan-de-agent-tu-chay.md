@@ -1,6 +1,6 @@
 # Setup dự án một lần để agent tự chạy: cấp quyền đúng cách, nối GitHub - Vercel - Supabase, rồi giao việc
 
-Bài này dành cho người đã build được vài thứ với coding agent nhưng vẫn đang tự mở terminal gõ từng lệnh, tự bấm deploy, tự copy biến môi trường mỗi lần. Học xong bạn sẽ dựng được một "bàn làm việc" cho agent trong khoảng một buổi: đăng nhập các công cụ một lần, cấp đúng quyền theo đúng khuyến nghị chính thức của Anthropic và OpenAI, và từ đó giao việc trọn gói bằng tiếng Việt - agent tự viết code, chạy test, commit, push, và bạn xem thử trước khi nó chạm vào bản thật. Việc của bạn thu về vài điểm kiểm tra và một thói quen quan trọng nhất: biết rollback khi cần.
+Bài này dành cho người đã build được vài thứ với coding agent nhưng vẫn đang tự mở terminal gõ từng lệnh, tự bấm deploy, tự copy biến môi trường mỗi lần. Học xong bạn sẽ dựng được một "bàn làm việc" cho agent trong khoảng một buổi: đăng nhập các công cụ một lần, cấp đúng quyền theo đúng khuyến nghị chính thức của Anthropic và OpenAI, và từ đó giao việc trọn gói bằng tiếng Việt - agent tự viết code, chạy test, commit, push, và bạn xem thử trước khi nó chạm vào bản thật. Việc của bạn thu về vài điểm kiểm tra và một thói quen quan trọng nhất: biết rollback khi cần. Nếu bạn tìm cách setup Claude Code hoặc Codex chạy tự động, cấp quyền an toàn cho coding agent thay vì duyệt từng lệnh, đây là quy trình thật đang được dùng, không phải lý thuyết.
 
 ## Đây là cách các sản phẩm trong thư viện này được build, đã sửa lại chỗ đáng sửa
 

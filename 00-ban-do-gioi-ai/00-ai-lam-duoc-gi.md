@@ -1,6 +1,6 @@
 # AI làm được gì - và vì sao phải cẩn thận với "mỏ vàng"
 
-Đây là bài **đầu tiên**, dành cho người **chưa biết gì về AI** và muốn thấy ngay câu trả lời thực tế: rốt cuộc AI làm được gì cho mình? Học xong bạn sẽ có bức tranh tổng thể về các nhóm năng lực của AI hiện nay, biết thư viện này tập trung vào nhánh nào, và - quan trọng không kém - biết nhận diện chiêu trò "kiếm tiền nhanh bằng AI" tràn lan trên mạng để không mất tiền oan.
+Đây là bài **đầu tiên**, dành cho người **chưa biết gì về AI** và muốn thấy ngay câu trả lời thực tế: rốt cuộc AI làm được gì cho mình? Học xong bạn sẽ có bức tranh tổng thể về các nhóm năng lực của AI hiện nay, biết thư viện này tập trung vào nhánh nào, và - quan trọng không kém - biết nhận diện chiêu trò "kiếm tiền nhanh bằng AI" tràn lan trên mạng để không mất tiền oan. Đây cũng là điểm bắt đầu hợp lý nếu bạn đang tìm hiểu AI là gì và không biết học AI từ đâu khi chưa có nền tảng công nghệ.
 
 > **Gặp từ lạ đừng lo.** Trong thư viện này bạn sẽ thấy vài từ tiếng Anh lặp lại - ví dụ *repo* (viết tắt của *repository*, nghĩa là "kho chứa toàn bộ nội dung/code của một dự án"; ở đây chính là thư viện Học AI Việt này), hay *token*, *API*, *GitHub*... Bất cứ khi nào gặp một từ chưa hiểu, mở [**Từ điển thuật ngữ A-Z**](06-tu-dien-thuat-ngu.md) (cũng luôn có trên thanh menu trên cùng) để tra - không cần nhớ hết, cứ tra khi cần. Những từ quan trọng sẽ được giải thích lại ngay tại chỗ khi dùng lần đầu.
 

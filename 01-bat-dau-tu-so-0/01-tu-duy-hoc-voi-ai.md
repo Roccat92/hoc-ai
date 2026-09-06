@@ -1,6 +1,6 @@
 # Học "vibe coding" đúng cách: hiểu để sửa, không copy mù
 
-Bài này dành cho **bất kỳ ai chuẩn bị học code với AI** - kể cả khi bạn chưa cài bất kỳ công cụ nào. Đây là bài quan trọng nhất trong cả repo, vì nó quyết định bạn sẽ học được thật sự hay chỉ dừng lại ở mức "may mắn ra sản phẩm nhưng không hiểu gì". Đọc xong bạn sẽ có một tư duy đúng để bắt đầu, tránh những cái bẫy phổ biến nhất của người mới học với AI.
+Bài này dành cho **bất kỳ ai chuẩn bị học code với AI** - kể cả khi bạn chưa cài bất kỳ công cụ nào. Đây là bài quan trọng nhất trong cả repo, vì nó quyết định bạn sẽ học được thật sự hay chỉ dừng lại ở mức "may mắn ra sản phẩm nhưng không hiểu gì". Đọc xong bạn sẽ có một tư duy đúng để bắt đầu, tránh những cái bẫy phổ biến nhất của người mới học với AI. Nếu bạn đang tìm cách học lập trình với AI cho người mới bắt đầu mà phân vân nên học code truyền thống trước hay học "vibe coding" luôn, đây là câu trả lời.
 
 ## "Vibe coding" là gì?
 

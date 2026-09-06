@@ -1,6 +1,6 @@
 # RAG là gì và cách build: chatbot hỏi đáp tài liệu công ty
 
-Bài này dành cho người đã gọi được API LLM ([bài trước](01-goi-api-llm.md)) và muốn build một chatbot **trả lời dựa trên tài liệu riêng** của mình (ví dụ: quy định công ty, tài liệu sản phẩm, ghi chú cá nhân) - thứ mà AI gốc chưa từng được huấn luyện để biết. Học xong bạn sẽ hiểu RAG hoạt động ra sao và build được một chatbot RAG đơn giản.
+Bài này dành cho người đã gọi được API LLM ([bài trước](01-goi-api-llm.md)) và muốn build một chatbot **trả lời dựa trên tài liệu riêng** của mình (ví dụ: quy định công ty, tài liệu sản phẩm, ghi chú cá nhân) - thứ mà AI gốc chưa từng được huấn luyện để biết. Học xong bạn sẽ hiểu RAG hoạt động ra sao và build được một chatbot RAG đơn giản. Đây đúng là câu trả lời cho "RAG là gì" và "cách làm chatbot AI đọc tài liệu riêng của công ty" - hai câu hỏi luôn đi cùng nhau khi ai đó mới tìm hiểu RAG.
 
 ## Vì sao cần RAG?
 
