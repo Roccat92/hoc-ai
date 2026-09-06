@@ -10,12 +10,17 @@ Font không chỉ để "đọc được". Nó mang cảm xúc: một tiệm bá
 
 ## Bốn nhóm font, dùng vào việc gì
 
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=pacifico:400" rel="stylesheet">
+
 <div class="uid-font">
   <div class="uid-font__row"><span class="uid-font__demo" style="font-family: Georgia, 'Times New Roman', serif;">Mẻ bánh ra lò</span><span class="uid-font__label"><strong>Serif</strong> (có chân) - cảm giác cổ điển, ấm, đáng tin. Hợp báo chí, thương hiệu thủ công, tiêu đề lớn.</span></div>
   <div class="uid-font__row"><span class="uid-font__demo" style="font-family: system-ui, -apple-system, sans-serif;">Nắm toàn bộ xưởng</span><span class="uid-font__label"><strong>Sans-serif</strong> (không chân) - hiện đại, sạch, dễ đọc trên màn hình. Mặc định an toàn cho phần lớn app.</span></div>
   <div class="uid-font__row"><span class="uid-font__demo" style="font-family: 'Courier New', monospace;">TDG-10241</span><span class="uid-font__label"><strong>Monospace</strong> (đều ô) - mỗi ký tự rộng bằng nhau. Hợp code, mã đơn, số liệu cần thẳng cột.</span></div>
-  <div class="uid-font__row"><span class="uid-font__demo" style="font-family: 'Brush Script MT', cursive; font-size: 26px;">Ưu đãi hôm nay</span><span class="uid-font__label"><strong>Display / trang trí</strong> - cá tính mạnh, chỉ dùng cho tiêu đề ngắn, logo. Không bao giờ dùng cho đoạn văn dài.</span></div>
+  <div class="uid-font__row"><span class="uid-font__demo" style="font-family: 'Pacifico', cursive; font-size: 26px;">Ưu đãi hôm nay</span><span class="uid-font__label"><strong>Display / trang trí</strong> - cá tính mạnh, chỉ dùng cho tiêu đề ngắn, logo. Không bao giờ dùng cho đoạn văn dài.</span></div>
 </div>
+
+> Bốn ô trên minh họa bằng font hệ thống có sẵn, trừ ô "Display" - loại font này hiếm khi có sẵn trên máy (khác `Brush Script MT` từng dùng ở đây, chỉ có trên Windows cũ và hiện xuống chữ nghiêng thường ở nhiều máy), nên nhúng tạm một font qua [Bunny Fonts](https://fonts.bunny.net) (**Pacifico**, đã kiểm tra đủ dấu tiếng Việt) chỉ để bạn thấy đúng "chất" mà nhóm font này mang lại.
 
 **Nguyên tắc vàng: một trang chỉ nên có 1-2 font.** Thường là một font cho tiêu đề (có thể cá tính) và một font cho nội dung (ưu tiên dễ đọc). Ba font trở lên là bắt đầu loạn.
 
