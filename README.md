@@ -80,6 +80,8 @@ Trên mạng đã có rất nhiều nơi dạy lập trình - từ các khóa d�
 
 Repo này sống được là nhờ cộng đồng bổ sung, sửa lỗi, cập nhật giá cả/model mới. Xem hướng dẫn chi tiết (kể cả nếu đây là lần đầu bạn tạo Pull Request) tại [CONTRIBUTING.md](CONTRIBUTING.md).
 
+Ngoài đóng góp thủ công, nội dung còn được giữ cập nhật bằng hai cách tự động: một job chạy hàng tuần dùng **Claude qua API** rà lại các mốc giá/tên model/giới hạn gói đã đánh dấu ngày kiểm tra trong bài, tự tra cứu thông tin mới và mở Pull Request đề xuất sửa khi phát hiện thông tin quá hạn - không tự commit thẳng, người duy trì luôn xem lại trước khi gộp; và một script kiểm tra chuỗi bài học, link nội bộ cùng cú pháp code mẫu, chạy trên mọi Pull Request để bắt lỗi trước khi merge.
+
 ## Người thực hiện
 
 Học AI Việt được viết bởi **Nguyễn Ngọc Thư**, cùng **Claude** (Anthropic) và **ChatGPT** (OpenAI) - đúng cách các sản phẩm trong [case study](07-case-study/) của chính tác giả được build: mô tả ý tưởng bằng tiếng Việt, để AI viết phần lớn nội dung, người làm đọc lại, kiểm tra và quyết định.
