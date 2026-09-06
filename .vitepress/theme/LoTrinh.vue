@@ -7,10 +7,22 @@
 // Đường dẫn không có ".md" vì VitePress build ra URL sạch (cleanUrls: true
 // trong config.mts). Đây KHÔNG thay thế chuỗi "Bước tiếp theo" đầy đủ - vẫn
 // còn nguyên, chỉ là một lớp lộ trình rút gọn nằm phía trên.
+// Icon dạng vector (không dùng emoji) cho huy hiệu mỗi cấp - xem lý do ở
+// 02-code-voi-ai/19-font-va-icon.md. Mỗi mục là phần bên trong một <svg
+// viewBox="0 0 24 24">, style stroke đồng bộ đặt sẵn ở nơi render.
+const ICON = {
+  compass: '<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5 13 13l-3.5 1.5L11 11z" stroke-linejoin="round"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><ellipse cx="12" cy="12" rx="4" ry="9"/>',
+  database: '<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>',
+  bot: '<rect x="5" y="9" width="14" height="10" rx="2"/><line x1="12" y1="5" x2="12" y2="9"/><circle cx="12" cy="4" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="14" r="1" fill="currentColor" stroke="none"/>',
+  rocket: '<path d="M12 3l4 6v6l-4 4-4-4V9z" stroke-linejoin="round"/><circle cx="12" cy="10" r="1.4" fill="currentColor" stroke="none"/><path d="M8 15l-2 4M16 15l2 4"/>',
+  flag: '<path d="M5 3v18M5 4h13l-3 4 3 4H5" stroke-linejoin="round"/>',
+}
+
 const CAP = [
   {
     ten: 'Hiểu AI trong một buổi',
-    huyHieu: '🧭',
+    huyHieu: 'compass',
     thanhTich: 'Dùng chatbot làm xong một việc thật trong công việc của bạn',
     bai: [
       { link: '/00-ban-do-gioi-ai/00-ai-lam-duoc-gi', ten: 'AI làm được gì, và cảnh giác "mỏ vàng"' },
@@ -22,7 +34,7 @@ const CAP = [
   },
   {
     ten: 'Trang web đầu tiên lên mạng',
-    huyHieu: '🌐',
+    huyHieu: 'globe',
     thanhTich: 'Một link public gửi được cho bạn bè bấm vào xem',
     bai: [
       { link: '/01-bat-dau-tu-so-0/02-cai-dat-moi-truong', ten: 'Cài VS Code, Git, Node, Python' },
@@ -34,7 +46,7 @@ const CAP = [
   },
   {
     ten: 'Sản phẩm có dữ liệu thật',
-    huyHieu: '🗄️',
+    huyHieu: 'database',
     thanhTich: 'App có đăng nhập, lưu được dữ liệu, chạy trên hosting thật',
     bai: [
       { link: '/01-bat-dau-tu-so-0/10-file-web-va-server-hoat-dong-the-nao', ten: 'Hiểu client-server, request/response' },
@@ -46,7 +58,7 @@ const CAP = [
   },
   {
     ten: 'Sản phẩm có AI',
-    huyHieu: '🤖',
+    huyHieu: 'bot',
     thanhTich: 'Chatbot đọc tài liệu riêng, có bộ eval tự chấm',
     bai: [
       { link: '/04-build-ung-dung-ai/01-goi-api-llm', ten: 'Gọi API LLM, tính chi phí token' },
@@ -58,7 +70,7 @@ const CAP = [
   },
   {
     ten: 'Cho người khác dùng, và thu tiền',
-    huyHieu: '🚀',
+    huyHieu: 'rocket',
     thanhTich: 'Có người dùng thật, viết được case study của chính bạn',
     bai: [
       { link: '/08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay', ten: 'Setup một lần, giao việc trọn gói cho agent' },
@@ -119,10 +131,15 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
 
     <div v-for="(cap, i) in CAP" :key="cap.ten" class="cap" :class="{ xong: soXongCua(cap) === cap.bai.length }">
       <div class="cap-dau">
-        <span class="cap-huy-hieu">{{ cap.huyHieu }}</span>
+        <span class="cap-huy-hieu">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" v-html="ICON[cap.huyHieu]" />
+        </span>
         <div class="cap-chu">
           <div class="cap-ten">Cấp {{ i }} · {{ cap.ten }}</div>
-          <div class="cap-thanh-tich">🏁 {{ cap.thanhTich }}</div>
+          <div class="cap-thanh-tich">
+            <svg class="icon-flag" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" v-html="ICON.flag" />
+            {{ cap.thanhTich }}
+          </div>
         </div>
         <div class="cap-dem">{{ soXongCua(cap) }}/{{ cap.bai.length }}</div>
       </div>
@@ -209,7 +226,7 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
   gap: 10px;
 }
 .cap-huy-hieu {
-  font-size: 22px;
+  display: inline-flex;
   filter: grayscale(1);
   opacity: 0.5;
   line-height: 1;
@@ -226,9 +243,15 @@ const phanTramTong = computed(() => Math.round((tongSoXong.value / tongSoBai) * 
   font-weight: 600;
 }
 .cap-thanh-tich {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 13px;
   color: var(--vp-c-text-2);
   margin-top: 2px;
+}
+.icon-flag {
+  flex-shrink: 0;
 }
 .cap-dem {
   font-size: 13px;
