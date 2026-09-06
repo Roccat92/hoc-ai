@@ -53,7 +53,7 @@ Bạn không cần thuộc lòng, cứ tra lại khi cần:
 
 - **Copy lệnh từ bài viết rồi dán vào terminal**: bấm chuột phải trong cửa sổ terminal để dán (PowerShell/cmd), hoặc `Cmd + V` trên Mac. Sau đó nhấn **Enter** để chạy.
 - **Gõ xong luôn nhấn Enter** thì máy mới thực hiện lệnh.
-- **Thấy chữ đỏ / báo lỗi đừng hoảng** - đó là chuyện bình thường. Copy nguyên dòng lỗi, dán vào chatbot AI hỏi "lỗi này là gì, sửa sao" (đúng như [mẹo ở bài trước](03-dung-chatbot-de-hoc.md) - à mà bài đó ở ngay sau, cứ nhớ nguyên tắc này).
+- **Thấy chữ đỏ / báo lỗi đừng hoảng** - đó là chuyện bình thường. Copy nguyên dòng lỗi, dán vào chatbot AI hỏi "lỗi này là gì, sửa sao" - đúng kỹ năng bạn sẽ học kỹ hơn ở [bài tiếp theo](03-dung-chatbot-de-hoc.md).
 - **Terminal luôn đang "đứng" ở một thư mục nào đó.** Trước khi gõ lệnh liên quan tới một dự án, thường bạn cần `cd` vào đúng thư mục dự án đó trước.
 
 Giờ thì bắt tay cài đặt.
