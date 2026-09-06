@@ -1,6 +1,6 @@
 # Bảo mật ứng dụng AI: prompt injection, tool và dữ liệu
 
-Bài này dành cho người đã có chatbot RAG hoặc agent (như [dự án 03](../09-du-an-thuc-hanh/du-an-03-chatbot-tai-lieu/spec.md)) và muốn public mà không biến model thành một cửa hậu. Học xong bạn sẽ nhận diện được một cuộc tấn công prompt injection thật, biết cách tách instruction khỏi dữ liệu, giới hạn quyền của tool, và có sẵn 10 câu red-team để tự kiểm tra trước khi public. Nếu bạn tìm "prompt injection là gì" hoặc lo AI của mình bị lợi dụng để lộ dữ liệu, đây là bài trả lời bằng ví dụ tấn công thật, không phải cảnh báo chung chung.
+Bài này dành cho bất kỳ ai đang để AI đọc nội dung nó không tự viết ra - tài liệu người dùng tải lên, trang web, kết quả tìm kiếm, hay cả README/issue của một thư viện ngoài mà **chính coding agent bạn dùng hàng ngày** (Claude Code, Codex) đọc qua lúc làm việc. Có chatbot RAG hoặc agent riêng (như [dự án 03](../09-du-an-thuc-hanh/du-an-03-chatbot-tai-lieu/spec.md)) và muốn public thì càng cần đọc kỹ, nhưng rủi ro này không chỉ dành cho người build sản phẩm AI - nó áp dụng cho chính công cụ bạn đang cầm mỗi ngày. Học xong bạn sẽ nhận diện được một cuộc tấn công prompt injection thật, biết cách tách instruction khỏi dữ liệu, giới hạn quyền của tool, và có sẵn 10 câu red-team để tự kiểm tra trước khi public. Nếu bạn tìm "prompt injection là gì" hoặc lo AI của mình bị lợi dụng để lộ dữ liệu, đây là bài trả lời bằng ví dụ tấn công thật, không phải cảnh báo chung chung.
 
 ## Tài liệu truy hồi không phải lệnh
 
@@ -36,6 +36,12 @@ Câu hỏi của người dùng: {cau_hoi}
 ```
 
 Cách tách bằng thẻ rõ ràng (`<tai_lieu>...</tai_lieu>`) kèm một câu quy tắc bất biến không làm model miễn nhiễm 100%, nhưng giảm đáng kể tỉ lệ bị "gài bẫy" so với việc nhét lẫn mọi thứ vào một đoạn văn xuôi.
+
+## Rủi ro y hệt với chính coding agent bạn dùng hàng ngày
+
+Không chỉ chatbot/agent bạn tự build mới gặp prompt injection. Coding agent bạn dùng để code (Claude Code, Codex) cũng đọc nội dung không do bạn viết ra trong lúc làm việc - trang web nó tra cứu, README hoặc issue của một thư viện ngoài, kết quả tìm kiếm - và về nguyên tắc có thể bị "gài bẫy" theo đúng cách một tài liệu độc hại gài bẫy chatbot RAG ở trên: một trang hướng dẫn cài đặt có thể chứa dòng chữ ẩn (màu trắng, font nhỏ, hoặc trong comment HTML) yêu cầu agent chạy một lệnh nguy hiểm hoặc gửi nội dung file `.env` đi nơi khác.
+
+Đây là lý do mô hình "setup một lần, giao việc trọn gói" ở [`08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md`](../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md) vẫn giữ commit và push sau mỗi đợt làm điểm kiểm tra thật, và vì sao [bài đọc diff](../02-code-voi-ai/13-codex-sua-code-test-va-review.md) nói rõ ba lúc bắt buộc phải xem kỹ: task chạm tới tiền/dữ liệu/đăng nhập, cùng lỗi lặp lại lần ba, và trước khi lên production. Thêm một dấu hiệu đáng ngờ để tự để ý: **agent vừa đọc một trang web hoặc thư viện lạ rồi bất ngờ đề xuất một lệnh không liên quan gì tới yêu cầu ban đầu của bạn** - đó là lúc dừng lại đọc kỹ trước khi đồng ý, không bấm "có" theo phản xạ.
 
 ## Tool phải có quyền tối thiểu
 

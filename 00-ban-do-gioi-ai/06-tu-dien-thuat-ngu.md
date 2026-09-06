@@ -29,6 +29,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **Pre-train** | Giai đoạn huấn luyện ban đầu của model trên lượng dữ liệu khổng lồ, trước khi fine-tune chuyên biệt |
 | **Prompt** | Câu lệnh/yêu cầu bạn đưa cho AI |
 | **Prompt engineering** | Kỹ thuật viết prompt sao cho AI hiểu đúng ý, trả lời đúng cái bạn cần - xem [`01-bat-dau-tu-so-0/04-prompt-co-ban.md`](../01-bat-dau-tu-so-0/04-prompt-co-ban.md) |
+| **Prompt injection** | Kẻ xấu cài lệnh giả vào nội dung mà AI đọc được (tài liệu, trang web, kết quả tìm kiếm) để lừa AI làm theo lệnh đó thay vì lệnh thật của bạn - ví dụ dụ AI tiết lộ system prompt hoặc thực hiện hành động không được yêu cầu. Áp dụng cho cả chatbot bạn tự build lẫn chính coding agent bạn dùng hàng ngày. Xem [`10-bao-mat/07-bao-mat-ung-dung-ai.md`](../10-bao-mat/07-bao-mat-ung-dung-ai.md) |
 | **RAG (Retrieval-Augmented Generation)** | Kỹ thuật cho AI "tra cứu" tài liệu thật trước khi trả lời, thay vì chỉ dựa vào trí nhớ đã huấn luyện - giảm hallucination, cho AI biết thông tin riêng/mới. Xem [`04-build-ung-dung-ai/02-rag-la-gi-va-build.md`](../04-build-ung-dung-ai/02-rag-la-gi-va-build.md) |
 | **Reasoning model / Extended thinking** | Model tự sinh một chuỗi bước suy luận trung gian (vẫn tính token, vẫn tốn tiền và thời gian) trước khi trả lời - chính xác hơn với việc khó, nhưng chậm và đắt hơn với việc dễ. Xem [`02-llm-la-gi.md`](02-llm-la-gi.md) |
 | **System prompt** | Chỉ dẫn "nền" được đặt trước cuộc trò chuyện, định hướng cách AI cư xử xuyên suốt (ví dụ: "Bạn là trợ lý viết code, luôn trả lời bằng tiếng Việt") |
@@ -51,6 +52,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **CLI (Command Line Interface)** | Giao diện dòng lệnh - gõ lệnh chữ thay vì bấm chuột vào nút. Claude Code là một công cụ CLI |
 | **Clone** | Tải một repo về máy mình từ GitHub |
 | **Commit** | Một "điểm lưu" trong Git, ghi lại một cụm thay đổi cụ thể kèm mô tả |
+| **CORS (Cross-Origin Resource Sharing)** | Cơ chế trình duyệt chặn một trang web gọi API của một domain khác nếu domain đó không "cho phép" trước - "cấu hình CORS lỏng lẻo" nghĩa là API của bạn cho phép bất kỳ domain nào gọi tới, dễ bị lợi dụng |
 | **Database (Cơ sở dữ liệu)** | Nơi lưu trữ dữ liệu có tổ chức để phần mềm đọc/ghi - ví dụ: danh sách người dùng, đơn hàng |
 | **Deploy / Deployment (Triển khai)** | Đưa sản phẩm bạn đang code lên internet để người khác dùng được, thay vì chỉ chạy trên máy riêng |
 | **Docker / Container** | Công nghệ "đóng gói" một ứng dụng cùng mọi thứ nó cần để chạy, giúp chạy giống hệt nhau trên mọi máy |
@@ -82,6 +84,8 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **SDK (Software Development Kit)** | Bộ công cụ (thường gồm thư viện code + tài liệu) giúp lập trình viên tích hợp với một nền tảng/dịch vụ cụ thể dễ dàng hơn |
 | **Server** | Máy tính (thường ở xa, chạy 24/7) xử lý yêu cầu và phục vụ dữ liệu cho người dùng |
 | **SQL / NoSQL** | Hai kiểu cơ sở dữ liệu: SQL có cấu trúc bảng cố định chặt chẽ (ví dụ: PostgreSQL, MySQL), NoSQL linh hoạt hơn về cấu trúc (ví dụ: MongoDB) |
+| **SQL injection** | Kiểu tấn công chèn câu lệnh SQL độc hại qua một ô nhập liệu không được lọc kỹ (ví dụ ô tìm kiếm), khiến database chạy nhầm lệnh của kẻ tấn công thay vì chỉ tìm kiếm - phòng bằng cách luôn dùng câu lệnh tham số hóa, không nối chuỗi trực tiếp vào câu SQL |
+| **XSS (Cross-Site Scripting)** | Kiểu tấn công chèn được đoạn mã (thường là JavaScript) vào một trang web, khiến nó chạy trong trình duyệt của người xem khác - ví dụ một bình luận chứa `<script>` không được lọc trước khi hiển thị. Phòng bằng cách escape/lọc mọi nội dung do người dùng (hoặc AI) tạo ra trước khi hiển thị |
 | **Tech stack** | Tập hợp các công nghệ/công cụ được dùng để xây một sản phẩm cụ thể (ví dụ: "stack" gồm React + Node.js + PostgreSQL) |
 | **Terminal / Command line** | Cửa sổ để gõ lệnh chữ điều khiển máy tính trực tiếp, thay vì bấm chuột - cách mở và các lệnh cơ bản xem [`01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md`](../01-bat-dau-tu-so-0/02-cai-dat-moi-truong.md) |
 | **TypeScript** | Phiên bản mở rộng của JavaScript, thêm kiểm tra kiểu dữ liệu (type) giúp phát hiện lỗi sớm hơn khi code |
