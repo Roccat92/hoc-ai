@@ -23,3 +23,5 @@ jobs:
         run: npm run docs:build
       - name: Dò anchor chết (heading đổi tên nhưng link quên cập nhật)
         run: npm run kiem-tra-anchor
+      - name: Dò lỗi cú pháp trong code mẫu (ngoặc "thông minh", JSON/bash/Python hỏng)
+        run: npm run kiem-tra-code
