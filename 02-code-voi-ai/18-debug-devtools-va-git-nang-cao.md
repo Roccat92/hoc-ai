@@ -39,7 +39,7 @@ git switch -c sua-nut-gui      # tạo nhánh mới và chuyển sang nó
 git status                     # xem đang sửa gì, đang ở nhánh nào
 git diff                       # đọc thay đổi trước khi commit
 git add -p                     # chọn từng đoạn để đưa vào commit, không add mù cả file
-git commit -m “Sửa nút Gửi bị bấm hai lần”
+git commit -m "Sửa nút Gửi bị bấm hai lần"
 git switch main               # quay về nhánh chính
 git merge sua-nut-gui         # gộp nhánh vừa làm vào main
 ```

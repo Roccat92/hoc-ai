@@ -70,7 +70,7 @@ Số VND ở trên đã gồm thuế và tự cập nhật theo tỉ giá - xem 
 ## Link
 
 - Trang sản phẩm: [starteex.app](https://starteex.app)
-- App Store / Google Play: *(đang bổ sung link trực tiếp)*
+- [App Store](https://apps.apple.com/vn/app/starteex/id6788760618) / [Google Play](https://play.google.com/store/apps/details?id=com.starteex.app)
 - Mã nguồn: không công khai
 
 ## Bước tiếp theo

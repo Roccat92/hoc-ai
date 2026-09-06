@@ -19,7 +19,7 @@ def chu_ky_hop_le(body_thô: bytes, chu_ky_nhan_duoc: str, secret: str) -> bool:
     return hmac.compare_digest(chu_ky_dung, chu_ky_nhan_duoc)
 
 # Trong handler webhook:
-if not chu_ky_hop_le(request.body, request.headers[“X-Signature”], WEBHOOK_SECRET):
+if not chu_ky_hop_le(request.body, request.headers["X-Signature"], WEBHOOK_SECRET):
     return 400  # chữ ký sai -> có thể là giả mạo, từ chối ngay
 ```
 - Tính chữ ký trên **body thô** (bytes gốc), không phải bản đã parse JSON - parse rồi tính lại thường ra chuỗi khác, làm chữ ký luôn sai.
@@ -30,10 +30,10 @@ Chống xử lý trùng (idempotency): cổng có thể gửi cùng một webhoo
 
 ```python
 def xu_ly_thanh_toan(su_kien):
-    if da_xu_ly(su_kien[“id”]):     # đã ghi nhận id này rồi
+    if da_xu_ly(su_kien["id"]):     # đã ghi nhận id này rồi
         return 200                  # trả OK nhưng không làm gì thêm
-    danh_dau_da_xu_ly(su_kien[“id”])
-    cap_quyen_cho_don(su_kien[“ma_don”])
+    danh_dau_da_xu_ly(su_kien["id"])
+    cap_quyen_cho_don(su_kien["ma_don"])
 ```
 - Không có bước này, một webhook gửi hai lần có thể cộng tiền hai lần hoặc mở khóa hai lần.
 
