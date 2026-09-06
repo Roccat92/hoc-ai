@@ -14,7 +14,7 @@ cd quan-ly-don-hang
 
 Giống dự án 01, nhưng backlog dài hơn nên **càng cần nghiêm túc làm từng task một, commit sau mỗi task** (xem lại [quy trình một phiên làm việc chuẩn](../../08-chuan-hoa-du-an/05-quy-trinh-1-phien-lam-viec.md)). Dự án có backend, một task làm hỏng có thể ảnh hưởng tới các task sau - càng nhiều lý do để commit thường xuyên.
 
-Đây cũng là dự án hợp lý để bắt đầu áp dụng cách giao việc trọn gói và tách nhánh/bản xem thử đã học ở [bài setup một lần để agent tự chạy](../../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md), thay vì tick từng task thủ công như dự án 01 - dự án có database thật nên chuyện dev/prod tách riêng đáng giá hơn hẳn.
+Đây cũng là dự án hợp lý để bắt đầu áp dụng tinh thần "giao việc trọn gói" đã học ở [bài setup một lần để agent tự chạy](../../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md): mô tả task đầy đủ, để agent tự code/test/commit, bạn nghiệm thu bằng cách tự dùng thử - thay vì tick từng task thủ công như dự án 01. Lưu ý: bài đó dùng ví dụ Vercel/Supabase nên có "bản xem thử" tự động theo nhánh; dự án này deploy VPS nên không có tính năng đó. Tách dev/prod ở đây đơn giản hơn: dùng hai file `.db` riêng - một để agent tự do thử, một là bản thật chỉ cập nhật sau khi bạn tự kiểm tra kỹ trên máy mình.
 
 Prompt bắt đầu phiên đầu tiên:
 ```
