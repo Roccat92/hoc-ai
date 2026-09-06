@@ -10,6 +10,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 |---|---|
 | **AI (Artificial Intelligence)** | Trí tuệ nhân tạo - khái niệm rộng nhất, xem [`01-ai-la-gi.md`](01-ai-la-gi.md) |
 | **Agent (AI Agent)** | AI có khả năng tự lên kế hoạch, gọi công cụ (tool), thực hiện nhiều bước để hoàn thành một mục tiêu - không chỉ trả lời một câu hỏi. Xem [`04-build-ung-dung-ai/03-ai-agent.md`](../04-build-ung-dung-ai/03-ai-agent.md) |
+| **Computer use** | AI tự điều khiển chuột/bàn phím dựa trên ảnh chụp màn hình, thao tác phần mềm y hệt người dùng thật - dùng khi công cụ không có MCP/API để gọi thẳng. Xem [`04-build-ung-dung-ai/03-ai-agent.md`](../04-build-ung-dung-ai/03-ai-agent.md#computer-use-khi-cong-cu-khong-co-mcp-hay-api) |
 | **API (Application Programming Interface)** | Cách một phần mềm "nói chuyện" với phần mềm khác qua các quy tắc định sẵn. Gọi API LLM = gửi yêu cầu qua internet để model xử lý và trả kết quả |
 | **Context window** | Số token tối đa AI "nhìn thấy" cùng lúc trong một lần xử lý - xem [`02-llm-la-gi.md`](02-llm-la-gi.md) |
 | **Deep Learning (Học sâu)** | Nhánh Machine Learning dùng mạng neural nhiều lớp - xem [`01-ai-la-gi.md`](01-ai-la-gi.md) |

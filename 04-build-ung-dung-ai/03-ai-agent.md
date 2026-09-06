@@ -20,6 +20,8 @@ Nhắc lại từ [từ điển thuật ngữ](../00-ban-do-gioi-ai/06-tu-dien-t
 
 Ví dụ thực tế: có sẵn các MCP server cộng đồng cho việc đọc file hệ thống, truy vấn GitHub, thao tác Google Drive, truy vấn database... Thay vì tự viết tích hợp từ đầu, bạn có thể dùng lại các MCP server có sẵn này. Xem thêm ở [`06-kho-tai-nguyen/03-skills-va-mcp.md`](../06-kho-tai-nguyen/03-skills-va-mcp.md).
 
+MCP không chỉ dành cho việc "văn phòng" - bất kỳ công cụ nào (kể cả công cụ xử lý ảnh, dựng phim, thiết kế 3D) có MCP server riêng thì agent gọi thẳng được, không cần ai mở giao diện web bấm tay thay. Ví dụ thật trong chính cộng đồng dùng thư viện này: case study [Mockup Studio](../07-case-study/04-mockup-studio.md) - một công cụ xử lý ảnh được gọi qua MCP để agent tự tạo mockup sản phẩm cho khách.
+
 <figure style="max-width:560px;margin:24px auto">
 <svg id="mh-mcp" viewBox="0 0 480 205" width="100%" role="img" aria-label="AI ở giữa nối với ba công cụ Tệp tin, Web, Cơ sở dữ liệu qua ba ổ cắm giống hệt nhau" style="font-family:inherit;display:block">
   <rect x="190" y="15" width="100" height="36" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
@@ -65,6 +67,12 @@ Ví dụ thực tế: có sẵn các MCP server cộng đồng cho việc đọc
 </svg>
 <figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Agent không trả lời một phát rồi thôi, nó lặp Nghĩ → Gọi công cụ → Nhận kết quả cho tới khi xong.</figcaption>
 </figure>
+
+## Computer use - khi công cụ không có MCP hay API
+
+MCP và tool use đều cần công cụ đó **chủ động mở sẵn một "ổ cắm"** để agent gọi vào. Rất nhiều phần mềm - nhất là phần mềm nội bộ cũ, hoặc ứng dụng chỉ có giao diện bấm chuột - không có ổ cắm nào cả. Với trường hợp này, một số harness cho phép AI dùng **computer use**: AI "nhìn" màn hình qua ảnh chụp và tự điều khiển chuột/bàn phím giống hệt một người dùng thật - mở ứng dụng, bấm đúng nút, gõ chữ vào đúng ô, đọc lại kết quả hiện trên màn hình - thay vì gọi thẳng một hàm qua API.
+
+Khác biệt cốt lõi: **MCP/tool use = "gọi hàm"** (nhanh, đáng tin cậy hơn, nhưng cần công cụ đã hỗ trợ sẵn); **computer use = "bấm như người"** (dùng được với hầu như bất kỳ phần mềm nào có giao diện, kể cả cái không có API, nhưng chậm hơn và dễ bấm nhầm hơn gọi hàm trực tiếp). Hai cách không loại trừ nhau - agent thật thường ưu tiên MCP/API khi có, và chỉ dùng computer use khi không còn lựa chọn nào khác. Xem thêm ở [từ điển thuật ngữ](../00-ban-do-gioi-ai/06-tu-dien-thuat-ngu.md).
 
 ## Build agent đầu tiên: agent tra cứu thời tiết
 
