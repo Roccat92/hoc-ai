@@ -1,6 +1,6 @@
 # Chọn model, reasoning và hạn mức khi dùng coding agent
 
-Bài này dành cho người dùng Codex hoặc Claude Code nhưng không hiểu vì sao hai task tương tự tiêu hao khác nhau. Học xong bạn sẽ chọn cấu hình dựa trên rủi ro, hiểu context và biết xem số liệu sử dụng - ở cả hai công cụ.
+Bài này dành cho người dùng Codex hoặc Claude Code nhưng không hiểu vì sao hai task tương tự tiêu hao khác nhau. Học xong bạn sẽ chọn cấu hình dựa trên rủi ro, hiểu context và biết xem số liệu sử dụng - ở cả hai công cụ. Nếu chưa rõ "reasoning" thực chất là gì (không chỉ là một nút bấm), xem khái niệm nền tảng ở [`00-ban-do-gioi-ai/02-llm-la-gi.md`](../00-ban-do-gioi-ai/02-llm-la-gi.md).
 
 ## Quy tắc chọn nhanh
 

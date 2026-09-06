@@ -66,6 +66,14 @@ Khi LLM dự đoán từ tiếp theo, nó thực ra tính ra một **danh sách 
 
 Chatbot thường (Claude.ai, ChatGPT) hiếm khi cho chỉnh temperature trực tiếp - nó chỉ hiện khi gọi API bằng code. Hiểu khái niệm này giúp bạn hiểu vì sao hỏi AI cùng một câu hai lần có thể ra hai câu trả lời hơi khác nhau.
 
+## Reasoning - khi model "nghĩ" trước khi trả lời
+
+Một số model hiện đại (gọi là **reasoning model**, hoặc có chế độ "extended thinking"/"suy luận mở rộng") không trả lời ngay mà tự sinh ra một chuỗi bước suy luận trung gian trước khi đưa ra câu trả lời cuối cùng - giống bạn nháp ra giấy trước khi viết câu trả lời chốt, thay vì nghĩ gì viết nấy. Chuỗi suy luận này về bản chất vẫn là token (xem lại phần Token phía trên) - bạn thường không thấy hết nội dung nháp đó, nhưng nó vẫn tính vào chi phí và thời gian chờ.
+
+**Vì sao việc này quan trọng với bạn:** đây chính là lý do khi dùng coding agent (Claude Code, Codex), bật mức "reasoning" cao cho một việc khó thì kết quả thường chính xác hơn nhưng chờ lâu hơn và tốn nhiều token hơn hẳn - không phải vì model "biết nhiều hơn", mà vì nó đang suy nghĩ kỹ hơn trước khi trả lời. Xem cách chọn mức reasoning hợp lý theo từng loại việc ở [`02-code-voi-ai/14-codex-model-reasoning-va-han-muc.md`](../02-code-voi-ai/14-codex-model-reasoning-va-han-muc.md).
+
+**Mẹo thực tế:** việc đơn giản, rõ ràng thì dùng reasoning thấp (hoặc tắt) cho nhanh và rẻ; việc khó, nhiều bước, dễ sai (debug bug hóc búa, thiết kế kiến trúc, toán/logic phức tạp) mới cần reasoning cao - bật cao cho mọi việc chỉ tổ chờ lâu và tốn tiền oan.
+
 ## Vì sao AI đôi khi "bịa" (hallucination)?
 
 Vì bản chất LLM là **dự đoán từ có khả năng cao nhất**, không phải tra cứu một cơ sở dữ liệu sự thật. Khi gặp câu hỏi mà nó không có đủ thông tin đáng tin cậy, nó vẫn có xu hướng tạo ra một câu trả lời **nghe rất trôi chảy và tự tin** - dù nội dung sai. Hiện tượng này gọi là **hallucination** (ảo giác).

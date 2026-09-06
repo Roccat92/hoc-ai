@@ -30,6 +30,7 @@ Từ điển chia làm hai phần: thuật ngữ AI/LLM, và thuật ngữ lập
 | **Prompt** | Câu lệnh/yêu cầu bạn đưa cho AI |
 | **Prompt engineering** | Kỹ thuật viết prompt sao cho AI hiểu đúng ý, trả lời đúng cái bạn cần - xem [`01-bat-dau-tu-so-0/04-prompt-co-ban.md`](../01-bat-dau-tu-so-0/04-prompt-co-ban.md) |
 | **RAG (Retrieval-Augmented Generation)** | Kỹ thuật cho AI "tra cứu" tài liệu thật trước khi trả lời, thay vì chỉ dựa vào trí nhớ đã huấn luyện - giảm hallucination, cho AI biết thông tin riêng/mới. Xem [`04-build-ung-dung-ai/02-rag-la-gi-va-build.md`](../04-build-ung-dung-ai/02-rag-la-gi-va-build.md) |
+| **Reasoning model / Extended thinking** | Model tự sinh một chuỗi bước suy luận trung gian (vẫn tính token, vẫn tốn tiền và thời gian) trước khi trả lời - chính xác hơn với việc khó, nhưng chậm và đắt hơn với việc dễ. Xem [`02-llm-la-gi.md`](02-llm-la-gi.md) |
 | **System prompt** | Chỉ dẫn "nền" được đặt trước cuộc trò chuyện, định hướng cách AI cư xử xuyên suốt (ví dụ: "Bạn là trợ lý viết code, luôn trả lời bằng tiếng Việt") |
 | **Temperature** | Tham số điều chỉnh độ "ngẫu nhiên/sáng tạo" khi AI chọn từ tiếp theo - xem [`02-llm-la-gi.md`](02-llm-la-gi.md) |
 | **Token** | Đơn vị nhỏ nhất LLM xử lý (một phần từ, một từ, hoặc dấu câu) - xem [`02-llm-la-gi.md`](02-llm-la-gi.md) |

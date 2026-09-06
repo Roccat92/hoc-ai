@@ -43,6 +43,8 @@ Công cụ tiêu biểu: Midjourney, DALL-E, Stable Diffusion.
 
 AI tạo video ngắn từ mô tả văn bản hoặc ảnh, lồng tiếng tự nhiên (text-to-speech), tạo nhạc nền theo yêu cầu. Đây là nhánh phát triển nhanh nhất gần đây, nhưng chất lượng và độ ổn định vẫn chưa bằng ba nhóm trên - thường cần thử nhiều lần, chỉnh sửa nhiều mới ra kết quả ưng ý, chưa phải "bấm một phát ăn ngay".
 
+Một nhánh khác đang phát triển nhanh: **hội thoại giọng nói thời gian thực** (voice realtime) - bạn nói chuyện trực tiếp bằng giọng, AI nghe và trả lời lại ngay bằng giọng gần như tức thì, khác hẳn kiểu cũ "gõ chữ rồi AI đọc to lên" chậm rãi. Nhiều chatbot phổ biến đã có chế độ này - mở app trên điện thoại, tìm biểu tượng micro để thử.
+
 Công cụ tiêu biểu: các nền tảng tạo video AI (Runway, Sora...), công cụ lồng tiếng (ElevenLabs), công cụ tạo nhạc (Suno).
 
 ### Agent & tự động hóa
