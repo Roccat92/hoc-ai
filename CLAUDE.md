@@ -43,6 +43,10 @@ Hình gốc là số 0 đặc có lỗ tròn + dấu mũ hình nêm (gợi chữ
 
 `scripts/tao-thumbnail.mjs` sinh ảnh 1200x630 cho mọi bài vào `public/thumb/` (không commit) bằng satori + resvg, font ở `scripts/fonts/`. kèm bản nhỏ 480px ở `public/thumb/nho/` làm thẻ bài trong lộ trình 5 cấp trên trang chủ (`theme/LoTrinh.vue`). `npm run docs:build` tự chạy nó trước khi build; `transformPageData` trong `config.mts` gắn `og:image`/`og:title`/`og:description` theo từng trang từ đó. Không cần làm gì khi thêm bài mới - tiêu đề, phần, số bài, cấp độ và câu "học xong bạn sẽ..." đều rút từ nội dung. Phong cách mặc định là "dark" (chủ dự án chọn); thử nhanh một bài: `node scripts/tao-thumbnail.mjs <một-phần-tên-file>`.
 
+## SEO (đã tự động, đừng làm tay)
+
+`config.mts` tự sinh theo từng trang: canonical, title (trang chủ có từ khóa, không kèm "| Học AI Việt"), description (từ `public/thumb/_mo-ta.json`), og/twitter, JSON-LD (WebSite / CollectionPage / Article+LearningResource + BreadcrumbList) trong `transformPageData`; `sitemap.xml` do VitePress sinh; `llms.txt` sinh ở `buildEnd`; `public/robots.txt` trỏ sitemap. Muốn mô tả SEO của một bài tốt hơn: sửa câu "Học xong bạn sẽ..." trong đoạn mở đầu bài đó (đó chính là nguồn), không thêm frontmatter.
+
 ## Lệnh
 
 - `npm run docs:dev` - xem web ở máy (http://localhost:5173)
