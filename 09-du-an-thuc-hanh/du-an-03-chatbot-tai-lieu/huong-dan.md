@@ -45,6 +45,7 @@ Sửa `spec.md`, cập nhật `backlog.md`, rồi lặp lại quy trình đã qu
 Dự án này thường chứa **tài liệu nội bộ có thể nhạy cảm** (chính sách công ty, thông tin nhân sự...) - đi lại kỹ [checklist bảo mật ở phần 10](../../10-bao-mat/) trước khi public, đặc biệt:
 - Không để chatbot truy cập công khai nếu tài liệu chứa thông tin nhạy cảm - giữ sau lớp đăng nhập.
 - Giấu API key Claude cẩn thận (xem [`10-bao-mat/03-giau-api-key-va-secret.md`](../../10-bao-mat/03-giau-api-key-va-secret.md)) - dự án này gọi API nhiều hơn hai dự án trước (mỗi lần upload và mỗi lần hỏi đều tốn token), theo dõi usage dashboard thường xuyên hơn.
+- Dự án này chính xác là kiểu ứng dụng bài [bảo mật ứng dụng AI](../../10-bao-mat/07-bao-mat-ung-dung-ai.md) nói tới - tài liệu admin tải lên có thể chứa lệnh giả gài vào (prompt injection) để dụ chatbot tiết lộ system prompt hoặc bỏ qua quy tắc. Trước khi cho người khác dùng thật, chạy thử 10 câu red-team ở bài đó và xác nhận chatbot từ chối đúng cả 10 câu.
 
 ## Tự chấm: mình đã hiểu chưa?
 
