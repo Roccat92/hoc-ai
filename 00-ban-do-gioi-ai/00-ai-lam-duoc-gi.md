@@ -49,6 +49,8 @@ Công cụ tiêu biểu: các nền tảng tạo video AI (Runway, Sora...), cô
 
 AI không chỉ trả lời một câu hỏi mà tự lên kế hoạch, gọi công cụ, thực hiện chuỗi nhiều bước để hoàn thành một mục tiêu - sẽ học kỹ ở [`04-build-ung-dung-ai/03-ai-agent.md`](../04-build-ung-dung-ai/03-ai-agent.md). Ứng dụng: tự động hóa quy trình lặp lại (xử lý email, cập nhật bảng tính), trợ lý tự tìm kiếm và tổng hợp thông tin thay bạn.
 
+Một dạng "gọi công cụ" đáng chú ý gần đây: thay vì tự tạo nội dung từ đầu, AI có thể **điều khiển trực tiếp phần mềm chuyên dụng có sẵn** - dựng phim, tạo mô hình 3D, chỉnh sửa ảnh hàng loạt, đăng bài lên mạng xã hội... - thông qua **MCP** (Model Context Protocol, xem [từ điển thuật ngữ](06-tu-dien-thuat-ngu.md)), một chuẩn kết nối mở giúp AI "cắm" vào đúng công cụ cần dùng theo cách chuẩn hóa, thay vì mỗi nơi phải tự viết tích hợp riêng. Ngày càng nhiều phần mềm sáng tạo cung cấp MCP server riêng cho đúng việc này. Hiểu đơn giản: bạn mô tả kết quả muốn có, AI tự vận hành công cụ chuyên nghiệp để ra kết quả đó - giống thuê một trợ lý đã biết dùng thành thạo công cụ ấy, chỉ khác là trợ lý này làm việc qua mô tả bằng lời thay vì thao tác chuột tay. Xem kỹ hơn ở [`04-build-ung-dung-ai/03-ai-agent.md`](../04-build-ung-dung-ai/03-ai-agent.md#mcp-chuan-hoa-viec-ket-noi-agent-voi-cong-cu-du-lieu).
+
 Công cụ tiêu biểu: Claude Code (agent chuyên code), n8n kết hợp AI (xem [`04-build-ung-dung-ai/05-n8n-automation.md`](../04-build-ung-dung-ai/05-n8n-automation.md)).
 
 ### Dữ liệu
