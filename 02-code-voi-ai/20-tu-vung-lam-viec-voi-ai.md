@@ -86,4 +86,4 @@ Ví dụ: *"**Refactor** hàm `xuLyDon` **trong `don-hang.js`** thành các hàm
 
 ## Bước tiếp theo
 
-Bạn đã có công cụ, biết chọn chỗ làm việc, biết diễn đạt cho AI hiểu. Giờ tới lúc đưa sản phẩm ra khỏi máy mình cho người khác dùng được: [Thuê VPS: là gì, chọn nhà cung cấp nào →](../03-ha-tang-thuc-chien/01-thue-vps.md)
+Bạn đã có công cụ, biết chọn chỗ làm việc, biết diễn đạt cho AI hiểu. Trước khi đưa sản phẩm ra khỏi máy mình, còn một việc nhỏ hay bị bỏ qua: logo, favicon, ảnh chia sẻ link - những thứ AI cũng làm giúp được: [Tạo logo, favicon, thumbnail và ảnh động bằng AI →](21-tao-logo-thumbnail-va-video-bang-ai.md)

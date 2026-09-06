@@ -73,6 +73,10 @@ jobs:
 - `secrets.OPENAI_API_KEY`: khóa để trong GitHub Secrets, **không** viết thẳng vào file - xem [giấu API key](../../10-bao-mat/03-giau-api-key-va-secret.md).
 - Job này chỉ đọc và in báo cáo; commit hay deploy thì tách bước riêng có phê duyệt.
 
+## Tạo ảnh và asset hàng loạt trong một phiên
+
+Khái niệm chung (dùng vector cho logo/icon/favicon, cách mô tả cho AI) nằm ở [bài tạo logo, thumbnail và ảnh động bằng AI](../../02-code-voi-ai/21-tao-logo-thumbnail-va-video-bang-ai.md). Riêng về Codex: trải nghiệm thực tế cho thấy nó xử lý việc **sinh hàng loạt ảnh minh họa/asset trong cùng một phiên làm việc** mượt hơn Claude Code - mô tả nhu cầu một lần ("cần 5 ảnh minh họa cho 5 tính năng, phong cách phẳng, hai màu thương hiệu"), Codex tự lặp lại việc gọi công cụ sinh ảnh cho từng cái và đặt đúng vào thư mục assets, không cần bạn ngồi tạo tay từng ảnh rồi copy vào dự án như một số agent khác.
+
 ## Xem thêm
 
 [Cài đặt và lệnh cơ bản](01-cai-dat-va-lenh-co-ban.md) - [Chi phí và các gói](02-chi-phi-cac-goi.md) - [Cấu hình Claude Code tương đương](../claude-code/03-cau-hinh-nang-cao.md).
