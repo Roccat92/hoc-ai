@@ -42,6 +42,19 @@ Sau khi có tài khoản nhà phát triển (và D-U-N-S nếu đăng ký tổ c
 4. **Nộp app chờ duyệt (review)**: Apple duyệt khá kỹ và có thể từ chối nếu app vi phạm nguyên tắc (thiếu tính năng, lỗi, thiếu Apple Sign In khi đã có login khác - xem [bài đăng nhập](01-dang-nhap-google-apple-otp.md)). Google thường nhanh hơn nhưng cũng có kiểm duyệt.
 5. **Được duyệt → phát hành**. Về sau mỗi lần cập nhật đều nộp bản mới và có thể phải chờ duyệt lại.
 
+## Lý do bị Apple từ chối - checklist rút từ trải nghiệm thật
+
+Phần "duyệt kỹ và có thể từ chối" ở trên nghe chung chung, không biết đường nào mà lần. Dưới đây là **bốn lý do bị Apple từ chối thật** khi đưa [StarteeX](../07-case-study/02-starteex-app.md) lên App Store - dạng checklist để bạn tự rà trước khi nộp, đỡ mất một vòng nộp lại (mỗi vòng có thể mất vài ngày chờ duyệt):
+
+1. **Phải dùng thử được mà không cần đăng ký.** Apple bắt reviewer trải nghiệm được tính năng chính của app mà không bị ép tạo tài khoản trước - trừ khi bản thân sản phẩm bắt buộc phải có tài khoản mới có ý nghĩa (ví dụ app ngân hàng). Cách xử lý: thêm chế độ "dùng thử/khách" (guest mode) cho các màn hình chính, chỉ bắt đăng nhập ở bước thật sự cần (thanh toán, lưu lịch sử...).
+2. **Phải xin ý kiến người dùng trước khi gửi dữ liệu chat cho bên thứ ba, và nói rõ gửi cho ai.** Nếu app có tính năng chat với AI, Apple yêu cầu khai báo rõ dữ liệu người dùng gõ vào được gửi đi đâu. Dùng thẳng một nhà cung cấp (ví dụ Google Gemini) thì khai đúng tên nhà cung cấp đó trong "App Privacy" và chính sách bảo mật. Nếu dùng dịch vụ định tuyến nhiều model như [OpenRouter](../phu-luc-cong-cu/) (một request có thể được chuyển tới nhiều nhà cung cấp model khác nhau tùy cấu hình) thì việc khai "dịch vụ nào" mơ hồ hơn hẳn - repo này chưa có câu trả lời chuẩn cho tình huống đó, chỉ ghi nhận đây là điểm cần đọc kỹ mục "App Privacy" mới nhất của Apple hoặc hỏi thẳng OpenRouter, không nên đoán.
+3. **Tính năng "trông có vẻ" chưa xong cũng bị tính là lỗi**, dù nó chạy đúng. Review của Apple có phần chủ quan (mắt người xem, không chỉ test chức năng) - một nút "sắp ra mắt", một màn hình còn placeholder, hay một luồng nửa vời dễ bị gắn nhãn "chưa đủ hoàn thiện để duyệt". Cách xử lý: tắt/ẩn hẳn khỏi bản nộp mọi tính năng chưa mượt, chỉ để lại phần đã chỉn chu.
+4. **Cho tạo tài khoản thì bắt buộc phải có nút tự xóa tài khoản ngay trong app**, kèm cam kết xóa sạch dữ liệu liên quan - không được bắt người dùng phải email/liên hệ hỗ trợ mới xóa được.
+
+> Đây là bốn điều thực tế đã gặp, không phải danh sách đầy đủ nguyên tắc của Apple - và chính sách của Apple có thể đổi theo thời gian. Trước khi nộp app, đọc trực tiếp [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) thay vì chỉ tin danh sách này. *(kiểm tra: 06/09/2026)*
+
+**Còn Google Play** thì không gắt kiểu từ chối như trên - trải nghiệm thật là app không bị từ chối, nhưng **duyệt rất chậm**, nhiều khi build mới đã sẵn sàng từ trước khi bản cũ duyệt xong. Google chủ yếu chỉ cảnh báo (không chặn) các vấn đề kỹ thuật kiểu phiên bản công cụ build đã cũ - kiểm tra mục "Cảnh báo" (Warnings) trong Play Console sau khi nộp để không bỏ sót.
+
 ## Nếu chưa cần lên store
 
 Không phải sản phẩm nào cũng cần lên chợ ứng dụng. Nếu sản phẩm của bạn là **web app** (chạy trên trình duyệt), bạn có thể phát hành ngay qua deploy web thông thường ([xem phần 3](../03-ha-tang-thuc-chien/03-deploy-mien-phi.md)) mà không tốn phí store, không chờ duyệt. Nhiều sản phẩm chọn làm **PWA** (web app cài được lên màn hình điện thoại như một app) để tránh toàn bộ quy trình store ở giai đoạn đầu. Chỉ lên App Store/Play khi thật sự cần (cần tính năng native, cần hiện diện trên chợ để người dùng tin tưởng/tìm thấy).

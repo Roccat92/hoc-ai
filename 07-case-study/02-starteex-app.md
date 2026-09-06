@@ -65,7 +65,7 @@ Số VND ở trên đã gồm thuế và tự cập nhật theo tỉ giá - xem 
 2. **Một bộ mã cho hai hệ điều hành là lựa chọn của đội nhỏ.** Không phải vì nó "xịn hơn", mà vì đội ít người không kham nổi hai bản.
 3. **Phí lên chợ là chi phí cố định phải tính trước.** Riêng phí Apple đã là khoản trả hàng năm, dừng trả thì app biến mất khỏi App Store - cần tính vào chi phí duy trì chứ không phải chi phí một lần.
 
-*(Phần bài học sẽ được bổ sung thêm các chỗ bị Apple/Google từ chối duyệt và cách xử lý.)*
+4. **Apple duyệt kỹ hơn tưởng tượng, Google Play thì chậm chứ không khó.** Bị Apple từ chối vì thiếu chế độ dùng thử không cần đăng ký, vì chưa khai rõ dữ liệu chat gửi cho nhà cung cấp AI nào, và vì một tính năng "trông có vẻ" chưa xong dù chạy đúng. Chi tiết từng lý do và cách xử lý ở [checklist trong bài đưa app lên store](../11-ra-thi-truong/02-dua-app-len-store.md#ly-do-bi-apple-tu-choi-checklist-rut-tu-trai-nghiem-that).
 
 ## Link
 
