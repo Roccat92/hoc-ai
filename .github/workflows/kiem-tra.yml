@@ -21,3 +21,5 @@ jobs:
         run: npm run kiem-tra-chuoi
       - name: Build VitePress (kiểm tra link nội bộ)
         run: npm run docs:build
+      - name: Dò anchor chết (heading đổi tên nhưng link quên cập nhật)
+        run: npm run kiem-tra-anchor

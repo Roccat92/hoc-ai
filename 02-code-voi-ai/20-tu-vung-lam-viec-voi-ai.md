@@ -75,7 +75,7 @@ Thuật ngữ đúng mà chỉ sai chỗ thì AI vẫn mò. Luôn nói rõ *ở 
 - **Theo file và dòng:** *"Ở `src/gio-hang.js` dòng 42, giá đang tính sai thuế."*
 - **Theo tên hàm/thành phần:** *"Trong hàm `tinhTongTien`, ..."*
 - **Theo vị trí trên màn hình:** *"Cái nút Gửi màu xám ở góc dưới bên phải form."*
-- **Kèm ảnh chụp:** với lỗi giao diện, dán luôn ảnh - đây chính là [vòng lặp sửa bằng ảnh](06-tri-benh-ui-phen.md#c-vòng-lặp-sửa-bằng-ảnh) đã học.
+- **Kèm ảnh chụp:** với lỗi giao diện, dán luôn ảnh - đây chính là [vòng lặp sửa bằng ảnh](06-tri-benh-ui-phen.md#c-vong-lap-sua-bang-anh) đã học.
 
 Công thức gọn cho một yêu cầu tốt: **[thuật ngữ] + [vị trí cụ thể] + [kết quả mong muốn]**.
 Ví dụ: *"**Refactor** hàm `xuLyDon` **trong `don-hang.js`** thành các hàm nhỏ, **giữ nguyên kết quả trả về**."*

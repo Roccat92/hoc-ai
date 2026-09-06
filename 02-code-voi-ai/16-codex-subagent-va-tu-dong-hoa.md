@@ -22,7 +22,7 @@ Nếu thiếu file hoặc lệnh lỗi: trả trạng thái blocked và log ng�
 
 ## Chế độ không tương tác cho script và CI
 
-Mỗi coding agent có một cách gọi tương tự nhau để chạy không hỏi lại, nhận thẳng prompt và tự thoát khi xong - Codex dùng `codex exec "..."`, Claude Code dùng `claude -p "..."`. Cả hai đều hợp để chạy trong GitHub Actions (ví dụ rà link chết mỗi khi có pull request) hay bất kỳ script lặp lại nào. Cú pháp đầy đủ và một ví dụ workflow CI thật nằm ở phụ lục [Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#codex-exec-chạy-không-tương-tác) hoặc [Claude Code](../phu-luc-cong-cu/claude-code/03-cau-hinh-nang-cao.md#subagent-và-chế-độ-không-tương-tác).
+Mỗi coding agent có một cách gọi tương tự nhau để chạy không hỏi lại, nhận thẳng prompt và tự thoát khi xong - Codex dùng `codex exec "..."`, Claude Code dùng `claude -p "..."`. Cả hai đều hợp để chạy trong GitHub Actions (ví dụ rà link chết mỗi khi có pull request) hay bất kỳ script lặp lại nào. Cú pháp đầy đủ và một ví dụ workflow CI thật nằm ở phụ lục [Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#codex-exec-chay-khong-tuong-tac) hoặc [Claude Code](../phu-luc-cong-cu/claude-code/03-cau-hinh-nang-cao.md#subagent-va-che-đo-khong-tuong-tac).
 
 Với Claude Code, **subagent** (đôi khi gọi là Agent hoặc Task) là một phiên Claude con được giao một việc thu hẹp, chạy độc lập rồi báo kết quả về - dùng cho đúng trường hợp "việc thật sự độc lập" như đã nói ở trên, không dùng cho hai việc cùng sửa một file.
 

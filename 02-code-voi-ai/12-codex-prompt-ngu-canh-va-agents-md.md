@@ -21,7 +21,7 @@ Hai file `AGENTS.md` và `CLAUDE.md` đóng cùng một vai trò cho hai công c
 
 ## Một file hướng dẫn tốt trông thế nào
 
-Đặt file này ở **thư mục gốc dự án**; agent tự đọc mỗi phiên (`AGENTS.md` với Codex, `CLAUDE.md` với Claude Code). Nội dung cốt lõi luôn có bốn phần: stack đang dùng, lệnh kiểm tra (cài/test/build), quy ước đặt tên và định dạng dữ liệu, khu vực nhạy cảm cần hỏi trước khi đụng. Để ngắn và cụ thể - một file 10-20 dòng agent đọc hết còn hơn 200 dòng nó bỏ qua nửa chừng. Ví dụ đầy đủ cho một dự án thật: [AGENTS.md ở phụ lục Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#agentsmd-đầy-đủ).
+Đặt file này ở **thư mục gốc dự án**; agent tự đọc mỗi phiên (`AGENTS.md` với Codex, `CLAUDE.md` với Claude Code). Nội dung cốt lõi luôn có bốn phần: stack đang dùng, lệnh kiểm tra (cài/test/build), quy ước đặt tên và định dạng dữ liệu, khu vực nhạy cảm cần hỏi trước khi đụng. Để ngắn và cụ thể - một file 10-20 dòng agent đọc hết còn hơn 200 dòng nó bỏ qua nửa chừng. Ví dụ đầy đủ cho một dự án thật: [AGENTS.md ở phụ lục Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#agents-md-đay-đu).
 
 ## Prompt sửa bug có thể tái hiện
 

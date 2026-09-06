@@ -4,7 +4,7 @@ Trang này gom cú pháp cấu hình cụ thể của Claude Code mà lộ trìn
 
 ## Quyền hạn: `.claude/settings.json`
 
-Khái niệm chung (ba thứ cần nhìn trước khi duyệt lệnh) nằm ở [bài task đầu tiên và quyền hạn](../../02-code-voi-ai/11-codex-task-dau-tien-va-quyen-han.md). Cấu hình cụ thể và một ví dụ allowlist đầy đủ nằm ở [bài setup một lần để agent tự chạy](../../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md#bước-5-cấp-quyền-cho-agent-đúng-mức) - không lặp lại ở đây để tránh hai nơi cùng một cấu hình dễ lệch nhau. Kiểm tra và sửa nhanh bằng lệnh `/permissions` ngay trong phiên làm việc.
+Khái niệm chung (ba thứ cần nhìn trước khi duyệt lệnh) nằm ở [bài task đầu tiên và quyền hạn](../../02-code-voi-ai/11-codex-task-dau-tien-va-quyen-han.md). Cấu hình cụ thể và một ví dụ allowlist đầy đủ nằm ở [bài setup một lần để agent tự chạy](../../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md#buoc-5-cap-quyen-cho-agent-theo-đung-khuyen-nghi-chinh-thuc-khong-phai-tu-đong-het) - không lặp lại ở đây để tránh hai nơi cùng một cấu hình dễ lệch nhau. Kiểm tra và sửa nhanh bằng lệnh `/permissions` ngay trong phiên làm việc.
 
 ## Skills, Plugins, MCP
 

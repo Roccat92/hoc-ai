@@ -16,7 +16,7 @@ Thư viện mở dạy lập trình với AI cho người Việt. Toàn bộ n�
 
 `09-du-an-thuc-hanh/` khác cấu trúc các phần còn lại: mỗi thư mục con `du-an-NN-*/` chứa đúng 4 file (`spec.md`, `backlog.md`, `CLAUDE.md`, `huong-dan.md`), không phải bài học phẳng - sidebar gộp các nhóm dự án đó với mọi file bài học phẳng còn lại trong cùng thư mục (ví dụ `04-rubric-va-capstone.md`) trong `config.mts` (hàm `projectGroupsOf` và khối `flatLessonFiles` trong `buildSidebar`), tự nhận diện qua tên thư mục con.
 
-Có script `scripts/kiem-tra-chuoi.mjs` (`npm run kiem-tra-chuoi`, hoặc `npm run docs:check` để chạy kèm build) dò chuỗi "Bước tiếp theo" từ bài đầu tiên - chạy trước khi commit nếu vừa thêm/sửa/sắp xếp lại bài, và luôn chạy trong CI (`.github/workflows/kiem-tra.yml`) trên mọi PR.
+Có script `scripts/kiem-tra-chuoi.mjs` (`npm run kiem-tra-chuoi`, hoặc `npm run docs:check` để chạy kèm build) dò chuỗi "Bước tiếp theo" từ bài đầu tiên - chạy trước khi commit nếu vừa thêm/sửa/sắp xếp lại bài, và luôn chạy trong CI (`.github/workflows/kiem-tra.yml`) trên mọi PR. Có thêm `scripts/kiem-tra-anchor.mjs` (`npm run kiem-tra-anchor`, chạy kèm trong `docs:check` và CI) dò các link `...md#anchor` xem đúng ID thật trong bản build chưa - VitePress chỉ xác minh đường dẫn file, không xác minh phần `#anchor`, nên đổi tên một heading rất dễ để lại link chết âm thầm (không 404, chỉ cuộn sai chỗ). Không tự đoán quy tắc bỏ dấu của markdown-it-anchor khi viết link thủ công - luôn build rồi soi `id="..."` thật trong `.vitepress/dist`.
 
 ## Quy tắc nội dung (bắt buộc với mọi bài)
 

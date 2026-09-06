@@ -10,8 +10,9 @@
     "docs:preview": "vitepress preview",
     "kiem-tra-chuoi": "node scripts/kiem-tra-chuoi.mjs",
     "kiem-tra-ngay-cu": "node scripts/kiem-tra-ngay-cu.mjs",
-    "docs:check": "npm run kiem-tra-chuoi && npm run docs:build",
-    "tao-thumbnail": "node scripts/tao-thumbnail.mjs"
+    "docs:check": "npm run kiem-tra-chuoi && npm run docs:build && npm run kiem-tra-anchor",
+    "tao-thumbnail": "node scripts/tao-thumbnail.mjs",
+    "kiem-tra-anchor": "node scripts/kiem-tra-anchor.mjs"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

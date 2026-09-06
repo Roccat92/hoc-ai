@@ -4,7 +4,7 @@ Bài này nối tiếp [chữa bệnh "UI phèn"](06-tri-benh-ui-phen.md). Ở �
 
 ## Vì sao font là thứ đầu tiên lộ ra "phèn"
 
-Đổi đúng một font, cả trang đổi khí chất. Ngược lại, để nguyên font mặc định của framework (thường là một font sans-serif hệ thống nhàn nhạt) là một trong những dấu hiệu "code AI ra" rõ nhất - vì đó chính là lựa chọn mặc định khi [không ai nói cho AI biết khẩu vị](06-tri-benh-ui-phen.md#vì-sao-ai-hay-ra-kiểu-này).
+Đổi đúng một font, cả trang đổi khí chất. Ngược lại, để nguyên font mặc định của framework (thường là một font sans-serif hệ thống nhàn nhạt) là một trong những dấu hiệu "code AI ra" rõ nhất - vì đó chính là lựa chọn mặc định khi [không ai nói cho AI biết khẩu vị](06-tri-benh-ui-phen.md#vi-sao-ai-hay-ra-kieu-nay).
 
 Font không chỉ để "đọc được". Nó mang cảm xúc: một tiệm bánh và một dashboard tài chính cần hai giọng chữ hoàn toàn khác nhau.
 
@@ -87,7 +87,7 @@ Khi bạn mua/được cấp một file font (`.woff2`), tự khai báo:
 
 ## Icon: bỏ emoji, dùng icon thiết kế
 
-Nhớ dấu hiệu "UI phèn": [dùng emoji 🚀 ✨ 💡 thay icon thiết kế](06-tri-benh-ui-phen.md#ui-phèn-là-gì). Emoji nhanh nhưng mỗi hệ máy hiển thị một kiểu, không đồng bộ nét, không đổi được màu theo giao diện. So sánh:
+Nhớ dấu hiệu "UI phèn": [dùng emoji 🚀 ✨ 💡 thay icon thiết kế](06-tri-benh-ui-phen.md#ui-phen-la-gi). Emoji nhanh nhưng mỗi hệ máy hiển thị một kiểu, không đồng bộ nét, không đổi được màu theo giao diện. So sánh:
 
 <div class="uid">
   <div class="uid__col">

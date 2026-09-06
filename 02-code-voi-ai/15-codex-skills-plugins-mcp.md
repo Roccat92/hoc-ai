@@ -32,7 +32,7 @@ Giả sử bạn muốn cho Codex đọc tài liệu của một thư viện qua
 | Chạy chỉ-đọc trước được không? | Được, đây vốn là MCP chỉ đọc |
 | Cách gỡ / thu hồi? | Xóa khai báo trong file cấu hình |
 
-Điền được cả năm mới cài. Về mặt cấu hình, MCP được khai báo trong một file cấu hình của agent (tên MCP + lệnh chạy + tham số) - cú pháp chính xác khác nhau giữa Codex và Claude Code, và đổi theo phiên bản, nên xem ví dụ cụ thể ở phụ lục [Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#mcp-khai-báo-trong-file-cấu-hình) hoặc [Claude Code](../phu-luc-cong-cu/claude-code/03-cau-hinh-nang-cao.md#skills-plugins-mcp) thay vì chép nguyên một sơ đồ dễ lỗi thời ở đây.
+Điền được cả năm mới cài. Về mặt cấu hình, MCP được khai báo trong một file cấu hình của agent (tên MCP + lệnh chạy + tham số) - cú pháp chính xác khác nhau giữa Codex và Claude Code, và đổi theo phiên bản, nên xem ví dụ cụ thể ở phụ lục [Codex](../phu-luc-cong-cu/codex/03-cau-hinh-nang-cao.md#mcp-khai-bao-trong-file-cau-hinh) hoặc [Claude Code](../phu-luc-cong-cu/claude-code/03-cau-hinh-nang-cao.md#skills-plugins-mcp) thay vì chép nguyên một sơ đồ dễ lỗi thời ở đây.
 
 ## Bài tập
 
