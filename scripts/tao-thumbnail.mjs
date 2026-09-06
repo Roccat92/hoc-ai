@@ -94,8 +94,18 @@ function moTaCua(file) {
   let cau = m ? m[1] : doan.split(/(?<=[.!?])\s/)[0]
   cau = cau.replace(/^bạn sẽ\s*/i, '').replace(/\s*[.!?]$/, '')
   cau = cau.charAt(0).toUpperCase() + cau.slice(1)
-  if (cau.length > 118) cau = cau.slice(0, 115).replace(/\s+\S*$/, '') + '…'
-  return cau
+  return catNgan(cau, 155) // meta description: Google hiện tới ~155-160 ký tự
+}
+function catNgan(s, toiDa) {
+  return s.length > toiDa ? s.slice(0, toiDa - 3).replace(/\s+\S*$/, '') + '…' : s
+}
+// README của phần: lấy đoạn mở đầu (đã viết theo kiểu tóm tắt phần), không thì câu đếm bài.
+function moTaReadme(file, soBai) {
+  const lines = fs.readFileSync(file, 'utf8').split('\n')
+  const i = lines.findIndex((l) => /^#\s+/.test(l))
+  const doan = lines.slice(i + 1).find((l) => l.trim() && !/^(#|<|:::|!\[|\||-|\d+\.|>|\*\*Dành cho)/.test(l.trim()))
+  if (doan) return catNgan(boMarkdown(doan), 155)
+  return soBai ? `${soBai} bài trong phần này, đọc theo thứ tự hoặc nhảy thẳng tới bài bạn cần.` : null
 }
 
 function* duyetMd(dir) {
@@ -130,7 +140,7 @@ function gomBai() {
         urlPath,
         outPng: path.join(OUT, rel.replace(/\.md$/, '.png').replace(/README\.png$/, 'index.png')),
         tieuDe: laReadme ? tieuDe.replace(/^Phần \d+:\s*/, '') : tieuDe,
-        moTa: laReadme ? (baiPhang.length ? `${baiPhang.length} bài trong phần này, đọc theo thứ tự hoặc nhảy thẳng tới bài bạn cần.` : null) : moTaCua(file),
+        moTa: laReadme ? moTaReadme(file, baiPhang.length) : moTaCua(file),
         phan: soPhan ? `Phần ${Number(soPhan)} · ${tenPhan}` : tenPhan,
         soBai: idx >= 0 ? `Bài ${idx + 1}/${baiPhang.length}` : laReadme ? 'Mục lục phần' : null,
         cap: capDo.get(urlPath.replace(/\/$/, '')) || null,
@@ -217,7 +227,7 @@ function mauApple(b) {
     h('div', { display: 'flex', flexDirection: 'column', gap: 22, width: 760 }, [
       h('div', { display: 'flex', gap: 14, fontSize: 26, fontWeight: 600, letterSpacing: -0.3 }, dong1),
       h('div', { fontSize: coChu(b.tieuDe), fontWeight: 700, color: '#1d1d1f', letterSpacing: -2, lineHeight: 1.08 }, b.tieuDe),
-      ...(b.moTa ? [h('div', { fontSize: 26, color: '#6e6e73', lineHeight: 1.35, marginTop: 6 }, b.moTa)] : []),
+      ...(b.moTa ? [h('div', { fontSize: 26, color: '#6e6e73', lineHeight: 1.35, marginTop: 6 }, catNgan(b.moTa, 118))] : []),
     ]),
     h('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }, [
       h('div', { display: 'flex', alignItems: 'center', gap: 18 }, [
@@ -254,7 +264,7 @@ function mauDark(b) {
     h('div', { display: 'flex', flexDirection: 'column', gap: 22, width: 780 }, [
       h('div', { display: 'flex', gap: 14, fontSize: 26, fontWeight: 600, letterSpacing: -0.3 }, dong1),
       h('div', { fontSize: coChu(b.tieuDe), fontWeight: 700, color: '#f5f5f7', letterSpacing: -2, lineHeight: 1.08 }, b.tieuDe),
-      ...(b.moTa ? [h('div', { fontSize: 26, color: '#a1a1a6', lineHeight: 1.35, marginTop: 6 }, b.moTa)] : []),
+      ...(b.moTa ? [h('div', { fontSize: 26, color: '#a1a1a6', lineHeight: 1.35, marginTop: 6 }, catNgan(b.moTa, 118))] : []),
     ]),
     h('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }, [
       h('div', { display: 'flex', alignItems: 'center', gap: 18 }, [
@@ -294,7 +304,7 @@ function mauCard(b) {
       ]),
       h('div', { display: 'flex', flexDirection: 'column', gap: 16, width: 940 }, [
         h('div', { fontSize: coChu(b.tieuDe), fontWeight: 700, color: '#1d1d1f', letterSpacing: -2, lineHeight: 1.08 }, b.tieuDe),
-        ...(b.moTa ? [h('div', { fontSize: 25, color: '#6e6e73', lineHeight: 1.35 }, b.moTa)] : []),
+        ...(b.moTa ? [h('div', { fontSize: 25, color: '#6e6e73', lineHeight: 1.35 }, catNgan(b.moTa, 118))] : []),
       ]),
       h('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'center' }, [
         h('div', { display: 'flex', alignItems: 'center', gap: 14 }, [

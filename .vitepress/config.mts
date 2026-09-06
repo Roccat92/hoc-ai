@@ -189,7 +189,7 @@ function moTaBai(relativePath: string): string | undefined {
   if (!moTaCache) {
     try { moTaCache = JSON.parse(fs.readFileSync(path.join(root, 'public', 'thumb', '_mo-ta.json'), 'utf8')) } catch { moTaCache = {} }
   }
-  return moTaCache![relativePath]
+  return moTaCache![relativePath] ?? moTaCache![relativePath.replace(new RegExp('(^|/)index[.]md$'), '$1README.md')]
 }
 
 // Suy ra đường dẫn công khai (sau rewrite, sau khi bỏ .md) từ relativePath VitePress
@@ -217,6 +217,7 @@ export default defineConfig({
   },
   cleanUrls: true,
   lastUpdated: true,
+  sitemap: { hostname: CANONICAL_ORIGIN },
   ignoreDeadLinks: [(url) => /LICENSE$/.test(url)],
   vite: {
     plugins: [
@@ -237,30 +238,122 @@ export default defineConfig({
     if (pageData.relativePath === '404.md') return
     const head = (pageData.frontmatter.head ??= [])
     const duongDan = canonicalPathOf(pageData.relativePath)
-    head.push(['link', { rel: 'canonical', href: `${CANONICAL_ORIGIN}${duongDan}` }])
-    // Thẻ Open Graph theo TỪNG trang: tiêu đề bài, mô tả và ảnh thumbnail riêng
-    // (public/thumb/... do scripts/tao-thumbnail.mjs sinh trước khi build - xem
-    // "docs:build" trong package.json). Trang chủ hoặc trang chưa có ảnh riêng
-    // thì dùng ảnh chung /og.png (trang chủ cũng có thẻ riêng: thumb/index.png).
-    const anhRieng = pageData.relativePath.replace(/.md$/, '.png')
-    const coAnhRieng = fs.existsSync(path.join(root, 'public', 'thumb', anhRieng))
-    const ogImage = coAnhRieng ? `${CANONICAL_ORIGIN}/thumb/${anhRieng}` : `${CANONICAL_ORIGIN}/og.png`
-    const ogTitle = duongDan === '/' ? 'Học AI Việt' : `${pageData.title} | Học AI Việt`
-    // Mô tả riêng từng bài (câu "học xong bạn sẽ...") do scripts/tao-thumbnail.mjs rút ra.
+    const laTrangChu = duongDan === '/'
+    const url = `${CANONICAL_ORIGIN}${duongDan}`
+    head.push(['link', { rel: 'canonical', href: url }])
+
+    // Trang chủ: tiêu đề có từ khóa tìm kiếm thay vì "Học AI Việt | Học AI Việt".
+    if (laTrangChu) {
+      pageData.title = 'Học AI Việt - học lập trình và build sản phẩm với AI từ con số 0'
+      // VitePress đọc pageData.titleTemplate (đã sao từ frontmatter TRƯỚC hook này), nên phải đặt cả hai.
+      pageData.titleTemplate = false
+      pageData.frontmatter.titleTemplate = false
+    }
+    // Mô tả riêng từng bài (câu "học xong bạn sẽ...", hoặc đoạn mở đầu của README phần)
+    // do scripts/tao-thumbnail.mjs rút ra; dùng cho <meta name="description"> lẫn og/twitter.
     const moTa = moTaBai(pageData.relativePath)
     if (!pageData.description && moTa) pageData.description = moTa
+    const moTaCuoi = pageData.description || description
+
+    // Ảnh riêng từng trang (public/thumb/..., sinh bởi plugin buildStart ở trên); thiếu thì dùng og.png.
+    const anhRieng = pageData.relativePath.replace(/\.md$/, '.png')
+    const coAnhRieng = fs.existsSync(path.join(root, 'public', 'thumb', anhRieng))
+    const ogImage = coAnhRieng ? `${CANONICAL_ORIGIN}/thumb/${anhRieng}` : `${CANONICAL_ORIGIN}/og.png`
+    const ogTitle = laTrangChu ? pageData.title : `${pageData.title} | Học AI Việt`
     head.push(
-      ['meta', { property: 'og:type', content: duongDan === '/' ? 'website' : 'article' }],
-      ['meta', { property: 'og:url', content: `${CANONICAL_ORIGIN}${duongDan}` }],
+      ['meta', { property: 'og:type', content: laTrangChu ? 'website' : 'article' }],
+      ['meta', { property: 'og:site_name', content: 'Học AI Việt' }],
+      ['meta', { property: 'og:locale', content: 'vi_VN' }],
+      ['meta', { property: 'og:url', content: url }],
       ['meta', { property: 'og:title', content: ogTitle }],
-      ['meta', { property: 'og:description', content: pageData.description || description }],
+      ['meta', { property: 'og:description', content: moTaCuoi }],
       ['meta', { property: 'og:image', content: ogImage }],
       ['meta', { property: 'og:image:width', content: '1200' }],
       ['meta', { property: 'og:image:height', content: '630' }],
       ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
       ['meta', { name: 'twitter:title', content: ogTitle }],
+      ['meta', { name: 'twitter:description', content: moTaCuoi }],
       ['meta', { name: 'twitter:image', content: ogImage }],
     )
+
+    // Dữ liệu có cấu trúc (JSON-LD) cho Google: trang chủ = WebSite; trang mục lục phần =
+    // CollectionPage; bài học = Article + LearningResource. Mọi trang con kèm BreadcrumbList
+    // (Trang chủ > Phần > Bài) để Google hiện đường dẫn thay vì URL thô.
+    const toChuc = {
+      '@type': 'Organization',
+      name: 'Học AI Việt',
+      url: CANONICAL_ORIGIN,
+      logo: `${CANONICAL_ORIGIN}/apple-touch-icon.png`,
+    }
+    const jsonLd: Record<string, unknown>[] = []
+    if (laTrangChu) {
+      jsonLd.push({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Học AI Việt',
+        url: CANONICAL_ORIGIN,
+        description,
+        inLanguage: 'vi',
+        publisher: toChuc,
+      })
+    } else {
+      const dir = pageData.relativePath.split('/')[0]
+      const phan =
+        sections.find((sec) => sec.dir === dir)?.text ??
+        (dir === 'phu-luc-cong-cu' ? 'Phụ lục: hướng dẫn theo công cụ' : undefined)
+      const laMucLuc = pageData.relativePath.endsWith('/index.md')
+      const vet: Record<string, unknown>[] = [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: CANONICAL_ORIGIN }]
+      if (phan) vet.push({ '@type': 'ListItem', position: 2, name: phan, item: `${CANONICAL_ORIGIN}/${dir}/` })
+      if (!laMucLuc) vet.push({ '@type': 'ListItem', position: vet.length + 1, name: pageData.title, item: url })
+      jsonLd.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: vet })
+      const capNhat = pageData.lastUpdated ? new Date(pageData.lastUpdated).toISOString() : undefined
+      jsonLd.push({
+        '@context': 'https://schema.org',
+        '@type': laMucLuc ? 'CollectionPage' : ['Article', 'LearningResource'],
+        headline: pageData.title,
+        name: pageData.title,
+        description: moTaCuoi,
+        url,
+        image: ogImage,
+        inLanguage: 'vi',
+        isAccessibleForFree: true,
+        isPartOf: { '@type': 'WebSite', name: 'Học AI Việt', url: CANONICAL_ORIGIN },
+        author: toChuc,
+        publisher: toChuc,
+        ...(capNhat ? { dateModified: capNhat } : {}),
+        ...(laMucLuc ? {} : { learningResourceType: 'Bài học', educationalLevel: 'Người mới bắt đầu' }),
+      })
+    }
+    for (const d of jsonLd) head.push(['script', { type: 'application/ld+json' }, JSON.stringify(d)])
+  },
+  async buildEnd(siteConfig) {
+    // llms.txt (https://llmstxt.org): mục lục gọn cho ChatGPT/Perplexity/Claude và các công cụ
+    // tìm kiếm bằng AI - mỗi bài một dòng: tên, URL, mô tả. Sinh từ chính danh sách trang.
+    const dong = [
+      '# Học AI Việt',
+      '',
+      `> ${description}`,
+      '',
+      `Toàn bộ nội dung miễn phí, viết bằng tiếng Việt, tại ${CANONICAL_ORIGIN}. Mỗi bài kết thúc bằng mục "Bước tiếp theo" trỏ sang bài kế tiếp; đọc theo thứ tự đó là đường học đầy đủ.`,
+      '',
+    ]
+    const nhom = new Map<string, string[]>()
+    for (const page of siteConfig.pages) {
+      if (page === '404.md' || page === 'README.md') continue
+      const file = path.join(root, page)
+      if (!fs.existsSync(file)) continue
+      const dir = page.includes('/') ? page.split('/')[0] : ''
+      const phan =
+        sections.find((sec) => sec.dir === dir)?.text ??
+        (dir === 'phu-luc-cong-cu' ? 'Phụ lục: hướng dẫn theo công cụ' : 'Trang khác')
+      const sauRewrite = page.replace(/README\.md$/, 'index.md')
+      const moTa = moTaBai(sauRewrite)
+      const u = `${CANONICAL_ORIGIN}${canonicalPathOf(sauRewrite)}`
+      if (!nhom.has(phan)) nhom.set(phan, [])
+      nhom.get(phan)!.push(`- [${headingOf(file)}](${u})${moTa ? `: ${moTa}` : ''}`)
+    }
+    for (const [phan, ds] of nhom) dong.push(`## ${phan}`, '', ...ds, '')
+    fs.writeFileSync(path.join(siteConfig.outDir, 'llms.txt'), dong.join('\n'))
   },
   head: [
     // Nhận diện: số 0 có lỗ + dấu mũ nêm, nền đen - file gốc ở public/, PNG sinh bằng scripts/tao-icon.ps1.

@@ -1,6 +1,6 @@
-# Học AI Việt 🇻🇳
+# Học AI Việt - học lập trình và build sản phẩm với AI từ con số 0 🇻🇳
 
-**Thư viện mở, miễn phí, tiếng Việt - học lập trình và build sản phẩm với AI từ con số 0.**
+**Thư viện mở, hoàn toàn miễn phí, viết bằng tiếng Việt** - cho người chưa biết code muốn tự build web, app, chatbot bằng AI, và cho dev muốn làm việc nhanh hơn với coding agent.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
