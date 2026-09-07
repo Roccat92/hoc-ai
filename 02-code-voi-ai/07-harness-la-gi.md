@@ -24,7 +24,7 @@ Trong giới AI, harness là **toàn bộ phần chương trình bao quanh model
   <text x="58" y="99" style="fill:var(--vp-c-text-2);font-size:12px">nghĩ - làm - xem</text>
   <text x="314" y="84" style="fill:var(--vp-c-text-2);font-size:12px">công cụ</text>
   <text x="314" y="99" style="fill:var(--vp-c-text-2);font-size:12px">đọc file, chạy lệnh</text>
-  <rect class="mh-anim" x="180" y="62" width="120" height="48" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite, mh-harness-fill 5s ease-in-out infinite"/>
+  <rect class="mh-anim" x="170" y="62" width="138" height="48" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite, mh-harness-fill 5s ease-in-out infinite"/>
   <text x="240" y="82" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>
   <text x="240" y="98" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">chỉ đoán chữ tiếp theo</text>
   <text x="240" y="136" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">quyền được làm gì · ngữ cảnh · quy tắc riêng của bạn</text>
