@@ -23,9 +23,13 @@
 @keyframes mh-skill-g  { 0%, 100% { stroke-opacity: 1 } 45% { stroke-opacity: .4 } 70% { stroke-opacity: 1 } }
 @keyframes mh-skill-in { 0%, 30% { opacity: 0 } 45% { opacity: 1 } 90% { opacity: 1 } 100% { opacity: 0 } }
 
-/* Khung MODEL trong sơ đồ harness (02-code-voi-ai/07) "thở" rõ hơn hẳn so với
-   chỉ đổi stroke-opacity - đổi cả độ đậm nền, đồng bộ nhịp với mh-skill-g. */
+/* Sơ đồ harness (02-code-voi-ai/07). Khung MODEL "thở" (đổi cả độ đậm nền,
+   đồng bộ nhịp với mh-skill-g); chấm chạy vòng MODEL <-> công cụ dùng lại
+   mh-loop-run; dây "ngữ cảnh -> MODEL" chảy bằng mh-mcp-f; chấm rơi từ
+   harness xuống sản phẩm dùng mh-harness-out - nằm im nửa đầu chu kỳ để
+   không rơi liên tục, chỉ "xuất xưởng" một nhịp mỗi vòng lặp. */
 @keyframes mh-harness-fill { 0%, 100% { fill-opacity: .08 } 45% { fill-opacity: .22 } 70% { fill-opacity: .08 } }
+@keyframes mh-harness-out { 0%, 50% { transform: translateY(0); opacity: 0 } 56% { opacity: 1 } 90% { transform: translateY(14px); opacity: 1 } 100% { transform: translateY(14px); opacity: 0 } }
 
 /* Sơ đồ 3 hộp (ví dụ: Trình duyệt -> Server -> Database) đi một vòng khứ hồi
    trong một chu kỳ duy nhất - mỗi keyframe chỉ "sống" trong đúng 1/4 chu kỳ,
