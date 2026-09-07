@@ -121,6 +121,31 @@ Hỏi lại tôi nếu thiếu thông tin, đừng tự đoán.
 
 Agent tạo cả `spec.md`, `backlog.md`, `CLAUDE.md` và khung thư mục ban đầu trong một lần, đỡ phải lặp lại quy trình phỏng vấn riêng cho từng file. Vẫn nên đọc lại từng file sau khi agent tạo xong - đây là nền móng cho cả dự án, sai ở đây kéo dài ảnh hưởng sang mọi phiên làm việc sau.
 
+## Cẩn thận: AI có xu hướng đồng tình với bạn - ép nó phản biện trước khi chốt
+
+Đây là điều ít người mới biết nhưng rất đáng nhớ: các mô hình AI (kể cả Claude, ChatGPT) có xu hướng thật là **đồng tình và khen ý tưởng của người hỏi** nhiều hơn mức nên có - gọi là "sycophancy" (nịnh/chiều theo ý người dùng). Đây không phải AI "biết nói dối", mà là cách nó được huấn luyện để nghe dễ chịu, hữu ích - hệ quả là bạn hỏi "ý tưởng này ổn không?", nó gần như luôn khen, ít khi tự nói ra rủi ro, hiếm khi chủ động tìm đối thủ cạnh tranh nếu bạn không yêu cầu.
+
+Hậu quả thật với người mới: hào hứng mô tả ý tưởng, AI khen hay, viết spec đẹp, code chạy được - rồi làm ra sản phẩm **không ai dùng**, vì chưa ai hỏi thật "đã có ai làm cái này chưa, tại sao họ chưa thắng, vì sao người dùng sẽ chọn bạn". Bước này cực rẻ để làm trước khi build (vài chục phút), cực đắt để bỏ qua (vài tuần công build).
+
+**Cách xử lý: chủ động ép AI phản biện, đừng để nó tự nguyện.** Trước khi chốt spec, thêm một vòng hỏi ngược lại chính ý tưởng của bạn:
+
+```
+Đừng cổ vũ tôi - đóng vai một cố vấn khó tính đang thẩm định ý tưởng này
+trước khi tôi bỏ công build. Nếu có tính năng tìm kiếm web/nghiên cứu sâu,
+hãy bật lên và:
+1. Tìm 3-5 sản phẩm/dịch vụ đã giải quyết vấn đề tương tự - họ làm gì,
+   vì sao người dùng chọn hoặc không chọn họ.
+2. Chỉ ra 3-5 lý do cụ thể ý tưởng này có thể thất bại (không ai cần đủ
+   nhiều, đối thủ đã làm tốt hơn, chi phí vận hành không hợp lý...).
+3. Với mỗi lý do, gợi ý một hướng điều chỉnh - hoặc nói thẳng nếu ý tưởng
+   ban đầu không còn khả thi, cần đổi hướng.
+Tôi cần biết sự thật trước khi bỏ công build, không cần lời khen.
+```
+
+Bước phản biện này xứng đáng dùng **model mạnh nhất bạn có** (Claude Opus, GPT-5 Thinking, hay bất kỳ model gắn nhãn "reasoning" cao) - tìm lỗ hổng và tự phản biện đòi hỏi suy luận sâu hơn hẳn so với việc chỉ viết mô tả theo ý bạn, khác với việc code hàng ngày (để dành model nhẹ hơn cũng đủ, xem lại [chi phí các gói](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md)).
+
+Nếu bước này khiến bạn thấy ý tưởng ban đầu yếu hơn tưởng - đó là **kết quả tốt**, không phải thất bại. Phát hiện sớm rẻ hơn phát hiện muộn rất nhiều lần.
+
 ## Mẹo giữ spec luôn đúng
 
 Spec không phải viết một lần rồi để đó - khi ý tưởng thay đổi giữa chừng (rất bình thường), **cập nhật lại spec.md** trước khi yêu cầu AI làm tiếp, để lần sau đọc lại vẫn đúng với thực tế hiện tại.
