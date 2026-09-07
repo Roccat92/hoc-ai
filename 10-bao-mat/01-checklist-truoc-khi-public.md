@@ -22,7 +22,7 @@ Tick được cả 5 dòng thì sản phẩm của bạn đã ở mức an toàn
 
 Không có bài riêng cho mục này vì cách làm khá đơn giản, tùy nơi bạn lưu dữ liệu:
 
-- **Dùng dịch vụ database có sẵn** (Supabase, PlanetScale, MongoDB Atlas...) - phần lớn đã tự động backup định kỳ ở gói miễn phí hoặc gói trả phí thấp nhất, kiểm tra tài liệu của dịch vụ bạn dùng để bật tính năng này.
+- **Dùng dịch vụ database có sẵn** (Supabase, PlanetScale, MongoDB Atlas...) - đừng mặc định gói miễn phí đã tự động backup: **Supabase và MongoDB Atlas free tier hiện KHÔNG có backup tự động**, tính năng này chỉ bật từ gói trả phí trở lên *(kiểm tra: 07/09/2026)*. Kiểm tra kỹ tài liệu của đúng dịch vụ bạn dùng; nếu đang ở gói miễn phí, tự đặt lịch backup thủ công (xem cách làm ở mục ngay dưới - tự quản lý trên VPS - áp dụng được kể cả khi dùng dịch vụ có sẵn, chỉ cần đổi lệnh export đúng theo dịch vụ đó) cho tới khi nâng cấp gói.
 - **Tự quản lý database trên VPS** (như đã học ở [phần 3](../03-ha-tang-thuc-chien/01-thue-vps.md)) - cần tự đặt lịch backup, ví dụ dùng `cron` (lịch chạy lệnh tự động trên Linux) để tự động sao lưu file database ra một nơi khác (một VPS khác, hoặc dịch vụ lưu trữ đám mây) mỗi ngày. Nhờ Claude Code viết script backup và hướng dẫn đặt lịch `cron` là cách nhanh nhất nếu bạn chưa quen.
 - **Nguyên tắc tối thiểu:** ít nhất có một bản sao dữ liệu **không nằm trên cùng server** với bản chính - nếu server chính gặp sự cố, bản sao vẫn còn.
 
