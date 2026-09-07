@@ -83,17 +83,43 @@ giá, trạng thái, ngày đặt
 
 ## Chưa biết viết spec? Nhờ AI phỏng vấn bạn
 
-Không cần tự nghĩ ra hết một mình. Mở Claude Code (hoặc chatbot bất kỳ), thử prompt:
+Không cần tự nghĩ ra hết một mình - nhưng viết spec là việc **suy nghĩ/lên kế hoạch**, chưa phải việc code, nên cách làm hơi khác lúc giao task cho coding agent:
+
+- **Dùng thẳng chat AI (Claude.ai, ChatGPT...) cũng được, không bắt buộc phải mở Claude Code/Codex** - lúc này chưa có code, chưa cần agent đụng vào file dự án, nên trò chuyện qua lại trong khung chat quen thuộc thường thoải mái hơn.
+- **Bật mức suy luận cao nhất công cụ đó có** (ví dụ "Extended thinking" ở Claude, hoặc model có gắn nhãn "reasoning"/"thinking" nếu ChatGPT cho chọn nhiều model) - viết spec cần cân nhắc đánh đổi (tính năng nào thật sự cần, công nghệ nào hợp túi tiền/trình độ bạn), mức suy luận cao cho kết quả chắc tay hơn trả lời nhanh.
+- **Nếu công cụ có tính năng tìm kiếm web (research/search), bật lên** - để AI tra cứu thực tế (sản phẩm tương tự đã làm gì, công nghệ nào đang phổ biến cho đúng bài toán này) thay vì chỉ đoán từ kiến thức cũ.
+
+Prompt mẫu (dùng được cho cả chat AI riêng lẻ lẫn trong coding agent):
 
 ```
 Tôi muốn build [mô tả ngắn ý tưởng của bạn]. Tôi chưa biết viết spec.
 Hãy phỏng vấn tôi từng câu một (không hỏi dồn) để làm rõ: mục tiêu,
 người dùng, tính năng cần có, tính năng không cần, công nghệ muốn dùng,
-các màn hình chính, dữ liệu cần lưu. Sau khi hỏi đủ, tự viết ra file
-spec.md hoàn chỉnh theo đúng template chuẩn.
+các màn hình chính, dữ liệu cần lưu. Nếu cần, tra cứu thêm để góp ý công
+nghệ/tính năng phù hợp. Sau khi hỏi đủ, tự viết ra file spec.md hoàn
+chỉnh theo đúng template chuẩn.
 ```
 
 AI sẽ hỏi lại bạn từng phần một - bạn chỉ cần trả lời như đang trò chuyện, không cần biết trước cấu trúc file. Đây chính là cách thực tế nhất để bắt đầu nếu bạn thấy template ở trên vẫn "đáng sợ".
+
+**Sau khi có nội dung spec, file đó phải nằm trong thư mục dự án:**
+- Dùng chat AI riêng lẻ (Claude.ai/ChatGPT - không có quyền ghi file lên máy bạn): copy toàn bộ nội dung AI trả về, tự tạo file `spec.md` ở thư mục gốc dự án, dán nội dung vào rồi lưu.
+- Làm ngay trong coding agent (Claude Code/Codex - có quyền đọc/ghi file): yêu cầu nó tự tạo file `spec.md` thẳng trong thư mục dự án, không cần copy-paste tay.
+
+## Coding agent còn tạo được luôn cả bộ khung dự án ban đầu
+
+Nếu bạn đã mở coding agent ngay trong thư mục dự án (kể cả thư mục còn trống), không cần làm từng file một - giao trọn gói được luôn:
+
+```
+Đọc kỹ mô tả ý tưởng của tôi ở trên (phỏng vấn tôi trước nếu chưa đủ
+thông tin). Sau đó tạo giúp tôi bộ file khởi đầu cho dự án này:
+spec.md (theo mẫu chuẩn), backlog.md (chia nhỏ việc từ spec thành các
+task làm được trong một phiên), CLAUDE.md (quy ước cơ bản cho dự án),
+và khung thư mục code trống đúng với công nghệ đã chọn trong spec.
+Hỏi lại tôi nếu thiếu thông tin, đừng tự đoán.
+```
+
+Agent tạo cả `spec.md`, `backlog.md`, `CLAUDE.md` và khung thư mục ban đầu trong một lần, đỡ phải lặp lại quy trình phỏng vấn riêng cho từng file. Vẫn nên đọc lại từng file sau khi agent tạo xong - đây là nền móng cho cả dự án, sai ở đây kéo dài ảnh hưởng sang mọi phiên làm việc sau.
 
 ## Mẹo giữ spec luôn đúng
 
