@@ -73,7 +73,18 @@ Nói cách khác: **AI không thiếu gu thẩm mỹ, nó thiếu thông tin v�
 
 Trước khi vào ba kỹ thuật, có một công cụ nền tảng đáng cài trước: **skill `frontend-design`** do chính đội ngũ Anthropic viết, chứa sẵn hướng dẫn giúp Claude Code tránh đúng những mẫu "UI phèn" kể trên, và ra quyết định thẩm mỹ có chủ đích hơn.
 
-**Cài đặt từng bước** (tại thời điểm viết, plugin này chưa có lệnh cài tự động - cài thủ công bằng cách tải file skill về thư mục skill cá nhân):
+**Cách cài nhanh nhất - qua hệ thống plugin có sẵn**, gõ hai lệnh này ngay trong Claude Code:
+
+```
+/plugin marketplace add anthropics/claude-code
+/plugin install frontend-design@claude-code-plugins
+```
+- Dòng 1: thêm kho plugin chính thức của Anthropic (chỉ cần làm một lần cho mọi plugin sau này).
+- Dòng 2: cài skill `frontend-design` từ kho đó.
+
+> Cú pháp lệnh `/plugin` có thể đổi theo phiên bản Claude Code - nếu lệnh trên báo lỗi, gõ `/plugin` không kèm gì để mở menu cài đặt, hoặc xem [tài liệu chính chủ](https://code.claude.com/docs/en/plugins) *(kiểm tra: 07/09/2026)*.
+
+**Nếu bản Claude Code của bạn chưa hỗ trợ lệnh `/plugin`** (phiên bản cũ), cài thủ công bằng cách tải file skill về thư mục skill cá nhân:
 
 **Bước 1 - Tạo thư mục đích:**
 ```bash
@@ -97,7 +108,7 @@ head -n 5 ~/.claude/skills/frontend-design/SKILL.md
 ```
 Thấy hiện ra phần đầu file với dòng `name: frontend-design` là tải đúng. Cách kiểm tra thực tế hơn: mở Claude Code ở bất kỳ dự án nào, giao một việc liên quan tới giao diện (ví dụ "làm trang chủ cho tôi") - nếu skill hoạt động, Claude Code thường sẽ tự nhắc đang áp dụng hướng dẫn thiết kế trước khi viết code. Nếu không chắc, hỏi thẳng: "bạn có đang thấy skill frontend-design không?"
 
-> Skill này chưa có kênh cài đặt chính thức qua hệ thống plugin tại thời điểm viết - luôn kiểm tra [README chính chủ](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) để có cách cài mới nhất, đề phòng Anthropic bổ sung cách cài tiện hơn sau này.
+> Cách cài thủ công này dựa trên đúng file skill thật trong repo chính chủ - nếu link tải lỗi (đường dẫn file có thể đổi), xem lại [thư mục plugin chính chủ](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) để lấy đường dẫn mới.
 
 ## Ba kỹ thuật cho AI "khẩu vị"
 
