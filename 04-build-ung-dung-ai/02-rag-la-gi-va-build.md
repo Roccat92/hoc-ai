@@ -67,8 +67,9 @@ Bạn không cần tự viết từng bước trên bằng tay - mô tả yêu c
 ```
 Tôi muốn build một chatbot RAG bằng Python, đọc các file .txt trong thư mục "tai-lieu/",
 chia nhỏ nội dung, tạo embedding, lưu vào Chroma (vector database chạy local, không cần
-server riêng). Dùng API embedding và API chat của Claude/Anthropic. Trước tiên, viết
-phần đọc file và chia nhỏ (chunking) thôi, tôi sẽ yêu cầu tiếp phần sau.
+server riêng). Dùng Voyage AI để tạo embedding (đối tác embedding chính thức của
+Anthropic - Claude không có API embedding riêng), và API Claude để trả lời câu hỏi.
+Trước tiên, viết phần đọc file và chia nhỏ (chunking) thôi, tôi sẽ yêu cầu tiếp phần sau.
 ```
 
 **Bước 3 - kiểm tra, rồi yêu cầu tiếp phần tạo embedding và lưu vào Chroma.**

@@ -25,7 +25,7 @@ Nhân viên trong một công ty/tổ chức nhỏ (dưới 50 người), truy c
 - Backend: Python (FastAPI)
 - Frontend: React (nhất quán với [dự án 02](../du-an-02-quan-ly-don-hang/spec.md))
 - Vector database: [Chroma](https://www.trychroma.com) - chạy embedded/local, không cần server riêng, phù hợp dự án nhỏ (xem lại [`04-build-ung-dung-ai/02-rag-la-gi-va-build.md`](../../04-build-ung-dung-ai/02-rag-la-gi-va-build.md))
-- Embedding + trả lời câu hỏi: API Claude (xem cách lấy key và tính chi phí ở [`04-build-ung-dung-ai/01-goi-api-llm.md`](../../04-build-ung-dung-ai/01-goi-api-llm.md))
+- Embedding: Voyage AI (đối tác embedding chính thức của Anthropic - Claude không có API embedding riêng); trả lời câu hỏi: API Claude (xem cách lấy key và tính chi phí ở [`04-build-ung-dung-ai/01-goi-api-llm.md`](../../04-build-ung-dung-ai/01-goi-api-llm.md))
 - Xác thực: bcrypt + JWT, cùng cách làm với [dự án 02](../du-an-02-quan-ly-don-hang/spec.md) - tài khoản admin và nhân viên tạo qua script seed đọc từ `.env`, không có form đăng ký công khai
 - Deploy: VPS (có backend Python cần chạy liên tục - xem [`03-ha-tang-thuc-chien/`](../../03-ha-tang-thuc-chien/))
 

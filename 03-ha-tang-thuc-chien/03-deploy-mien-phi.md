@@ -20,6 +20,8 @@ Một trong những nền tảng deploy miễn phí lâu đời và phổ biến
 
 Của Cloudflare - công ty sở hữu một trong những mạng lưới máy chủ phân phối nội dung (CDN) lớn nhất thế giới, nên tốc độ tải trang thường rất nhanh ở nhiều khu vực địa lý khác nhau, gói miễn phí thường có băng thông rộng rãi.
 
+> Cloudflare hiện khuyên **dự án mới nên bắt đầu bằng Cloudflare Workers** (dùng tính năng "static assets" có sẵn của Workers) thay vì Pages - Pages vẫn chạy tốt, chưa bị khai tử, nhưng các tính năng/đầu tư mới của Cloudflare giờ dồn cho Workers *(kiểm tra: 07/09/2026)*. Với một trang tĩnh đơn giản mới bắt đầu, cả hai đều dùng được; đọc thêm tại [trang Workers static assets](https://developers.cloudflare.com/workers/static-assets/) của Cloudflare nếu muốn chọn đúng hướng cho lâu dài.
+
 ### Railway
 
 Khác nhóm với ba cái trên - Railway không chỉ deploy frontend tĩnh mà hỗ trợ tốt cả **backend cần chạy liên tục và database** (PostgreSQL, MySQL...), gần với trải nghiệm "VPS đơn giản hoá" hơn là chỉ deploy static site. Phù hợp khi dự án của bạn có phần backend thật sự (không chỉ là các hàm serverless nhỏ lẻ).
