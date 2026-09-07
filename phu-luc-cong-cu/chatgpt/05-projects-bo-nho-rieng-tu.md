@@ -44,26 +44,7 @@ Quy tắc: không bịa thông số; thiếu dữ liệu thì hỏi hoặc ghi �
 - Kiểm tra gói tài khoản, chính sách dữ liệu và quyền chia sẻ file.
 - Xóa file/Project không còn cần; không để dữ liệu nhạy cảm tồn tại vô thời hạn.
 
-## Mang "bộ nhớ" sang nền tảng khác - đừng sợ đổi công cụ hay tài khoản
-
-Bộ nhớ (memory) nói ở trên chỉ sống **bên trong một tài khoản, một nền tảng**. Đổi sang Claude, Gemini, hay một tài khoản ChatGPT khác, AI mới hoàn toàn không biết bạn là ai, đang làm dự án gì, thích trả lời kiểu nào - phải kể lại từ đầu. Nhiều người vì vậy ngại đổi công cụ, sợ "mất hết".
-
-Cách né việc này: nhờ chính AI đang dùng **trích xuất** những gì nó đã nhớ về bạn thành một đoạn văn bản gọn, để bạn tự cầm đi bất cứ đâu:
-
-```
-Dựa trên toàn bộ lịch sử trò chuyện và bộ nhớ bạn đang lưu về tôi, hãy tóm
-tắt lại thành một đoạn hồ sơ ngắn (dạng gạch đầu dòng): tôi là ai, đang làm
-dự án/công việc gì, trình độ kỹ thuật ra sao, phong cách trả lời tôi thích
-(ngắn gọn hay chi tiết, có ví dụ hay không...), và những điều tôi hay nhắc
-lại nhiều lần. Viết để tôi dán đoạn này vào một AI khác, giúp nó hiểu tôi
-ngay từ tin nhắn đầu tiên.
-```
-
-Lưu đoạn đó lại (một file `.txt`/`.md` trên máy là đủ). Mở chat mới ở bất kỳ nền tảng nào - ChatGPT, Claude, Gemini, hay tài khoản khác của chính bạn - dán đoạn này vào tin nhắn đầu tiên. AI mới đọc xong là hiểu ngay bối cảnh, đỡ phải giải thích lại từ đầu.
-
-"Bộ nhớ" thật ra chính là **của bạn**, không phải của nền tảng - trích ra được thì mang đi được. Cập nhật lại đoạn hồ sơ này định kỳ (vài tháng một lần, hoặc khi dự án đổi hướng) để nó không bị cũ.
-
-> Đoạn hồ sơ này có thể chứa thông tin về công việc, dự án, khách hàng của bạn - áp dụng đúng nguyên tắc [quyền riêng tư ở trên](#quyen-rieng-tu-toi-thieu): rà lại trước khi dán sang một công cụ hoặc tài khoản bạn không hoàn toàn tin tưởng.
+> **Đổi công cụ/tài khoản không mất hết bối cảnh** - có cách mang bộ nhớ theo mình, áp dụng chung cho mọi chatbot (không riêng ChatGPT), xem ở [bài dùng chatbot để học](../../01-bat-dau-tu-so-0/03-dung-chatbot-de-hoc.md#mang-bo-nho-sang-nen-tang-khac-đung-so-đoi-cong-cu-hay-tai-khoan).
 
 ## Bài tập
 

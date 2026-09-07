@@ -142,7 +142,7 @@ hãy bật lên và:
 Tôi cần biết sự thật trước khi bỏ công build, không cần lời khen.
 ```
 
-Bước phản biện này xứng đáng dùng **model mạnh nhất bạn có** (Claude Opus, GPT-5 Thinking, hay bất kỳ model gắn nhãn "reasoning" cao) - tìm lỗ hổng và tự phản biện đòi hỏi suy luận sâu hơn hẳn so với việc chỉ viết mô tả theo ý bạn, khác với việc code hàng ngày (để dành model nhẹ hơn cũng đủ, xem lại [chi phí các gói](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md)).
+Bước phản biện này xứng đáng dùng **model mạnh/suy luận cao nhất bạn đang có quyền dùng** - tìm lỗ hổng và tự phản biện đòi hỏi suy luận sâu hơn hẳn so với việc chỉ viết mô tả theo ý bạn, khác với việc code hàng ngày (để dành model nhẹ hơn cũng đủ). Tên gọi model "mạnh nhất" đổi liên tục (tại thời điểm viết là Claude Fable 5.1 bên Anthropic, GPT-6 Astra bên OpenAI *(kiểm tra: 07/09/2026)*) - đừng cố nhớ tên, cứ chọn model xếp cao nhất trong danh sách tài khoản bạn lúc đó, xem thêm ở [chi phí các gói](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md).
 
 Nếu bước này khiến bạn thấy ý tưởng ban đầu yếu hơn tưởng - đó là **kết quả tốt**, không phải thất bại. Phát hiện sớm rẻ hơn phát hiện muộn rất nhiều lần.
 

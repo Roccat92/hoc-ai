@@ -45,6 +45,27 @@ Nhắc lại từ bài LLM là gì: AI có thể trả lời sai mà vẫn rất
 
 Rất nhiều tài liệu công nghệ chỉ có tiếng Anh. Thay vì bỏ qua vì ngại tiếng Anh, thử: copy đoạn văn bản, dán vào chatbot, hỏi "**dịch và giải thích đoạn này bằng tiếng Việt, dễ hiểu**" - nhanh và hiệu quả hơn dịch máy thông thường vì AI hiểu ngữ cảnh kỹ thuật.
 
+## Mang "bộ nhớ" sang nền tảng khác - đừng sợ đổi công cụ hay tài khoản
+
+Nhiều chatbot (Claude, ChatGPT, Grok, Gemini...) có tính năng **ghi nhớ** giữa các cuộc trò chuyện - nó dần "biết" bạn là ai, đang làm gì, thích trả lời kiểu nào. Vấn đề: bộ nhớ này chỉ sống **bên trong đúng một tài khoản, một nền tảng**. Đổi sang chatbot khác, hay tạo tài khoản mới, AI mới hoàn toàn không biết gì về bạn - phải kể lại từ đầu. Nhiều người vì vậy ngại đổi công cụ, sợ "mất hết".
+
+Cách né việc này: nhờ chính AI đang dùng **trích xuất** những gì nó đã nhớ về bạn thành một đoạn văn bản gọn, để bạn tự cầm đi bất cứ đâu:
+
+```
+Dựa trên toàn bộ lịch sử trò chuyện và bộ nhớ bạn đang lưu về tôi, hãy tóm
+tắt lại thành một đoạn hồ sơ ngắn (dạng gạch đầu dòng): tôi là ai, đang làm
+dự án/công việc gì, trình độ kỹ thuật ra sao, phong cách trả lời tôi thích
+(ngắn gọn hay chi tiết, có ví dụ hay không...), và những điều tôi hay nhắc
+lại nhiều lần. Viết để tôi dán đoạn này vào một AI khác, giúp nó hiểu tôi
+ngay từ tin nhắn đầu tiên.
+```
+
+Lưu đoạn đó lại (một file `.txt`/`.md` trên máy là đủ). Mở chat mới ở bất kỳ nền tảng nào - Claude, ChatGPT, Grok, Gemini, hay tài khoản khác của chính bạn - dán đoạn này vào tin nhắn đầu tiên. AI mới đọc xong là hiểu ngay bối cảnh, đỡ phải giải thích lại từ đầu.
+
+"Bộ nhớ" thật ra chính là **của bạn**, không phải của nền tảng - trích ra được thì mang đi được. Cập nhật lại đoạn hồ sơ này định kỳ (vài tháng một lần, hoặc khi dự án đổi hướng) để nó không bị cũ.
+
+> Đoạn hồ sơ này có thể chứa thông tin về công việc, dự án, khách hàng của bạn - rà lại trước khi dán sang một công cụ hoặc tài khoản bạn không hoàn toàn tin tưởng. Với ChatGPT cụ thể, xem thêm cách quản lý bộ nhớ/Projects ở [phụ lục ChatGPT](../phu-luc-cong-cu/chatgpt/05-projects-bo-nho-rieng-tu.md).
+
 ## Đừng dừng lại ở "hỏi xong rồi thôi"
 
 Kỹ năng học với AI hiệu quả nhất là **tự tay làm lại** sau khi được giải thích - dù chỉ là gõ lại đoạn code mẫu bằng tay, hay tự viết một ví dụ khác dựa trên khái niệm vừa học. AI giúp bạn học nhanh hơn, nhưng không thay được việc bạn tự thực hành.
