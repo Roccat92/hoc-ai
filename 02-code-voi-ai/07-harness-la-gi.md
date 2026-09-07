@@ -17,28 +17,25 @@ Vậy mà Claude Code lại sửa được file, chạy được lệnh, làm vi
 Trong giới AI, harness là **toàn bộ phần chương trình bao quanh model** để biến khả năng "đoán chữ tiếp theo" thành một công cụ làm được việc thật.
 
 <figure style="max-width:560px;margin:24px auto">
-<svg viewBox="0 0 480 230" width="100%" role="img" aria-label="Quyền và ngữ cảnh chảy vào model; model gọi công cụ rồi nhận kết quả về theo vòng lặp; harness tạo ra sản phẩm bạn thực sự dùng" style="font-family:inherit;display:block">
-  <rect x="40" y="24" width="400" height="126" rx="6" style="fill:var(--vp-c-brand-1);fill-opacity:.05;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5;stroke-dasharray:6 4"/>
-  <text x="48" y="44" style="fill:currentColor;font-size:13px;font-weight:600">HARNESS</text>
-  <text x="48" y="84" style="fill:var(--vp-c-text-2);font-size:12px">quyền, ngữ cảnh</text>
-  <text x="48" y="99" style="fill:var(--vp-c-text-2);font-size:12px">quy tắc của bạn</text>
-  <path class="mh-anim mh-wire" d="M150 86 H163" style="fill:none;stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite"/>
-  <path d="M162 82 L167 86 L162 90" style="fill:none;stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <rect class="mh-anim" x="170" y="62" width="138" height="48" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite, mh-harness-fill 5s ease-in-out infinite"/>
-  <text x="239" y="82" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>
-  <text x="239" y="98" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">chỉ đoán chữ tiếp theo</text>
-  <path d="M314 76 H342 M337 72 L342 76 L337 80" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <path d="M346 96 H318 M323 92 L318 96 L323 100" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" r="3.5" style="fill:var(--vp-c-brand-1);stroke:none;offset-path:path('M316 76 H344 V96 H316 Z');offset-rotate:0deg;animation:mh-loop-run 3.2s linear infinite"/>
-  <text x="352" y="76" style="fill:var(--vp-c-text-2);font-size:12px">công cụ</text>
-  <text x="352" y="91" style="fill:var(--vp-c-text-2);font-size:12px">đọc file,</text>
-  <text x="352" y="106" style="fill:var(--vp-c-text-2);font-size:12px">chạy lệnh</text>
-  <text x="240" y="136" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">vòng lặp: nghĩ → làm → xem kết quả → nghĩ tiếp, tới khi xong</text>
-  <path d="M240 150 V166 M235 159 L240 166 L245 159" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" cx="240" cy="152" r="3.5" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-harness-out 3.2s ease-in-out infinite"/>
-  <rect x="120" y="172" width="240" height="44" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
-  <text x="240" y="192" style="fill:currentColor;font-size:13px;font-weight:600;text-anchor:middle">Chat · Code · Design · Cowork</text>
-  <text x="240" y="208" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">thứ bạn thực sự ngồi dùng</text>
+<svg viewBox="0 0 480 230" width="100%" role="img" aria-label="Harness bọc quanh model: quyền và ngữ cảnh bên trái, công cụ bên phải; một vòng lặp chạy quanh model (nghĩ, làm, xem, lặp lại); kết quả rơi xuống thành sản phẩm bạn thực sự dùng" style="font-family:inherit;display:block">
+  <rect x="40" y="22" width="400" height="136" rx="6" style="fill:var(--vp-c-brand-1);fill-opacity:.05;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5;stroke-dasharray:6 4"/>
+  <text x="52" y="42" style="fill:currentColor;font-size:13px;font-weight:600">HARNESS</text>
+  <text x="46" y="96" style="fill:var(--vp-c-text-2);font-size:12px">quyền, ngữ cảnh</text>
+  <text x="46" y="112" style="fill:var(--vp-c-text-2);font-size:12px">quy tắc của bạn</text>
+  <text x="344" y="88" style="fill:var(--vp-c-text-2);font-size:12px">công cụ</text>
+  <text x="344" y="104" style="fill:var(--vp-c-text-2);font-size:12px">đọc file,</text>
+  <text x="344" y="120" style="fill:var(--vp-c-text-2);font-size:12px">chạy lệnh</text>
+  <text x="240" y="55" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">vòng lặp: nghĩ → làm → xem</text>
+  <rect class="mh-anim mh-wire" x="152" y="64" width="176" height="64" rx="8" style="fill:none;stroke:var(--vp-c-brand-1);stroke-opacity:.4;stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite"/>
+  <rect class="mh-anim" x="170" y="76" width="140" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite, mh-harness-fill 5s ease-in-out infinite"/>
+  <text x="240" y="94" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>
+  <text x="240" y="110" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">chỉ đoán chữ tiếp theo</text>
+  <circle class="mh-anim mh-dot" r="5" style="fill:var(--vp-c-brand-1);stroke:none;offset-path:path('M152 64 H328 V128 H152 V64');offset-rotate:0deg;animation:mh-loop-run 4s linear infinite"/>
+  <path d="M240 158 V176 M235 169 L240 176 L245 169" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <circle class="mh-anim mh-dot" cx="240" cy="160" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-harness-out 3.2s ease-in-out infinite"/>
+  <rect x="120" y="180" width="240" height="42" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
+  <text x="240" y="200" style="fill:currentColor;font-size:13px;font-weight:600;text-anchor:middle">Chat · Code · Design · Cowork</text>
+  <text x="240" y="215" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">thứ bạn thực sự ngồi dùng</text>
 </svg>
 <figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Bạn không dùng model trực tiếp; bạn dùng model đã được bọc trong một harness.</figcaption>
 </figure>
