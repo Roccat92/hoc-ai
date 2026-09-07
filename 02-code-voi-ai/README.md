@@ -26,5 +26,6 @@ Lộ trình dưới đây viết chung cho mọi coding agent, không thiên v�
 16. [Font và icon: cho giao diện một tiếng nói riêng](19-font-va-icon.md)
 17. [Nói đúng thuật ngữ khi làm việc với AI: refactor, polish, audit, review...](20-tu-vung-lam-viec-voi-ai.md)
 18. [Tạo logo, favicon, thumbnail và ảnh động bằng AI](21-tao-logo-thumbnail-va-video-bang-ai.md)
+19. [Thiết kế layout, UI nhanh bằng Stitch - nhờ AI viết prompt cho AI](22-thiet-ke-ui-bang-stitch.md)
 
 Bắt đầu từ [bài 1](01-cai-mot-coding-agent.md).

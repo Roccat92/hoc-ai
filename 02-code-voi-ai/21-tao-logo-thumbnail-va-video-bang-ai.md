@@ -41,4 +41,4 @@ AI vẽ vector đủ tốt cho logo/favicon/asset hàng loạt - chỉ thuê des
 
 ## Bước tiếp theo
 
-Có sản phẩm, có bộ nhận diện cơ bản - giờ tới lúc đưa nó ra khỏi máy mình cho người khác dùng được: [Thuê VPS: là gì, chọn nhà cung cấp nào →](../03-ha-tang-thuc-chien/01-thue-vps.md)
+Có bộ nhận diện cơ bản - còn một công cụ AI nữa đáng biết trước khi code giao diện thật: vẽ nhanh layout/UI bằng Stitch: [Thiết kế layout, UI nhanh bằng Stitch →](22-thiet-ke-ui-bang-stitch.md)
