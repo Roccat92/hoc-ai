@@ -25,24 +25,28 @@ API key dùng được với Codex CLI, SDK và tiện ích IDE, nhưng không c
 
 <TyGia />
 
+Số USD dưới đây là **số bạn thực trả** (đã cộng sẵn VAT 10% mà người mua dịch vụ số từ nước ngoài phải chịu ở Việt Nam), không phải giá OpenAI niêm yết:
+
 | Gói | Giá theo tháng | Phù hợp nhất với | Điểm cần nhớ |
 |---|---|---|---|
 | **Free** | 0đ | Thử Codex với vài việc code nhanh | Có hạn mức nhỏ, chưa cần thẻ |
-| **Go** | 8 USD <Vnd usd="8" /> | Việc nhẹ, không dùng liên tục | Rẻ hơn Plus nhưng dung lượng thấp hơn |
-| **Plus** | 20 USD <Vnd usd="20" /> | Vài phiên code tập trung mỗi tuần | Mốc hợp lý nhất để bắt đầu làm dự án thật |
-| **Pro 5x** | 100 USD <Vnd usd="100" /> | Dùng Codex hằng ngày, thường xuyên chạm trần Plus | Hạn mức Codex gấp 5 lần Plus |
-| **Pro 20x** | 200 USD <Vnd usd="200" /> | Làm việc cường độ rất cao hoặc nhiều luồng song song | Hạn mức Codex gấp 20 lần Plus |
+| **Go** | 8,8 USD <Vnd usd="8" /> | Việc nhẹ, không dùng liên tục | Rẻ hơn Plus nhưng dung lượng thấp hơn |
+| **Plus** | 22 USD <Vnd usd="20" /> | Vài phiên code tập trung mỗi tuần | Mốc hợp lý nhất để bắt đầu làm dự án thật |
+| **Pro 5x** | 110 USD <Vnd usd="100" /> | Dùng Codex hằng ngày, thường xuyên chạm trần Plus | Hạn mức Codex gấp 5 lần Plus |
+| **Pro 20x** | 220 USD <Vnd usd="200" /> | Làm việc cường độ rất cao hoặc nhiều luồng song song | Hạn mức Codex gấp 20 lần Plus |
 
-Các số trên là giá niêm yết bằng USD. Con số VND là ước tính để bạn dễ hình dung; số tiền ngân hàng trừ thực tế còn phụ thuộc thuế, tỉ giá và phí chuyển đổi ngoại tệ.
+Ngân hàng có thể thu thêm phí chuyển đổi ngoại tệ (khoảng 1-4% tùy ngân hàng) ngoài khoản VAT đã tính ở trên - số bị trừ thật có thể nhỉnh hơn vài phần trăm.
 
 **Lời khuyên thẳng:** nếu mới học, hãy dùng Free trước rồi lên Plus khi bắt đầu làm dự án thật. Đừng mua Pro chỉ vì sợ thiếu. Hãy dùng Plus một thời gian, theo dõi lúc nào và vì loại việc gì bạn chạm hạn mức, rồi mới quyết định nâng gói.
 
 ## Các gói cho nhóm
 
+Cũng là số thực trả (đã gồm VAT):
+
 | Gói | Giá theo tháng | Ghi chú |
 |---|---|---|
-| **Business - trả năm** | 20 USD/người <Vnd usd="20" /> | Tối thiểu 2 người, thanh toán theo năm |
-| **Business - trả tháng** | 25 USD/người <Vnd usd="25" /> | Linh hoạt hơn, có không gian làm việc và quản trị tập trung |
+| **Business - trả năm** | 22 USD/người <Vnd usd="20" /> | Tối thiểu 2 người, thanh toán theo năm |
+| **Business - trả tháng** | 27,5 USD/người <Vnd usd="25" /> | Linh hoạt hơn, có không gian làm việc và quản trị tập trung |
 | **Enterprise / Edu** | Liên hệ OpenAI | Dành cho tổ chức cần kiểm soát, bảo mật và quản trị nâng cao |
 
 Business đáng cân nhắc khi nhóm cần quản lý thành viên, SAML SSO, MFA và chính sách dữ liệu tập trung. Nếu chỉ có hai người cùng học nhưng không cần quản trị chung, mỗi người dùng tài khoản cá nhân thường đơn giản hơn.

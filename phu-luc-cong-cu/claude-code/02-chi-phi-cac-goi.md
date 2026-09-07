@@ -15,22 +15,26 @@ Hai cách này tính tiền hoàn toàn khác nhau. Bài này nói về **gói t
 
 <TyGia />
 
-| Gói | Giá theo tháng (chưa thuế) | Trả cả năm (rẻ hơn) | Có gì đáng chú ý |
+Số USD dưới đây là **số bạn thực trả** (đã cộng sẵn VAT 10% - xem cách tính ở [mục thanh toán bên dưới](#vai-luu-y-khi-thanh-toan-tu-viet-nam)), không phải giá hãng niêm yết:
+
+| Gói | Giá theo tháng | Trả cả năm (rẻ hơn) | Có gì đáng chú ý |
 |---|---|---|---|
 | **Free** | 0đ | - | Chat cơ bản, đủ để thử xem có hợp không. Không có Claude Code |
-| **Pro** | 20 USD <Vnd usd="20" /> | 17 USD/tháng <Vnd usd="17" /> | Mốc quan trọng nhất: từ đây mới có **Claude Code**, Design, Cowork |
-| **Max 5x** | 100 USD <Vnd usd="100" /> | - | Gấp 5 lần Pro trong mỗi phiên 5 giờ |
-| **Max 20x** | 200 USD <Vnd usd="200" /> | - | Gấp 20 lần Pro trong mỗi phiên 5 giờ |
+| **Pro** | 22 USD <Vnd usd="20" /> | 18,7 USD/tháng <Vnd usd="17" /> | Mốc quan trọng nhất: từ đây mới có **Claude Code**, Design, Cowork |
+| **Max 5x** | 110 USD <Vnd usd="100" /> | - | Gấp 5 lần Pro trong mỗi phiên 5 giờ |
+| **Max 20x** | 220 USD <Vnd usd="200" /> | - | Gấp 20 lần Pro trong mỗi phiên 5 giờ |
 
 **Mốc đáng nhớ nhất là Pro.** Bản Free không có Claude Code, mà Claude Code lại là công cụ chính của toàn bộ repo này. Nếu bạn định đi theo lộ trình ở đây, Pro là mức tối thiểu để thực hành được đầy đủ.
 
 ## Các gói cho nhóm
 
-| Gói | Giá theo tháng (chưa thuế) | Trả cả năm | Ghi chú |
+Cũng là số thực trả (đã gồm VAT):
+
+| Gói | Giá theo tháng | Trả cả năm | Ghi chú |
 |---|---|---|---|
-| **Team - ghế thường** | 25 USD/người <Vnd usd="25" /> | 20 USD/người <Vnd usd="20" /> | Thêm quản lý thành viên, đăng nhập tập trung |
-| **Team - ghế cao cấp** | 125 USD/người <Vnd usd="125" /> | 100 USD/người <Vnd usd="100" /> | Hạn mức gấp khoảng 5 lần ghế thường |
-| **Enterprise** | 20 USD/ghế <Vnd usd="20" /> cộng tiền dùng tính theo giá API | Chỉ bán theo năm | Cho công ty cần nhật ký kiểm toán, tuân thủ |
+| **Team - ghế thường** | 27,5 USD/người <Vnd usd="25" /> | 22 USD/người <Vnd usd="20" /> | Thêm quản lý thành viên, đăng nhập tập trung |
+| **Team - ghế cao cấp** | 137,5 USD/người <Vnd usd="125" /> | 110 USD/người <Vnd usd="100" /> | Hạn mức gấp khoảng 5 lần ghế thường |
+| **Enterprise** | 22 USD/ghế <Vnd usd="20" /> cộng tiền dùng tính theo giá API | Chỉ bán theo năm | Cho công ty cần nhật ký kiểm toán, tuân thủ |
 
 Với nhóm nhỏ vài người ở Việt Nam, thường mỗi người mua Pro riêng vẫn đơn giản và rẻ hơn là mở gói Team, trừ khi bạn cần quản lý tập trung.
 
@@ -84,7 +88,7 @@ Nhiều người dùng cả hai gói phản ánh mức tăng theo tuần chỉ k
 ## Vài lưu ý khi thanh toán từ Việt Nam
 
 - Anthropic thu tiền bằng **USD**, cần thẻ quốc tế (Visa/Mastercard, gồm cả thẻ ghi nợ quốc tế mà các ngân hàng trong nước đều phát hành được).
-- **Giá hãng công bố là giá chưa thuế.** Mua dịch vụ số từ nhà cung cấp nước ngoài, người mua ở Việt Nam bị cộng thêm **thuế VAT 10%**. Gói Pro 20 USD nghĩa là hóa đơn thật của bạn là 22 USD. Các số VND trong bài này **đã cộng sẵn 10% đó**, nên chúng là số bạn thực trả chứ không phải giá niêm yết.
+- **Giá hãng công bố (ví dụ "Pro 20 USD") là giá chưa thuế.** Mua dịch vụ số từ nhà cung cấp nước ngoài, người mua ở Việt Nam bị cộng thêm **thuế VAT 10%** - Pro 20 USD niêm yết thành hóa đơn thật 22 USD. Cả số USD lẫn số VND trong các bảng ở bài này **đều đã tính sẵn phần 10% đó** - là số bạn thực trả, không phải giá niêm yết gốc của hãng.
 - **Ngoài thuế còn phí ngân hàng.** Ngân hàng dùng tỉ giá bán ra của họ (cao hơn tỉ giá thị trường một chút) và thường thu thêm **phí chuyển đổi ngoại tệ khoảng 1-4%** tùy ngân hàng. Nên con số ngân hàng trừ thật thường nhỉnh hơn số trong bài vài phần trăm.
 - Tóm lại thứ tự cộng dồn là: **giá niêm yết USD, cộng VAT 10%, đổi theo tỉ giá ngân hàng, cộng phí ngoại tệ**. Bài này tính giúp bạn hai bước đầu.
 

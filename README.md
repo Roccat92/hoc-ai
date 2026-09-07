@@ -69,12 +69,12 @@ Trên mạng đã có rất nhiều nơi dạy lập trình - từ các khóa d�
 |---|---|---|---|
 | Máy tính, mạng internet | Bắt buộc | Đã có sẵn | Không cần máy mạnh để bắt đầu |
 | Tài khoản chatbot AI (Claude/ChatGPT/Gemini) | Không | 0đ (bản free) | Bản free đủ dùng để học lý thuyết, tự copy-paste code thủ công |
-| Claude Code / Codex (coding agent) | Không, nhưng nên có | 0đ để copy-paste tay; thực tế cần **~20 USD/tháng** <Vnd usd="20" sau="/tháng" /> để dùng coding agent tự động | Bản Free của Claude không có Claude Code; bản Free của Codex có nhưng hạn mức rất nhỏ. Xem giá chi tiết ở [`phu-luc-cong-cu/`](phu-luc-cong-cu/) |
+| Claude Code / Codex (coding agent) | Không, nhưng nên có | 0đ để copy-paste tay; thực tế cần **~22 USD/tháng** <Vnd usd="20" sau="/tháng" /> (đã gồm VAT VN) để dùng coding agent tự động | Bản Free của Claude không có Claude Code; bản Free của Codex có nhưng hạn mức rất nhỏ. Xem giá chi tiết ở [`phu-luc-cong-cu/`](phu-luc-cong-cu/) |
 | Tên miền riêng (domain) | Không | ~150.000-350.000đ/năm | Chỉ cần khi muốn địa chỉ web riêng |
 | VPS (máy chủ riêng) | Không | ~50.000-150.000đ/tháng | Chỉ cần khi deploy miễn phí không đủ đáp ứng |
 | Thuê cloud GPU (fine-tune) | Không | Tính theo giờ, xem [`03-ha-tang-thuc-chien/04-thue-cloud-gpu.md`](03-ha-tang-thuc-chien/04-thue-cloud-gpu.md) | Chỉ cần ở giai đoạn nâng cao |
 
-> Giá có thể thay đổi theo thời gian - luôn kiểm tra trang chủ nhà cung cấp để có số mới nhất. Riêng số VND đổi tự động từ USD (dòng coding agent, có dấu ≈, di chuột/chạm vào để xem chi tiết) đã tự cộng sẵn thuế VAT 10% - khoản người mua dịch vụ số từ nước ngoài phải trả thêm, ngân hàng có thể thu thêm phí chuyển đổi ngoại tệ ngoài khoản này. Còn domain/VPS mua trực tiếp từ nhà cung cấp trong nước thì giá VND họ niêm yết đã là giá cuối cùng, không cộng thêm gì nữa.
+> Giá có thể thay đổi theo thời gian - luôn kiểm tra trang chủ nhà cung cấp để có số mới nhất. Số USD/VND dòng coding agent ở trên là **số bạn thực trả** (đã cộng VAT 10% cho dịch vụ số mua từ nước ngoài - Claude Pro hãng niêm yết 20 USD nhưng hóa đơn thật là 22 USD), không phải giá hãng niêm yết. Domain/VPS mua trực tiếp từ nhà cung cấp trong nước thì giá VND họ niêm yết đã là giá cuối cùng.
 
 ## Đóng góp
 
