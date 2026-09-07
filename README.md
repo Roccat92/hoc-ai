@@ -63,13 +63,13 @@ Trên mạng đã có rất nhiều nơi dạy lập trình - từ các khóa d�
 
 ## Chi phí thực tế tối thiểu
 
-**Trả lời thẳng: có, bạn học 100% miễn phí được nếu chịu khó.** Các công cụ trong repo này đều ưu tiên bản miễn phí/open source trước.
+**Trả lời thẳng: có, bạn học 100% miễn phí được nếu chịu khó** - nhưng "chịu khó" ở đây nghĩa thật là: tự copy code từ bản chat miễn phí (Claude.ai/ChatGPT) rồi dán vào máy tự chạy, thay vì để coding agent (Claude Code/Codex) tự động đọc/sửa file giúp bạn. Cách sau nhanh hơn hẳn nhưng cần trả phí - xem rõ ở dòng dưới, đừng hiểu lầm coding agent cũng miễn phí như bản chat.
 
 | Khoản chi | Có bắt buộc không? | Chi phí ước tính | Ghi chú |
 |---|---|---|---|
 | Máy tính, mạng internet | Bắt buộc | Đã có sẵn | Không cần máy mạnh để bắt đầu |
-| Tài khoản chatbot AI (Claude/ChatGPT/Gemini) | Không | 0đ (bản free) | Bản free đủ dùng để học; nâng cấp khi cần dùng nhiều |
-| Claude Code / Codex (coding agent) | Không | 0đ (có gói free/dùng thử) | Xem giá ở [`phu-luc-cong-cu/`](phu-luc-cong-cu/) |
+| Tài khoản chatbot AI (Claude/ChatGPT/Gemini) | Không | 0đ (bản free) | Bản free đủ dùng để học lý thuyết, tự copy-paste code thủ công |
+| Claude Code / Codex (coding agent) | Không, nhưng nên có | 0đ để copy-paste tay; thực tế cần **~20 USD/tháng** <Vnd usd="20" sau="/tháng" /> để dùng coding agent tự động | Bản Free của Claude không có Claude Code; bản Free của Codex có nhưng hạn mức rất nhỏ. Xem giá chi tiết ở [`phu-luc-cong-cu/`](phu-luc-cong-cu/) |
 | Tên miền riêng (domain) | Không | ~150.000-350.000đ/năm | Chỉ cần khi muốn địa chỉ web riêng |
 | VPS (máy chủ riêng) | Không | ~50.000-150.000đ/tháng | Chỉ cần khi deploy miễn phí không đủ đáp ứng |
 | Thuê cloud GPU (fine-tune) | Không | Tính theo giờ, xem [`03-ha-tang-thuc-chien/04-thue-cloud-gpu.md`](03-ha-tang-thuc-chien/04-thue-cloud-gpu.md) | Chỉ cần ở giai đoạn nâng cao |
