@@ -30,9 +30,9 @@ MCP không chỉ dành cho việc "văn phòng" - bất kỳ công cụ nào (k�
   <text x="70" y="120" style="fill:currentColor;font-size:14px;font-weight:600;font-size:13px;text-anchor:middle">Web</text>
   <rect x="360" y="95" width="110" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
   <text x="415" y="120" style="fill:currentColor;font-size:14px;font-weight:600;font-size:12px;text-anchor:middle">Cơ sở dữ liệu</text>
-  <line class="mh-anim mh-wire" x1="240" y1="51" x2="240" y2="89" style="stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite"/>
-  <line class="mh-anim mh-wire" x1="120" y1="115" x2="184" y2="115" style="stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite"/>
-  <line class="mh-anim mh-wire" x1="360" y1="115" x2="296" y2="115" style="stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite"/>
+  <line class="mh-anim mh-wire" x1="240" y1="51" x2="240" y2="89" style="stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite !important"/>
+  <line class="mh-anim mh-wire" x1="120" y1="115" x2="184" y2="115" style="stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite !important"/>
+  <line class="mh-anim mh-wire" x1="360" y1="115" x2="296" y2="115" style="stroke:var(--vp-c-brand-1);stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite !important"/>
   <rect x="190" y="95" width="100" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
   <text x="240" y="120" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">AI</text>
   <rect x="234" y="89" width="12" height="12" rx="2" style="fill:var(--vp-c-brand-1)"/>
@@ -46,7 +46,7 @@ MCP không chỉ dành cho việc "văn phòng" - bất kỳ công cụ nào (k�
 
 <figure style="max-width:560px;margin:24px auto">
 <svg id="mh-loop" viewBox="0 0 480 236" width="100%" role="img" aria-label="Vòng lặp Nghĩ, Gọi công cụ, Nhận kết quả, quay lại Nghĩ; khi đủ thông tin thì Trả lời" style="font-family:inherit;display:block">
-  <circle class="mh-anim mh-dot" r="5" style="fill:var(--vp-c-brand-1);stroke:none;offset-path:path('M240 56 V82 H395 V176 H85 V38 H240 V56');offset-rotate:0deg;animation:mh-loop-run 7s linear infinite"/>
+  <circle class="mh-anim mh-dot" r="5" style="fill:var(--vp-c-brand-1);stroke:none;offset-path:path('M240 56 V82 H395 V176 H85 V38 H240 V56');offset-rotate:0deg;animation:mh-loop-run 7s linear infinite !important"/>
   <rect x="180" y="20" width="120" height="36" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2"/>
   <text x="240" y="43" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">Nghĩ</text>
   <rect x="330" y="110" width="130" height="36" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>

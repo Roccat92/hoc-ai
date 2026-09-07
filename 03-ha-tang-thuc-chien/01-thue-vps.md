@@ -25,8 +25,8 @@ VPS "ảo" vì thực chất nhiều VPS cùng chạy chung trên một máy ch�
   <text x="240" y="52" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">yêu cầu: "mở trang chủ"</text>
 <path d="M168 62 H312 M305 57 L312 62 L305 67" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
 <path d="M312 90 H168 M175 85 L168 90 L175 95" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" cx="172" cy="62" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-cs-req 4.5s ease-in-out infinite"/>
-  <circle class="mh-anim mh-dot" cx="308" cy="90" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-cs-res 4.5s ease-in-out infinite"/>
+  <circle class="mh-anim mh-dot" cx="172" cy="62" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-cs-req 4.5s ease-in-out infinite !important"/>
+  <circle class="mh-anim mh-dot" cx="308" cy="90" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-cs-res 4.5s ease-in-out infinite !important"/>
   <text x="240" y="106" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">trả về: trang web</text>
   <text x="240" y="140" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">cả hai chiều đều đi qua internet</text>
 </svg>

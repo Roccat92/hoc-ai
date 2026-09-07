@@ -18,11 +18,11 @@ Tìm hiểu thêm và tài liệu chính thức tại docs.claude.com (tài li�
   <text x="330" y="46" style="fill:var(--vp-c-text-2);font-size:12px">trả lời chung chung</text>
   <text x="20" y="136" style="fill:currentColor;font-size:14px;font-weight:600;font-size:12px">"Viết email xin nghỉ phép"</text>
 <path d="M178 132 H202 M195 127 L202 132 L195 137" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <rect class="mh-anim" x="210" y="108" width="80" height="48" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite"/>
+  <rect class="mh-anim" x="210" y="108" width="80" height="48" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite !important"/>
   <text x="250" y="129" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">AI</text>
   <text x="250" y="146" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px;text-anchor:middle">+ sổ tay skill</text>
 <path d="M298 132 H322 M315 127 L322 132 L315 137" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <g class="mh-anim" style="animation:mh-skill-in 5s ease-in-out infinite">
+  <g class="mh-anim" style="animation:mh-skill-in 5s ease-in-out infinite !important">
     <text x="330" y="124" style="fill:currentColor;font-size:14px;font-weight:600;font-size:12px">đúng mẫu công ty:</text>
     <text x="330" y="140" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">kính gửi, lý do,</text>
     <text x="330" y="154" style="fill:var(--vp-c-text-2);font-size:12px;font-size:12px">thời gian, người bàn giao</text>

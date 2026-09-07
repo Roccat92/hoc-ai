@@ -72,19 +72,19 @@ Biến trong bộ nhớ của server sẽ mất khi server khởi động lại;
 
   <text x="200" y="65" style="fill:var(--vp-c-text-2);font-size:11px;text-anchor:middle">1. POST /api/orders</text>
   <path d="M164 78 H236 M229 73 L236 78 L229 83" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" cx="168" cy="78" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-a 9s ease-in-out infinite"/>
+  <circle class="mh-anim mh-dot" cx="168" cy="78" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-a 9s ease-in-out infinite !important"/>
 
   <text x="200" y="145" style="fill:var(--vp-c-text-2);font-size:11px;text-anchor:middle">4. JSON: đơn hàng #12</text>
   <path d="M236 103 H164 M171 98 L164 103 L171 108" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" cx="232" cy="103" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-d 9s ease-in-out infinite"/>
+  <circle class="mh-anim mh-dot" cx="232" cy="103" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-d 9s ease-in-out infinite !important"/>
 
   <text x="420" y="65" style="fill:var(--vp-c-text-2);font-size:11px;text-anchor:middle">2. INSERT</text>
   <path d="M384 78 H456 M449 73 L456 78 L449 83" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" cx="388" cy="78" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-b 9s ease-in-out infinite"/>
+  <circle class="mh-anim mh-dot" cx="388" cy="78" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-b 9s ease-in-out infinite !important"/>
 
   <text x="420" y="145" style="fill:var(--vp-c-text-2);font-size:11px;text-anchor:middle">3. id = 12</text>
   <path d="M456 103 H384 M391 98 L384 103 L391 108" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" cx="452" cy="103" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-c 9s ease-in-out infinite"/>
+  <circle class="mh-anim mh-dot" cx="452" cy="103" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-3hop-c 9s ease-in-out infinite !important"/>
 
   <text x="310" y="175" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">Cùng một khuôn 4 bước như bài trước, chỉ đổi vai trò các hộp</text>
 </svg>

@@ -12,7 +12,7 @@ Bài này dành cho người **chưa từng học AI ngày nào**, nghe người
     <circle cx="140" cy="150" r="120"/>
     <circle cx="140" cy="180" r="90"/>
     <circle cx="140" cy="210" r="60"/>
-    <circle class="mh-anim" cx="140" cy="240" r="30" style="stroke-opacity:1;stroke-width:2;animation:mh-rings-p 4.5s ease-in-out infinite"/>
+    <circle class="mh-anim" cx="140" cy="240" r="30" style="stroke-opacity:1;stroke-width:2;animation:mh-rings-p 4.5s ease-in-out infinite !important"/>
   </g>
   <g style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">
     <text x="140" y="55">AI</text>

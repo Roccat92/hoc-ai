@@ -26,13 +26,13 @@ Trong giới AI, harness là **toàn bộ phần chương trình bao quanh model
   <text x="344" y="104" style="fill:var(--vp-c-text-2);font-size:12px">đọc file,</text>
   <text x="344" y="120" style="fill:var(--vp-c-text-2);font-size:12px">chạy lệnh</text>
   <text x="240" y="55" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">vòng lặp: nghĩ → làm → xem</text>
-  <rect class="mh-anim mh-wire" x="152" y="64" width="176" height="64" rx="8" style="fill:none;stroke:var(--vp-c-brand-1);stroke-opacity:.4;stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite"/>
-  <rect class="mh-anim" x="170" y="76" width="140" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite, mh-harness-fill 5s ease-in-out infinite"/>
+  <rect class="mh-anim mh-wire" x="152" y="64" width="176" height="64" rx="8" style="fill:none;stroke:var(--vp-c-brand-1);stroke-opacity:.4;stroke-width:1.5;stroke-dasharray:5 5;animation:mh-mcp-f 1.6s linear infinite !important"/>
+  <rect class="mh-anim" x="170" y="76" width="140" height="40" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite, mh-harness-fill 5s ease-in-out infinite !important"/>
   <text x="240" y="94" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>
   <text x="240" y="110" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">chỉ đoán chữ tiếp theo</text>
-  <circle class="mh-anim mh-dot" r="5" style="fill:var(--vp-c-brand-1);stroke:none;offset-path:path('M152 64 H328 V128 H152 V64');offset-rotate:0deg;animation:mh-loop-run 4s linear infinite"/>
+  <circle class="mh-anim mh-dot" r="5" style="fill:var(--vp-c-brand-1);stroke:none;offset-path:path('M152 64 H328 V128 H152 V64');offset-rotate:0deg;animation:mh-loop-run 4s linear infinite !important"/>
   <path d="M240 158 V176 M235 169 L240 176 L245 169" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <circle class="mh-anim mh-dot" cx="240" cy="160" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-harness-out 3.2s ease-in-out infinite"/>
+  <circle class="mh-anim mh-dot" cx="240" cy="160" r="4" style="fill:var(--vp-c-brand-1);stroke:none;animation:mh-harness-out 3.2s ease-in-out infinite !important"/>
   <rect x="120" y="180" width="240" height="42" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
   <text x="240" y="200" style="fill:currentColor;font-size:13px;font-weight:600;text-anchor:middle">Chat · Code · Design · Cowork</text>
   <text x="240" y="215" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">thứ bạn thực sự ngồi dùng</text>
