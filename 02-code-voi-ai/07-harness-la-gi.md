@@ -17,21 +17,21 @@ Vậy mà Claude Code lại sửa được file, chạy được lệnh, làm vi
 Trong giới AI, harness là **toàn bộ phần chương trình bao quanh model** để biến khả năng "đoán chữ tiếp theo" thành một công cụ làm được việc thật.
 
 <figure style="max-width:560px;margin:24px auto">
-<svg viewBox="0 0 480 216" width="100%" role="img" aria-label="Model nằm bên trong harness gồm vòng lặp, công cụ, quyền và ngữ cảnh; harness tạo ra sản phẩm bạn thực sự dùng" style="font-family:inherit;display:block">
-  <rect x="40" y="24" width="400" height="112" rx="6" style="fill:var(--vp-c-brand-1);fill-opacity:.05;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5;stroke-dasharray:6 4"/>
+<svg viewBox="0 0 480 230" width="100%" role="img" aria-label="Model nằm bên trong harness gồm vòng lặp, công cụ, quyền và ngữ cảnh; harness tạo ra sản phẩm bạn thực sự dùng" style="font-family:inherit;display:block">
+  <rect x="40" y="24" width="400" height="126" rx="6" style="fill:var(--vp-c-brand-1);fill-opacity:.05;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5;stroke-dasharray:6 4"/>
   <text x="56" y="44" style="fill:currentColor;font-size:13px;font-weight:600">HARNESS</text>
   <text x="58" y="84" style="fill:var(--vp-c-text-2);font-size:12px">vòng lặp</text>
   <text x="58" y="99" style="fill:var(--vp-c-text-2);font-size:12px">nghĩ - làm - xem</text>
   <text x="314" y="84" style="fill:var(--vp-c-text-2);font-size:12px">công cụ</text>
   <text x="314" y="99" style="fill:var(--vp-c-text-2);font-size:12px">đọc file, chạy lệnh</text>
-  <rect class="mh-anim" x="180" y="62" width="120" height="44" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite"/>
+  <rect class="mh-anim" x="180" y="62" width="120" height="48" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:1;stroke-width:2;animation:mh-skill-g 5s ease-in-out infinite, mh-harness-fill 5s ease-in-out infinite"/>
   <text x="240" y="82" style="fill:currentColor;font-size:14px;font-weight:600;text-anchor:middle">MODEL</text>
   <text x="240" y="98" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">chỉ đoán chữ tiếp theo</text>
-  <text x="240" y="126" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">quyền được làm gì · ngữ cảnh · quy tắc riêng của bạn</text>
-  <path d="M240 136 V152 M235 145 L240 152 L245 145" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
-  <rect x="120" y="158" width="240" height="44" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
-  <text x="240" y="178" style="fill:currentColor;font-size:13px;font-weight:600;text-anchor:middle">Chat · Code · Design · Cowork</text>
-  <text x="240" y="194" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">thứ bạn thực sự ngồi dùng</text>
+  <text x="240" y="136" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">quyền được làm gì · ngữ cảnh · quy tắc riêng của bạn</text>
+  <path d="M240 150 V166 M235 159 L240 166 L245 159" style="fill:none;stroke:var(--vp-c-text-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <rect x="120" y="172" width="240" height="44" rx="4" style="fill:var(--vp-c-brand-1);fill-opacity:.08;stroke:var(--vp-c-brand-1);stroke-opacity:.45;stroke-width:1.5"/>
+  <text x="240" y="192" style="fill:currentColor;font-size:13px;font-weight:600;text-anchor:middle">Chat · Code · Design · Cowork</text>
+  <text x="240" y="208" style="fill:var(--vp-c-text-2);font-size:12px;text-anchor:middle">thứ bạn thực sự ngồi dùng</text>
 </svg>
 <figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Bạn không dùng model trực tiếp; bạn dùng model đã được bọc trong một harness.</figcaption>
 </figure>

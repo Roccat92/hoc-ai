@@ -23,6 +23,10 @@
 @keyframes mh-skill-g  { 0%, 100% { stroke-opacity: 1 } 45% { stroke-opacity: .4 } 70% { stroke-opacity: 1 } }
 @keyframes mh-skill-in { 0%, 30% { opacity: 0 } 45% { opacity: 1 } 90% { opacity: 1 } 100% { opacity: 0 } }
 
+/* Khung MODEL trong sơ đồ harness (02-code-voi-ai/07) "thở" rõ hơn hẳn so với
+   chỉ đổi stroke-opacity - đổi cả độ đậm nền, đồng bộ nhịp với mh-skill-g. */
+@keyframes mh-harness-fill { 0%, 100% { fill-opacity: .08 } 45% { fill-opacity: .22 } 70% { fill-opacity: .08 } }
+
 /* Sơ đồ 3 hộp (ví dụ: Trình duyệt -> Server -> Database) đi một vòng khứ hồi
    trong một chu kỳ duy nhất - mỗi keyframe chỉ "sống" trong đúng 1/4 chu kỳ,
    im lặng (opacity 0) phần còn lại. Dùng chung cho nhiều sơ đồ 3 hộp khác
