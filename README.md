@@ -74,7 +74,7 @@ Trên mạng đã có rất nhiều nơi dạy lập trình - từ các khóa d�
 | VPS (máy chủ riêng) | Không | ~50.000-150.000đ/tháng | Chỉ cần khi deploy miễn phí không đủ đáp ứng |
 | Thuê cloud GPU (fine-tune) | Không | Tính theo giờ, xem [`03-ha-tang-thuc-chien/04-thue-cloud-gpu.md`](03-ha-tang-thuc-chien/04-thue-cloud-gpu.md) | Chỉ cần ở giai đoạn nâng cao |
 
-> Giá có thể thay đổi theo thời gian - luôn kiểm tra trang chủ nhà cung cấp để có số mới nhất. Số VND trong bảng đã tự cộng sẵn thuế VAT 10% (khoản người mua dịch vụ số từ nước ngoài phải trả thêm, di chuột/chạm vào số để xem chi tiết) - ngân hàng có thể thu thêm phí chuyển đổi ngoại tệ ngoài khoản này.
+> Giá có thể thay đổi theo thời gian - luôn kiểm tra trang chủ nhà cung cấp để có số mới nhất. Riêng số VND đổi tự động từ USD (dòng coding agent, có dấu ≈, di chuột/chạm vào để xem chi tiết) đã tự cộng sẵn thuế VAT 10% - khoản người mua dịch vụ số từ nước ngoài phải trả thêm, ngân hàng có thể thu thêm phí chuyển đổi ngoại tệ ngoài khoản này. Còn domain/VPS mua trực tiếp từ nhà cung cấp trong nước thì giá VND họ niêm yết đã là giá cuối cùng, không cộng thêm gì nữa.
 
 ## Đóng góp
 
