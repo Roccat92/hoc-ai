@@ -61,7 +61,7 @@ Mẹo mô tả cho AI: luôn chỉ rõ **phần nào** + **muốn gì**. Ví d�
     </div>
   </div>
   <div class="uid__col">
-    <div class="uid__tag uid__tag--good">✓ Có chủ đích: một màu nhấn đặc, bo nhỏ, chữ thường, không trang trí thừa</div>
+    <div class="uid__tag uid__tag--good">✓ Có chủ đích: màu mực trầm sang, bo gọn, chữ thường, một bóng rất nhẹ tạo chiều sâu</div>
     <div class="uid__stage uid__stage--light">
       <button class="uid-btn uid-btn--good">Bắt đầu ngay</button>
     </div>
@@ -82,7 +82,7 @@ Mẹo mô tả cho AI: luôn chỉ rõ **phần nào** + **muốn gì**. Ví d�
     </div>
   </div>
   <div class="uid__col">
-    <div class="uid__tag uid__tag--good">✓ Có chủ đích: viền mảnh 1px, bo 4px, không bóng, nhãn thường</div>
+    <div class="uid__tag uid__tag--good">✓ Có chủ đích: viền mảnh, bo vừa, một bóng rất nhẹ tinh tế, type chỉn chu, nhãn thường</div>
     <div class="uid__stage uid__stage--light">
       <div class="uid-card uid-card--good">
         <div class="uid-card__label">Tính năng</div>
@@ -92,6 +92,8 @@ Mẹo mô tả cho AI: luôn chỉ rõ **phần nào** + **muốn gì**. Ví d�
     </div>
   </div>
 </div>
+
+Để ý điểm mấu chốt hay bị hiểu nhầm: **"có chủ đích" không phải là bỏ sạch mọi thứ cho trơ trụi** - làm thế thì nhạt, nhìn còn chán hơn cả bên phèn. Bên phải vẫn có màu (mực trầm), vẫn có chiều sâu (một lớp bóng rất nhẹ), vẫn bo góc - chỉ khác là **tiết chế đúng liều**: bóng vừa đủ để "nâng" chứ không phủ mờ cả khối, màu trầm sang thay vì gradient lòe loẹt, chữ thường gọn thay vì ALL-CAPS hô hào. Sang lên nhờ *chọn đúng*, không phải nhờ *bỏ hết*.
 
 <p class="uid-note">Hai bên nội dung y hệt nhau — chỉ khác ở các quyết định thẩm mỹ. Bên phải không "đẹp hơn" một cách tuyệt đối, nó chỉ <strong>không rơi vào mẫu mặc định</strong> mà ai cũng nhận ra.</p>
 

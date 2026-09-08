@@ -60,13 +60,17 @@
   font-weight: 700;
   box-shadow: 0 8px 20px rgba(139, 92, 246, .45);
 }
-/* Nút có chủ đích: một màu nhấn đặc, bo nhỏ, chữ thường */
+/* Nút có chủ đích: màu mực trầm sang, bo vừa, type chỉn chu, một bóng rất
+   nhẹ tạo chiều sâu (tiết chế có gu - khác hẳn kiểu "bỏ sạch cho trơ"). */
 .uid-btn--good {
-  background: #1e3a5f;
+  background: #17171b;
   color: #fff;
-  padding: 11px 22px;
-  border-radius: 4px;
+  padding: 11px 24px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: .1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .16), 0 2px 6px rgba(0, 0, 0, .08);
 }
 
 /* ---------- Mẫu CARD ---------- */
@@ -85,18 +89,28 @@
   color: #9333ea;
   font-weight: 700;
 }
-/* Card có chủ đích: viền mảnh 1px, bo nhỏ, không bóng */
+/* Card có chủ đích: viền mảnh, bo vừa, một bóng lớp rất nhẹ tạo độ "nâng"
+   tinh tế, type chỉn chu, khoảng thở rộng - sang nhờ tiết chế đúng chỗ,
+   không phải nhờ bỏ sạch cho trơ. */
 .uid-card--good {
   background: #fff;
-  border: 1px solid #e2e2e0;
-  border-radius: 4px;
-  padding: 18px;
+  border: 1px solid #ececef;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 6px 16px rgba(16, 24, 40, .05);
 }
 .uid-card--good .uid-card__label {
-  font-size: 13px;
-  color: #6b7280;
+  font-size: 12px;
+  color: #6b6f76;
   font-weight: 600;
+  letter-spacing: .2px;
 }
+.uid-card--good .uid-card__title {
+  font-weight: 600;
+  letter-spacing: -.1px;
+  margin: 10px 0 6px;
+}
+.uid-card--good .uid-card__body { color: #52525b; line-height: 1.55; }
 .uid-card__title {
   color: #1a1a1a;
   font-size: 16px;
