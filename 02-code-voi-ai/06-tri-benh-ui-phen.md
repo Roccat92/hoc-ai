@@ -1,6 +1,40 @@
 # Chữa bệnh "UI phèn": để sản phẩm không nhìn ra ngay là AI code
 
-Bài này dành cho người đã build được vài dự án ([dự án đầu tiên](03-du-an-dau-tien.md), hoặc xa hơn ở [phần 9](../09-du-an-thuc-hanh/)) và bắt đầu nhận ra một điều: dù chức năng chạy đúng, giao diện cứ nhìn... "quen quen", kiểu ai cũng đoán ra ngay "cái này AI code". Học xong bạn sẽ biết chính xác vì sao AI hay ra giao diện kiểu đó, và có ba kỹ thuật thực chiến để AI code ra thứ có "chất riêng" thay vì bản sao của hàng nghìn app khác.
+Bài này dành cho người đã build được vài dự án ([dự án đầu tiên](03-du-an-dau-tien.md), hoặc xa hơn ở [phần 9](../09-du-an-thuc-hanh/)) và bắt đầu nhận ra một điều: dù chức năng chạy đúng, giao diện cứ nhìn... "quen quen", kiểu ai cũng đoán ra ngay "cái này AI code". Học xong bạn sẽ gọi được đúng tên các phần của một trang, biết chính xác vì sao AI hay ra giao diện "phèn", và có ba kỹ thuật thực chiến để AI code ra thứ có "chất riêng" thay vì bản sao của hàng nghìn app khác.
+
+## Gọi đúng tên các phần của một trang
+
+Trước khi chê giao diện xấu hay bảo AI sửa, bạn cần **gọi đúng tên từng phần** - nói "thu gọn cái **header** lại" thì AI hiểu ngay, còn "cái thanh ở trên ấy" thì dễ bị mò. Gần như mọi trang web đều chia làm ba tầng quen thuộc, xếp từ trên xuống:
+
+- **Header (đầu trang):** thanh trên cùng, thường có **logo** bên trái và **menu điều hướng** (nav) bên phải. Là thứ người dùng thấy đầu tiên, nhiều trang cho nó "dính" lại khi cuộn.
+- **Body / thân trang:** phần nội dung chính ở giữa - tiêu đề, văn bản, ảnh, form... chiếm phần lớn diện tích. Nhiều trang mở đầu thân bằng một khối lớn gây ấn tượng gọi là **hero** (ảnh to + một câu tuyên ngôn + nút bấm chính).
+- **Footer (chân trang):** thanh dưới cùng, chữ nhỏ màu nhạt - thường chứa bản quyền, và các link phụ như điều khoản, liên hệ, mạng xã hội.
+
+<div class="uia">
+  <div class="uia__region">
+    <div class="uia__label">HEADER · đầu trang</div>
+    <div class="uia__header-row">
+      <span class="uia__logo">Shop ABC</span>
+      <span class="uia__nav"><span>Trang chủ</span><span>Sản phẩm</span><span>Liên hệ</span></span>
+    </div>
+  </div>
+  <div class="uia__region uia__body">
+    <div class="uia__label">BODY · thân trang (nội dung chính)</div>
+    <div class="uia__h">Tiêu đề chính của trang</div>
+    <div class="uia__line"></div>
+    <div class="uia__line"></div>
+    <div class="uia__line uia__line--short"></div>
+  </div>
+  <div class="uia__region">
+    <div class="uia__label">FOOTER · chân trang</div>
+    <div class="uia__footer-row">
+      <span>© 2026 Shop ABC</span>
+      <span>Điều khoản · Liên hệ · Facebook</span>
+    </div>
+  </div>
+</div>
+
+Mẹo mô tả cho AI: luôn chỉ rõ **phần nào** + **muốn gì**. Ví dụ: *"Header dính trên cùng khi cuộn trang"*, *"Footer đang chiếm quá nhiều chỗ, gom lại còn một dòng"*, *"Thêm một hero ở đầu thân trang với câu 'Mẻ bánh ra lò mỗi sáng' và nút 'Đặt bánh'"*. Gọi đúng tên là nửa đường tới việc AI sửa đúng ý.
 
 ## "UI phèn" là gì?
 
