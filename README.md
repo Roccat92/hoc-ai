@@ -90,4 +90,4 @@ Học AI Việt được viết bởi **Nguyễn Ngọc Thư** - Giám đốc c�
 
 ## Giấy phép
 
-Phát hành theo giấy phép [MIT](LICENSE) - dùng, sửa, chia sẻ lại thoải mái, kể cả cho mục đích thương mại.
+Phát hành theo giấy phép [MIT](giay-phep.md) - dùng, sửa, chia sẻ lại thoải mái, kể cả cho mục đích thương mại.

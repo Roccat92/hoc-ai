@@ -10,7 +10,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 // BACKLOG.md, và bất kỳ file nội bộ nào thêm sau này) tự động bị loại khỏi bản
 // build, không cần sửa danh sách này mỗi khi có file nội bộ mới — chỉ cần
 // KHÔNG thêm tên nó vào đây.
-const PUBLIC_ROOT_DOCS = new Set(['README.md', 'CONTRIBUTING.md'])
+const PUBLIC_ROOT_DOCS = new Set(['README.md', 'CONTRIBUTING.md', 'giay-phep.md'])
 const internalRootDocs = fs
   .readdirSync(root, { withFileTypes: true })
   .filter((d) => d.isFile() && d.name.endsWith('.md') && !PUBLIC_ROOT_DOCS.has(d.name))
