@@ -49,7 +49,76 @@ Mẹo mô tả cho AI: luôn chỉ rõ **phần nào** + **muốn gì**. Ví d�
 
 ### Nhìn tận mắt: đặt cạnh nhau cho dễ nhận ra
 
-Đọc mô tả thì trừu tượng. Dưới đây là **phần tử thật render ngay trong trang** - bên trái là kiểu "phèn", bên phải là cùng thành phần đó nhưng có chủ đích. Nhìn quen mắt hai bên rồi, bạn sẽ tự soi ra "bệnh" trong sản phẩm của mình.
+Đọc mô tả thì trừu tượng. Dưới đây là **giao diện thật render ngay trong trang**. Bắt đầu bằng **toàn cảnh** - một phần tử như cái nút chỉ "đọc" được đúng khi nhìn cả màn hình quanh nó: cùng một nội dung, dựng hai kiểu, bạn sẽ thấy ngay bên nào "ăn nhập".
+
+**Toàn cảnh: hai màn hình cùng nội dung, hai "chất" khác hẳn**
+
+<div style="display:flex;flex-direction:column;gap:20px;margin:20px 0;">
+  <div>
+    <div style="font-size:13px;font-weight:600;color:var(--vp-c-text-2);margin-bottom:8px;">✗ Phèn — nhìn toàn cảnh là biết AI code</div>
+    <div style="border:1px solid var(--vp-c-border);border-radius:12px;overflow:hidden;font-family:system-ui,sans-serif;" role="img" aria-label="Màn hình landing kiểu phèn: gradient tím phủ khắp, chữ hoa, emoji, bóng đổ nặng">
+      <div style="background:#efeff2;padding:8px 12px;display:flex;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></span><span style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></span><span style="width:10px;height:10px;border-radius:50%;background:#28c840;"></span></div>
+      <div style="background:#fff;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid #f0f0f0;">
+          <span style="font-weight:800;background:linear-gradient(135deg,#8b5cf6,#ec4899);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:16px;">✨ TurboApp</span>
+          <span style="font-size:12px;color:#9333ea;font-weight:700;text-transform:uppercase;letter-spacing:.5px;">Trang chủ · Tính năng · Giá 🚀</span>
+        </div>
+        <div style="background:linear-gradient(135deg,#8b5cf6,#ec4899);padding:30px 22px;text-align:center;">
+          <div style="color:#fff;opacity:.85;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;">✨ Nền tảng số 1 ✨</div>
+          <div style="color:#fff;font-size:23px;font-weight:800;text-transform:uppercase;margin:8px 0;line-height:1.2;">Tăng tốc doanh nghiệp 🚀</div>
+          <div style="color:#fff;opacity:.9;font-size:13px;margin-bottom:16px;">Giải pháp all-in-one cho mọi nhu cầu của bạn.</div>
+          <button style="border:none;background:#fff;color:#8b5cf6;padding:12px 28px;border-radius:999px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:13px;box-shadow:0 8px 20px rgba(0,0,0,.25);cursor:default;">Bắt đầu ngay →</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:18px;">
+          <div style="background:#fff;border-radius:18px;box-shadow:0 6px 18px rgba(0,0,0,.14);padding:16px;">
+            <div style="text-transform:uppercase;letter-spacing:1px;font-size:10px;color:#9333ea;font-weight:700;">🚀 Nhanh</div>
+            <div style="font-size:14px;font-weight:700;color:#1a1a1a;margin:5px 0 3px;">Siêu tốc độ</div>
+            <div style="font-size:12px;color:#666;">Nhanh hơn 10 lần.</div>
+          </div>
+          <div style="background:#fff;border-radius:18px;box-shadow:0 6px 18px rgba(0,0,0,.14);padding:16px;">
+            <div style="text-transform:uppercase;letter-spacing:1px;font-size:10px;color:#ec4899;font-weight:700;">💎 Đẹp</div>
+            <div style="font-size:14px;font-weight:700;color:#1a1a1a;margin:5px 0 3px;">Giao diện xịn</div>
+            <div style="font-size:12px;color:#666;">Ai nhìn cũng mê.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div style="font-size:13px;font-weight:600;color:var(--vp-c-text-2);margin-bottom:8px;">✓ Có chủ đích — tiết chế, tinh tế, hợp bối cảnh</div>
+    <div style="border:1px solid var(--vp-c-border);border-radius:12px;overflow:hidden;font-family:system-ui,sans-serif;" role="img" aria-label="Màn hình landing có chủ đích: một tông trầm, khoảng thở rộng, type phân cấp rõ, nút mực đen gọn">
+      <div style="background:#efeff2;padding:8px 12px;display:flex;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></span><span style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></span><span style="width:10px;height:10px;border-radius:50%;background:#28c840;"></span></div>
+      <div style="background:#fff;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #eee;">
+          <span style="font-weight:700;color:#17171b;font-size:16px;letter-spacing:-.2px;">Xưởng In ABC</span>
+          <span style="font-size:13px;color:#52525b;">Trang chủ &nbsp; Tính năng &nbsp; Giá</span>
+        </div>
+        <div style="padding:34px 24px;">
+          <div style="color:#b25a2e;font-size:12px;font-weight:600;letter-spacing:.2px;">Quản lý sản xuất</div>
+          <div style="color:#17171b;font-size:24px;font-weight:600;letter-spacing:-.4px;margin:8px 0 10px;line-height:1.2;">Nắm toàn bộ xưởng trong một màn hình</div>
+          <div style="color:#52525b;font-size:14px;margin-bottom:18px;line-height:1.55;max-width:400px;">Theo dõi tiến độ từng công đoạn, không cần gọi điện hỏi nhau.</div>
+          <button style="border:none;background:#17171b;color:#fff;padding:11px 24px;border-radius:8px;font-weight:600;font-size:14.5px;letter-spacing:.1px;box-shadow:0 1px 2px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.08);cursor:default;">Bắt đầu ngay</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 24px 24px;">
+          <div style="background:#fff;border:1px solid #ececef;border-radius:10px;padding:18px;box-shadow:0 1px 2px rgba(16,24,40,.06),0 6px 16px rgba(16,24,40,.05);">
+            <div style="font-size:12px;color:#6b6f76;font-weight:600;letter-spacing:.2px;">Tốc độ</div>
+            <div style="font-size:15px;font-weight:600;color:#17171b;margin:8px 0 4px;letter-spacing:-.1px;">Cập nhật tức thì</div>
+            <div style="font-size:13px;color:#52525b;line-height:1.5;">Trạng thái đơn thay đổi ngay khi thao tác.</div>
+          </div>
+          <div style="background:#fff;border:1px solid #ececef;border-radius:10px;padding:18px;box-shadow:0 1px 2px rgba(16,24,40,.06),0 6px 16px rgba(16,24,40,.05);">
+            <div style="font-size:12px;color:#6b6f76;font-weight:600;letter-spacing:.2px;">Rõ ràng</div>
+            <div style="font-size:15px;font-weight:600;color:#17171b;margin:8px 0 4px;letter-spacing:-.1px;">Một luồng duy nhất</div>
+            <div style="font-size:13px;color:#52525b;line-height:1.5;">Ai cũng thấy đơn đang ở công đoạn nào.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+Cùng một cái nút "Bắt đầu ngay": ở màn trên nó chỉ là một viên thuốc gradient nữa giữa một rừng gradient; ở màn dưới, nút mực đen gọn lại trở thành điểm nhấn rõ ràng vì mọi thứ quanh nó đã tiết chế. **Phần tử chỉ "đúng" khi hợp với môi trường của nó** - đó là lý do phải nhìn cả màn hình, không chỉ soi một nút rời.
+
+**Giờ soi từng phần tử cho rõ khác biệt:**
 
 **Nút bấm chính:**
 
