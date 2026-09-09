@@ -66,6 +66,12 @@ Khi LLM dự đoán từ tiếp theo, nó thực ra tính ra một **danh sách 
 
 Chatbot thường (Claude.ai, ChatGPT) hiếm khi cho chỉnh temperature trực tiếp - nó chỉ hiện khi gọi API bằng code. Hiểu khái niệm này giúp bạn hiểu vì sao hỏi AI cùng một câu hai lần có thể ra hai câu trả lời hơi khác nhau.
 
+Kéo thanh dưới đây để tự thấy: đây là câu đang viết dở "Trời hôm nay đẹp, mình đi ___", và mỗi từ có một xác suất được chọn. Temperature làm phân phối đó đổi hình - rồi bấm "sinh thử" để xem model thực sự chọn ra từ nào.
+
+<Temperature />
+
+Không có mức temperature "đúng" cho mọi việc: cần chính xác, lặp lại được (viết code, trích xuất dữ liệu, trả lời theo tài liệu) thì để thấp; cần nhiều ý, nhiều cách diễn đạt (brainstorm, đặt tên, viết nháp sáng tạo) thì để cao hơn.
+
 ## Reasoning - khi model "nghĩ" trước khi trả lời
 
 Một số model hiện đại (gọi là **reasoning model**, hoặc có chế độ "extended thinking"/"suy luận mở rộng") không trả lời ngay mà tự sinh ra một chuỗi bước suy luận trung gian trước khi đưa ra câu trả lời cuối cùng - giống bạn nháp ra giấy trước khi viết câu trả lời chốt, thay vì nghĩ gì viết nấy. Chuỗi suy luận này về bản chất vẫn là token (xem lại phần Token phía trên) - bạn thường không thấy hết nội dung nháp đó, nhưng nó vẫn tính vào chi phí và thời gian chờ.
