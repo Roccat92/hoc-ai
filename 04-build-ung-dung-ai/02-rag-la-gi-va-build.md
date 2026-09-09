@@ -57,6 +57,14 @@ Câu hỏi người dùng → Tạo embedding câu hỏi → Tìm đoạn tài l
 <figcaption style="text-align:center;font-size:14px;color:var(--vp-c-text-2);margin-top:8px">Chỉ vài mẩu tài liệu liên quan tới câu hỏi được đưa cho model, nên câu trả lời bám tài liệu thật.</figcaption>
 </figure>
 
+## Nghịch thử: cắt mẩu to hay nhỏ?
+
+Bước cắt nhỏ (chunking) nghe đơn giản nhưng là chỗ quyết định RAG của bạn trả lời đúng hay sai. Cắt **quá nhỏ**, một câu trả lời bị xé làm đôi, retrieval lấy được một nửa - model trả lời thiếu. Cắt **quá to**, mỗi mẩu lẫn nhiều chủ đề và tốn token vô ích mỗi câu hỏi. Kéo thử ba thanh dưới đây để tự thấy sự đánh đổi đó ngay trên một tài liệu thật:
+
+<RagChunking />
+
+Không có con số "đúng" cho mọi trường hợp - cỡ mẩu hợp lý tùy loại tài liệu (văn bản pháp lý câu dài khác ghi chú gạch đầu dòng). Gối đầu (overlap) là mẹo phổ biến để một ý không bị cắt cụt ở ranh giới hai mẩu, đổi lại tạo nhiều mẩu hơn. Khi dùng LangChain/LlamaIndex bên dưới, đây chính là hai tham số bạn sẽ chỉnh đầu tiên.
+
 ## Build chatbot RAG đơn giản với Claude Code
 
 Bạn không cần tự viết từng bước trên bằng tay - mô tả yêu cầu cho Claude Code theo từng bước nhỏ (đúng tinh thần đã học ở [bài dự án đầu tiên](../02-code-voi-ai/03-du-an-dau-tien.md)):
