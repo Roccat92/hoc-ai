@@ -55,6 +55,10 @@ Hãy tưởng tượng context window như **một cái bàn làm việc có kí
 
 Các model hiện đại thường có context window từ 128.000 đến hơn 1.000.000 token tùy model *(kiểm tra: 05/09/2026)* - đủ chứa từ vài trăm trang đến cả một cuốn sách. Con số đổi liên tục theo bản cập nhật, nên kiểm tra trang chủ nhà cung cấp để có số mới nhất thay vì tin vào một con số cố định.
 
+Thử ngay cái "bàn làm việc" đó: bấm **thêm lượt hỏi–đáp** cho hội thoại dài dần, và để ý dòng "lời dặn" ghim ở đầu - tới lúc nào nó bị đẩy ra khỏi bàn thì AI coi như quên mất bạn tên Thư. Kéo thanh kích thước cửa sổ để thấy bàn to hơn giữ được lâu hơn.
+
+<ContextWindow />
+
 **Mẹo thực tế:** nếu cuộc trò chuyện quá dài và AI bắt đầu trả lời "lạc đề" hoặc quên context, hãy mở cuộc trò chuyện mới và tóm tắt lại những gì cần thiết - đừng cố kéo dài một thread vô hạn.
 
 ## Temperature - độ "sáng tạo" của câu trả lời
