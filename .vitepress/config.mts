@@ -38,6 +38,29 @@ const sections = [
 // Thứ tự đọc ưu tiên cho 4 file chuẩn trong mỗi thư mục dự án ở 09-du-an-thuc-hanh/.
 const PROJECT_FILE_ORDER = ['spec.md', 'backlog.md', 'CLAUDE.md', 'huong-dan.md']
 
+// Nhãn ngắn, phân biệt cho từng trang phụ lục công cụ (phu-luc-cong-cu/<tool>/NN-*.md).
+// Sidebar gộp các trang này dưới một nhóm mang tên công cụ; nếu để tiêu đề tự cắt ở
+// dấu ":" (hàm shortTitle) thì nhiều trang rớt về đúng mỗi tên công cụ - ví dụ HAI
+// trang Claude Code cùng hiện "Claude Code", còn trang mở đầu ChatGPT/Codex chỉ hiện
+// tên công cụ trơ, không phân biệt được. Map này đặt cho mỗi trang một nhãn dạng
+// "Công cụ — chủ đề": đọc tách khỏi ngữ cảnh vẫn rõ (tốt cho cả screen reader lẫn
+// SEO/anchor text) và không còn hai mục trùng tên. Thêm trang công cụ mới thì thêm
+// một dòng vào đây; nếu quên, trang đó tự lùi về cách cắt tiêu đề như cũ (chỉ kém
+// đẹp chứ không hỏng). Khóa là "<tên-thư-mục-công-cụ>/<tên-file-không-có-.md>".
+const TOOL_PAGE_LABELS: Record<string, string> = {
+  'chatgpt/01-bat-dau-va-chon-che-do': 'ChatGPT — Bắt đầu & chọn chế độ',
+  'chatgpt/02-prompt-thuc-dung': 'ChatGPT — Prompt thực dụng',
+  'chatgpt/03-file-web-va-nghien-cuu': 'ChatGPT — File, web & nghiên cứu',
+  'chatgpt/04-phan-tich-du-lieu': 'ChatGPT — Phân tích dữ liệu',
+  'chatgpt/05-projects-bo-nho-rieng-tu': 'ChatGPT — Projects, bộ nhớ & riêng tư',
+  'claude-code/01-cai-dat-va-lenh-co-ban': 'Claude Code — Cài đặt & lệnh cơ bản',
+  'claude-code/02-chi-phi-cac-goi': 'Claude Code — Chi phí & các gói',
+  'claude-code/03-cau-hinh-nang-cao': 'Claude Code — Cấu hình nâng cao',
+  'codex/01-cai-dat-va-lenh-co-ban': 'Codex — Cài đặt & nơi làm việc',
+  'codex/02-chi-phi-cac-goi': 'Codex — Chi phí & các gói',
+  'codex/03-cau-hinh-nang-cao': 'Codex — Cấu hình nâng cao',
+}
+
 function headingOf(file: string): string {
   const match = fs.readFileSync(file, 'utf8').match(/^#\s+(.+)$/m)
   return match ? match[1].trim() : path.basename(file, '.md')
@@ -112,10 +135,15 @@ function toolGroupsOf(dir: string, sectionDir: string): DefaultTheme.SidebarItem
         text: label,
         collapsed: true,
         link: fs.existsSync(readme) ? `/${sectionDir}/${toolDir}/` : undefined,
-        items: files.map((f) => ({
-          text: shortTitle(headingOf(path.join(tdir, f))),
-          link: `/${sectionDir}/${toolDir}/${f.replace(/\.md$/, '')}`,
-        })),
+        items: files.map((f) => {
+          const base = f.replace(/\.md$/, '')
+          return {
+            // Ưu tiên nhãn "Công cụ — chủ đề" đã soạn tay ở TOOL_PAGE_LABELS; chưa có
+            // thì lùi về cắt tiêu đề như cũ.
+            text: TOOL_PAGE_LABELS[`${toolDir}/${base}`] ?? shortTitle(headingOf(path.join(tdir, f))),
+            link: `/${sectionDir}/${toolDir}/${base}`,
+          }
+        }),
       }
     })
 }
@@ -279,14 +307,28 @@ export default defineConfig({
     // Dữ liệu có cấu trúc (JSON-LD) cho Google: trang chủ = WebSite; trang mục lục phần =
     // CollectionPage; bài học = Article + LearningResource. Mọi trang con kèm BreadcrumbList
     // (Trang chủ > Phần > Bài) để Google hiện đường dẫn thay vì URL thô.
+    // @id cố định để Google gộp tổ chức "Học AI Việt" xuất hiện ở nhiều trang
+    // (author/publisher của từng bài + node Organization đầy đủ ở trang chủ) thành
+    // MỘT thực thể, thay vì coi mỗi lần nhắc là một tổ chức khác.
+    const orgId = `${CANONICAL_ORIGIN}/#to-chuc`
     const toChuc = {
       '@type': 'Organization',
+      '@id': orgId,
       name: 'Học AI Việt',
       url: CANONICAL_ORIGIN,
       logo: `${CANONICAL_ORIGIN}/apple-touch-icon.png`,
     }
     const jsonLd: Record<string, unknown>[] = []
     if (laTrangChu) {
+      // Node Organization đầy đủ chỉ đặt ở trang chủ (kèm mô tả, người sáng lập,
+      // và liên kết GitHub làm sameAs) - các trang con vẫn tham chiếu qua @id.
+      jsonLd.push({
+        '@context': 'https://schema.org',
+        ...toChuc,
+        description,
+        founder: { '@type': 'Person', name: 'Nguyễn Ngọc Thư' },
+        ...(githubRepo ? { sameAs: [`https://github.com/${githubRepo}`] } : {}),
+      })
       jsonLd.push({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
@@ -294,7 +336,7 @@ export default defineConfig({
         url: CANONICAL_ORIGIN,
         description,
         inLanguage: 'vi',
-        publisher: toChuc,
+        publisher: { '@id': orgId },
       })
     } else {
       const dir = pageData.relativePath.split('/')[0]
@@ -374,6 +416,10 @@ export default defineConfig({
     siteTitle: 'Học AI Việt',
     nav: [
       { text: 'Bắt đầu học', link: '/00-ban-do-gioi-ai/00-ai-lam-duoc-gi' },
+      // Trỏ về khối lộ trình 5 cấp trên trang chủ (id "lo-trinh-5-cap" - xem <LoTrinh />
+      // trong README). Dùng đường dẫn tuyệt đối "/#..." để bấm từ BẤT KỲ trang nào cũng
+      // về trang chủ rồi cuộn tới đó, không phải tìm anchor trên trang hiện tại.
+      { text: 'Lộ trình', link: '/#lo-trinh-5-cap' },
       { text: 'Từ điển thuật ngữ', link: '/00-ban-do-gioi-ai/06-tu-dien-thuat-ngu' },
       { text: 'Đóng góp', link: '/CONTRIBUTING' },
     ],

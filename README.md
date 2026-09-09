@@ -1,5 +1,7 @@
 # Học AI Việt - học lập trình và build sản phẩm với AI từ con số 0 <img src="/favicon.svg" alt="" width="28" height="28" style="vertical-align:-4px;border-radius:6px">
 
+<Hero />
+
 **Thư viện mở, hoàn toàn miễn phí, viết bằng tiếng Việt** - cho người chưa biết code muốn tự build web, app, chatbot bằng AI, và cho dev muốn làm việc nhanh hơn với coding agent.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -7,11 +9,13 @@
 
 > Giúp người chưa biết gì về công nghệ có kiến thức và tự tin. Có thể bạn vẫn chưa kiếm được tiền ngay, nhưng ít nhất sẽ không mất tiền cho những khóa học không đáng.
 
-## Sứ mệnh
+## Lộ trình 5 cấp
 
-Học AI Việt sinh ra để giải một bài toán rất thật: rất nhiều người Việt muốn build sản phẩm bằng AI nhưng không biết bắt đầu từ đâu, và các khóa học "AI cho người mới" trên mạng thường thu phí vài triệu đồng mà nội dung thì rải rác, nửa vời. Repo này gom lại một lộ trình đầy đủ, thực chiến, từ việc còn chưa phân biệt được AI với ML cho tới lúc tự tay deploy một sản phẩm AI thật lên internet - **hoàn toàn miễn phí, viết bằng tiếng Việt, không giấu bài, không quảng cáo trá hình.**
+Đừng hoảng khi thấy repo có tới 12 phần và cả trăm bài - bạn **không cần đọc hết mới thấy mình tiến bộ**. Dưới đây là 5 cấp, mỗi cấp 5 bài mốc (lấy từ chính nội dung repo, không phải bài mới), mỗi cấp kết thúc bằng một thứ nhìn thấy được - một link public, một app có đăng nhập, một chatbot RAG chạy thật. Tick vào ô khi xong, tiến độ tự lưu lại trên trình duyệt này để bạn tự thấy mình đang ở đâu.
 
-**AI là con dao, chuyên môn là đầu bếp.** Repo này không dạy "học AI" như một đích đến tự thân - dạy bạn dùng AI để build sản phẩm thật, ngay trong lĩnh vực/công việc bạn đã có hoặc đang theo đuổi.
+<LoTrinh />
+
+Đi hết 5 cấp là bạn đã chạm tới năng lực cốt lõi của cả repo. Muốn đào sâu hơn (train/fine-tune model, kho tài nguyên tham khảo, so sánh từng công cụ AI code) thì đọc thêm ở mục lục đầy đủ bên dưới hoặc sidebar bên trái - không bắt buộc, không có gì "bỏ lỡ" nếu bạn không đọc.
 
 ## Dành cho ai?
 
@@ -22,17 +26,26 @@ Học AI Việt sinh ra để giải một bài toán rất thật: rất nhiề
 
 Bạn không cần biết trước bất kỳ thuật ngữ nào. Thấy chữ "RAG", "token", "MCP" mà không hiểu - đó chính xác là lý do repo này tồn tại.
 
-## Lộ trình 5 cấp
+## Sản phẩm thật, build bằng AI
 
-Đừng hoảng khi thấy repo có tới 12 phần và cả trăm bài - bạn **không cần đọc hết mới thấy mình tiến bộ**. Dưới đây là 5 cấp, mỗi cấp 5 bài mốc (lấy từ chính nội dung repo, không phải bài mới), mỗi cấp kết thúc bằng một thứ nhìn thấy được - một link public, một app có đăng nhập, một chatbot RAG chạy thật. Tick vào ô khi xong, tiến độ tự lưu lại trên trình duyệt này để bạn tự thấy mình đang ở đâu.
+Không chỉ lý thuyết: những kỹ thuật trong thư viện này đến từ các sản phẩm đang chạy thật, phần lớn dựng trên bậc miễn phí của hạ tầng - khoản trả tiền chính là gói AI để build. Mỗi case study kèm chi phí thật bằng VND và bài học rút ra (xem đầy đủ ở [`07-case-study/`](07-case-study/)):
 
-<LoTrinh />
+- **[TIDOGO (Print OS)](07-case-study/01-tidogo-print-os.md)** - phần mềm quản lý sản xuất cho xưởng in, sinh ra từ chính bài toán tác giả sống cùng nhiều năm.
+- **[StarteeX App](07-case-study/02-starteex-app.md)** - app đặt in theo yêu cầu, đã lên cả hai chợ ứng dụng.
+- **[NEXA](07-case-study/03-nexa-agent.md)** - agent biết gọi công cụ để tạo đơn thật, không phải chatbot trả lời suông.
+- **[Mockup Studio](07-case-study/04-mockup-studio.md)** - công cụ xử lý ảnh chạy ngay trong trình duyệt, gọi được qua CLI và MCP.
 
-Đi hết 5 cấp là bạn đã chạm tới năng lực cốt lõi của cả repo. Muốn đào sâu hơn (train/fine-tune model, kho tài nguyên tham khảo, so sánh từng công cụ AI code) thì đọc thêm ở mục lục đầy đủ bên dưới hoặc sidebar bên trái - không bắt buộc, không có gì "bỏ lỡ" nếu bạn không đọc.
+Đây là phần khác biệt nhất của repo: học tới kỹ thuật nào, bạn cũng nối được về một sản phẩm thật đã dùng nó.
 
-## Vì sao không phải một khóa học nữa?
+## Sứ mệnh
 
-Trên mạng đã có rất nhiều nơi dạy lập trình - từ các khóa dạy code truyền thống tới các khóa "vibe coding" mới nổi dạy dùng AI để code. Nhiều nơi trong số đó chất lượng tốt thật sự. Học AI Việt không cạnh tranh bằng cách nói ai dở hơn ai - chỉ khác ở ba điểm cụ thể:
+Học AI Việt sinh ra để giải một bài toán rất thật: rất nhiều người Việt muốn build sản phẩm bằng AI nhưng không biết bắt đầu từ đâu, và ngại bỏ ra vài triệu đồng cho một khóa học khi còn chưa chắc mình có hợp hay không. Repo này gom lại một lộ trình đầy đủ, thực chiến, từ việc còn chưa phân biệt được AI với ML cho tới lúc tự tay deploy một sản phẩm AI thật lên internet - **hoàn toàn miễn phí, viết bằng tiếng Việt, không giấu bài, không quảng cáo trá hình.**
+
+**AI là con dao, chuyên môn là đầu bếp.** Repo này không dạy "học AI" như một đích đến tự thân - dạy bạn dùng AI để build sản phẩm thật, ngay trong lĩnh vực/công việc bạn đã có hoặc đang theo đuổi.
+
+## Điều làm Học AI Việt khác biệt
+
+Trên mạng đã có nhiều nơi dạy lập trình - từ các khóa dạy code truyền thống tới các khóa "vibe coding" mới nổi dạy dùng AI để code - và không ít trong số đó chất lượng tốt thật sự. Học AI Việt không so đo hơn thua với ai, chỉ tập trung vào ba điều mình làm khác:
 
 - **Miễn phí hoàn toàn**, không có phần nào giấu sau paywall để "học tiếp phải trả tiền".
 - **Kèm chi phí thật bằng VND và case study từ sản phẩm đang chạy thật** (xem [`07-case-study/`](07-case-study/)), không chỉ lý thuyết suông hay ảnh chụp màn hình demo.
