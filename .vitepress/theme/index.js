@@ -7,6 +7,7 @@
 // - <RagChunking />: playground cắt mẩu RAG (chunk size / overlap / top-k), dùng ở bài 04-02
 // - <Temperature />: playground temperature (softmax) - kéo để thấy ổn định vs sáng tạo, bài 00-02
 // - <ContextWindow />: playground cửa sổ ngữ cảnh - hội thoại dài, lời dặn cũ rớt khỏi bàn, bài 00-02
+// - <Reasoning />: playground reasoning cao/thấp - đánh đổi chính xác vs thời gian/token, bài 00-02
 import DefaultTheme from 'vitepress/theme'
 import './minh-hoa.css'
 import './ui-demo.css'
@@ -17,6 +18,7 @@ import MayTinhChiPhi from './MayTinhChiPhi.vue'
 import RagChunking from './RagChunking.vue'
 import Temperature from './Temperature.vue'
 import ContextWindow from './ContextWindow.vue'
+import Reasoning from './Reasoning.vue'
 
 export default {
   extends: DefaultTheme,
@@ -28,5 +30,6 @@ export default {
     app.component('RagChunking', RagChunking)
     app.component('Temperature', Temperature)
     app.component('ContextWindow', ContextWindow)
+    app.component('Reasoning', Reasoning)
   }
 }

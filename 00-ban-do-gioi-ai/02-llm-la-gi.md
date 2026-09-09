@@ -82,6 +82,10 @@ Một số model hiện đại (gọi là **reasoning model**, hoặc có chế 
 
 **Vì sao việc này quan trọng với bạn:** đây chính là lý do khi dùng coding agent (Claude Code, Codex), bật mức "reasoning" cao cho một việc khó thì kết quả thường chính xác hơn nhưng chờ lâu hơn và tốn nhiều token hơn hẳn - không phải vì model "biết nhiều hơn", mà vì nó đang suy nghĩ kỹ hơn trước khi trả lời. Xem cách chọn mức reasoning hợp lý theo từng loại việc ở [`02-code-voi-ai/14-codex-model-reasoning-va-han-muc.md`](../02-code-voi-ai/14-codex-model-reasoning-va-han-muc.md).
 
+Chọn thử độ khó việc và mức reasoning để thấy sự đánh đổi: để ý khi việc *dễ* mà bật reasoning *cao*, độ chính xác gần như không nhích trong khi thời gian và token tăng vọt - còn với việc *khó* thì nghĩ sâu mới thật sự đáng.
+
+<Reasoning />
+
 **Mẹo thực tế:** việc đơn giản, rõ ràng thì dùng reasoning thấp (hoặc tắt) cho nhanh và rẻ; việc khó, nhiều bước, dễ sai (debug bug hóc búa, thiết kế kiến trúc, toán/logic phức tạp) mới cần reasoning cao - bật cao cho mọi việc chỉ tổ chờ lâu và tốn tiền oan.
 
 ## Vì sao AI đôi khi "bịa" (hallucination)?
