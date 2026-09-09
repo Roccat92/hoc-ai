@@ -108,6 +108,14 @@ Ví dụ minh họa cách tính (dùng số giả định để hiểu công th�
 
 **Giá thật của từng model thay đổi thường xuyên** - luôn tra trực tiếp trang pricing chính thức của hãng (đã liệt kê ở [`00-ban-do-gioi-ai/03-cac-cong-ty-va-model.md`](../00-ban-do-gioi-ai/03-cac-cong-ty-va-model.md)) để tính chi phí thật cho dự án của bạn, đừng dựa vào con số cố định trong bài viết bất kỳ.
 
+### Tự tính thử: token ra tiền
+
+Thay vì nhẩm công thức, cứ nhập số vào máy tính dưới đây để thấy ngay một lần gọi tốn bao nhiêu, và nếu app của bạn gọi vài nghìn lần mỗi tháng thì hóa đơn ra sao. Bấm một hạng model để điền giá ví dụ, rồi chỉnh số token cho giống việc thật của bạn. Có giá thật trên trang hãng thì gõ đè vào hai ô giá.
+
+<MayTinhChiPhi />
+
+Kéo thử sẽ thấy ngay hai điều đáng nhớ: **token đầu ra đắt hơn đầu vào nhiều** (nên câu trả lời càng dài càng tốn), và **khoảng cách giá giữa hạng nhẹ và đầu bảng là rất lớn** - cùng một việc, chọn model hạng nhẹ có khi rẻ hơn hàng chục lần. Đó chính là lý do của hai mẹo ngay dưới.
+
 **Mẹo kiểm soát chi phí:**
 - Luôn đặt `max_tokens` hợp lý - đừng để mặc định quá cao nếu câu trả lời của bạn thực sự chỉ cần ngắn.
 - Với các tác vụ đơn giản, cân nhắc dùng model "hạng nhẹ" (mini/flash/haiku-tier) của hãng - rẻ hơn model đầu bảng đáng kể mà vẫn đủ dùng.
