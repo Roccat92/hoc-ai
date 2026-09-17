@@ -13,7 +13,8 @@
     "docs:check": "npm run kiem-tra-chuoi && npm run docs:build && npm run kiem-tra-anchor && npm run kiem-tra-code",
     "tao-thumbnail": "node scripts/tao-thumbnail.mjs",
     "kiem-tra-anchor": "node scripts/kiem-tra-anchor.mjs",
-    "kiem-tra-code": "node scripts/kiem-tra-code.mjs"
+    "kiem-tra-code": "node scripts/kiem-tra-code.mjs",
+    "audit": "node scripts/audit-noi-dung.mjs"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

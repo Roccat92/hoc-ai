@@ -1,0 +1,68 @@
+# Audit nội dung + SEO chạy HẰNG NGÀY - MIỄN PHÍ, KHÔNG gọi API (khác
+# ra-noi-dung.yml dùng Claude API cho giá/model quá hạn). Chạy
+# scripts/audit-noi-dung.mjs và CHỈ mở/cập nhật MỘT issue "rolling" khi có mục
+# đáng làm (ưu tiên CAO/VỪA) - tránh mỗi ngày đẻ một issue rác. Khi hết mục
+# CAO/VỪA thì đóng issue lại, tự mở lại khi có việc mới (bài cũ dần, bản nháp mới...).
+#
+# ĐIỀU KIỆN: chỉ cần GITHUB_TOKEN mặc định của Actions - KHÔNG cần API key. Đảm bảo
+# Settings > Actions > General > Workflow permissions để "Read and write permissions"
+# (repo này đã bật để ra-noi-dung.yml mở PR được, nên không phải làm gì thêm).
+name: Audit nội dung + SEO (hằng ngày)
+
+on:
+  schedule:
+    - cron: '0 23 * * *' # 23:00 UTC = 06:00 sáng giờ VN (UTC+7) mỗi ngày
+  workflow_dispatch: {} # cho bấm chạy tay từ tab Actions để thử ngay
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # cần đủ lịch sử git để tính đúng "bài cũ bao nhiêu ngày"
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+
+      - name: Chạy audit (script chỉ dùng thư viện chuẩn - không cần npm install)
+        id: audit
+        run: |
+          node scripts/audit-noi-dung.mjs > /tmp/bao-cao.md
+          node scripts/audit-noi-dung.mjs --json > /tmp/audit.json
+          CAO=$(jq '[.phatHien[]|select(.muc=="cao")]|length' /tmp/audit.json)
+          VUA=$(jq '[.phatHien[]|select(.muc=="vua")]|length' /tmp/audit.json)
+          echo "dang-lam=$((CAO + VUA))" >> "$GITHUB_OUTPUT"
+          echo "Kết quả: $CAO mục CAO, $VUA mục VỪA."
+
+      - name: Mở hoặc cập nhật một issue tổng hợp (rolling)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          gh label create audit-tu-dong --color 1D76DB --description "Báo cáo audit nội dung tự động" --force
+          {
+            echo "_Cập nhật tự động $(date +%d/%m/%Y) bởi workflow \`audit-noi-dung.yml\`. Xem tay bất cứ lúc nào: \`npm run audit\`. Đây là báo cáo tham khảo (gợi ý việc nên làm), workflow KHÔNG tự sửa nội dung._"
+            echo
+            cat /tmp/bao-cao.md
+          } > /tmp/issue.md
+          SO=$(gh issue list --label audit-tu-dong --state open --json number --jq '.[0].number')
+          DANG_LAM=${{ steps.audit.outputs.dang-lam }}
+          if [ -n "$SO" ]; then
+            gh issue edit "$SO" --body-file /tmp/issue.md
+            echo "Đã cập nhật issue #$SO."
+            if [ "$DANG_LAM" -eq 0 ]; then
+              gh issue close "$SO" --comment "Hết mục ưu tiên CAO/VỪA - đóng lại, sẽ tự mở issue mới khi có việc đáng làm."
+              echo "Đóng issue #$SO vì hết mục CAO/VỪA."
+            fi
+          elif [ "$DANG_LAM" -gt 0 ]; then
+            SO_MOI=$(gh issue create --title "🔎 Audit nội dung + SEO (tự động)" --label audit-tu-dong --body-file /tmp/issue.md)
+            echo "Đã tạo issue: $SO_MOI"
+          else
+            echo "Không có mục CAO/VỪA và không có issue đang mở - bỏ qua để tránh spam."
+          fi
