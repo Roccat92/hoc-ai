@@ -75,6 +75,8 @@ Bài này dành cho người tò mò "học AI xong thì làm nghề gì, kiếm
 
 Một hướng đi ngày càng phổ biến nhờ AI code editor (Claude Code, Cursor...): trở thành **"solo builder" / indie hacker** - tự học, tự build sản phẩm của riêng mình (SaaS nhỏ, công cụ tự động hóa, app...) mà không cần cả một team kỹ thuật. Đây chính là con đường mà toàn bộ lộ trình trong repo này hướng tới: bạn không cần "trở thành nhà tuyển dụng thích", chỉ cần đủ kỹ năng để tự biến ý tưởng thành sản phẩm thật.
 
+**Một câu để nhớ:** nghề "hot" nhất giờ không đòi toán cao siêu mà đòi biết build - và bạn không nhất thiết phải đi xin việc, đủ kỹ năng tự biến ý tưởng thành sản phẩm thật là đã có đường đi riêng.
+
 ## Bước tiếp theo
 
 Trước khi đi tiếp, trang bị cho mình một công cụ quan trọng: từ điển thuật ngữ để không bị "khớp" mỗi khi gặp từ lạ: [Từ điển thuật ngữ A-Z](06-tu-dien-thuat-ngu.md)

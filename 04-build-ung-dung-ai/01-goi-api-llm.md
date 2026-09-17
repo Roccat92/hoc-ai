@@ -121,6 +121,8 @@ Kéo thử sẽ thấy ngay hai điều đáng nhớ: **token đầu ra đắt h
 - Với các tác vụ đơn giản, cân nhắc dùng model "hạng nhẹ" (mini/flash/haiku-tier) của hãng - rẻ hơn model đầu bảng đáng kể mà vẫn đủ dùng.
 - Theo dõi usage/billing dashboard của hãng thường xuyên khi mới bắt đầu, để không bị bất ngờ.
 
+**Một câu để nhớ:** API là cách cho code của bạn tự gọi AI thay vì bạn ngồi chat tay - và vì mỗi lần gọi đều tính tiền theo token (output đắt hơn input), chọn đúng hạng model và giới hạn độ dài câu trả lời là đã tiết kiệm được nhiều lần.
+
 ## Bước tiếp theo
 
 Gọi API đơn lẻ chỉ là bước đầu - giờ học cách cho AI "đọc" tài liệu riêng của bạn để trả lời chính xác hơn: [RAG là gì và cách build](02-rag-la-gi-va-build.md)

@@ -97,6 +97,8 @@ Sửa chatbot phân loại đơn hàng của bạn (hoặc viết mới, dựa t
 - [ ] Có retry giới hạn kèm backoff, không retry vô hạn.
 - [ ] Log đủ để chẩn đoán nhưng không lộ dữ liệu nhạy cảm.
 
+**Một câu để nhớ:** ép model trả đúng schema thay vì tách chuỗi bằng tay, và nhớ function calling chỉ là đề xuất - server mới là nơi kiểm quyền và quyết định có thực thi hay không.
+
 ## Bước tiếp theo
 
 Đầu ra đã có hình dạng và đường lỗi, giờ đo chất lượng bằng bộ ví dụ cố định: [Evals và prompt versioning →](07-evals-va-prompt-versioning.md)

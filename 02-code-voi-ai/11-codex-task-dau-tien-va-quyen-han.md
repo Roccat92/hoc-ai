@@ -60,6 +60,8 @@ Giao Codex task đổi tiêu đề landing page theo đúng mẫu bốn phần �
 - [ ] Có diff xem được (`git diff`) trước khi commit.
 - [ ] Biết từ chối và thu nhỏ phạm vi khi agent đi lệch task.
 
+**Một câu để nhớ:** task rõ bốn phần (mục tiêu, phạm vi, tiêu chí, kiểm tra) và đọc kỹ lệnh, phạm vi cùng hậu quả trước khi bấm "y" - đó là cách để agent làm nhanh mà bạn vẫn giữ quyền.
+
 ## Bước tiếp theo
 
 Quyền đã rõ, giờ dạy Codex bối cảnh dự án mà không nhồi cả lịch sử vào prompt: [Prompt, ngữ cảnh và AGENTS.md →](12-codex-prompt-ngu-canh-va-agents-md.md)

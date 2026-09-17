@@ -150,6 +150,8 @@ Nếu bước này khiến bạn thấy ý tưởng ban đầu yếu hơn tưở
 
 Spec không phải viết một lần rồi để đó - khi ý tưởng thay đổi giữa chừng (rất bình thường), **cập nhật lại spec.md** trước khi yêu cầu AI làm tiếp, để lần sau đọc lại vẫn đúng với thực tế hiện tại.
 
+**Một câu để nhớ:** không cần tự nghĩ spec một mình - để AI phỏng vấn bạn viết ra, rồi ép nó đóng vai cố vấn khó tính phản biện trước khi bỏ công build, vì để mặc thì nó chỉ biết khen.
+
 ## Bước tiếp theo
 
 Có spec rồi, giờ chia nhỏ nó thành các việc làm được trong từng phiên: [Backlog.md](03-backlog-md.md)

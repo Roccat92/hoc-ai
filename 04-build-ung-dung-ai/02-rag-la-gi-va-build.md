@@ -99,6 +99,8 @@ Nếu muốn xây RAG phức tạp hơn (nhiều loại tài liệu, nhiều bư
 
 RAG tốn hai loại chi phí API: **embedding** (mỗi lần thêm tài liệu mới, và mỗi lần có câu hỏi mới) và **chat completion** (mỗi lần AI trả lời). Với dự án nhỏ/thử nghiệm, chi phí này thường rất thấp - nhưng nếu tài liệu lớn (hàng nghìn trang) hoặc lượng câu hỏi cao, hãy ước tính trước bằng cách tham khảo giá embedding/chat tại trang pricing chính thức của hãng.
 
+**Một câu để nhớ:** RAG không dạy cho AI biết thêm gì cả - nó chỉ tự tìm đúng vài đoạn tài liệu liên quan rồi đưa kèm câu hỏi, để AI trả lời bám tài liệu thật của bạn thay vì đoán mò.
+
 ## Bước tiếp theo
 
 RAG giúp AI trả lời dựa trên dữ liệu - bước tiếp theo là cho AI **tự hành động** nhiều bước, không chỉ trả lời: [AI Agent →](03-ai-agent.md)

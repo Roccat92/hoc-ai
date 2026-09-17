@@ -61,6 +61,8 @@ Xây agent thời tiết chỉ dùng tool đọc. Sau đó thêm tool đặt l�
 - [ ] Có fallback khi model/tool lỗi.
 - [ ] Có log metric và cách xem một request end-to-end.
 
+**Một câu để nhớ:** agent càng tự làm nhiều thì càng phải có trần cứng - giới hạn số bước, bắt hành động không hoàn tác phải chờ một nút người bấm đồng ý, và log đủ để lần lại từng bước khi có sự cố.
+
 ## Bước tiếp theo
 
 Đã có agent có kiểm soát, quay lại [Phần 5: train và fine-tune](../05-train-va-finetune/01-hieu-ve-training.md) chỉ khi eval chứng minh prompt/RAG chưa đủ.

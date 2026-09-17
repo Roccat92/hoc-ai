@@ -40,6 +40,8 @@ Xem thêm các khóa học nền tảng khác ở [`06-kho-tai-nguyen/02-khoa-ho
 
 Hiểu lý thuyết về pre-training giúp bạn có cái nhìn sâu hơn về cách AI hoạt động - điều này có giá trị, nhưng **không phải điều kiện cần để build sản phẩm AI thực tế**. Với mục tiêu build sản phẩm, hãy quay lại và làm chủ thật vững các kỹ năng đã học ở [`04-build-ung-dung-ai/`](../04-build-ung-dung-ai/) - đó là nơi 95%+ giá trị thực tế nằm ở đó.
 
+**Một câu để nhớ:** pre-train một LLM từ đầu tốn hàng triệu đô và cả một phòng lab - hiểu nó hoạt động ra sao thì đáng, nhưng tự làm thì gần như không ai cần, giá trị thật của bạn nằm ở chỗ dùng giỏi model có sẵn.
+
 ## Bước tiếp theo
 
 Trước khi rời phần nâng cao này, học cách đo lường thay vì đoán mò: [Eval trước khi fine-tune →](05-eval-truoc-khi-fine-tune.md)

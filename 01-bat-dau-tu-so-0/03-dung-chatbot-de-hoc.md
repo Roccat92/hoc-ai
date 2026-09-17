@@ -70,6 +70,8 @@ Lưu đoạn đó lại (một file `.txt`/`.md` trên máy là đủ). Mở cha
 
 Kỹ năng học với AI hiệu quả nhất là **tự tay làm lại** sau khi được giải thích - dù chỉ là gõ lại đoạn code mẫu bằng tay, hay tự viết một ví dụ khác dựa trên khái niệm vừa học. AI giúp bạn học nhanh hơn, nhưng không thay được việc bạn tự thực hành.
 
+**Một câu để nhớ:** chatbot là gia sư miễn phí giỏi nhất trong tầm tay, nhưng nó chỉ giúp bạn giỏi lên khi bạn hỏi để hiểu rồi tự tay làm lại - không phải xin đáp án rồi gật đầu cho qua.
+
 ## Bước tiếp theo
 
 Đã biết cách khai thác chatbot để học, giờ học kỹ thuật viết prompt bài bản hơn: [Prompt cơ bản](04-prompt-co-ban.md)

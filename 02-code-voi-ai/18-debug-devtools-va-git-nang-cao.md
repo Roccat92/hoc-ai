@@ -59,6 +59,8 @@ Tạo một branch, cố ý gây một lỗi giao diện, dùng Console/Network/
 - [ ] Tạo branch và đọc diff trước merge.
 - [ ] Không đưa secret vào log, issue hoặc prompt.
 
+**Một câu để nhớ:** gặp lỗi thì chạy đúng quy trình - tái hiện, đọc lỗi, thu hẹp, sửa một giả thuyết, thêm test - chứ đừng hoảng lên xóa dữ liệu hay viết lại cả app.
+
 ## Bước tiếp theo
 
 Code đã chạy ổn rồi thì tới lượt trau chuốt phần nhìn cho có chất riêng - bắt đầu từ hai thứ dễ lộ "phèn" nhất: [Font và icon →](19-font-va-icon.md)

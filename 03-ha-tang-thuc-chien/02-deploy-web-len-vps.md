@@ -113,6 +113,8 @@ Certbot cũng tự thiết lập gia hạn chứng chỉ tự động (chứng c
 
 Mở trình duyệt, vào `https://domain-cua-ban.com` - thấy ổ khóa và website của bạn chạy đúng là thành công. Nếu có lỗi, kiểm tra theo thứ tự: `pm2 list` (app có đang chạy không) → `sudo nginx -t` (cấu hình Nginx có lỗi cú pháp không) → `sudo systemctl status nginx` (Nginx có đang chạy không).
 
+**Một câu để nhớ:** đưa web lên VPS thật ra là ghép ba mảnh - PM2 giữ app luôn chạy, Nginx đón khách từ internet đẩy vào app, Let's Encrypt cấp khóa HTTPS miễn phí.
+
 ## Bước tiếp theo
 
 Deploy lên VPS khá nhiều bước - với dự án nhỏ, có cách nhanh hơn nhiều. Xem: [Deploy miễn phí - khi nào chưa cần VPS](03-deploy-mien-phi.md)

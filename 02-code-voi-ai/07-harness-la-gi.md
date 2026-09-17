@@ -1,4 +1,4 @@
-# Harness là gì? Vì sao cùng một Claude mà Chat, Code, Design làm được việc khác nhau
+# Harness là gì? Vì sao một Claude làm được nhiều việc khác nhau
 
 Bài này dành cho người đã dùng qua Claude - dù chỉ là chat vài câu - và thấy khó hiểu: cùng một cái tên "Claude", mà trên web nó chỉ trả lời bằng chữ, trong terminal nó tự sửa file dự án của bạn, còn chỗ khác nó lại vẽ ra cả một giao diện bấm được. Học xong bạn sẽ hiểu **harness** - thứ quyết định sự khác nhau đó - và biết chọn đúng chỗ làm việc cho từng loại việc, thay vì dùng nhầm chỗ rồi kết luận "AI dở".
 
@@ -100,6 +100,8 @@ Chỗ này quan trọng không kém, và ít người nói thẳng:
 3. **Cho nó cách tự biết mình sai.** Trong Claude Code: bảo nó chạy test, mở trang lên xem, đọc log lỗi. Harness có công cụ - đừng bắt nó đoán mò khi nó có thể tự kiểm tra.
 
 > **Đích đến của cả phần này:** dù chọn harness nào, cách làm việc thật sự về sau là dựng "bàn làm việc" một lần (đăng nhập GitHub, Vercel, Supabase; cấp quyền cho harness; tách môi trường thử với thật) rồi giao việc trọn gói bằng tiếng Việt - agent tự commit, push, deploy, bạn nghiệm thu bằng cách dùng thử. Bài hướng dẫn trọn bộ nằm ở [phần 8, setup một lần để agent tự chạy](../08-chuan-hoa-du-an/06-setup-mot-lan-de-agent-tu-chay.md); các bài từ đây tới đó cho bạn đủ nền để biết mình đang giao gì và kiểm tra gì.
+
+**Một câu để nhớ:** model chỉ đoán chữ tiếp theo, còn harness - vòng lặp, công cụ, quyền, ngữ cảnh - mới biến nó thành thứ làm được việc thật, nên chọn chỗ làm gần nhất với nơi kết quả sẽ sống.
 
 ## Bước tiếp theo
 

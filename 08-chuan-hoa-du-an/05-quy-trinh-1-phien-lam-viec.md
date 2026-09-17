@@ -53,6 +53,8 @@ Chuyện thường gặp: đang làm dở một task thì phải dừng (hết g
 
 Bốn bài trong phần này ([1](01-tai-sao-can-spec.md), [2](02-viet-spec-md.md), [3](03-backlog-md.md), [4](04-claude-md-va-ngu-canh.md)) cùng với quy trình ở bài này tạo thành một bộ khung đầy đủ để làm việc với AI có kỷ luật trên các dự án lớn hơn dự án đầu tiên ở phần 2. Đây không phải quy trình bắt buộc cứng nhắc - hãy điều chỉnh cho phù hợp với cách làm việc của riêng bạn, miễn giữ đúng tinh thần cốt lõi: **một nguồn sự thật cố định (spec.md), chia nhỏ theo dõi được (backlog.md), quy ước rõ ràng (CLAUDE.md), và commit thường xuyên.**
 
+**Một câu để nhớ:** mỗi phiên đi đúng một nhịp - đọc backlog, chọn 1-2 việc, làm, chạy thử thật, rồi commit ngay sau từng task chứ đừng dồn tới cuối buổi.
+
 ## Bước tiếp theo
 
 Quy trình từng phiên đã có, giờ dựng bàn làm việc để agent tự chạy trọn vòng commit - push - deploy mà bạn chỉ cần nghiệm thu: [Setup dự án một lần để agent tự chạy →](06-setup-mot-lan-de-agent-tu-chay.md)

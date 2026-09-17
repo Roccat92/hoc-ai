@@ -112,6 +112,8 @@ Làm theo hướng dẫn trên màn hình, trỏ tới địa chỉ server vừa
 
 Nhắc lại: **không, trừ khi bạn đã thấy rõ vấn đề cụ thể** - ví dụ dự án đã kéo dài nhiều tháng và bạn nhận ra AI liên tục lặp lại các quyết định/lỗi đã từng giải quyết trước đó, dù CLAUDE.md đã khá đầy đủ. Với phần lớn người học trong repo này, việc duy trì tốt spec.md + backlog.md + CLAUDE.md, cùng thói quen [bắt đầu mỗi phiên đúng cách](05-quy-trinh-1-phien-lam-viec.md), đã giải quyết được hầu hết vấn đề "AI quên ngữ cảnh" mà không cần thêm hạ tầng phức tạp này.
 
+**Một câu để nhớ:** CLAUDE.md lo phần "làm theo cách nào", và bộ ba spec + backlog + CLAUDE.md đã đủ cho gần hết dự án - đừng vội rước công cụ bộ nhớ phức tạp khi chưa thật sự bí.
+
 ## Bước tiếp theo
 
 Đã có đủ ba mảnh ghép (spec, backlog, CLAUDE.md), giờ ráp chúng lại thành một quy trình làm việc chuẩn cho mỗi phiên: [Quy trình 1 phiên làm việc](05-quy-trinh-1-phien-lam-viec.md)

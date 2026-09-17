@@ -38,6 +38,8 @@ Nhanh hơn, an toàn hơn cho người chưa có nhiều kinh nghiệm backend -
 - **Giới hạn số lần đăng nhập sai** (đã nhắc ở checklist) - hầu hết các dịch vụ trên đã có sẵn cơ chế này, kiểm tra tài liệu để bật/cấu hình đúng, tránh bị dò mật khẩu hàng loạt (brute-force).
 - **Không tự ý lộ thông tin qua thông báo lỗi** - ví dụ khi đăng nhập sai, đừng hiện "Email này không tồn tại" (giúp kẻ xấu dò ra email nào đã đăng ký) - nên hiện chung chung "Email hoặc mật khẩu không đúng".
 
+**Một câu để nhớ:** đăng nhập là chỗ tự chế nguy hiểm nhất - đừng tự viết mã hóa mật khẩu, giao hẳn cho thư viện chuẩn như bcrypt/argon2 hoặc một dịch vụ auth có sẵn đã được rà soát kỹ qua nhiều năm.
+
 ## Bước tiếp theo
 
 Đã xong 5 hạng mục thực hành trong checklist, bài cuối cùng nói về giới hạn của việc tự làm bảo mật một mình - và cách dùng AI hỗ trợ rà soát: [Nhờ AI rà soát bảo mật](06-nho-ai-ra-soat-bao-mat.md)

@@ -74,6 +74,8 @@ Không dùng các từ “tốt nhất”, “số 1”, “cam kết 100%”.
 - [ ] Sửa prompt dựa trên lỗi cụ thể.
 - [ ] Yêu cầu AI nói rõ phần không biết thay vì bịa.
 
+**Một câu để nhớ:** giao việc cho ChatGPT như giao cho đồng đội - nói rõ task, bối cảnh, đầu ra, giới hạn - và khi chưa đạt thì chỉ ra lỗi cụ thể quan sát được, đừng chỉ bảo "làm hay hơn".
+
 ## Bước tiếp theo
 
 Prompt đã rõ, giờ đưa file và nguồn vào đúng cách: [Làm việc với file, web và nghiên cứu →](03-file-web-va-nghien-cuu.md)

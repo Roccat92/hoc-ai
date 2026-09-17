@@ -89,6 +89,8 @@ Chạy qua cả 10 câu, ghi lại kết quả mong đợi cho mỗi câu: **t�
 
 Kết hợp bài này với checklist ở [bài 1 của phần này](01-checklist-truoc-khi-public.md), rồi ghi các test độc ở trên vào eval của ứng dụng AI.
 
+**Một câu để nhớ:** mọi thứ AI đọc mà không tự viết ra - tài liệu, trang web, cả README thư viện lạ - đều là dữ liệu chứ không phải lệnh; tách rõ dữ liệu khỏi instruction và siết quyền tool, kể cả với coding agent bạn cầm mỗi ngày.
+
 ## Bước tiếp theo
 
 Sản phẩm đã bảo mật cơ bản - giờ là những chuyện thực tế khi đưa nó ra thị trường thật ở Việt Nam: [Đăng nhập bằng Google, Apple, OTP email và Zalo →](../11-ra-thi-truong/01-dang-nhap-google-apple-otp.md)

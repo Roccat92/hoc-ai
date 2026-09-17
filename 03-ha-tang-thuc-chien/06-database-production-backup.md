@@ -84,6 +84,8 @@ Với một database SQLite của bạn (dự án thật hoặc dự án mẫu �
 - [ ] Biết vì sao backup phải lưu tách khỏi máy chủ chính.
 - [ ] Biết vì sao không nên dùng chung tài khoản admin cho mọi thao tác.
 
+**Một câu để nhớ:** một bản backup chưa từng thử khôi phục thì chưa đáng tin - hãy tự tay restore thử ít nhất một lần trước khi có sự cố thật, đừng chỉ tạo file rồi yên tâm.
+
 ## Bước tiếp theo
 
 Dữ liệu đã an toàn, giờ tự động hóa việc kiểm tra trước khi đưa thay đổi lên production: [CI/CD cơ bản: kiểm tra tự động trước khi deploy →](07-cicd-co-ban.md)

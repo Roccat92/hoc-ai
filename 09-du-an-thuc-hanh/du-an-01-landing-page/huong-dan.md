@@ -1,4 +1,4 @@
-# Hướng dẫn: từ bản mẫu tới sản phẩm của riêng bạn
+# Hướng dẫn dự án landing page: từ bản mẫu tới sản phẩm của bạn
 
 Bài này dành cho người đã đọc [spec.md](spec.md) và sẵn sàng bắt tay build landing page "Nhà Sạch Xinh" - hoặc quan trọng hơn, biến nó thành sản phẩm **của riêng bạn**. Học xong bạn sẽ có một landing page thật sự dùng được, và biết cách áp dụng lại toàn bộ quy trình này cho bất kỳ ý tưởng dịch vụ nhỏ nào khác.
 

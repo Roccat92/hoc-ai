@@ -33,6 +33,8 @@ Với nhiều bài toán chuyên biệt (ví dụ: fine-tune theo phong cách th
 - **Ẩn danh thông tin cá nhân** (tên khách hàng, số điện thoại, email...) trước khi dùng bất kỳ dữ liệu tương tác thật nào để fine-tune, tuân thủ quy định bảo vệ dữ liệu cá nhân hiện hành.
 - **Với dữ liệu từ crawl web**, kiểm tra điều khoản sử dụng (Terms of Service) của nguồn trước khi thu thập quy mô lớn.
 
+**Một câu để nhớ:** với fine-tune, dữ liệu ít mà sạch và đúng phong cách thắng dữ liệu nhiều mà lộn xộn - và nhớ ẩn danh thông tin cá nhân trước khi đưa bất kỳ hội thoại thật nào vào huấn luyện.
+
 ## Bước tiếp theo
 
 Đã hiểu cách tìm và chuẩn bị dữ liệu, phần cuối cùng của chặng nâng cao là một cái nhìn tổng quan (chỉ để biết, không phải để làm theo): [Tổng quan build LLM từ đầu](04-build-llm-tu-dau.md)

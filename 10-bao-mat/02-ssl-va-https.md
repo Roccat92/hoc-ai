@@ -38,6 +38,8 @@ Nếu bạn dùng Cloudflare để quản lý DNS cho domain trỏ về VPS riê
 
 Ngoài việc nhìn ổ khóa trên trình duyệt, có công cụ kiểm tra chi tiết hơn, miễn phí: [ssllabs.com/ssltest](https://www.ssllabs.com/ssltest/) - dán domain vào, chờ vài phút, nó chấm điểm và chỉ ra lỗi cấu hình cụ thể nếu có.
 
+**Một câu để nhớ:** HTTPS biến dữ liệu người dùng từ tấm bưu thiếp ai cũng đọc được thành phong bì niêm phong - phần lớn nền tảng đã bật sẵn miễn phí, việc của bạn chỉ là kiểm tra cái ổ khóa có đó chưa.
+
 ## Bước tiếp theo
 
 Hạng mục tiếp theo trong checklist - và cũng là lỗi gây thiệt hại tiền bạc thật nhiều nhất: [Giấu API key và secret](03-giau-api-key-va-secret.md)

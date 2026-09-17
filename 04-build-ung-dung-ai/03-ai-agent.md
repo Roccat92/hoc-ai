@@ -102,6 +102,8 @@ Open-Meteo, không cần API key).
 
 Đừng dùng agent chỉ vì nó "cool". Nếu bài toán của bạn chỉ cần một bước xử lý cố định (ví dụ: luôn tóm tắt văn bản theo cùng một cách), gọi API thẳng như [bài đầu tiên](01-goi-api-llm.md) đơn giản, rẻ hơn, và dễ kiểm soát hơn agent. Agent phù hợp khi bài toán **thực sự cần nhiều bước không cố định trước**, cần AI tự quyết định linh hoạt tùy tình huống.
 
+**Một câu để nhớ:** agent khác chatbot ở chỗ nó tự lặp nghĩ - gọi công cụ - nhận kết quả cho tới khi xong, nhưng chỉ nên dùng khi bài toán thật sự nhiều bước không đoán trước, còn việc một bước cố định thì gọi API thẳng vừa rẻ vừa chắc hơn.
+
 ## Bước tiếp theo
 
 Đã hiểu agent, tool use, MCP - giờ xem cách áp dụng những kỹ thuật này vào sản phẩm có sẵn: [Tích hợp AI vào app có sẵn](04-tich-hop-ai-vao-app.md)

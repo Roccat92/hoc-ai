@@ -105,6 +105,8 @@ Copy bộ 20 câu ở trên, đổi `cau_hoi` cho đúng tài liệu thật bạ
 - [ ] Tự đọc lại ít nhất các câu bị chấm thấp, không tin tuyệt đối vào LLM-as-judge.
 - [ ] Có baseline, kết quả trước/sau khi đổi prompt, và bản prompt cũ giữ lại để rollback.
 
+**Một câu để nhớ:** đừng sửa prompt theo cảm giác - chỉ khi có một bộ câu mẫu cố định và một con số trước/sau, bạn mới biết bản mới thật sự tốt hơn hay chỉ khác đi.
+
 ## Bước tiếp theo
 
 Đã đo được câu trả lời, giờ làm RAG bám tài liệu hơn và chống dữ liệu độc hại: [RAG quality và bảo mật →](08-rag-quality-va-bao-mat.md)

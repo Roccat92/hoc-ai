@@ -46,6 +46,8 @@ Cần AI biết thêm thông tin/dữ liệu riêng?
 
 **Lời khuyên chung:** luôn thử theo thứ tự **prompt tốt hơn → RAG → fine-tune**, theo đúng thứ tự chi phí/độ phức tạp tăng dần. Đừng nhảy thẳng vào fine-tune vì "nghe có vẻ chuyên nghiệp hơn" - phần lớn trường hợp thực tế RAG và prompt tốt đã đủ giải quyết vấn đề.
 
+**Một câu để nhớ:** thử theo đúng thứ tự prompt tốt hơn - RAG - fine-tune, vì gần như mọi nhu cầu thực tế đã dừng lại ở RAG, rất hiếm khi bạn cần đụng tới việc tự huấn luyện model.
+
 ## Bước tiếp theo
 
 Nếu bạn đã xác định thật sự cần fine-tune, xem hướng dẫn thực hành: [Fine-tune thực hành với LoRA](02-fine-tune-thuc-hanh.md)

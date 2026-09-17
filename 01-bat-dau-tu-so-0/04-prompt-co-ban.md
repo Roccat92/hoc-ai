@@ -62,6 +62,8 @@ Dài không đồng nghĩa với cụ thể. Một prompt 500 từ liệt kê m�
 
 Muốn đào sâu riêng cách dùng ChatGPT (chọn chế độ, Projects, phân tích dữ liệu, nghiên cứu có kiểm nguồn), có một nhóm bài riêng ở [phụ lục: ChatGPT](../phu-luc-cong-cu/chatgpt/01-bat-dau-va-chon-che-do.md) - không bắt buộc, đọc khi cần.
 
+**Một câu để nhớ:** AI không đọc được suy nghĩ của bạn - cụ thể, cho ví dụ, chia nhỏ và lặp lại mới là thứ biến một yêu cầu mơ hồ thành kết quả đúng ý.
+
 ## Bước tiếp theo
 
 Đã nắm kỹ thuật prompt cơ bản, giờ nắm mô hình web/API để biết mình đang giao AI xây cái gì: [File, web và server hoạt động thế nào →](10-file-web-va-server-hoat-dong-the-nao.md)

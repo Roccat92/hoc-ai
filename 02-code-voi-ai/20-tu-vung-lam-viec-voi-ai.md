@@ -84,6 +84,8 @@ Ví dụ: *"**Refactor** hàm `xuLyDon` **trong `don-hang.js`** thành các hàm
 
 "Refactor rồi thêm tính năng thanh toán rồi làm cho đẹp luôn" - ba việc khác loại nhồi một câu, AI làm rối và bạn khó kiểm chứng. Tách ra, làm từng cái, kiểm tra xong mới sang cái tiếp. Một việc rõ ràng luôn hơn ba việc mập mờ.
 
+**Một câu để nhớ:** đúng thuật ngữ cộng đúng vị trí cộng kết quả mong muốn thu hẹp khoảng đoán của AI - nói "refactor hàm này, giữ nguyên hành vi" luôn trúng hơn "dọn lại cho gọn".
+
 ## Bước tiếp theo
 
 Bạn đã có công cụ, biết chọn chỗ làm việc, biết diễn đạt cho AI hiểu. Trước khi đưa sản phẩm ra khỏi máy mình, còn một việc nhỏ hay bị bỏ qua: logo, favicon, ảnh chia sẻ link - những thứ AI cũng làm giúp được: [Tạo logo, favicon, thumbnail và ảnh động bằng AI →](21-tao-logo-thumbnail-va-video-bang-ai.md)

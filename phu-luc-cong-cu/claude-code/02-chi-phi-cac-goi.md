@@ -1,4 +1,4 @@
-# Chi phí và các gói Claude: gói nào đáng tiền, và cái bẫy trong tên gọi "20x"
+# Chi phí và các gói Claude: gói nào đáng tiền và cái bẫy "20x"
 
 Bài này dành cho người đã dùng thử Claude và đang cân nhắc có nên trả tiền hay không, trả gói nào. Học xong bạn sẽ biết các gói hiện có và mức tiền quy ra VND, hiểu hạn mức sử dụng thật sự hoạt động thế nào (chỗ này khác hẳn với những gì tên gói gợi ý), và tự chọn được gói hợp với cách làm việc của mình thay vì mua theo cảm tính.
 

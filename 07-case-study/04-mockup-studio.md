@@ -1,4 +1,4 @@
-# Mockup Studio: công cụ web xử lý ảnh ngay trên trình duyệt, gọi được từ dòng lệnh và MCP
+# Mockup Studio: xử lý ảnh trên trình duyệt, gọi qua CLI và MCP
 
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
 **Thời gian thực hiện:** là một phần của hệ sinh thái StarteeX (xem tổng thời gian và chi phí AI ở [case study StarteeX App](02-starteex-app.md)); kèm Codex/ChatGPT Pro để phản biện và làm assets. Vẫn được update đều, hiện làm bằng gói Max 5x.
@@ -71,6 +71,8 @@ Ngoài giao diện web cho người dùng thường, công cụ còn dùng đư�
 
 - Công cụ: [mockup.startee.vn](https://mockup.startee.vn)
 - Mã nguồn: không công khai
+
+**Một câu để nhớ:** chỗ nào chạy được ngay trên máy người dùng thì đừng đẩy lên máy chủ - vừa rẻ, vừa nhanh, vừa riêng tư, và đó là cách một công cụ miễn phí sống lâu được.
 
 ## Bước tiếp theo
 

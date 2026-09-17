@@ -65,6 +65,8 @@ Thêm file workflow ở trên vào một dự án của bạn (đổi đúng l�
 - [ ] Tự thấy được workflow chạy thật trên tab Actions của GitHub.
 - [ ] Biết vì sao nên merge qua pull request thay vì push thẳng vào `main`.
 
+**Một câu để nhớ:** CI là người gác cổng không bao giờ quên chạy test và không bị cám dỗ bỏ qua lúc vội - đáng dùng ngay cả khi bạn code một mình.
+
 ## Bước tiếp theo
 
 Kiểm tra tự động đã có, giờ tới lúc biết sản phẩm đang chạy ra sao sau khi lên production: [Log, monitoring và cảnh báo chi phí →](08-log-monitoring-va-chi-phi.md)

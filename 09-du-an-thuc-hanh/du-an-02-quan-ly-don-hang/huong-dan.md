@@ -1,4 +1,4 @@
-# Hướng dẫn: từ bản mẫu tới sản phẩm của riêng bạn
+# Hướng dẫn dự án quản lý đơn hàng: từ bản mẫu tới sản phẩm của bạn
 
 Bài này dành cho người đã xong [dự án 01](../du-an-01-landing-page/spec.md) và sẵn sàng thử sức với một dự án có **backend, database, và đăng nhập thật** - bước tiến rõ rệt so với trang tĩnh trước đó. Học xong bạn sẽ có một web quản lý đơn hàng chạy thật, và hiểu vì sao mỗi quyết định kỹ thuật trong spec.md lại được chọn như vậy.
 

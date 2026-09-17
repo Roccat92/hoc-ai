@@ -96,6 +96,8 @@ Mở một dự án đang chạy (của bạn hoặc dự án mẫu ở phần 0
 - [ ] Tự mở được tab Network và đọc được mã trạng thái của một request thật.
 - [ ] Biết vì sao file secret không nằm ở frontend.
 
+**Một câu để nhớ:** hiểu bốn bước request và tự mở được tab Network nghĩa là bạn có cách tự thấy sự thật - không phải tin lời agent nói "đã sửa xong" khi trang vẫn đang hỏng.
+
 ## Bước tiếp theo
 
 Giờ nối giao diện với dữ liệu: [JSON, API, database và CRUD →](11-json-api-database-crud.md)

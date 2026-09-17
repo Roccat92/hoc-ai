@@ -46,6 +46,8 @@ Chọn một vấn đề trong lĩnh vực bạn hiểu. Viết problem brief, p
 - [ ] Có chi phí, thời gian, lỗi và bài học thật.
 - [ ] Có rubric tự chấm và mục còn thiếu.
 
+**Một câu để nhớ:** điểm cao hơn không tới từ nhồi thêm tính năng, mà từ nhiều bằng chứng hơn - phỏng vấn, test, eval, rollback - nên hãy lấp đúng ô "bằng chứng" đang trống thay vì chấm theo cảm giác.
+
 ## Bước tiếp theo
 
 Trước khi cho người khác dùng capstone, đi qua [Checklist bảo mật trước khi public →](../10-bao-mat/01-checklist-truoc-khi-public.md)

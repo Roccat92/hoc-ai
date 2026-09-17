@@ -70,6 +70,8 @@ Ba bài đầu của phần này ([đăng nhập](01-dang-nhap-google-apple-otp.
 
 Có kinh nghiệm thực chiến về mảng này (đã tự làm DUNS, tự thông báo Bộ Công Thương, tự tích hợp Zalo ZNS...)? Chia sẻ lại cho cộng đồng qua [CONTRIBUTING.md](../CONTRIBUTING.md) - đây đúng là loại kiến thức "xương máu" quý nhất của thư viện này.
 
+**Một câu để nhớ:** đừng để nỗi lo pháp lý cản bạn bắt đầu, nhưng khi đã thu tiền thật hay giữ dữ liệu cá nhân thì phải biết các đầu việc này tồn tại - không cần thuộc lòng, chỉ cần đúng lúc thì biết đường hỏi luật sư, kế toán thật.
+
 ## Bước tiếp theo
 
 Pháp lý đã rõ, giờ trước khi build là phải biết chắc mình đang giải đúng vấn đề: [Xác thực vấn đề, analytics và phản hồi người dùng →](04-xac-thuc-van-de-va-analytics.md)

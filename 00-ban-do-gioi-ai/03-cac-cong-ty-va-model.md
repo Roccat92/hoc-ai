@@ -74,6 +74,8 @@ Vài quy tắc chung, không tuyệt đối:
 - **Cần tự host, không muốn phụ thuộc API bên ngoài, hoặc dữ liệu nhạy cảm không muốn gửi ra ngoài:** cân nhắc model mở (Llama, Qwen, DeepSeek, Mistral) chạy qua Ollama - xem [`03-ha-tang-thuc-chien/05-chay-llm-tren-may-minh.md`](../03-ha-tang-thuc-chien/05-chay-llm-tren-may-minh.md).
 - **Ngân sách hạn chế, cần gọi API nhiều:** so sánh giá các model "hạng nhẹ" (mini/flash/haiku-tier) của từng hãng - thường rẻ hơn model đầu bảng rất nhiều mà vẫn đủ dùng cho tác vụ đơn giản.
 
+**Một câu để nhớ:** nhớ ai làm ra model nào là bức tranh ổn định đáng giá - còn "model nào mạnh nhất" thì đổi theo tuần, cứ chọn theo việc và kiểm tra bảng xếp hạng lúc cần thay vì học thuộc con số.
+
 ## Bước tiếp theo
 
 Hiểu các hãng rồi, giờ đào sâu vào một câu hỏi quan trọng khi chọn công cụ: [Model mở vs đóng - khi nào dùng cái nào?](04-open-source-vs-closed.md)

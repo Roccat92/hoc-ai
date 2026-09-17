@@ -76,6 +76,8 @@ Ví dụ task "Kết nối database SQLite, lưu dữ liệu thật" ở trên t
 
 Task càng nhỏ, càng dễ kiểm tra đúng/sai ngay sau khi làm, và càng dễ quay lại đúng chỗ nếu một phiên bị gián đoạn giữa chừng.
 
+**Một câu để nhớ:** backlog là để mỗi phiên chỉ nhặt 1-2 việc nhỏ làm cho xong rồi tick - task nào làm không hết trong một buổi thì chia nhỏ tiếp, đừng ôm cả đống.
+
 ## Bước tiếp theo
 
 Đã có spec.md và backlog.md, giờ tìm hiểu file thứ ba - CLAUDE.md - và khi nào cần thêm công cụ hỗ trợ AI nhớ ngữ cảnh cho dự án lớn: [CLAUDE.md và ngữ cảnh dự án](04-claude-md-va-ngu-canh.md)

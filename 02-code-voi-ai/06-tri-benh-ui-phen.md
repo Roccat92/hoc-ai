@@ -345,6 +345,8 @@ Trước khi gửi link cho ai đó xem, tự hỏi:
 
 > Giao diện đã có chất riêng rồi thì cũng đừng vội khoe ngay - trước khi gửi link cho người khác dùng thử, còn một checklist khác đáng đi qua: [Bảo mật tối thiểu ở phần 10](../10-bao-mat/). Quay lại đó bất cứ lúc nào trước khi public, không cần đọc ngay bây giờ.
 
+**Một câu để nhớ:** AI không thiếu gu thẩm mỹ, nó thiếu thông tin về gu CỦA BẠN - khai báo rõ khẩu vị thì nó thôi rơi vào cái mẫu "phèn" mặc định mà ai nhìn cũng nhận ra.
+
 ## Bước tiếp theo
 
 Giao diện đã có chất riêng. Trước khi đưa sản phẩm lên internet, dừng một nhịp để hiểu công cụ mình đang cầm: vì sao cùng một Claude mà mỗi chỗ làm được việc khác nhau: [Harness là gì?](07-harness-la-gi.md)

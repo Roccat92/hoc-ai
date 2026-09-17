@@ -57,6 +57,8 @@ Chọn ba nền tảng deploy miễn phí. Yêu cầu ChatGPT tạo bảng gồm
 - [ ] Tự mở ít nhất một nguồn gốc trước khi chia sẻ kết luận.
 - [ ] Không tải dữ liệu nhạy cảm khi chưa hiểu chính sách tài khoản.
 
+**Một câu để nhớ:** ChatGPT có gắn link không có nghĩa link đó chứng minh điều nó nói - người mở nguồn ra kiểm lại vẫn phải là bạn, trước khi đưa kết luận vào việc thật.
+
 ## Bước tiếp theo
 
 File đã vào đúng ngữ cảnh, giờ biến dữ liệu thành insight và sản phẩm công việc: [Phân tích dữ liệu và tạo tài liệu →](04-phan-tich-du-lieu.md)

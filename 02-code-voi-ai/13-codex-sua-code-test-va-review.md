@@ -73,6 +73,8 @@ Trong dự án landing page, cố tình tạo một bug nhỏ (ví dụ: xóa th
 - [ ] Có smoke test bằng tay sau test tự động.
 - [ ] Commit có mô tả rõ mục tiêu và bằng chứng đã kiểm tra.
 
+**Một câu để nhớ:** test xanh chỉ chứng minh đúng mỗi test đó - đọc diff để bắt thay đổi ngoài phạm vi và tự smoke test mới là bằng chứng thật rằng agent sửa đúng chỗ.
+
 ## Bước tiếp theo
 
 Vòng lặp đã rõ, giờ chọn model và reasoning theo độ khó, chi phí và hạn mức: [Model, reasoning và hạn mức →](14-codex-model-reasoning-va-han-muc.md)

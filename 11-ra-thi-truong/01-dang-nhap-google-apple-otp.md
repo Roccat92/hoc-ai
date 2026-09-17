@@ -63,6 +63,8 @@ Gửi mã qua tin nhắn điện thoại. Khác với email, **SMS tốn tiền 
 
 **Lời khuyên:** người mới bắt đầu với **Google + OTP email** qua một dịch vụ auth có sẵn - đủ cho hầu hết sản phẩm giai đoạn đầu, gần như miễn phí, bật nhanh. Thêm các kênh khác khi có nhu cầu thật.
 
+**Một câu để nhớ:** người mới cứ bắt đầu bằng Google + OTP email qua một dịch vụ auth có sẵn - gần như miễn phí, bật nhanh; còn Zalo ZNS tốn tiền triệu và phải chờ duyệt mẫu tin, để dành khi thật sự cần kênh Zalo.
+
 ## Bước tiếp theo
 
 Đăng nhập xong, nếu sản phẩm của bạn là app di động và muốn lên chợ ứng dụng - có một chuyện tiền bạc quan trọng cần biết trước để khỏi mất oan mấy chục triệu: [Đưa app lên App Store & Google Play](02-dua-app-len-store.md)

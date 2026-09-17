@@ -67,6 +67,8 @@ Model gốc thường được lưu ở độ chính xác số cao (tốn nhiề
 
 Nếu máy bạn không đủ mạnh cho model muốn thử, hai lựa chọn: chọn model nhỏ hơn (vẫn học/thử nghiệm được), hoặc thuê cloud GPU như bài trước.
 
+**Một câu để nhớ:** chạy model mở trên máy mình được cái miễn phí, riêng tư và offline - đổi lại RAM/VRAM của máy quyết định chạy nổi model tới cỡ nào, và chất lượng thường thua model đóng hàng đầu.
+
 ## Bước tiếp theo
 
 Đã có đủ nền tảng hạ tầng - từ deploy web tới chạy AI local/cloud. Trước khi build ứng dụng AI thật, học cách giữ dữ liệu an toàn khi có người dùng thật: [Database production, migration và backup thật →](06-database-production-backup.md)

@@ -47,6 +47,8 @@ Rà soát bằng AI + checklist trong phần này là mức **"đủ an toàn đ
 
 Sáu bài trong phần này ([1](01-checklist-truoc-khi-public.md) đến bài này) cho bạn một checklist thực dụng - không phải để biến bạn thành chuyên gia bảo mật, mà để tránh những lỗi phổ biến nhất khiến sản phẩm của người mới dễ bị tấn công nhất. Áp dụng đều đặn trước mỗi lần public sản phẩm mới, và đừng ngại nhờ AI kiểm tra lại - hỏi thêm một lần không bao giờ thừa.
 
+**Một câu để nhớ:** nhờ AI rà soát luôn đáng làm thêm một lượt và bắt tốt các lỗi có khuôn mẫu, nhưng nó không thấy được lỗ hổng logic nghiệp vụ của riêng bạn - đụng tới tiền thật hay dữ liệu nhạy cảm thì vẫn cần người có chuyên môn.
+
 ## Bước tiếp theo
 
 Nếu sản phẩm có chatbot RAG hoặc agent, còn một lớp bảo mật riêng cần biết trước khi public: [Bảo mật ứng dụng AI: prompt injection, tool và dữ liệu →](07-bao-mat-ung-dung-ai.md)

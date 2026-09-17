@@ -49,6 +49,8 @@ Chọn ba việc bạn thật sự làm trong tuần này: học một khái ni�
 - [ ] Mỗi yêu cầu có mục tiêu, đối tượng, đầu ra và giới hạn.
 - [ ] Biết kiểm tra lại tính năng hiện có trong tài khoản.
 
+**Một câu để nhớ:** đừng hỏi "model nào mạnh nhất" mà hỏi "sai ở việc này có đắt không" - chọn đúng nơi bắt đầu và đúng cỡ model theo việc, đừng mặc định dùng đồ xịn nhất cho mọi thứ.
+
 ## Bước tiếp theo
 
 Biết chọn đúng nơi rồi, giờ học cách viết yêu cầu cho ra kết quả ổn định: [Prompt thực dụng và quy trình lặp →](02-prompt-thuc-dung.md)

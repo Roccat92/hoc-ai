@@ -43,6 +43,8 @@ Bạn **nên** viết spec khi:
 - Bạn biết sẽ làm dự án này qua nhiều phiên, nhiều ngày.
 - Có người khác (hoặc chính AI ở phiên sau) cần hiểu lại toàn bộ ý tưởng mà không cần hỏi lại bạn từ đầu.
 
+**Một câu để nhớ:** AI không nhớ gì giữa các phiên và sẽ tự đoán chỗ bạn nói thiếu - spec chính là nguồn sự thật cố định để nó khỏi đoán mò, khỏi mỗi lần hiểu một kiểu.
+
 ## Bước tiếp theo
 
 Đã hiểu vì sao cần spec, giờ học cách viết một file spec.md thật sự dùng được: [Viết spec.md](02-viet-spec-md.md)

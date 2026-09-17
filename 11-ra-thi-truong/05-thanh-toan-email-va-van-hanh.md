@@ -63,6 +63,8 @@ Viết runbook một trang cho dự án có form liên hệ: email lỗi, spam t
 - [ ] Có runbook rollback, lộ key và khôi phục dữ liệu.
 - [ ] Chi phí được kiểm tra theo trang chính thức.
 
+**Một câu để nhớ:** đừng tin màn hình "thanh toán thành công" trên trình duyệt khách - nguồn sự thật là webhook có chữ ký đi thẳng từ cổng thanh toán tới server, và tuyệt đối đừng tự lưu số thẻ.
+
 ## Bước tiếp theo
 
 Ghi chi phí và bài học vào [case study](../07-case-study/), để người học sau thấy cả phần vận hành chứ không chỉ ảnh demo.

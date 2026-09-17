@@ -65,6 +65,8 @@ Khi có lỗi, trình duyệt hoặc terminal sẽ hiện một dòng thông bá
 
 Mức độ hiểu cần thiết để tiếp tục an toàn: **bạn biết đại khái đoạn code này làm gì, vì sao nó cần thiết, và nó có ảnh hưởng gì tới phần còn lại của chương trình.** Không cần hiểu tới mức có thể tự viết lại từ đầu không cần AI - đó là mức hiểu của một lập trình viên chuyên nghiệp, không phải yêu cầu bắt buộc để bạn tự tin build sản phẩm.
 
+**Một câu để nhớ:** đọc code AI viết là nhận ra khung lớn và vài hình dạng quen thuộc, không phải thuộc cú pháp - hiểu đại khái nó làm gì và ảnh hưởng tới đâu là đã đủ để đi tiếp an toàn.
+
 ## Bước tiếp theo
 
 Sản phẩm đã chạy, đã hiểu được nó - giờ học cách lưu lại công sức của mình một cách an toàn: [Git, GitHub cơ bản](05-git-github-co-ban.md)

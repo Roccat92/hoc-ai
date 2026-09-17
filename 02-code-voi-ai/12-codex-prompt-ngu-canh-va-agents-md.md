@@ -45,6 +45,8 @@ Tạo `AGENTS.md` 10-15 dòng cho dự án quản lý đơn hàng, sau đó giao
 - [ ] `AGENTS.md` ngắn, cụ thể và có phạm vi.
 - [ ] Biết kiểm tra các file hướng dẫn trước khi tin agent.
 
+**Một câu để nhớ:** đừng nhồi cả repo vào prompt - tách bối cảnh vào đúng file và viết một AGENTS.md ngắn 10-20 dòng agent đọc hết, còn hơn 200 dòng nó bỏ dở giữa chừng.
+
 ## Bước tiếp theo
 
 Ngữ cảnh đã gọn, giờ đi qua vòng sửa–test–review để thay đổi không trôi ngoài ý muốn: [Sửa code, chạy test và review →](13-codex-sua-code-test-va-review.md)

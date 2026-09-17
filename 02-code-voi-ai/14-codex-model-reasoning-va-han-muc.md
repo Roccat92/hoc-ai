@@ -40,6 +40,8 @@ Giao cùng một task sửa text cho model nhẹ và model cân bằng; ghi th�
 - [ ] Không coi hạn mức công bố là số cố định.
 - [ ] Có dữ liệu trước khi nâng gói.
 
+**Một câu để nhớ:** chọn model và reasoning theo rủi ro của việc chứ không theo tâm lý "chắc ăn" - model mạnh chỉ đoán tinh vi hơn, không cứu được prompt mơ hồ hay thiếu tiêu chí nghiệm thu.
+
 ## Bước tiếp theo
 
 Đã biết kiểm soát model, giờ mở rộng Codex bằng skills, plugins và MCP một cách có chọn lọc: [Skills, plugins và MCP →](15-codex-skills-plugins-mcp.md)

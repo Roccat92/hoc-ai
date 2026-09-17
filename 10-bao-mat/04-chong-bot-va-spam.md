@@ -52,6 +52,8 @@ Rate limiting = giới hạn số lượt truy cập/gửi request từ một ng
 
 Nếu domain của bạn đã trỏ qua Cloudflare (bất kỳ gói nào, kể cả miễn phí), bạn **đã tự động được bảo vệ DDoS** ở tầng hạ tầng của Cloudflare - đây là một trong những lý do khiến việc dùng Cloudflare (cho DNS, hoặc deploy qua Cloudflare Pages) là lựa chọn hợp lý mặc định cho người mới, không cần cấu hình phức tạp gì thêm.
 
+**Một câu để nhớ:** form công khai nào rồi cũng bị bot tìm tới - gắn Turnstile miễn phí để chặn, nhưng nhớ xác thực token ở phía server, vì chỉ nhúng widget ngoài trình duyệt thì bot vẫn lách qua được.
+
 ## Bước tiếp theo
 
 Form đã an toàn, giờ tới phần đăng nhập - nơi dễ mắc lỗi bảo mật nghiêm trọng nhất nếu tự làm sai cách: [Đăng nhập và mật khẩu](05-dang-nhap-va-mat-khau.md)

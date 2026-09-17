@@ -1,4 +1,4 @@
-# Claude Code: cấu hình nâng cao (quyền hạn, skills/plugins/MCP, chế độ không tương tác)
+# Claude Code: cấu hình nâng cao - quyền, skills, MCP, tự động
 
 Trang này gom cú pháp cấu hình cụ thể của Claude Code mà lộ trình chính chỉ nhắc ở mức khái niệm. Đọc khi bạn đã hiểu khái niệm ở các bài tương ứng và cần ví dụ cụ thể để làm theo.
 

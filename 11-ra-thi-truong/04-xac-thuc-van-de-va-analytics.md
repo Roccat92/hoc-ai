@@ -59,6 +59,8 @@ Mời ba người dùng thử dự án landing page hoặc quản lý đơn hàn
 - [ ] Feedback có nhãn và phiên bản.
 - [ ] Có quyết định giữ, sửa hoặc bỏ tính năng dựa trên dữ liệu.
 
+**Một câu để nhớ:** hỏi về việc người ta đã thật sự làm chứ đừng hỏi "bạn có thích app mình không", rồi đo vài metric của luồng chính - để quyết định dựa trên bằng chứng thật, không phải đoán mò rồi build cho đã mới biết có ai cần.
+
 ## Bước tiếp theo
 
 Khi có người dùng thật, cần chuẩn bị tiền, email và vận hành: [Thanh toán, email và vận hành sau ra mắt →](05-thanh-toan-email-va-van-hanh.md)

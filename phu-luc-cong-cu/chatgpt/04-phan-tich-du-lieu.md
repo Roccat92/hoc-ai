@@ -59,6 +59,8 @@ Dùng dữ liệu giả của dự án quản lý đơn hàng ở [Phần 9](../
 - [ ] Biểu đồ có tiêu đề, đơn vị và khoảng thời gian.
 - [ ] Báo cáo ghi giả định, giới hạn và cách xác minh.
 
+**Một câu để nhớ:** biểu đồ đẹp không chứng minh công thức đúng - luôn đối chiếu tổng số, vài dòng mẫu và định nghĩa metric để bắt lỗi trước khi tin con số AI đưa ra.
+
 ## Bước tiếp theo
 
 Workflow đã chạy được một lần, giờ gom file và quy tắc thành một không gian làm việc tái sử dụng: [Projects, bộ nhớ và quyền riêng tư →](05-projects-bo-nho-rieng-tu.md)

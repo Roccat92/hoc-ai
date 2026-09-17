@@ -74,6 +74,8 @@ Số VND ở trên đã gồm thuế và tự cập nhật theo tỉ giá - xem 
 - [App Store](https://apps.apple.com/vn/app/starteex/id6788760618) / [Google Play](https://play.google.com/store/apps/details?id=com.starteex.app)
 - Mã nguồn: không công khai
 
+**Một câu để nhớ:** AI chỉ đáng tiền khi đặt đúng vào chỗ tắc của quy trình - chỗ khách phải ngồi chờ nhau - chứ không phải gắn đại một chatbot cho có.
+
 ## Bước tiếp theo
 
 Trợ lý AI trong app này là một agent biết gọi công cụ, không phải chatbot trả lời suông: [NEXA](03-nexa-agent.md)

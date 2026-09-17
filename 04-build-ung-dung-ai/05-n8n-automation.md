@@ -54,6 +54,8 @@ Toàn bộ luồng này chạy **tự động, 24/7**, không cần bạn ngồi
 
 **Lời khuyên:** nếu bạn đã có VPS đang chạy dự án khác, tự host n8n trên cùng VPS đó (nếu cấu hình còn dư tài nguyên) là cách tiết kiệm nhất để bắt đầu thử nghiệm tự động hóa.
 
+**Một câu để nhớ:** n8n cho bạn nối các khối kéo-thả thành luồng tự chạy 24/7 - tự động hóa được nhiều việc lặp lại mà không phải tự viết và nuôi code cho từng bước.
+
 ## Bước tiếp theo
 
 Đã biết gọi API, RAG, agent, tích hợp và tự động hóa. Trước khi train model, hãy học cách làm đầu ra AI có schema, có eval và có đường xử lý lỗi: [Structured output, eval và AI reliability →](06-structured-output-evals-va-reliability.md)

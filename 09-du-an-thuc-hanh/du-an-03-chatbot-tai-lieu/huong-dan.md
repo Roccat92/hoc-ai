@@ -1,4 +1,4 @@
-# Hướng dẫn: từ bản mẫu tới sản phẩm của riêng bạn
+# Hướng dẫn dự án chatbot tài liệu: từ bản mẫu tới sản phẩm của bạn
 
 Bài này dành cho người đã xong [dự án 02](../du-an-02-quan-ly-don-hang/spec.md) và sẵn sàng cho dự án khó nhất trong ba dự án thực hành: một **chatbot RAG thật**, biết trích dẫn nguồn, biết nói "không biết" thay vì bịa. Học xong bạn sẽ hiểu RAG không chỉ qua lý thuyết mà qua chính tay build ra một hệ thống RAG hoàn chỉnh.
 

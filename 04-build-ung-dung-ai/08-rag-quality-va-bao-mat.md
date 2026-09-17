@@ -72,6 +72,8 @@ Chèn một đoạn giả độc vào tài liệu test. Yêu cầu chatbot trả
 - [ ] Metadata chặn truy cập chéo người dùng.
 - [ ] Tài liệu được coi là dữ liệu không tin cậy.
 
+**Một câu để nhớ:** tài liệu truy hồi là dữ liệu chứ không phải mệnh lệnh - lọc quyền theo phiên đăng nhập thật, trả "không biết" khi điểm truy hồi thấp, và đừng để một đoạn văn trong tài liệu cướp quyền điều khiển chatbot.
+
 ## Bước tiếp theo
 
 RAG đã có lớp phòng thủ, giờ thêm giới hạn và phê duyệt cho agent có hành động: [Agent guardrail và quan sát →](09-agent-guardrail-va-quan-sat.md)

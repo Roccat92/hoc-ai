@@ -53,6 +53,8 @@ Lấy chatbot phân loại phản hồi khách hàng. Tạo 30 ví dụ, chia 20
 
 Nếu baseline chứng minh thật sự cần tinh chỉnh, quay lại [Fine-tune thực hành bằng LoRA](02-fine-tune-thuc-hanh.md) và train theo đúng bộ dữ liệu vừa chuẩn bị. Nếu chưa đủ bằng chứng, đừng train - quay về cải thiện prompt và RAG ở [Evals và prompt versioning](../04-build-ung-dung-ai/07-evals-va-prompt-versioning.md), phần lớn trường hợp dừng ở đây là đủ.
 
+**Một câu để nhớ:** đo trước khi train - dựng baseline rồi so công bằng prompt, RAG và fine-tune trên cùng một bộ test, nếu fine-tune không thắng rõ về cả chất lượng lẫn chi phí thì đừng train.
+
 ## Bước tiếp theo
 
 Đã đi hết phần nâng cao. Giờ khám phá kho tài nguyên để tiếp tục tự học sau khi hoàn thành lộ trình này: [Kho tài nguyên →](../06-kho-tai-nguyen/01-awesome-repos.md)

@@ -58,6 +58,8 @@ Chi phí chủ yếu tới từ **thời gian thuê GPU**. Với fine-tune LoRA 
 
 Fine-tune là kỹ năng cần thử nghiệm nhiều lần mới quen - đừng kỳ vọng lần đầu đã ra kết quả hoàn hảo. Bắt đầu với dataset nhỏ (vài trăm mẫu), thời gian training ngắn, chi phí thấp để học quy trình trước, rồi mở rộng dần khi đã tự tin.
 
+**Một câu để nhớ:** fine-tune bằng LoRA không đắt như bạn tưởng - một lần thử model 7B-8B chỉ tốn từ vài chục tới dưới 200 nghìn đồng tiền thuê GPU, nhưng luôn nhớ kiểm tra model có bị "quên" các khả năng chung sau khi học không.
+
 ## Bước tiếp theo
 
 Chất lượng fine-tune phụ thuộc rất nhiều vào chất lượng dữ liệu - đặc biệt quan trọng với tiếng Việt: [Dữ liệu tiếng Việt](03-du-lieu-tieng-viet.md)

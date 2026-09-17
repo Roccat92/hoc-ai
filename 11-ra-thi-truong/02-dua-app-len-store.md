@@ -59,6 +59,8 @@ Phần "duyệt kỹ và có thể từ chối" ở trên nghe chung chung, khô
 
 Không phải sản phẩm nào cũng cần lên chợ ứng dụng. Nếu sản phẩm của bạn là **web app** (chạy trên trình duyệt), bạn có thể phát hành ngay qua deploy web thông thường ([xem phần 3](../03-ha-tang-thuc-chien/03-deploy-mien-phi.md)) mà không tốn phí store, không chờ duyệt. Nhiều sản phẩm chọn làm **PWA** (web app cài được lên màn hình điện thoại như một app) để tránh toàn bộ quy trình store ở giai đoạn đầu. Chỉ lên App Store/Play khi thật sự cần (cần tính năng native, cần hiện diện trên chợ để người dùng tin tưởng/tìm thấy).
 
+**Một câu để nhớ:** mã D-U-N-S để mở tài khoản tổ chức là thứ Apple cấp miễn phí, đừng trả cho trung gian mấy chục triệu - và rà trước những lý do Apple hay từ chối để đỡ mất thêm một vòng chờ duyệt.
+
 ## Bước tiếp theo
 
 Có sản phẩm, có đăng nhập, chuẩn bị lên store - còn một mảng người mới hay bỏ qua tới lúc gặp rắc rối mới lo: pháp lý ở Việt Nam. [Pháp lý cơ bản khi làm sản phẩm ở Việt Nam](03-phap-ly-viet-nam.md)

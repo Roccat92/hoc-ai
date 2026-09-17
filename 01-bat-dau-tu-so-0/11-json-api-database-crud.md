@@ -107,6 +107,8 @@ Biến trong bộ nhớ của server sẽ mất khi server khởi động lại;
 - [ ] Tự gọi được ít nhất một API thật bằng `curl` và đọc được JSON trả về.
 - [ ] Biết vì sao validate phải nằm ở backend, không chỉ ở form.
 
+**Một câu để nhớ:** dữ liệu chạy từ form qua API vào database rồi quay lại màn hình, và chốt kiểm tra phải nằm ở API - vì ai cũng gửi thẳng được request giả bỏ qua form.
+
 ## Bước tiếp theo
 
 Nền tảng đã đủ để đọc code AI viết; giờ quay lại quy trình xây sản phẩm: [Cài một coding agent và chạy task đầu tiên →](../02-code-voi-ai/01-cai-mot-coding-agent.md)

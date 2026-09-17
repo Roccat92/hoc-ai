@@ -26,6 +26,8 @@ Không có bài riêng cho mục này vì cách làm khá đơn giản, tùy nơ
 - **Tự quản lý database trên VPS** (như đã học ở [phần 3](../03-ha-tang-thuc-chien/01-thue-vps.md)) - cần tự đặt lịch backup, ví dụ dùng `cron` (lịch chạy lệnh tự động trên Linux) để tự động sao lưu file database ra một nơi khác (một VPS khác, hoặc dịch vụ lưu trữ đám mây) mỗi ngày. Nhờ Claude Code viết script backup và hướng dẫn đặt lịch `cron` là cách nhanh nhất nếu bạn chưa quen.
 - **Nguyên tắc tối thiểu:** ít nhất có một bản sao dữ liệu **không nằm trên cùng server** với bản chính - nếu server chính gặp sự cố, bản sao vẫn còn.
 
+**Một câu để nhớ:** "chạy được" chưa phải là "an toàn để chạy" - tick đủ năm dòng checklist trước khi cho người ngoài dùng là đủ tránh những lỗi phổ biến nhất khiến người mới mất tiền, lộ dữ liệu.
+
 ## Bước tiếp theo
 
 Bắt đầu từ hạng mục đầu tiên trong checklist: [SSL và HTTPS](02-ssl-va-https.md)

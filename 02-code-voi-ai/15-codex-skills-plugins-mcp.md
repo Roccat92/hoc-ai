@@ -46,6 +46,8 @@ Chọn một MCP đọc tài liệu công khai. Viết bảng gồm nguồn, quy
 - [ ] Biết gỡ hoặc thu hồi kết nối.
 - [ ] Không đưa secret vào prompt hay file hướng dẫn.
 
+**Một câu để nhớ:** mỗi mở rộng bạn cắm thêm là một cánh cửa mới vào dự án - chỉ cài khi thật cần, đọc kỹ quyền của nó, và thử chế độ chỉ-đọc trước khi trao quyền ghi.
+
 ## Bước tiếp theo
 
 Kết nối đã an toàn ở mức cơ bản, giờ xem khi nào nên làm song song hoặc tự động hóa: [Subagent và tự động hóa →](16-codex-subagent-va-tu-dong-hoa.md)

@@ -92,6 +92,8 @@ sudo ufw enable
 
 Đến đây, VPS của bạn đã sẵn sàng, an toàn cơ bản, để tiếp tục cài đặt phần mềm cần thiết cho dự án.
 
+**Một câu để nhớ:** VPS là chiếc máy tính bạn thuê chạy 24/7 và toàn quyền kiểm soát - cứ bắt đầu từ gói nhỏ nhất rồi nâng sau, và đừng làm việc hằng ngày bằng root.
+
 ## Bước tiếp theo
 
 Server đã sẵn sàng, giờ đưa web của bạn lên chạy thật trên đó: [Deploy web lên VPS](02-deploy-web-len-vps.md)

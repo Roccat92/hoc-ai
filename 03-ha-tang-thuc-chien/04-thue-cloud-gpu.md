@@ -59,6 +59,8 @@ Khác các nền tảng trên - Colab là môi trường notebook chạy trên t
 - **Trên Vast.ai, so sánh nhiều máy** trước khi chọn - giá chênh lệch khá nhiều giữa các máy cùng loại GPU do là chợ tự do.
 - **Ước lượng thời gian cần trước khi bắt đầu** - nếu công việc dự kiến chạy nhiều giờ liên tục, tính tổng chi phí trước (giá/giờ × số giờ dự kiến) để tránh bất ngờ.
 
+**Một câu để nhớ:** gọi API là đang mượn GPU của người khác nên phần lớn việc không cần GPU riêng - chỉ thuê khi fine-tune hay chạy model mở lớn, và nhớ tắt máy ngay khi xong kẻo đốt tiền oan.
+
 ## Bước tiếp theo
 
 Trước khi vội thuê GPU cloud, kiểm tra xem máy cá nhân của bạn có chạy được model mở không - có thể không cần tốn tiền: [Chạy LLM trên máy mình](05-chay-llm-tren-may-minh.md)

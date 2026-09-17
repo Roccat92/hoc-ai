@@ -52,6 +52,8 @@ Cố ý tạo một lỗi mỗi nhóm rồi tự phân loại: đổi tên một
 - [ ] Handoff có mục tiêu, đã làm, chưa làm, lệnh cuối.
 - [ ] Không xóa dữ liệu để “thử cho nhanh”.
 
+**Một câu để nhớ:** trước khi nhờ agent "sửa hộ", tự phân loại lỗi thuộc nhóm nào - môi trường, quyền, ngữ cảnh hay code - vì phần lớn "agent dốt" thật ra là môi trường thiếu hoặc ngữ cảnh git chưa sạch.
+
 ## Bước tiếp theo
 
 Đã biết xử lý phiên Codex, học tiếp quy trình debug, DevTools và Git để tự kiểm chứng thay đổi: [Debug, DevTools và Git nâng cao vừa đủ →](18-debug-devtools-va-git-nang-cao.md)

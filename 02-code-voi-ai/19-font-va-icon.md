@@ -145,6 +145,8 @@ Font và icon là "khẩu vị" - phải khai báo, đừng để AI tự đoán
 
 Muốn diễn đạt chính xác hơn nữa - "canh icon thẳng hàng với chữ", "giảm độ đậm nét icon" - thì cần đúng thuật ngữ, đó là nội dung bài kế tiếp.
 
+**Một câu để nhớ:** font và icon là "khẩu vị" phải khai báo cho AI chứ đừng để nó chọn mặc định - và với sản phẩm tiếng Việt, luôn thử đủ dấu (`ữ`, `ượ`, `ẳ`) trước khi chốt một font.
+
 ## Bước tiếp theo
 
 Bạn để ý chưa: xuyên suốt hai bài về giao diện, sức mạnh nằm ở chỗ **nói đúng từ** - "refactor", "polish", "canh lề". Bài cuối phần này gom lại bộ thuật ngữ đó: [Nói đúng thuật ngữ khi làm việc với AI](20-tu-vung-lam-viec-voi-ai.md)

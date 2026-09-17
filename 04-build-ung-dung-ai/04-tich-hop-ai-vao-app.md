@@ -43,6 +43,8 @@ Sai lầm phổ biến khi thêm AI vào sản phẩm có sẵn là **cố nhét
 - **Kiểm soát chi phí API** khi tích hợp vào sản phẩm có lượng người dùng thật - theo dõi usage dashboard thường xuyên, đặt giới hạn (rate limit) hợp lý để tránh chi phí tăng đột biến ngoài dự kiến.
 - **Thông báo rõ cho người dùng** khi họ đang tương tác với AI, không giả vờ là con người - vừa minh bạch, vừa tránh kỳ vọng sai về khả năng của hệ thống.
 
+**Một câu để nhớ:** thêm AI vào sản phẩm đang chạy thì chọn đúng một điểm đau, làm nhỏ, đo thật rồi mới mở rộng - và luôn chừa sẵn đường cho con người tiếp quản khi AI trả lời sai.
+
 ## Bước tiếp theo
 
 Không phải lúc nào cũng cần code phức tạp để tự động hóa - có cách nhanh hơn cho nhiều trường hợp: [Tự động hóa với n8n](05-n8n-automation.md)

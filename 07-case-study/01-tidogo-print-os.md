@@ -69,6 +69,8 @@ Vài khái niệm trong bảng trên nếu bạn chưa quen: xem lại [từ đi
 - Sản phẩm: [tidogo.com](https://tidogo.com)
 - Mã nguồn: không công khai
 
+**Một câu để nhớ:** phần khó nhất của phần mềm cho xưởng không phải viết code, mà là biết chính xác quy trình thật chạy thế nào - và cái đó chỉ có khi bạn đã sống trong bài toán đủ lâu.
+
 ## Bước tiếp theo
 
 Xem tiếp case study về app di động và trợ lý AI của cùng hệ sinh thái này: [StarteeX App](02-starteex-app.md)

@@ -48,6 +48,8 @@ Không cần chọn phe. Gợi ý thực tế:
 
 Nhiều lập trình viên thực tế dùng **kết hợp** - ví dụ gõ code hàng ngày với Cursor, nhưng bật Claude Code cho những tác vụ lớn cần AI tự làm nhiều bước liên tục.
 
+**Một câu để nhớ:** CLI hợp giao việc nhiều bước, IDE hợp vừa gõ vừa được gợi ý ngay - đây không phải chọn phe, cứ kết hợp cái nào hợp việc nấy.
+
 ## Bước tiếp theo
 
 Đã có công cụ trong tay, giờ bắt tay vào làm thật: [Build dự án đầu tiên](03-du-an-dau-tien.md)

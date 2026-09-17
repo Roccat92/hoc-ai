@@ -43,6 +43,8 @@ Với một dự án đang chạy: (1) thêm log có đủ bốn phần ở trê
 - [ ] Đã tìm và bật thử một cảnh báo chi phí trên ít nhất một dịch vụ đang dùng.
 - [ ] Biết nơi cần tìm ("billing"/"usage") khi muốn kiểm tra chi phí trên một nhà cung cấp mới.
 
+**Một câu để nhớ:** log đủ bốn câu - request nào, lúc nào, phiên bản nào, lỗi gì - cộng một cảnh báo chi phí đặt sẵn giúp bạn biết trục trặc trước khi người dùng than phiền hay hóa đơn nhảy vọt.
+
 ## Bước tiếp theo
 
 Đã có đủ nền tảng hạ tầng - từ deploy web tới database, CI/CD và giám sát, giờ bắt tay build ứng dụng AI thật: [Gọi API Claude/OpenAI/Gemini bằng code →](../04-build-ung-dung-ai/01-goi-api-llm.md)

@@ -53,6 +53,8 @@ Vậy nên khi nghe "model mở nguồn", hiểu ngầm là "open-weight, dùng 
 
 Đừng nghĩ đây là quyết định "chọn một, bỏ hẳn cái kia". Rất nhiều team dùng **kết hợp**: model đóng cho phần lõi sản phẩm cần chất lượng cao nhất, model mở tự host cho các tác vụ phụ, khối lượng lớn, hoặc dữ liệu nhạy cảm. Người mới nên bắt đầu với model đóng để tập trung học kỹ năng cốt lõi trước, rồi khám phá model mở khi có nhu cầu cụ thể.
 
+**Một câu để nhớ:** model đóng để bạn tập trung học và build nhanh, model mở để bạn giữ dữ liệu và tùy biến sâu - người mới cứ bắt đầu với đóng, mở ra khi có nhu cầu thật, không phải chọn một bỏ một.
+
 ## Bước tiếp theo
 
 Đã hiểu rõ bối cảnh công nghệ, giờ tìm hiểu ngành AI có những công việc gì, làm gì, lương ra sao: [Các nghề trong AI](05-cac-nghe-trong-ai.md)

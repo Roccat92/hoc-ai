@@ -60,6 +60,8 @@ Thứ tự ưu tiên, **làm bước 1 trước tiên, ngay lập tức**, trư�
 3. **Kiểm tra hóa đơn/usage dashboard** của hãng xem có lượt gọi API lạ nào trong khoảng thời gian key bị lộ không - nếu có chi phí phát sinh không phải do bạn, nhiều hãng có kênh hỗ trợ để báo cáo lạm dụng.
 4. **Dọn lịch sử Git** (tùy chọn, nâng cao hơn) - nếu muốn xóa hẳn key khỏi lịch sử commit, cần công cụ như `git filter-repo` hoặc BFG Repo-Cleaner. Đây là thao tác **viết lại lịch sử Git**, có thể ảnh hưởng tới người khác đang cùng làm việc trên repo - nếu chưa tự tin, nhờ Claude Code hướng dẫn cẩn thận từng bước, và **bước 1 (thu hồi key) đã đủ để vô hiệu hóa rủi ro chính**, kể cả khi bạn chưa dọn xong lịch sử.
 
+**Một câu để nhớ:** key lộ lên GitHub công khai bị bot lấy trong vài phút chứ không phải chuyện "may ra mới bị" - giữ mọi key trong `.env` đã gitignore, và nếu lỡ lộ thì thu hồi (revoke) key ngay lập tức trước đã.
+
 ## Bước tiếp theo
 
 Đã giấu key an toàn, giờ chặn một vấn đề khác: bot và spam tấn công form công khai của bạn: [Chống bot và spam](04-chong-bot-va-spam.md)

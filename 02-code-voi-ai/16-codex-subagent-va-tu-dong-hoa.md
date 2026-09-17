@@ -38,6 +38,8 @@ Tạo hai task độc lập: một rà link Markdown và một rà tiêu đề. 
 - [ ] Không tự động hóa side effect nguy hiểm.
 - [ ] Có bước review trước merge/deploy.
 
+**Một câu để nhớ:** chỉ tách agent chạy song song khi việc thật sự độc lập, và dù tự động hóa tới đâu vẫn phải chừa một bước người duyệt trước khi deploy, merge hay xóa dữ liệu.
+
 ## Bước tiếp theo
 
 Muốn dùng Codex bền vững, hãy học cách chẩn đoán lỗi thay vì thử lệnh ngẫu nhiên: [Các lỗi Codex thường gặp →](17-codex-xu-ly-loi.md)

@@ -67,6 +67,8 @@ Khác với các case study kia, chi phí lớn nhất của NEXA **không phả
 - Sản phẩm: [starteex.app](https://starteex.app)
 - Mã nguồn: không công khai
 
+**Một câu để nhớ:** agent hơn chatbot ở chỗ nó làm được việc thật - nhưng chỉ khi phía sau đã có hệ thống thật để gọi, không thì cũng chỉ là con bot nói chuyện lịch sự.
+
 ## Bước tiếp theo
 
 Case study cuối: công cụ web tự làm mockup, có thể gọi từ dòng lệnh và qua MCP: [Mockup Studio](04-mockup-studio.md)
