@@ -6,9 +6,9 @@ import { execFileSync } from 'node:child_process'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
-// File .md công khai ở gốc repo — MỌI file .md khác ở gốc (CLAUDE.md, CONTEXT.md,
+// File .md công khai ở gốc repo - MỌI file .md khác ở gốc (CLAUDE.md, CONTEXT.md,
 // BACKLOG.md, và bất kỳ file nội bộ nào thêm sau này) tự động bị loại khỏi bản
-// build, không cần sửa danh sách này mỗi khi có file nội bộ mới — chỉ cần
+// build, không cần sửa danh sách này mỗi khi có file nội bộ mới - chỉ cần
 // KHÔNG thêm tên nó vào đây.
 const PUBLIC_ROOT_DOCS = new Set(['README.md', 'CONTRIBUTING.md', 'giay-phep.md'])
 const internalRootDocs = fs
@@ -43,25 +43,25 @@ const PROJECT_FILE_ORDER = ['spec.md', 'backlog.md', 'CLAUDE.md', 'huong-dan.md'
 // dấu ":" (hàm shortTitle) thì nhiều trang rớt về đúng mỗi tên công cụ - ví dụ HAI
 // trang Claude Code cùng hiện "Claude Code", còn trang mở đầu ChatGPT/Codex chỉ hiện
 // tên công cụ trơ, không phân biệt được. Map này đặt cho mỗi trang một nhãn dạng
-// "Công cụ — chủ đề": đọc tách khỏi ngữ cảnh vẫn rõ (tốt cho cả screen reader lẫn
+// "Công cụ - chủ đề": đọc tách khỏi ngữ cảnh vẫn rõ (tốt cho cả screen reader lẫn
 // SEO/anchor text) và không còn hai mục trùng tên. Thêm trang công cụ mới thì thêm
 // một dòng vào đây; nếu quên, trang đó tự lùi về cách cắt tiêu đề như cũ (chỉ kém
 // đẹp chứ không hỏng). Khóa là "<tên-thư-mục-công-cụ>/<tên-file-không-có-.md>".
 const TOOL_PAGE_LABELS: Record<string, string> = {
-  'chatgpt/01-bat-dau-va-chon-che-do': 'ChatGPT — Bắt đầu & chọn chế độ',
-  'chatgpt/02-prompt-thuc-dung': 'ChatGPT — Prompt thực dụng',
-  'chatgpt/03-file-web-va-nghien-cuu': 'ChatGPT — File, web & nghiên cứu',
-  'chatgpt/04-phan-tich-du-lieu': 'ChatGPT — Phân tích dữ liệu',
-  'chatgpt/05-projects-bo-nho-rieng-tu': 'ChatGPT — Projects, bộ nhớ & riêng tư',
-  'claude-code/01-cai-dat-va-lenh-co-ban': 'Claude Code — Cài đặt & lệnh cơ bản',
-  'claude-code/02-chi-phi-cac-goi': 'Claude Code — Chi phí & các gói',
-  'claude-code/03-cau-hinh-nang-cao': 'Claude Code — Cấu hình nâng cao',
-  'codex/01-cai-dat-va-lenh-co-ban': 'Codex — Cài đặt & nơi làm việc',
-  'codex/02-chi-phi-cac-goi': 'Codex — Chi phí & các gói',
-  'codex/03-cau-hinh-nang-cao': 'Codex — Cấu hình nâng cao',
-  'grok-bot/01-cai-dat-va-lenh-co-ban': 'Grok Bot — Cài đặt & dùng cơ bản',
-  'grok-bot/02-chi-phi-cac-goi': 'Grok Bot — Chi phí & các gói',
-  'grok-bot/03-cau-hinh-nang-cao': 'Grok Bot — Cấu hình nâng cao',
+  'chatgpt/01-bat-dau-va-chon-che-do': 'ChatGPT - Bắt đầu & chọn chế độ',
+  'chatgpt/02-prompt-thuc-dung': 'ChatGPT - Prompt thực dụng',
+  'chatgpt/03-file-web-va-nghien-cuu': 'ChatGPT - File, web & nghiên cứu',
+  'chatgpt/04-phan-tich-du-lieu': 'ChatGPT - Phân tích dữ liệu',
+  'chatgpt/05-projects-bo-nho-rieng-tu': 'ChatGPT - Projects, bộ nhớ & riêng tư',
+  'claude-code/01-cai-dat-va-lenh-co-ban': 'Claude Code - Cài đặt & lệnh cơ bản',
+  'claude-code/02-chi-phi-cac-goi': 'Claude Code - Chi phí & các gói',
+  'claude-code/03-cau-hinh-nang-cao': 'Claude Code - Cấu hình nâng cao',
+  'codex/01-cai-dat-va-lenh-co-ban': 'Codex - Cài đặt & nơi làm việc',
+  'codex/02-chi-phi-cac-goi': 'Codex - Chi phí & các gói',
+  'codex/03-cau-hinh-nang-cao': 'Codex - Cấu hình nâng cao',
+  'grok-bot/01-cai-dat-va-lenh-co-ban': 'Grok Bot - Cài đặt & dùng cơ bản',
+  'grok-bot/02-chi-phi-cac-goi': 'Grok Bot - Chi phí & các gói',
+  'grok-bot/03-cau-hinh-nang-cao': 'Grok Bot - Cấu hình nâng cao',
 }
 
 function headingOf(file: string): string {
@@ -141,7 +141,7 @@ function toolGroupsOf(dir: string, sectionDir: string): DefaultTheme.SidebarItem
         items: files.map((f) => {
           const base = f.replace(/\.md$/, '')
           return {
-            // Ưu tiên nhãn "Công cụ — chủ đề" đã soạn tay ở TOOL_PAGE_LABELS; chưa có
+            // Ưu tiên nhãn "Công cụ - chủ đề" đã soạn tay ở TOOL_PAGE_LABELS; chưa có
             // thì lùi về cắt tiêu đề như cũ.
             text: TOOL_PAGE_LABELS[`${toolDir}/${base}`] ?? shortTitle(headingOf(path.join(tdir, f))),
             link: `/${sectionDir}/${toolDir}/${base}`,
@@ -178,7 +178,7 @@ function buildSidebar(): DefaultTheme.SidebarItem[] {
           link: `/${section.dir}/${f.replace(/\.md$/, '')}`,
         }))
     // Số hiển thị lấy từ chính tiền tố thư mục (vd "10-bao-mat" -> 10), không phải
-    // vị trí trong mảng `sections` — để đúng ngay cả khi các phần chưa liền số
+    // vị trí trong mảng `sections` - để đúng ngay cả khi các phần chưa liền số
     // (ví dụ 09 chưa tồn tại nhưng 10 đã có).
     const sectionNumber = section.dir.match(/^(\d+)/)?.[1] ?? ''
     const text = `${sectionNumber}. ${section.text}`
