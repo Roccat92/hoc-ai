@@ -59,6 +59,9 @@ const TOOL_PAGE_LABELS: Record<string, string> = {
   'codex/01-cai-dat-va-lenh-co-ban': 'Codex — Cài đặt & nơi làm việc',
   'codex/02-chi-phi-cac-goi': 'Codex — Chi phí & các gói',
   'codex/03-cau-hinh-nang-cao': 'Codex — Cấu hình nâng cao',
+  'grok-bot/01-cai-dat-va-lenh-co-ban': 'Grok Bot — Cài đặt & dùng cơ bản',
+  'grok-bot/02-chi-phi-cac-goi': 'Grok Bot — Chi phí & các gói',
+  'grok-bot/03-cau-hinh-nang-cao': 'Grok Bot — Cấu hình nâng cao',
 }
 
 function headingOf(file: string): string {
@@ -114,7 +117,7 @@ function projectGroupsOf(dir: string, sectionDir: string): DefaultTheme.SidebarI
 }
 
 // phu-luc-cong-cu/ nằm ngoài lộ trình chính (00-11): không đánh số, không bắt buộc
-// đọc theo thứ tự. Mỗi thư mục con (chatgpt/, claude-code/, codex/) là một nhóm
+// đọc theo thứ tự. Mỗi thư mục con (chatgpt/, claude-code/, codex/, grok-bot/) là một nhóm
 // công cụ, có README.md riêng làm trang giới thiệu nhóm và các file NN-*.md bên
 // trong liệt kê theo thứ tự số.
 function toolGroupsOf(dir: string, sectionDir: string): DefaultTheme.SidebarItem[] {
@@ -239,7 +242,7 @@ export default defineConfig({
     'README.md': 'index.md',
     ':dir/README.md': ':dir/index.md',
     // phu-luc-cong-cu/ có thêm một cấp thư mục con theo công cụ (chatgpt/,
-    // claude-code/, codex/), nên cần khai riêng - quy tắc ":dir/README.md" ở trên
+    // claude-code/, codex/, grok-bot/), nên cần khai riêng - quy tắc ":dir/README.md" ở trên
     // chỉ khớp đúng một cấp.
     'phu-luc-cong-cu/:tool/README.md': 'phu-luc-cong-cu/:tool/index.md',
   },

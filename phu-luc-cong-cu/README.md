@@ -9,5 +9,6 @@
 - [Claude Code](claude-code/) - cài đặt, chi phí, cấu hình quyền/skills/MCP nâng cao.
 - [Codex](codex/) - cài đặt, chi phí, cấu hình AGENTS.md/MCP/tự động hóa nâng cao.
 - [ChatGPT](chatgpt/) - chọn chế độ, prompt thực dụng, file/nghiên cứu, phân tích dữ liệu, Projects.
+- [Grok Bot](grok-bot/) - cài đặt, chi phí, Computer/connector/routine/Auto-review.
 
 Xài AI nào là lựa chọn của bạn - lộ trình chính không thiên vị công cụ nào. Giá, tên gói và cú pháp cấu hình trong các trang này đổi theo thời gian; luôn đối chiếu với tài liệu chính thức của từng công cụ trước khi trả tiền hoặc chép nguyên một đoạn cấu hình.
