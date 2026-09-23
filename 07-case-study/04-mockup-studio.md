@@ -1,5 +1,7 @@
 # Mockup Studio: xử lý ảnh trên trình duyệt, gọi qua CLI và MCP
 
+Case study này dành cho người muốn thấy một công cụ web xử lý ảnh thật - xóa nền, chuyển vector, mô phỏng hiệu ứng in - được build bằng AI. Đọc xong bạn sẽ hiểu vì sao chọn xử lý ngay trên trình duyệt thay vì trên máy chủ (rẻ hơn, nhanh hơn, riêng tư hơn), và cách mở công cụ đó ra cho dòng lệnh lẫn MCP để tự động hóa.
+
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
 **Thời gian thực hiện:** là một phần của hệ sinh thái StarteeX (xem tổng thời gian và chi phí AI ở [case study StarteeX App](02-starteex-app.md)); kèm Codex/ChatGPT Pro để phản biện và làm assets. Vẫn được update đều, hiện làm bằng gói Max 5x.
 **Trình độ trước khi bắt đầu:** đã làm thiết kế và xử lý file in nhiều năm bằng Photoshop, Illustrator

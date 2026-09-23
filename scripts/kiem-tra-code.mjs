@@ -47,7 +47,7 @@ const KY_TU_NGOAC_THONG_MINH = /[“”‘’]/
 
 function* duyetMd(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (BO_QUA_THU_MUC.has(e.name)) continue
+    if (BO_QUA_THU_MUC.has(e.name) || e.name.startsWith('_')) continue // _tmp*: thư mục nháp cục bộ
     const p = path.join(dir, e.name)
     if (e.isDirectory()) yield* duyetMd(p)
     else if (e.name.endsWith('.md')) yield p

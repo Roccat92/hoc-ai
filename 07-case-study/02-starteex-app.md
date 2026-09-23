@@ -1,5 +1,7 @@
 # StarteeX App: đưa app đặt in theo yêu cầu lên hai chợ ứng dụng
 
+Case study này dành cho người muốn biết một app di động thật, có AI bên trong, được build và đưa lên App Store lẫn Google Play bằng coding agent như thế nào. Đọc xong bạn sẽ hiểu AI nên nằm ở đâu trong sản phẩm (đúng chỗ tắc nghẽn của quy trình, không phải chatbot gắn thêm cho có), bộ công nghệ đã dùng, và chi phí gói AI thật cho cả hệ sinh thái StarteeX.
+
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
 **Thời gian thực hiện:** cả **hệ sinh thái StarteeX** - app di động, trợ lý [NEXA](03-nexa-agent.md), hệ quản trị admin, web landing [starteex.app](https://starteex.app), và [Mockup Studio](04-mockup-studio.md) - build trong khoảng 2 tháng: **~1 tháng dùng gói [Claude Pro](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md), rồi ~1 tháng gói Claude Max 5x**.
 **Trình độ trước khi bắt đầu:** vận hành xưởng sản xuất, không xuất thân lập trình di động

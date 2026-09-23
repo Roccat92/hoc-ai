@@ -95,7 +95,7 @@ function walkChain(start, seen) {
 function walkAllFiles(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
     if (e.isDirectory()) {
-      if (IGNORE_DIRS.has(e.name)) return []
+      if (IGNORE_DIRS.has(e.name) || e.name.startsWith('_')) return [] // _tmp*: thư mục nháp cục bộ
       return walkAllFiles(path.posix.join(dir, e.name))
     }
     return [path.posix.join(dir, e.name)]
