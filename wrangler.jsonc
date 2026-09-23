@@ -15,6 +15,27 @@
     "binding": "ASSETS",
     // Đường dẫn lạ (không có file) sẽ trả trang 404 riêng của VitePress
     // thay vì lỗi trống.
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // MẶC ĐỊNH Cloudflare phục vụ thẳng file tĩnh khi URL khớp một file và CHỈ gọi worker khi
+    // không khớp - nên luật 301 trong worker/index.js (domain phụ -> hocaiviet.com, http ->
+    // https) chưa từng chạy cho các trang có thật (audit 23/09/2026: http://hocaiviet.com/ và
+    // ai.startee.vn vẫn trả 200). Bật worker chạy trước cho trang HTML, nhưng loại trừ file
+    // tĩnh (JS/CSS/ảnh/thumbnail...) để chúng vẫn được phục vụ miễn phí không giới hạn -
+    // chỉ lượt xem trang mới tính vào hạn mức Workers (gói miễn phí 100.000 lượt/ngày,
+    // vượt thì trang trả 429). Nếu sau này bật "Always Use HTTPS" và Redirect Rules cho
+    // domain phụ ngay trên dashboard Cloudflare thì có thể bỏ khối này.
+    "run_worker_first": [
+      "/*",
+      "!/assets/*",
+      "!/thumb/*",
+      "!/*.png",
+      "!/*.svg",
+      "!/*.ico",
+      "!/*.css",
+      "!/*.js",
+      "!/*.txt",
+      "!/*.xml",
+      "!/*.woff2"
+    ]
   }
 }
