@@ -1,5 +1,7 @@
 # NEXA: agent biết gọi công cụ, không phải chatbot trả lời suông
 
+Case study này dành cho người đã đọc bài AI agent và muốn xem một agent chạy thật với khách hàng thật. Đọc xong bạn sẽ hiểu agent khác chatbot ở chỗ nào qua ví dụ tạo đơn hàng thật, vì sao phần khó nhất là một trí nhớ chung cho Zalo, app và Facebook, và bộ công nghệ đã dùng.
+
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
 **Thời gian thực hiện:** là một phần của hệ sinh thái StarteeX (xem tổng thời gian và chi phí AI ở [case study StarteeX App](02-starteex-app.md)); vẫn được update và fix bug đều, hiện làm bằng gói Max 5x
 **Trình độ trước khi bắt đầu:** đã có sẵn hệ thống vận hành xưởng, cần một lớp trợ lý đứng trước khách

@@ -7,12 +7,19 @@
 // (bản chính thức lẫn bản preview theo PR), vì đó là domain nội bộ dùng để xem thử
 // trước khi lên hocaiviet.com, không phải nơi cần dồn SEO.
 const DOMAIN_CHINH = 'hocaiviet.com'
-const DOMAIN_PHU = new Set(['ai.startee.vn', 'ai.starteex.app'])
+// www.hocaiviet.com hiện chưa có bản ghi DNS; thêm sẵn vào đây để khi nào gắn thêm
+// domain đó vào worker (Cloudflare dashboard -> Workers -> Domains) nó tự 301 về apex.
+const DOMAIN_PHU = new Set(['ai.startee.vn', 'ai.starteex.app', 'www.hocaiviet.com'])
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url)
-    if (DOMAIN_PHU.has(url.hostname)) {
+    // Hai trường hợp cần gom về đúng một địa chỉ chuẩn https://hocaiviet.com/...:
+    // 1) domain phụ, 2) http:// không mã hóa trên domain chính (audit 23/09/2026 thấy
+    //    http://hocaiviet.com/ trả 200 thay vì chuyển sang https - thành hai bản sao).
+    const laDomainPhu = DOMAIN_PHU.has(url.hostname)
+    const laHttpThuong = url.protocol === 'http:' && url.hostname === DOMAIN_CHINH
+    if (laDomainPhu || laHttpThuong) {
       url.hostname = DOMAIN_CHINH
       url.protocol = 'https:'
       url.port = ''

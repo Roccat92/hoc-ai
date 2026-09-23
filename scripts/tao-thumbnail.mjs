@@ -68,6 +68,8 @@ function tieuDeCua(file) {
 function boMarkdown(s) {
   return s
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    // "(bài trước)", "(xem tổng quan ở phần 05)" chỉ có nghĩa khi còn là link - bỏ khỏi mô tả.
+    .replace(/\s*\((?:bài trước|bài \d+|xem [^)]*)\)/gi, '')
     .replace(/\*\*([^*]+)\*\*/g, '$1')
     .replace(/[*_`]/g, '')
     // VitePress chèn description thẳng vào thuộc tính content="..." không escape,
@@ -77,24 +79,80 @@ function boMarkdown(s) {
     .replace(/\s+/g, ' ')
     .trim()
 }
-function moTaCua(file) {
+// Đoạn văn mở đầu thật sự của bài: bỏ qua heading, bảng, danh sách, trích dẫn, ảnh,
+// thẻ HTML, TOÀN BỘ khối ::: warning/tip ::: (kể cả chữ bên trong - trước đây chữ trong
+// hộp "Bài này ở mức nhập môn" bị lấy nhầm làm mô tả cho 3 bài hạ tầng), và các dòng
+// siêu dữ liệu kiểu "**Người chia sẻ:** ..." ở đầu case study.
+function doanMoDau(file) {
   const lines = fs.readFileSync(file, 'utf8').split('\n')
   let i = lines.findIndex((l) => /^#\s+/.test(l))
   if (i < 0) return null
   let doan = ''
+  let trongKhoi = false
   for (i += 1; i < lines.length; i += 1) {
     const l = lines[i].trim()
+    if (/^:::/.test(l)) { trongKhoi = !trongKhoi && !/^:::\s*$/.test(l); if (doan) break; else continue }
+    if (trongKhoi) continue
     if (!l) { if (doan) break; else continue }
-    if (/^(#|<|:::|!\[|\||-|\d+\.|>)/.test(l)) { if (doan) break; else continue }
+    if (/^(#|<|!\[|\||-|\d+\.|>|\*\*[^*]+:\*\*)/.test(l)) { if (doan) break; else continue }
     doan += (doan ? ' ' : '') + l
   }
+  return doan ? boMarkdown(doan) : null
+}
+// Tách câu: dấu chấm chỉ kết câu khi theo sau là khoảng trắng - nên "spec.md", "CLAUDE.md",
+// "AGENTS.md" không bị cắt đôi câu (lỗi cũ: mô tả bài viết spec chỉ còn "Có một file spec").
+const CAU = /(?:[^.!?]|[.!?](?=\S))+/g
+function tachCau(doan) {
+  return (doan.match(CAU) || []).map((c) => c.trim()).filter(Boolean)
+}
+// Ghép mô tả tới ~155 ký tự: câu chính + các câu bổ sung, câu cuối không vừa thì cắt gọn.
+function ghepMoTa(chinh, boSung, toiDa = 155) {
+  let mo = chinh
+  for (const c of boSung) {
+    if (mo.length >= 110) break
+    if (!c || mo.toLowerCase().includes(c.slice(0, 30).toLowerCase())) continue
+    const conLai = toiDa - mo.length - 2
+    if (conLai < 40) break
+    mo = `${mo}. ${catNgan(c, conLai)}`
+    if (mo.endsWith('…')) break
+  }
+  return catNgan(mo, toiDa)
+}
+function hoaDau(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+// Mô tả cho các file mẫu không có đoạn mở đầu (được thiết kế để copy nguyên vào dự án).
+function moTaMacDinh(file, tieuDe) {
+  const ten = path.basename(file)
+  if (ten === 'backlog.md') {
+    const duAn = (tieuDe || '').replace(/^Backlog:\s*/i, '')
+    return catNgan(`Backlog mẫu cho dự án ${duAn}: danh sách task chia sẵn theo thứ tự làm, mỗi task vừa một phiên với coding agent - copy vào dự án của bạn rồi tick dần.`, 155)
+  }
+  if (ten === 'CLAUDE.md') {
+    return catNgan(`File CLAUDE.md mẫu cho dự án ${tieuDe}: quy ước chung, cấu trúc thư mục và những điều cấm làm, để coding agent bám đúng spec ngay từ phiên đầu tiên.`, 155)
+  }
+  return null
+}
+// Meta description: Google hiện tới ~155-160 ký tự. Ưu tiên câu "học xong bạn sẽ..." (bỏ
+// "bạn sẽ" cho gọn); nếu câu đó ngắn thì nối thêm vế "dành cho người..." để người tìm
+// kiếm biết luôn bài hợp với mình không. Không có câu "học xong" thì lấy câu đầu và các
+// câu kế tiếp của đoạn mở đầu.
+function moTaCua(file, tieuDe) {
+  // File mẫu (backlog.md / CLAUDE.md của dự án thực hành) luôn dùng mô tả mặc định: đoạn
+  // chữ đầu tiên trong đó là "(trống - bắt đầu từ đầu)" hay một dòng quy ước, không phải mô tả.
+  const macDinh = moTaMacDinh(file, tieuDe)
+  if (macDinh) return macDinh
+  const doan = doanMoDau(file)
   if (!doan) return null
-  doan = boMarkdown(doan)
-  const m = doan.match(/(?:Học|Đọc|Làm|Xem|Xong) xong,?\s+(bạn(?: sẽ)?[^.!?]*[.!?])/)
-  let cau = m ? m[1] : doan.split(/(?<=[.!?])\s/)[0]
-  cau = cau.replace(/^bạn sẽ\s*/i, '').replace(/\s*[.!?]$/, '')
-  cau = cau.charAt(0).toUpperCase() + cau.slice(1)
-  return catNgan(cau, 155) // meta description: Google hiện tới ~155-160 ký tự
+  const m = doan.match(/(?:Học|Đọc|Làm|Xem|Xong) xong(?: bài này| phần này)?(?:\s*\([^)]*\))?,?\s+(?:thì )?((?:máy )?bạn(?: sẽ)?\s(?:[^.!?]|[.!?](?=\S))*)/)
+  if (m) {
+    const chinh = hoaDau(m[1].replace(/^bạn(?: sẽ)?\s+/i, '').replace(/[.\s]+$/, '').trim())
+    const dc = doan.match(/dành cho ((?:[^.!?]|[.!?](?=\S))*)/i)
+    const boSung = dc ? [`Dành cho ${dc[1].trim()}`] : []
+    return ghepMoTa(chinh, boSung)
+  }
+  const [dau, ...conLai] = tachCau(doan)
+  return dau ? ghepMoTa(hoaDau(dau), conLai) : moTaMacDinh(file, tieuDe)
 }
 function catNgan(s, toiDa) {
   return s.length > toiDa ? s.slice(0, toiDa - 3).replace(/\s+\S*$/, '') + '…' : s
@@ -140,7 +198,7 @@ function gomBai() {
         urlPath,
         outPng: path.join(OUT, rel.replace(/\.md$/, '.png').replace(/README\.png$/, 'index.png')),
         tieuDe: laReadme ? tieuDe.replace(/^Phần \d+:\s*/, '') : tieuDe,
-        moTa: laReadme ? moTaReadme(file, baiPhang.length) : moTaCua(file),
+        moTa: laReadme ? moTaReadme(file, baiPhang.length) : moTaCua(file, tieuDe),
         phan: soPhan ? `Phần ${Number(soPhan)} · ${tenPhan}` : tenPhan,
         soBai: idx >= 0 ? `Bài ${idx + 1}/${baiPhang.length}` : laReadme ? 'Mục lục phần' : null,
         cap: capDo.get(urlPath.replace(/\/$/, '')) || null,

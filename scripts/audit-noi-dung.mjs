@@ -33,7 +33,7 @@ const dangJson = args.includes('--json')
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
     const p = path.posix.join(dir, e.name)
-    if (e.isDirectory()) return e.name === 'node_modules' ? [] : walk(p)
+    if (e.isDirectory()) return e.name === 'node_modules' || e.name.startsWith('_') ? [] : walk(p) // _tmp*: thư mục nháp cục bộ
     return e.name.endsWith('.md') ? [p] : []
   })
 }

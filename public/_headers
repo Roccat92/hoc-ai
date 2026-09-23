@@ -1,0 +1,17 @@
+# Header HTTP cho Cloudflare Workers static assets (cùng chuẩn với file _redirects bên cạnh).
+# Lý do (audit SEO 23/09/2026): mọi file đang trả "Cache-Control: max-age=0, must-revalidate",
+# kể cả JS/CSS/font trong /assets/ vốn có mã băm trong tên (đổi nội dung = đổi tên file) -
+# trình duyệt phải hỏi lại server ở mỗi lần mở trang, chậm hơn và tốn request không cần thiết.
+# Core Web Vitals (tốc độ tải) là một tín hiệu xếp hạng của Google.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Thumbnail từng bài: đổi nội dung sẽ vẽ lại cùng tên file, nên chỉ cache 1 ngày.
+/thumb/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Hai header an toàn cơ bản, không ảnh hưởng hiển thị.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

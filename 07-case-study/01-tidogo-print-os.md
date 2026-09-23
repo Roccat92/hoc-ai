@@ -1,5 +1,7 @@
 # TIDOGO (Print OS): phần mềm quản lý sản xuất cho xưởng in
 
+Case study này dành cho người muốn xem một sản phẩm thật build bằng AI trông ra sao, từ bài toán tới lúc chạy cho khách. Đọc xong bạn sẽ thấy cách một người vận hành xưởng 9 năm, không xuất thân lập trình, dùng Claude Code build phần mềm quản lý sản xuất cho xưởng in - kèm chi phí gói AI thật, các quyết định kỹ thuật đáng kể và bài học rút ra.
+
 **Người chia sẻ:** Nguyễn Ngọc Thư - Startee / StarteeX (liên hệ: thunguyen@startee.vn)
 **Thời gian thực hiện:** hơn 1 tháng, dùng gói [Claude Max 5x](../phu-luc-cong-cu/claude-code/02-chi-phi-cac-goi.md). Khoảng 2 tuần đầu mới ra được bản chạy tối thiểu (MVP), phần còn lại là hoàn thiện cho dùng thật.
 **Trình độ trước khi bắt đầu:** 9 năm vận hành xưởng sản xuất theo yêu cầu, tự học lập trình để giải bài toán của chính mình

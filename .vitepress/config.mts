@@ -233,11 +233,30 @@ function canonicalPathOf(relativePath: string): string {
   return `/${clean}`
 }
 
+// Cloudflare Workers Builds (và nhiều CI khác) clone repo "nông" (depth 1): git chỉ biết
+// đúng một commit, nên lastUpdated của MỌI trang = ngày commit mới nhất. Hậu quả đã thấy
+// trên hocaiviet.com: 128 dòng <lastmod> trong sitemap.xml và dateModified trong JSON-LD
+// giống hệt nhau tới từng giây - Google học được rằng số này vô nghĩa và bỏ qua nó.
+// Kéo đủ lịch sử trước khi build để mỗi bài có ngày sửa thật. Máy dev (clone đầy đủ)
+// thì bỏ qua ngay; kéo thất bại (không có mạng/quyền) cũng chỉ cảnh báo, không chặn build.
+function keoDuLichSuGit() {
+  try {
+    const nong = execFileSync('git', ['rev-parse', '--is-shallow-repository'], { cwd: root, encoding: 'utf8' }).trim()
+    if (nong !== 'true') return
+    console.log('[hoc-ai] repo clone nông - kéo đủ lịch sử git để lastUpdated đúng theo từng bài...')
+    execFileSync('git', ['fetch', '--unshallow', '--quiet'], { cwd: root, stdio: 'inherit', timeout: 120_000 })
+  } catch (e) {
+    console.warn('[hoc-ai] không kéo được lịch sử git đầy đủ, ngày cập nhật từng bài có thể không chính xác:', (e as Error).message)
+  }
+}
+
 export default defineConfig({
   lang: 'vi-VN',
   title: 'Học AI Việt',
   description,
-  srcExclude: ['**/node_modules/**', ...internalRootDocs],
+  // "_tmp*/" là thư mục nháp cục bộ (bản sao bài để đọc/so sánh) - nếu lọt vào build sẽ
+  // báo hàng chục "dead link" giả vì đường dẫn tương đối trong bản sao không còn đúng.
+  srcExclude: ['**/node_modules/**', '_tmp*/**', ...internalRootDocs],
   rewrites: {
     'README.md': 'index.md',
     ':dir/README.md': ':dir/index.md',
@@ -260,6 +279,7 @@ export default defineConfig({
         name: 'hoc-ai-thumbnail',
         apply: 'build',
         buildStart() {
+          keoDuLichSuGit()
           execFileSync(process.execPath, [path.join(root, 'scripts', 'tao-thumbnail.mjs')], { stdio: 'inherit' })
         },
       },
@@ -277,6 +297,13 @@ export default defineConfig({
     if (laTrangChu) {
       pageData.title = 'Học AI Việt - học lập trình và build sản phẩm với AI từ con số 0'
       // VitePress đọc pageData.titleTemplate (đã sao từ frontmatter TRƯỚC hook này), nên phải đặt cả hai.
+      pageData.titleTemplate = false
+      pageData.frontmatter.titleTemplate = false
+    } else if (pageData.title.length + ' | Học AI Việt'.length > 60) {
+      // Google cắt <title> ở ~60 ký tự. Bài nào tên bài + đuôi " | Học AI Việt" vượt ngưỡng
+      // (hơn nửa số bài) thì bỏ đuôi thương hiệu, để tên bài không bị cắt cụt giữa chừng.
+      // Tên site vẫn hiện riêng phía trên link nhờ og:site_name + WebSite schema, và
+      // og:title/twitter:title bên dưới vẫn giữ đuôi cho thẻ chia sẻ mạng xã hội.
       pageData.titleTemplate = false
       pageData.frontmatter.titleTemplate = false
     }

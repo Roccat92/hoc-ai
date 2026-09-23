@@ -10,3 +10,6 @@ DANH-GIA-NOI-DUNG-VA-LO-TRINH.md
 
 # Thumbnail từng bài sinh lúc build bởi scripts/tao-thumbnail.mjs
 public/thumb/
+
+# Thư mục nháp cục bộ (bản sao bài để đọc/so sánh) - không commit, build cũng bỏ qua (srcExclude)
+_tmp*/

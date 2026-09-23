@@ -1,6 +1,6 @@
 # Tổng quan build LLM từ đầu (tham khảo - không khuyến khích người mới)
 
-Bài này dành cho người **tò mò về mặt kiến thức** muốn hiểu build một LLM hoàn toàn từ đầu (pre-train from scratch) cần những gì - **không phải hướng dẫn thực hành**, và gần như chắc chắn không phải việc bạn cần tự làm. Học xong bạn sẽ hiểu vì sao, và biết tìm tài liệu nào nếu muốn đào sâu thêm về mặt lý thuyết.
+Bài này dành cho người **tò mò về mặt kiến thức** muốn hiểu build một LLM hoàn toàn từ đầu (pre-train from scratch) cần những gì - **không phải hướng dẫn thực hành**, và gần như chắc chắn không phải việc bạn cần tự làm. Học xong bạn sẽ hiểu vì sao gần như không ai tự build LLM từ đầu (dữ liệu, tiền và người đều vượt xa một cá nhân), và biết tìm tài liệu nào nếu muốn đào sâu thêm về mặt lý thuyết.
 
 ## Build LLM from scratch cần gì?
 
